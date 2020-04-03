@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FirmwareTest",
+    "\\FirmwareTest\\FirmwareConfigs",
+    "\\FirmwareTest\\FirmwareConfigs\\Riva CENTRON Electric Meter R1 with ACT",
+    "\\FirmwareTest\\FirmwareConfigs\\Riva CENTRON Electric Poly Meter R1 with ACT",
+    "\\FirmwareTest\\FirmwareConfigs\\Riva EDMI ASIC Single Phase Electric Meter",
+    "\\FirmwareTest\\FirmwareConfigs\\Riva Electric Meter R1 with ACT",
+    "\\FirmwareTest\\FirmwareConfigs\\Riva Electric Poly Meter R1 with ACT",
+    "\\FirmwareTest\\FirmwareConfigs\\Smart NIC R1 with ACT ELO2132",
+    "\\FirmwareTest\\FirmwareConfigs\\Smart NIC R1 with ACT ELO2133"
+  ],
+  "SelectedNode": "\\FirmwareTest\\FirmwareConfigs",
+  "PreviewInSolutionExplorer": false
+}

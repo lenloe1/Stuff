@@ -1,0 +1,50 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.ANSIStandard.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.Centron.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.LandisGyr.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.AMIConfigurationResources.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.AMIConfiguration.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.ANSIStandard.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.Centron.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Common.C1219Tables.LandisGyr.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.AMIConfigurationResources.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.AMIConfiguration\obj\Debug\Itron.Metering.AMIConfiguration.pdb

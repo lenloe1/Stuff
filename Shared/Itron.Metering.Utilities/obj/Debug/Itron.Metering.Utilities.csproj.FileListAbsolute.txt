@@ -1,0 +1,14 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Utilities\obj\Debug\Itron.Metering.Utilities.csprojAssemblyReference.cache

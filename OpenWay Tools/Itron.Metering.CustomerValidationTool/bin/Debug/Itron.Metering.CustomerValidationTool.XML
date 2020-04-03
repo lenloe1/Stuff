@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.CustomerValidationTool</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.CustomerValidationTool.AboutForm">
+            <summary>
+             This form shows the current version number of the data manager as well as copyright
+            information and allows the execution of Microsoft's System Info application to allow
+            application engineers access to system configuration information for debugging
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.AboutForm.#ctor">
+            <summary>
+            Primary constructor - retrieves and initializes the user interface with the current
+            application version information
+            </summary>
+            <remarks>
+             Revision History
+             MM/DD/YY Who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             01/21/08 MAH 10.0.0 Now uses application name from the application's properties
+                                             rather than hard coding the text
+             03/20/09 jrf 9.60.01 125531 Modifying copyright year to extract the year the 
+                                         the app was created to so we don't have to 
+                                         keep changing this date each year.
+             
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.AboutForm.butSystem_Click(System.Object,System.EventArgs)">
+            <summary>
+            This event handler invokes Microsoft's system information application    
+            </summary>
+            <remarks>
+             Revision History
+             MM/DD/YY Who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             01/21/08 MAH 10.0.0 Added exception handling - just in case...
+             
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidationTool.AboutForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.AboutForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.AboutForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm">
+            <summary>
+            Main form for the Customer Validation Tool
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            Process key presses.
+            </summary>
+            <param name="msg">The key press message</param>
+            <param name="keyData">The key press data</param>
+            <returns>True if the key was processed. False otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ExitButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the exit button click event
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.StartTestButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the start button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.CreateProgressControl(Itron.Metering.CustomerValidationTool.ValidationWorker)">
+            <summary>
+            Creates a new progress control for the specified validation worker.
+            </summary>
+            <param name="newValidationWorker">The validation worker to create the progress control for.</param>
+            <returns>Tje mew progress control.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ProgressControl_TestCompleteEvent(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ProgressControls Test complete event
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ProgressControl_ViewDetailsClickedEvent(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ProgressControl's View Details click event.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.InitializeSelectedTests">
+            <summary>
+            Initializes the check boxes for the tests selected to run.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.InitializePorts">
+            <summary>
+            Initializes the Port selection
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.InitializeOpticalProbes">
+            <summary>
+            Initializes the Optical Probe combo boxes.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.InitializeBaudRates">
+            <summary>
+            Initializes the baud rate combo boxes
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.Port_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the selection changed event for the Port combo boxes
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.Probe_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the selection changed event for the Probe combo boxes
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.Rate_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the selection changed event for the Rate combo boxes
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.UpdatePortDefaults">
+            <summary>
+            Updates the default values for the selected Ports
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.EnableTestSelection">
+            <summary>
+            Enables or disables the test selection boxes.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HideTestSettingsGroups">
+            <summary>
+            Shows or hides the test settings groups that are not being used.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HideUsedPorts">
+            <summary>
+            Hides ports that are currently used in other tests.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ComboBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Prevents the user from typing in one of the combo boxes.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.BrowseProgramButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Browse Program click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ResultsBrowseButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Browse Results button click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.AboutButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the About button click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.RunTestCheckBox_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event for the Run Test check boxes.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.RunTestCheckBox_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Checked Changed event for the Run Test check boxes.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.UpdateStartAndCancelButtons">
+            <summary>
+            Updates the enabled state of the start and cancel buttons based on the current settings.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.UpdateExportAndPrintButtons">
+            <summary>
+            Updates the enabled state of the export and print buttons
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.UpdateTestSettingsGroupState">
+            <summary>
+            Updates the enabled state of the test settings group based on whether or not tests are running
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.CancelTestButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Cancel Test button click event
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.CancelTests">
+            <summary>
+            Cancels the currently running tests.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.OpenResults_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the click event for the open results buttons
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.OpenResultsFile(System.String)">
+            <summary>
+            Opens the specified results file.
+            </summary>
+            <param name="resultsFilePath">The path to the results file to open</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ClearProgramButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the program clear button's click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HelpButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Help button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HelpSearchButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Help button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HelpContentsButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Help button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HelpIndexButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Help button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ResultsDockingTab_VisibleChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the visible changed event for the ResultsDockingTab
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.CloseResultsButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Close All button click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ResultsDockingTab_MeasureTab(System.Object,C1.Win.C1Command.MeasureTabEventArgs)">
+            <summary>
+            Handles the MeasureTab event.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ExportButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Exports the current view to an excel spreadsheet.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.PrintButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Print Button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.PrintPreviewButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Print Preview button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ResultsDockingTab_TabPageClosed(System.Object,C1.Win.C1Command.TabPageEventArgs)">
+            <summary>
+            Handles the tab page closed event for the results docking tab
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.CustomerValidationToolForm_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Handles the form closing event to prevent the user from closing the application while
+            a test is running.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.Port_DropDown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Drop Down event for the port combo boxes
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.PopulateSignedAuthorization">
+            <summary>
+            Populates the Signed Authorization Settings group
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.UpdateKeyButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event for the Authorization Key update button
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.TestSettingsTab_Select(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Test Settings Tab select event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.HandleFatalError(System.Object,Itron.Metering.Utilities.ItronErrorEventArgs)">
+            <summary>
+            Event handler that handles a fatal error
+            </summary>
+            <param name="sender">The control that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.IsTestRunning">
+            <summary>
+            Gets whether or not tests are currently running.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.TestRunCount">
+            <summary>
+            Gets the number of test runs that are currently selected.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ProgramFilePath">
+            <summary>
+            Gets or sets the program file path
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.ResultsDirPath">
+            <summary>
+            Gets or sets the results directory file path.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.CustomerValidationToolForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.OpenProgramDialog">
+            <summary>
+            Open Program dialog for the customer validation tool
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.OpenProgramDialog.SelectedFile">
+            <summary>
+            Gets the name of the file that was selected.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.PopulatePrograms">
+            <summary>
+            Populates the list of programs.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.AddFile(Itron.Metering.Datafiles.EDLFile)">
+            <summary>
+            Adds a program file to the Flexgrid control
+            </summary>
+            <param name="programFile">The EDL file to add.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.ProgramFlexGrid_AfterSelChange(System.Object,C1.Win.C1FlexGrid.RangeEventArgs)">
+            <summary>
+            Handles the selection changed event for the Flex Grid control.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.btnHelp_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the help button click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidationTool.OpenProgramDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.OpenProgramDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.ProgressControl">
+            <summary>
+            Control used for displaying the progress of a test.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ProgressControl.ViewDetailsClickedEvent">
+            <summary>
+            Event thrown when the View Details button is clicked.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ProgressControl.TestCompleteEvent">
+            <summary>
+            Event thrown when the test completes
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.ShowProgressHandler(System.Object,Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable ShowProgress event.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.HideProgressHandler(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable HideProgress event.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.StepProgressHandler(System.Object,Itron.Metering.Progressable.ProgressEventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable StepProgress event.
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.ProgressControl.Title">
+            <summary>
+            Gets or sets the title
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.ProgressControl.ResultsFile">
+            <summary>
+            Gets or sets the location of the results file.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.ShowProgress(Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable ShowProgress event.
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.HideProgress(System.EventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable HideProgress event.
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.StepProgress(Itron.Metering.Progressable.ProgressEventArgs)">
+            <summary>
+            Event handler for the Itron.Metering.Progressable StepProgress event.
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.UpdateResultCounts">
+            <summary>
+            Updates the displayed result counts
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.OnViewDetailsClicked">
+            <summary>
+            Raises the View Details Clicked event
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.OnTestComplete">
+            <summary>
+            Raises the Test Complete event
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.btnViewDetails_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the View Details button click event
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidationTool.ProgressControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ProgressControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Cancelled">
+            <summary>
+              Looks up a localized string similar to Cancelled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.DeviceType">
+            <summary>
+              Looks up a localized string similar to Device Type.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ElectronicSerialNumber">
+            <summary>
+              Looks up a localized string similar to Electronic Serial Number.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ERROR_COMMAND_EXECUTION">
+            <summary>
+              Looks up a localized string similar to Unable to execute command.  View details for more information.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ErrorCantCloseApp">
+            <summary>
+              Looks up a localized string similar to This application can not be closed while tests are running..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ErrorCouldNotOpenResultsFile">
+            <summary>
+              Looks up a localized string similar to Could not open results file..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ErrorRetrievingDeviceIdentification">
+            <summary>
+              Looks up a localized string similar to Error retrieving device identification.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ErrorsFound">
+            <summary>
+              Looks up a localized string similar to Errors Found.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ErrrorHelpFile">
+            <summary>
+              Looks up a localized string similar to An error occurred while opening the help file..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ExcelFileFilter">
+            <summary>
+              Looks up a localized string similar to Excel Spreadsheet|*.xls.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Failed">
+            <summary>
+              Looks up a localized string similar to Failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.FailedExceptionOccurred">
+            <summary>
+              Looks up a localized string similar to Failed: Exception occurred.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.MeterTypeNotSupported">
+            <summary>
+              Looks up a localized string similar to This meter type is not supported.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.NoErrorsFound">
+            <summary>
+              Looks up a localized string similar to No Errors Found.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.OK">
+            <summary>
+              Looks up a localized string similar to ✓.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.OpenWayCENTRON">
+            <summary>
+              Looks up a localized string similar to OpenWay CENTRON.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.OpenWayCENTRONAdvancedPoly">
+            <summary>
+              Looks up a localized string similar to OpenWay CENTRON Advanced Poly.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.OpenWayCENTRONBasicPoly">
+            <summary>
+              Looks up a localized string similar to OpenWay CENTRON Basic Poly.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.OpenWayTransparentDevice">
+            <summary>
+              Looks up a localized string similar to OpenWay Transparent Device.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Passed">
+            <summary>
+              Looks up a localized string similar to Passed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Probe1">
+            <summary>
+              Looks up a localized string similar to Probe 1.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Probe2">
+            <summary>
+              Looks up a localized string similar to Probe 2.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Probe3">
+            <summary>
+              Looks up a localized string similar to Probe 3.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Probe4">
+            <summary>
+              Looks up a localized string similar to Probe 4.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ProgramUsed">
+            <summary>
+              Looks up a localized string similar to Program Used.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ReasonExceptionOccurred">
+            <summary>
+              Looks up a localized string similar to Exception occurred: .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Results">
+            <summary>
+              Looks up a localized string similar to Results.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ResultsFileFilter">
+            <summary>
+              Looks up a localized string similar to Validation Result File|*.xml.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.SelectExportFileLocation">
+            <summary>
+              Looks up a localized string similar to Select export file location.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.SelectResultsFile">
+            <summary>
+              Looks up a localized string similar to Select results file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Skipped">
+            <summary>
+              Looks up a localized string similar to Skipped.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.SoftwareVersion">
+            <summary>
+              Looks up a localized string similar to Software Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.StatusComplete">
+            <summary>
+              Looks up a localized string similar to Complete.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.StatusRetrievingDeviceInfo">
+            <summary>
+              Looks up a localized string similar to Retrieving device information....
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.StatusRunningTest">
+            <summary>
+              Looks up a localized string similar to Running Test: .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.StatusSavingResults">
+            <summary>
+              Looks up a localized string similar to Saving results....
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.TestDate">
+            <summary>
+              Looks up a localized string similar to Test Date.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.Tested">
+            <summary>
+              Looks up a localized string similar to Tested: .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.TestInformation">
+            <summary>
+              Looks up a localized string similar to Test Information.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.Properties.Resources.ValidationResults">
+            <summary>
+              Looks up a localized string similar to  Validation Results.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.ResultDockingTabPage">
+            <summary>
+            Docking tab page control used for displaying Customer Validation result files.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.OpenResultFile(System.String)">
+            <summary>
+            Opens populates the tab with the results contained in the specified file.
+            </summary>
+            <param name="strResultFile">The file containing the results to open.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.Export(System.String)">
+            <summary>
+            Exports the current view
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.Print">
+            <summary>
+            Prints the current view
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.PrintPreview">
+            <summary>
+            Performs a Print Preview of the current view.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.FileName">
+            <summary>
+            Gets the full path of the file that is currently being displayed.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.SetupCellStyles">
+            <summary>
+            Sets up the various cell styles for the grid.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.AddResultNode(System.String,System.String,System.String)">
+            <summary>
+            Adds a result node to the flex grid control
+            </summary>
+            <param name="strName">The name of the node to add.</param>
+            <param name="strResult">The result of the test.</param>
+            <param name="strReason">The result reason.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.SetResultStyle(C1.Win.C1FlexGrid.Row)">
+            <summary>
+            Sets the style of the results cell based on the value that it contains.
+            </summary>
+            <param name="NewRow">The row to set.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.AddResult(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Adds the result to the flex grid control
+            </summary>
+            <param name="name">The name of the item to add</param>
+            <param name="result">The result</param>
+            <param name="details">The details of the result.</param>
+            <param name="additionalDetails">The additional details of the result.</param>
+            <param name="reason">The reason for the result</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.ClearResults">
+            <summary>
+            Clears the results from the flex grid.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.ResultsFlexGrid_MouseEnterCell(System.Object,C1.Win.C1FlexGrid.RowColEventArgs)">
+            <summary>
+            Shows the result reason as a tooltip
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ResultDockingTabPage.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.SignedAuthenticator">
+            <summary>
+            Class containing public methods used to update Signed Authorization keys.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.SignedAuthenticator.UpdateSignedAuthorizationKey">
+            <summary>
+            Updates the signed authorization key stored in user settings.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidationTool.ValidationWorker">
+            <summary>
+            Worker class used to run tests.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ValidationWorker.HideProgressEvent">
+            <summary>
+            Event used to indicate the the task has completed.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ValidationWorker.ShowProgressEvent">
+            <summary>
+            Event used to indicate that the task has started.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ValidationWorker.StepProgressEvent">
+            <summary>
+            Event used to indicate that task has taken a step
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidationTool.ValidationWorker.FatalErrorEvent">
+            <summary>
+            Event that is raised when a fatal error occurs
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.#ctor(System.String,System.String,System.UInt32,Itron.Metering.Utilities.OpticalProbeTypes)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strName">
+            The identifier for the current test run. This is used to identify which probe the test is
+            being run on and is for informational purposes.
+            </param>
+            <param name="strPort">The port to use for the test.</param>
+            <param name="uiBaudRate">The baud rate to use for the test.</param>
+            <param name="probeType">The optical probe type for the test.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.RunValidationTests">
+            <summary>
+            Runs the validation tests.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.CancelTests">
+            <summary>
+            Tells the worker to cancel it's operation
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.AbortTests">
+            <summary>
+            Aborts the current test and cancels any scheduled tests
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.GetDeviceInfo">
+            <summary>
+            Gets the device information from the meter.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.GetPasswords">
+            <summary>
+            Gets the list of available passwords
+            </summary>
+            <returns>The list of passwords.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.GetStepResult(Itron.Metering.CustomerValidation.Test)">
+            <summary>
+            Gets the step result based on the result of the test.
+            </summary>
+            <param name="testResult">The result of the test.</param>
+            <returns>The translated step result.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.GetSelectedTests">
+            <summary>
+            Gets the list of selected tests
+            </summary>
+            <returns>The list of selected tests</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.OnHideProgressEvent(Itron.Metering.CustomerValidation.TestCompleteEventArgs)">
+            <summary>
+            Raises the Hide Progress event
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.OnShowProgressEvent(Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Raises the Show Progress event
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.OnStepProgressEvent(Itron.Metering.CustomerValidation.TestStepEventArgs)">
+            <summary>
+            Raises the Step Progress event
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidationTool.ValidationWorker.HandleFatalError(System.Object,Itron.Metering.Utilities.ItronErrorEventArgs)">
+            <summary>
+            Event handler that handles a fatal error
+            </summary>
+            <param name="sender">The control that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidationTool.ValidationWorker.StepCount">
+            <summary>
+            Gets the number of steps in the test run.
+            </summary>
+        </member>
+    </members>
+</doc>

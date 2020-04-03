@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{012CB69B-5E05-43A6-9931-76FA42642E71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Metering.AMIConfiguration</RootNamespace>
+    <AssemblyName>Itron.Metering.AMIConfiguration</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Itron.Metering.AMIConfiguration.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.AMIConfiguration.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Itron.Metering.AMIConfiguration.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.AMIConfiguration (2).ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Itron.Metering.AMIConfiguration.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\Itron.Metering.AMIConfiguration.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.AMIConfiguration (2).ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Itron.Common.C1219Tables.ANSIStandard, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.ANSIStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Itron.Common.C1219Tables.Centron, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.Centron.dll</HintPath>
+    </Reference>
+    <Reference Include="Itron.Common.C1219Tables.LandisGyr, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.LandisGyr.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AMIConfiguration.cs" />
+    <Compile Include="AMIConfigurationResources.Designer.cs">
+      <DependentUpon>AMIConfigurationResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AMIConfigureDevice.cs" />
+    <Compile Include="AMIConfigureM2Gateway.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AMIConfigurationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AMIConfigurationResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Itron.Metering.Communications\Itron.Metering.Communications.csproj">
+      <Project>{A7D80805-B020-42A2-B843-28A5E72609A7}</Project>
+      <Name>Itron.Metering.Communications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.DeviceDataTypes\Itron.Metering.DeviceDataTypes.csproj">
+      <Project>{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}</Project>
+      <Name>Itron.Metering.DeviceDataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Progressable\Itron.Metering.Progressable.csproj">
+      <Project>{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}</Project>
+      <Name>Itron.Metering.Progressable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj">
+      <Project>{1C2BA173-78D6-4818-A68A-3773173F9104}</Project>
+      <Name>Itron.Metering.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ItronIEMPublic.snk" />
+    <None Include="Migrated rules for Itron.Metering.AMIConfiguration %282%29.ruleset" />
+    <None Include="Migrated rules for Itron.Metering.AMIConfiguration.ruleset" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="UpdateAssemblyInfo" Condition="'$(BuildVersion)' != '' And Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  </Target>
+  <Target Name="UpdateAssemblyInfo">
+    <Message Text="Updating Version to $(BuildVersion)" Importance="high" />
+    <Time Format="yyyy">
+      <Output TaskParameter="FormattedTime" PropertyName="CurrentYear" />
+    </Time>
+    <Attrib Files="$(ProjectDir)Properties\AssemblyInfo.cs" ReadOnly="false" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="(AssemblyVersion|AssemblyFileVersionAttribute|AssemblyFileVersion)\(&quot;.*&quot;\)" ReplacementText="$1(&quot;$(BuildVersion)&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCompany\(&quot;.*&quot;\)" ReplacementText="AssemblyCompany(&quot;Itron, Inc&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCopyright\(&quot;.*&quot;\)" ReplacementText="AssemblyCopyright(&quot;Copyright © Itron, Inc $(CurrentYear)&quot;)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

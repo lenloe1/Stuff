@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>stunnel</id>
+		<version>5.9.0.1</version>
+		<licenseUrl>https://www.stunnel.org/gpl.html</licenseUrl>
+		<projectUrl>https://www.stunnel.org/</projectUrl>
+		<authors>Michal Trojnara</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes>stunnel version 5.09</releaseNotes>
+		<description>stunnel</description>
+		<copyright>Copyright (C) 1998-2017 Michal Trojnara</copyright>
+		<tags>stunnel</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="stunnel.html" target="content\stunnel.html" />
+		<file src="4758cca.dll" target="build\stunnel\4758cca.dll" />
+		<file src="4758cca.dll.manifest" target="build\stunnel\4758cca.dll.manifest" />
+		<file src="aep.dll" target="build\stunnel\aep.dll" />
+		<file src="aep.dll.manifest" target="build\stunnel\aep.dll.manifest" />
+		<file src="atalla.dll" target="build\stunnel\atalla.dll" />
+		<file src="atalla.dll.manifest" target="build\stunnel\atalla.dll.manifest" />
+		<file src="capi.dll" target="build\stunnel\capi.dll" />
+		<file src="capi.dll.manifest" target="build\stunnel\capi.dll.manifest" />
+		<file src="chil.dll" target="build\stunnel\chil.dll" />
+		<file src="chil.dll.manifest" target="build\stunnel\chil.dll.manifest" />
+		<file src="cswift.dll" target="build\stunnel\cswift.dll" />
+		<file src="cswift.dll.manifest" target="build\stunnel\cswift.dll.manifest" />
+		<file src="gmp.dll" target="build\stunnel\gmp.dll" />
+		<file src="gmp.dll.manifest" target="build\stunnel\gmp.dll.manifest" />
+		<file src="gost.dll" target="build\stunnel\gost.dll" />
+		<file src="gost.dll.manifest" target="build\stunnel\gost.dll.manifest" />
+		<file src="libeay32.dll" target="build\stunnel\libeay32.dll" />
+		<file src="libeay32.dll.manifest" target="build\stunnel\libeay32.dll.manifest" />
+		<file src="Microsoft.VC90.CRT.Manifest" target="build\stunnel\Microsoft.VC90.CRT.Manifest" />
+		<file src="msvcr90.dll" target="build\stunnel\msvcr90.dll" />
+		<file src="nuron.dll" target="build\stunnel\nuron.dll" />
+		<file src="nuron.dll.manifest" target="build\stunnel\nuron.dll.manifest" />
+		<file src="padlock.dll" target="build\stunnel\padlock.dll" />
+		<file src="padlock.dll.manifest" target="build\stunnel\padlock.dll.manifest" />
+		<file src="ssleay32.dll" target="build\stunnel\ssleay32.dll" />
+		<file src="ssleay32.dll.manifest" target="build\stunnel\ssleay32.dll.manifest" />
+		<file src="stunnel.exe" target="build\stunnel\stunnel.exe" />
+		<file src="stunnel.exe.manifest" target="build\stunnel\stunnel.exe.manifest" />
+		<file src="sureware.dll" target="build\stunnel\sureware.dll" />
+		<file src="sureware.dll.manifest" target="build\stunnel\sureware.dll.manifest" />
+		<file src="tstunnel.exe" target="build\stunnel\tstunnel.exe" />
+		<file src="tstunnel.exe.manifest" target="build\stunnel\tstunnel.exe.manifest" />
+		<file src="ubsec.dll" target="build\stunnel\ubsec.dll" />
+		<file src="ubsec.dll.manifest" target="build\stunnel\ubsec.dll.manifest" />
+		<file src="zlib1.dll" target="build\stunnel\zlib1.dll" />
+		<file src="zlib1.dll.manifest" target="build\stunnel\zlib1.dll.manifest" />
+	</files>
+</package>

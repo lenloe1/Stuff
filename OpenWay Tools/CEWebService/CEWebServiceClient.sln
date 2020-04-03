@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{A79033AA-C189-4F68-A5FB-0952175CA429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{5F31D174-024E-44C3-BDB7-A05BE139F58D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProxyGenerators", "ProxyGenerators", "{ABCCF2EB-551C-403B-996A-EB95C3B5332D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{57042045-B47E-4A47-BCDD-003D5BC4F0F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{1B3B289B-A4C2-4FD9-BEDD-E92B6999C3EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{8A05EDFB-E632-4A11-801A-1DA810DEEC4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{554F2E6F-40B6-4DD6-A55A-C39AF305B41A}"
+	ProjectSection(SolutionItems) = preProject
+		ProxyGenerators\Internal\CreateInternalProxyClasses.bat = ProxyGenerators\Internal\CreateInternalProxyClasses.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{C18CD63C-99FF-456C-A568-ABE9673BFC0C}"
+	ProjectSection(SolutionItems) = preProject
+		ProxyGenerators\External\CreateExternalProxyClasses.bat = ProxyGenerators\External\CreateExternalProxyClasses.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientBaseLib", "Libs\Base\CEWebServiceClientBaseLib.csproj", "{BC5525C1-9EA1-4075-BC39-4A42BA24414E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientExternalLib", "Libs\External\CEWebServiceClientExternalLib.csproj", "{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientInternalLib", "Libs\Internal\CEWebServiceClientInternalLib.csproj", "{793F037F-D0BF-4091-9564-0D98DC7938D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientLibClient", "Client\CEWebServiceClientLibClient.csproj", "{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793F037F-D0BF-4091-9564-0D98DC7938D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793F037F-D0BF-4091-9564-0D98DC7938D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793F037F-D0BF-4091-9564-0D98DC7938D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793F037F-D0BF-4091-9564-0D98DC7938D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57042045-B47E-4A47-BCDD-003D5BC4F0F3} = {5F31D174-024E-44C3-BDB7-A05BE139F58D}
+		{1B3B289B-A4C2-4FD9-BEDD-E92B6999C3EB} = {5F31D174-024E-44C3-BDB7-A05BE139F58D}
+		{8A05EDFB-E632-4A11-801A-1DA810DEEC4A} = {5F31D174-024E-44C3-BDB7-A05BE139F58D}
+		{554F2E6F-40B6-4DD6-A55A-C39AF305B41A} = {ABCCF2EB-551C-403B-996A-EB95C3B5332D}
+		{C18CD63C-99FF-456C-A568-ABE9673BFC0C} = {ABCCF2EB-551C-403B-996A-EB95C3B5332D}
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E} = {57042045-B47E-4A47-BCDD-003D5BC4F0F3}
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140} = {1B3B289B-A4C2-4FD9-BEDD-E92B6999C3EB}
+		{793F037F-D0BF-4091-9564-0D98DC7938D6} = {8A05EDFB-E632-4A11-801A-1DA810DEEC4A}
+		{14CA7485-7A1F-4499-9A93-F8DD6EC8C9E0} = {A79033AA-C189-4F68-A5FB-0952175CA429}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3059C93-1C8F-455A-BBD2-D607938A2B0A}
+	EndGlobalSection
+EndGlobal

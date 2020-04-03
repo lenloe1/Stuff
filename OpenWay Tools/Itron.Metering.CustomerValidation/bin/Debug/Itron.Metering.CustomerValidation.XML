@@ -1,0 +1,1778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.CustomerValidation</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.CustomerValidation.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Properties.Resources.LOGON_FAILED_ICS_COMM_ERROR">
+            <summary>
+              Looks up a localized string similar to Logon Failed - the ICS comm module is not available.  Please wait a few minutes for communications to be established with the comm module and try again..
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestStepResult">
+            <summary>
+            The result of a test step.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.TestStepResult.None">
+            <summary>
+            There is no result for this step
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.TestStepResult.Passed">
+            <summary>
+            The test step passed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.TestStepResult.Failed">
+            <summary>
+            The test step failed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.TestStepResult.Skipped">
+            <summary>
+            The test step was skipped.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestStepEventArgs">
+            <summary>
+            Event arguments for a test step progress event.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestStepEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestStepEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strStatus">The current progress status</param>
+            <param name="strTitle">The title of the progress status</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestStepEventArgs.#ctor(System.String,System.String,Itron.Metering.CustomerValidation.TestStepResult)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strStatus">The current progress status</param>
+            <param name="strTitle">The title of the progress status</param>
+            <param name="result">The result of the test step.</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestStepEventArgs.StepResult">
+            <summary>
+            Gets or sets the result of the step.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestStepEventArgs.Title">
+            <summary>
+            Gets or sets the title
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestCompleteEventArgs">
+            <summary>
+            Event arguments for test completion.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestCompleteEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestCompleteEventArgs.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strStatus">The current progress status</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestCompleteEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strStatus">The current progress status</param>
+            <param name="strResultFile">The path to the results file.</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestCompleteEventArgs.ResultsFilePath">
+            <summary>
+            Gets or sets the path to the results file.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.AdvancedPolyMeter">
+            <summary>
+              Looks up a localized string similar to Advanced Poly Meter.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.AllAvailableRadiosInUse">
+            <summary>
+              Looks up a localized string similar to All available radios in use..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.AllowedANSIC1218Connection">
+            <summary>
+              Looks up a localized string similar to Allowed ANSI C12.18 connection.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ANSIC1218OverZigBeeEnabled">
+            <summary>
+              Looks up a localized string similar to ANSI C12.18 Over ZigBee Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.CannotReadValue">
+            <summary>
+              Looks up a localized string similar to Unable to read value.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearBillingData">
+            <summary>
+              Looks up a localized string similar to Clear Billing Data.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearDemandResetCount">
+            <summary>
+              Looks up a localized string similar to Clear Demand Reset Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearEventLogs">
+            <summary>
+              Looks up a localized string similar to Clear Event Logs.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearFailure">
+            <summary>
+              Looks up a localized string similar to Clear failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearInversionTampers">
+            <summary>
+              Looks up a localized string similar to Clear Inversion Tampers.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearPowerOutageCount">
+            <summary>
+              Looks up a localized string similar to Clear Power Outage Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearProgrammedCount">
+            <summary>
+              Looks up a localized string similar to Clear Programmed Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearRemovalTampers">
+            <summary>
+              Looks up a localized string similar to Clear Removal Tampers.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearSiteScanDiagnosticCounts">
+            <summary>
+              Looks up a localized string similar to Clear SiteScan Diagnostic Counts.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ClearSuccess">
+            <summary>
+              Looks up a localized string similar to Clear succeeded.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Connected">
+            <summary>
+              Looks up a localized string similar to Connected.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.CountCleared">
+            <summary>
+              Looks up a localized string similar to Count cleared.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.CountNotCleared">
+            <summary>
+              Looks up a localized string similar to Count not cleared.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DateLastProgrammed">
+            <summary>
+              Looks up a localized string similar to Date Last Programmed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DateOfLastDemandReset">
+            <summary>
+              Looks up a localized string similar to Date of Last Demand Reset.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DateOfLastOutage">
+            <summary>
+              Looks up a localized string similar to Date of Last Outage.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DateOfLastTest">
+            <summary>
+              Looks up a localized string similar to Date of Last Test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DemandResetCount">
+            <summary>
+              Looks up a localized string similar to Demand Reset Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DESKey1">
+            <summary>
+              Looks up a localized string similar to DES Key 1.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DESKey2">
+            <summary>
+              Looks up a localized string similar to DES Key 2.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DESKey3">
+            <summary>
+              Looks up a localized string similar to DES Key 3.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DESKey4">
+            <summary>
+              Looks up a localized string similar to DES Key 4.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DeviceError">
+            <summary>
+              Looks up a localized string similar to Device Error .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DeviceErrors">
+            <summary>
+              Looks up a localized string similar to Device Errors.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DeviceTime">
+            <summary>
+              Looks up a localized string similar to Device Time.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DisplayFirmwareVersion">
+            <summary>
+              Looks up a localized string similar to Display Firmware Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DSTEnabled">
+            <summary>
+              Looks up a localized string similar to DST Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DSTFromDate">
+            <summary>
+              Looks up a localized string similar to DST From Date .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.DSTToDate">
+            <summary>
+              Looks up a localized string similar to DST To Date .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ElectronicSerialNumber">
+            <summary>
+              Looks up a localized string similar to Electronic Serial Number.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedBlurtsEnabled">
+            <summary>
+              Looks up a localized string similar to Enhanced Blurts Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityCommandKey1">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Command Key 1.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityCommandKey2">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Command Key 2.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityCommandKey3">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Command Key 3.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityCommandKey4">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Command Key 4.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityRevocationKey1">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Revocation Key 1.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EnhancedSecurityRevocationKey2">
+            <summary>
+              Looks up a localized string similar to Enhanced Security Revocation Key 2.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ErrorPresent">
+            <summary>
+              Looks up a localized string similar to Error present.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ErrorsFound">
+            <summary>
+              Looks up a localized string similar to Errors Found.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EventLogCount">
+            <summary>
+              Looks up a localized string similar to Event Log Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EventNotFoundInEnabledLog">
+            <summary>
+              Looks up a localized string similar to Cleared event(s) not in enabled log.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EventsCleared">
+            <summary>
+              Looks up a localized string similar to Events cleared.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EventsFoundInDisabledLog">
+            <summary>
+              Looks up a localized string similar to Event(s) found in disabled log.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.EventsNotCleared">
+            <summary>
+              Looks up a localized string similar to Events not cleared.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ExceptionOccurred">
+            <summary>
+              Looks up a localized string similar to Exception Occurred.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Failed">
+            <summary>
+              Looks up a localized string similar to Failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Found">
+            <summary>
+              Looks up a localized string similar to  found.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.GMT">
+            <summary>
+              Looks up a localized string similar to GMT .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANChannel">
+            <summary>
+              Looks up a localized string similar to HAN Channel.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANJoiningEnabled">
+            <summary>
+              Looks up a localized string similar to HAN Joining Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANLinkKey">
+            <summary>
+              Looks up a localized string similar to HAN Link Key.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANMACAddress">
+            <summary>
+              Looks up a localized string similar to HAN MAC Address.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANNetworkKey">
+            <summary>
+              Looks up a localized string similar to HAN Network Key.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HANSecurityProfile">
+            <summary>
+              Looks up a localized string similar to HAN Security Profile.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.HardwareVersion">
+            <summary>
+              Looks up a localized string similar to Hardware Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.InconsistentWithHANSetup">
+            <summary>
+              Looks up a localized string similar to Inconsistent with HAN setup.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.InterPANMode">
+            <summary>
+              Looks up a localized string similar to InterPAN Mode.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Invalid">
+            <summary>
+              Looks up a localized string similar to Invalid.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.InvalidProgram">
+            <summary>
+              Looks up a localized string similar to Invalid program file for verification.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.InversionTamperCount">
+            <summary>
+              Looks up a localized string similar to Inversion Tamper Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.KeyNotConsistentWithProgram">
+            <summary>
+              Looks up a localized string similar to Key is not consistent with program file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.KeyNotConsistentWithRegistry">
+            <summary>
+              Looks up a localized string similar to Key is not consistent with registry.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.KeyNotConsistentWithSecurityFile">
+            <summary>
+              Looks up a localized string similar to Key is not consistent with enhanced security key file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.LoadProfileRunning">
+            <summary>
+              Looks up a localized string similar to Load Profile Running.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.LoadVoltagePresent">
+            <summary>
+              Looks up a localized string similar to Load Voltage Present.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.LogDisabled">
+            <summary>
+              Looks up a localized string similar to Log disabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MatchesActiveVersion">
+            <summary>
+              Looks up a localized string similar to Matches active version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Meter">
+            <summary>
+              Looks up a localized string similar to Meter.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterID">
+            <summary>
+              Looks up a localized string similar to Meter ID.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterShouldBeConnected">
+            <summary>
+              Looks up a localized string similar to Meter should be connected.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterShouldBeDisconnected">
+            <summary>
+              Looks up a localized string similar to Meter should be disconnected.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterShouldHaveLoadVoltage">
+            <summary>
+              Looks up a localized string similar to Meter should have load voltage.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterShouldNotHaveLoadVoltage">
+            <summary>
+              Looks up a localized string similar to Meter should not have load voltage.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterTypeNotSupported">
+            <summary>
+              Looks up a localized string similar to This meter type is not supported.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MeterValueEquals">
+            <summary>
+              Looks up a localized string similar to Meter Value = .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MFGSerialNumber">
+            <summary>
+              Looks up a localized string similar to MFG Serial Number.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MinutesOnBattery">
+            <summary>
+              Looks up a localized string similar to Minutes on Battery.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.MismatchWithActiveVersion">
+            <summary>
+              Looks up a localized string similar to Mismatch with active version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.No">
+            <summary>
+              Looks up a localized string similar to No.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NoActiveFile">
+            <summary>
+              Looks up a localized string similar to No file set as active for comparison.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NoErrorsFound">
+            <summary>
+              Looks up a localized string similar to No Errors Found.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NonePresent">
+            <summary>
+              Looks up a localized string similar to None present.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NoProgram">
+            <summary>
+              Looks up a localized string similar to No program file for verification.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NoRadiosAvailable">
+            <summary>
+              Looks up a localized string similar to No radios available..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NormalDisplayItems">
+            <summary>
+              Looks up a localized string similar to Normal Display Items.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NormalKh">
+            <summary>
+              Looks up a localized string similar to Normal Kh.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.NotAvailable">
+            <summary>
+              Looks up a localized string similar to Not Available.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.OK">
+            <summary>
+              Looks up a localized string similar to ✓.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.OperationFailure">
+            <summary>
+              Looks up a localized string similar to Operation failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.OperationSuccess">
+            <summary>
+              Looks up a localized string similar to Operation succeeded.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Passed">
+            <summary>
+              Looks up a localized string similar to Passed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.PasswordNotConsistentWithProgram">
+            <summary>
+              Looks up a localized string similar to Password is not consistent with program file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.PowerOutageCount">
+            <summary>
+              Looks up a localized string similar to Power Outage Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.PrefixFinal">
+            <summary>
+              Looks up a localized string similar to Final .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.PrefixInitial">
+            <summary>
+              Looks up a localized string similar to Initial .
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.PrimaryOpticalPassword">
+            <summary>
+              Looks up a localized string similar to Primary Optical Password.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Program">
+            <summary>
+              Looks up a localized string similar to Program.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ProgramMatch">
+            <summary>
+              Looks up a localized string similar to Consistent with selected program file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ProgrammedCount">
+            <summary>
+              Looks up a localized string similar to Programmed Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ProgramMismatch">
+            <summary>
+              Looks up a localized string similar to Mismatch with selected program file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ProgramValidationErrors">
+            <summary>
+              Looks up a localized string similar to Program Validation Errors.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.QuaternaryOpticalPassword">
+            <summary>
+              Looks up a localized string similar to Quaternary Optical Password.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonActivityStatusPermissions">
+            <summary>
+              Looks up a localized string similar to User is not allowed to reset Activity Status.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonActivityStatusSealedCanadian">
+            <summary>
+              Looks up a localized string similar to Activity status cannot be cleared on a sealed Canadian meter..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonBillingResetPermissions">
+            <summary>
+              Looks up a localized string similar to User is not allowed to perform a Billing Register reset.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonBillingResetSealedCanadian">
+            <summary>
+              Looks up a localized string similar to Billing cannot be cleared on a sealed Canadian meter..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonDisconnectNotSupported">
+            <summary>
+              Looks up a localized string similar to This meter does not support remote disconnect..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonEnhSecurtyFileRequired">
+            <summary>
+              Looks up a localized string similar to An Enhanced Security file must be specified to validate this key..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonFailedToGetHANInfo">
+            <summary>
+              Looks up a localized string similar to Unable to retrieve device&apos;s HAN information.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonInvalidItemsFound">
+            <summary>
+              Looks up a localized string similar to  invalid items found..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonInvalidProgramFile">
+            <summary>
+              Looks up a localized string similar to An invalid program file was selected..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonLoadVoltageNotDetected">
+            <summary>
+              Looks up a localized string similar to Load Voltage not detected.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonLoadVoltagePresent">
+            <summary>
+              Looks up a localized string similar to Load Voltage present.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonLogonFailed">
+            <summary>
+              Looks up a localized string similar to Unable to Logon to device.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonNoFirmwareFile">
+            <summary>
+              Looks up a localized string similar to No active firmware file..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonNoProgramFile">
+            <summary>
+              Looks up a localized string similar to A program file was not selected..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonOneInvalidItemFound">
+            <summary>
+              Looks up a localized string similar to 1 invalid item found..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonOperationNotSupported">
+            <summary>
+              Looks up a localized string similar to Operation not supported.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonProgramFileNeededToValidate">
+            <summary>
+              Looks up a localized string similar to A program file must be specified to validate this password..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonProgramFileNeededToValidateKey">
+            <summary>
+              Looks up a localized string similar to A program file must be specified to validate this key..
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonProtocolError">
+            <summary>
+              Looks up a localized string similar to Protocol error.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonRemoteConnectFailed">
+            <summary>
+              Looks up a localized string similar to Remote connect failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonSecurityError">
+            <summary>
+              Looks up a localized string similar to Security error.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonSiteScanNotSupported">
+            <summary>
+              Looks up a localized string similar to SiteScan is not supported by this device.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonSP5OrLaterRequired">
+            <summary>
+              Looks up a localized string similar to This test requires Register Firmware 2.005 or later.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonSwitchOperationPermissions">
+            <summary>
+              Looks up a localized string similar to User is not allowed to perform switch operations.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ReasonUnrecognizedProcedure">
+            <summary>
+              Looks up a localized string similar to Unrecognized procedure.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RegisterFirmwareVersion">
+            <summary>
+              Looks up a localized string similar to Register Firmware Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RemoteConnect">
+            <summary>
+              Looks up a localized string similar to Remote Connect.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RemoteDisconnect">
+            <summary>
+              Looks up a localized string similar to Remote Disconnect.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RemovalTamperCount">
+            <summary>
+              Looks up a localized string similar to Removal Tamper Count.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RFLANFirmwareVersion">
+            <summary>
+              Looks up a localized string similar to Comm Module Firmware Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RFLANMACAddress">
+            <summary>
+              Looks up a localized string similar to Comm Module MAC Address.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.RFLANSynchLevel">
+            <summary>
+              Looks up a localized string similar to Comm Module synch level.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.SecondaryOpticalPassword">
+            <summary>
+              Looks up a localized string similar to Secondary Optical Password.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.SerialNumber">
+            <summary>
+              Looks up a localized string similar to Serial Number.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Skipped">
+            <summary>
+              Looks up a localized string similar to Skipped.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.SupportsANSIC1218OverZigBee">
+            <summary>
+              Looks up a localized string similar to Supports ANSI C12.18 over ZigBee.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.TertiaryOpticalPassword">
+            <summary>
+              Looks up a localized string similar to Tertiary Optical Password.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.TimeZone">
+            <summary>
+              Looks up a localized string similar to Time Zone.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.TOUEnabled">
+            <summary>
+              Looks up a localized string similar to TOU Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Valid">
+            <summary>
+              Looks up a localized string similar to Valid.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ValidationFailed">
+            <summary>
+              Looks up a localized string similar to Validation failed.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.Yes">
+            <summary>
+              Looks up a localized string similar to Yes.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ZigBeeEnabled">
+            <summary>
+              Looks up a localized string similar to ZigBee Enabled.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ZigBeeFirmwareVersion">
+            <summary>
+              Looks up a localized string similar to ZigBee Firmware Version.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResources.ZigBeePrivateProfileEnabled">
+            <summary>
+              Looks up a localized string similar to ZigBee Private Profile Enabled.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestResults">
+            <summary>
+            Class used for reading a writing test results files
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestResults.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestResults.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strFileName"></param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestResults.Save">
+            <summary>
+            Saves the result file.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestResults.SaveAs(System.String)">
+            <summary>
+            Saves the results file to the specified location.
+            </summary>
+            <param name="strFilePath">The new file to save to.</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestResults.TestRuns">
+            <summary>
+            Gets the list of test runs in the file
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestRun">
+            <summary>
+            Class used for reading and writing a test run
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestRun.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestRun.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="testRunElement">The XElement representing the test run</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.MeterID">
+            <summary>
+            Gets or sets the Manufacturer Serial Number
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.TestDate">
+            <summary>
+            Gets or sets the date of the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.MeterType">
+            <summary>
+            Gets or sets the type of the meter tested
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.ProgramName">
+            <summary>
+            Gets or sets the name of the program used to test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.SWVersion">
+            <summary>
+            Gets or sets the software version
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.Tests">
+            <summary>
+            Gets the list of tests that were run
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestRun.XElement">
+            <summary>
+            Gets the TestRun as a XElement node.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.Test">
+            <summary>
+            Class used for reading and writing a test node
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.Test.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.Test.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="testElement">The XElement node containing the test</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Test.Name">
+            <summary>
+            Gets or sets the name of the test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Test.Result">
+            <summary>
+            Gets or sets the result of the test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Test.Reason">
+            <summary>
+            Gets or sets the reason for the result
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Test.TestDetails">
+            <summary>
+            Gets the list of test details for the test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.Test.XElement">
+            <summary>
+            Gets the XElement representation for the test node
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.TestDetail">
+            <summary>
+            Class used for reading and writing a test detail node
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestDetail.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestDetail.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the detail item.</param>
+            <param name="result">The result of the test detail</param>
+            <param name="details">The expected value</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestDetail.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the detail item.</param>
+            <param name="result">The result of the test detail</param>
+            <param name="details">The expected value</param>
+            <param name="reason">The reason for the result</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestDetail.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The name of the detail item.</param>
+            <param name="result">The result of the test detail</param>
+            <param name="details">The details for the result.</param>
+            <param name="reason">The reason for the result.</param>
+            <param name="additionalDetails">The additional details for the result.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.TestDetail.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="testDetailElement">The xml element to create it from.</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.Name">
+            <summary>
+            Gets or sets the name of the test detail
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.Details">
+            <summary>
+            Gets or sets the details value of the test detail
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.AdditionalDetails">
+            <summary>
+            Gets or sets the additional details value of the test detail
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.Result">
+            <summary>
+            Gets or sets the result of the test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.Reason">
+            <summary>
+            Gets or sets the reason for the result
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.TestDetail.XElement">
+            <summary>
+            Gets the XElement representation of the xml node
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ClearActivityStatusTest">
+            <summary>
+            Validation test that clears the activity status
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ClearActivityStatusTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ShowCounters">
+            <summary>
+            Shows the activity counters.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearEventLogs">
+            <summary>
+            Clears the event logs
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearSiteScanDiagCounts">
+            <summary>
+            Clears the SiteScan Diag counters
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearRemovalTampers">
+            <summary>
+            Clears the removal tampers
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearInversionTampers">
+            <summary>
+            Clears the inversion tampers
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearProgrammedCount">
+            <summary>
+            Clears the number of times programmed.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearOutageCount">
+            <summary>
+            Clears the power outage count
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.ClearDemandResetCount">
+            <summary>
+            Clears the demand reset count
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.GetClearCountDetails(System.Int32)">
+            <summary>
+            Displays the details for the cleared count results.
+            </summary>
+            <param name="count">The count of items.</param>
+            <returns>Details from clearing the count</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearActivityStatusTest.GetEventLogCountDetails(System.Int32,System.Int32)">
+            <summary>
+            Displays the details for the cleared event log count results.
+            </summary>
+            <param name="clearedEventCount">The count of log cleared events in event log</param>
+            <param name="totalEventCount">The count of items in event log.</param>
+            <returns>Details from cleared event log count</returns>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ClearBillingTest">
+            <summary>
+            Validation test that clears the billing registers
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearBillingTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearBillingTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearBillingTest.ClearBilling">
+            <summary>
+            Clears the billing registers
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearBillingTest.DisplayRegisterValues(System.String)">
+            <summary>
+            Displays the registers values.
+            </summary>
+            <param name="strPrefix">The prefix to show before the register value name.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ClearBillingTest.AddMeasurementDetail(System.String,Itron.Metering.DeviceDataTypes.Measurement)">
+            <summary>
+            Adds a test detail for the specified measurement.
+            </summary>
+            <param name="strPrefix">The prefix to use.</param>
+            <param name="currentMeasurement">The measurement to add.</param>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ClearBillingTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ConnectDisconnectTest">
+            <summary>
+            Validation test that the connect disconnect switch works
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ConnectDisconnectTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.ConnectMeter">
+            <summary>
+            Issues the connect command to the meter.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.CheckStatus(System.Boolean)">
+            <summary>
+            Checks the connection status of the meter.
+            </summary>
+            <param name="bConnected">Whether or not the meter should be connected</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.GetConnectedDetails(System.Boolean,System.Boolean)">
+            <summary>
+            Displays the details for the connected status results.
+            </summary>
+            <param name="connectedActual">Whether or not the meter is in a connected state.</param>
+            <param name="connectedExpected">Whether or not the meter should be in a connected state.</param>
+            <returns>Details from cleared event log count</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.GetLoadVoltageDetails(System.Boolean,System.Boolean)">
+            <summary>
+            Displays the details for the Load Voltage Present status results.
+            </summary>
+            <param name="loadVoltageActual">Whether or not the meter does have load voltage present.</param>
+            <param name="loadVoltageExpected">Whether or not the meter should have load voltage present.</param>
+            <returns>Details from cleared event log count</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.DisconnectMeter">
+            <summary>
+            Issues the disconnect command to the meter.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.DetermineReason(Itron.Metering.Device.RemoteConnectResult,Itron.Metering.Device.ConnectDisconnectResponse)">
+            <summary>
+            Gets the reason for the specified result.
+            </summary>
+            <param name="connectResult">The result to get the reason for.</param>
+            <param name="connectResponse">The response to get the reason for.</param>
+            <returns>The reason for the result as a string.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.DetermineDetails(Itron.Metering.Device.RemoteConnectResult,Itron.Metering.Device.ConnectDisconnectResponse)">
+            <summary>
+            Gets the details for the specified result.
+            </summary>
+            <param name="connectResult">The result to get the reason for.</param>
+            <param name="connectResponse">The response to get the reason for.</param>
+            <returns>Details for the result.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ConnectDisconnectTest.GetResultString(Itron.Metering.Device.RemoteConnectResult,Itron.Metering.Device.ConnectDisconnectResponse)">
+            <summary>
+            Gets the results string for the boolean expression
+            </summary>
+            <param name="connectResult">The result to get the reason for.</param>
+            <param name="connectResponse">The response to get the reason for.</param>
+            <returns>Passed if the value is true. Failed otherwise.</returns>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.DeviceStatusTest">
+            <summary>
+            Validation test the checks the device status
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckLPRunning">
+            <summary>
+            Checks the Load Profile running flag and verifies that it should be running.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.GetRFLANMac">
+            <summary>
+            Gets the RFLAN MAC address from the meter.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckRegisterFWVersion">
+            <summary>
+            Checks the Register FW version
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckRFLANFWVersion">
+            <summary>
+            Checks the RFLAN FW Version
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckZigBeeFWVersion">
+            <summary>
+            Checks the ZigBee FW Version
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckDisplayFWVersion">
+            <summary>
+            Checks the display FW Version
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.CheckDeviceErrors">
+            <summary>
+            Checks for device errors
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.DeviceStatusTest.GetFWVersionDetails(System.String,System.String)">
+            <summary>
+            Displays the details for the FW version check results.
+            </summary>
+            <param name="actualVersion">Meter's FW version.</param>
+            <param name="expectedVersion">Active FW file's version</param>
+            <returns>Details of the FW version check results.</returns>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.DeviceStatusTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ZigBeeRadioTest">
+            <summary>
+            Validation test that verifies the ZigBee radio is working correctly
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ZigBeeRadioTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ZigBeeRadioTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ZigBeeRadioTest.TestZigBeeConnection">
+            <summary>
+            Tests the ZigBee Connection
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ZigBeeRadioTest.LogonViaZigBee(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Connects to the meter using ZigBee
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ZigBeeRadioTest.CreateZigBeeRadio(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Creates the communications object for the radio
+            </summary>
+            <param name="radioToken">The radio token to use.</param>
+            <returns>The communications object.</returns>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ZigBeeRadioTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.NormalDisplayTest">
+            <summary>
+            Validation test the shows the normal display
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.NormalDisplayTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.NormalDisplayTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.NormalDisplayTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ValidateProgramTest">
+            <summary>
+            Validation test that validates the program
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateProgramTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateProgramTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidateProgramTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest">
+            <summary>
+            Validation test that validates the security keys
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.ValidateOpticalPasswords">
+            <summary>
+            Validates the optical passwords
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.ValidateDESKeys">
+            <summary>
+            Validates the DES Keys
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.ValidateEnhancedSecurityKeys">
+            <summary>
+            Validates the enhanced security keys
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.ValidateHANKeys">
+            <summary>
+            Validates the HAN keys
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidateSecurityKeysTest.GetSecurityValidationDetails(Itron.Metering.Device.ProcedureResultCodes)">
+            <summary>
+            Displays the details for a security validation.
+            </summary>
+            <param name="ValidationResult">The result of the security validation.</param>
+            <returns>Details from security validation.</returns>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ValidationTest">
+            <summary>
+            Base class for all validation tests.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.CustomerValidation.ValidationTest.FatalErrorEvent">
+            <summary>
+            Event that is raised when a fatal error occurs
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.RunTest">
+            <summary>
+            Runs the test.
+            </summary>
+            <returns>The test results</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.Abort">
+            <summary>
+            Aborts the current test
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidationTest.TestName">
+            <summary>
+            Gets the name of the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidationTest.TestID">
+            <summary>
+            Gets the type of the test.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidationTest.IsAborted">
+            <summary>
+            Gets whether or not the test has been aborted
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.#ctor(Itron.Metering.Communications.ICommunications,System.UInt32,System.String,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">The communications object.</param>
+            <param name="uiBaudRate">The baud rate to use.</param>
+            <param name="programFile">The program file to use for the test.</param>
+            <param name="authKey">The signed authorization key to use.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.GetResultString(System.Boolean)">
+            <summary>
+            Gets the results string for the boolean expression
+            </summary>
+            <param name="bPassed">Whether or not the test passed</param>
+            <returns>Passed if the value is true. Failed otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.GetResultString(System.Boolean,System.Boolean)">
+            <summary>
+            Gets the results string for the boolean expression
+            </summary>
+            <param name="bSkipped">Whether or not the test was skipped</param>
+            <param name="bPassed">Whether or not the test passed</param>
+            <returns>Passed if the value is true. Failed otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.GetTestResultString(System.Boolean,System.Boolean)">
+            <summary>
+            Gets the results string for the boolean expression
+            </summary>
+            <param name="bSkipped">Whether or not the test was skipped</param>
+            <param name="bPassed">Whether or not the test passed</param>
+            <returns>Passed if the value is true. Failed otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.LogonToDevice">
+            <summary>
+            Logs on to the specified device.
+            </summary>
+            <returns>The response of the logon.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.CreateDevice(Itron.Metering.Communications.PSEM.CPSEM,Itron.Metering.Device.SignedAuthorizationKey)">
+            <summary>
+            Creates a new device object
+            </summary>
+            <param name="psem">The current PSEM object</param>
+            <param name="key">Signed authorization security key</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.GetPasswords">
+            <summary>
+            Gets the list of available passwords
+            </summary>
+            <returns>The list of passwords.</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.ConvertYesOrNo(System.Boolean)">
+            <summary>
+            Converts a boolean to a yes or no string
+            </summary>
+            <param name="bYes">The boolean value</param>
+            <returns>Yes if the value is true No otherwise</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.AddTestDetail(System.String,System.String,System.String)">
+            <summary>
+            Adds a new test detail to the results file.
+            </summary>
+            <param name="name">The name of the detail</param>
+            <param name="result">The meter value</param>
+            <param name="details">The details of the detail</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.AddTestDetail(System.String,System.String,System.String,System.String)">
+            <summary>
+            Adds a new test detail to the results file.
+            </summary>
+            <param name="name">The name of the detail</param>
+            <param name="result">The result</param>
+            <param name="details">The details of the detail</param>
+            <param name="reason">The reason for the result</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.AddTestDetail(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Adds a new test detail to the results file.
+            </summary>
+            <param name="name">The name of the detail</param>
+            <param name="result">The result</param>
+            <param name="details">The details of the detail</param>
+            <param name="reason">The reason for the result</param>
+            <param name="additionalDetails">The additional details for the result.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.DetermineReason(Itron.Metering.Communications.PSEM.PSEMResponse)">
+            <summary>
+            Determines the reason for a failure
+            </summary>
+            <param name="response">The PSEM response</param>
+            <returns>The reason for the failure</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.DetermineReason(Itron.Metering.Device.ItronDeviceResult)">
+            <summary>
+            Determines the reason for a failure
+            </summary>
+            <param name="result">The result</param>
+            <returns>The reason for the failure</returns>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.OnFatalError(Itron.Metering.Utilities.ItronErrorEventArgs)">
+            <summary>
+            Raises a FatalErrorEvent for this test.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTest.GetClearDetails(System.Boolean)">
+            <summary>
+            Displays the details for a clear operation.
+            </summary>
+            <param name="cleared">Whether the clear succeeded</param>
+            <returns>Details from clearing operation</returns>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_Comm">
+            <summary>
+            Communications object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_uiBaudRate">
+            <summary>
+            Baud rate for communications
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_strProgramFile">
+            <summary>
+            The program file that should be used to validate the meter.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_AmiDevice">
+            <summary>
+            The device object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_bTestPassed">
+            <summary>
+            Whether or not the test passed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_bTestSkipped">
+            <summary>
+            Whether or not the test was skipped.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_TestResults">
+            <summary>
+            The current results for this test.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_AuthorizationKey">
+            <summary>
+            The Authorization key to use to log on to the meter.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTest.m_bAborted">
+            <summary>
+            Whether or not the test has been aborted
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ValidationTestID">
+            <summary>
+            Validation Test Identifiers
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.DeviceStatus">
+            <summary>
+            Checks the device status
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ValidateProgram">
+            <summary>
+            Validates the program
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ShowNormalDisplay">
+            <summary>
+            Show the normal display items
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ZigBeeRadioTest">
+            <summary>
+            Makes sure that ZigBee is functioning properly
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ValidateSecurityKeys">
+            <summary>
+            Validates all security keys
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ConnectDisconnect">
+            <summary>
+            Tests the functionality of the disconnect switch
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ClearBilling">
+            <summary>
+            Clears the billing registers
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.CustomerValidation.ValidationTestID.ClearActivityStatus">
+            <summary>
+            Clears the activity status
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.CustomerValidation.ValidationTestRun">
+            <summary>
+            Class used to read and write the file describing the tests included in a test run
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTestRun.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strFilePath">The path to the test run file.</param>
+            <summary>
+            Loads the Test Run file.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTestRun.Save">
+            <summary>
+            Saves the Test Run file
+            </summary>
+            <summary>
+            Loads the Test Run file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.CustomerValidation.ValidationTestRun.SelectedTestIDs">
+            <summary>
+            Gets the list of validation test IDs
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.CustomerValidation.ValidationTestRun.Load">
+            <summary>
+            Loads the Test Run file.
+            </summary>
+        </member>
+    </members>
+</doc>

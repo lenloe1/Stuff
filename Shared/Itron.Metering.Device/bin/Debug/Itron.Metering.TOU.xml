@@ -1,0 +1,3453 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.TOU</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.TOU.ANSITOUSchedule">
+            <summary>
+            ANSI TOU Schedule class - Used for reading TOU out of the meter
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.ANSITOUSchedule.#ctor">
+            <summary>
+            Default ANSITOUSchedule constructor
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.CDayType">
+            <summary>
+            This class represents a day type in the TOU Schedule through 
+            what type of day it is (holiday or normal) and what index 
+            the day type can be located at in holiday or normal day arrays.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CDayType.m_eDayType">
+            <summary>
+            Represents the Type of the DayType (Holiday or Normal)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CDayType.m_intDayIndex">
+            <summary>
+            Represents the Index of the DayType.  This will index into
+            holiday and normal day arrays.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CDayType.#ctor(Itron.Metering.TOU.eDayType,System.Int32)">
+            <summary>
+            Constructor to create a CDayType object and set member variables
+            </summary>
+            <param name="eType">
+            The Type of DayType
+            </param>
+            <param name="intIndex">
+            The Index of the DayType
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CDayType.UsedByTypicalWeek(Itron.Metering.TOU.CTOUSchedule)">
+            <summary>
+            This method looks to see if this day type is being used within
+            the typical week of the given TOU schedule.
+            </summary>
+            <param name="sched">
+            Represents the TOU Schedule to search within.
+            </param>
+            <returns>
+            Returns true if this day type is used in the typical week and
+            false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved method from Day Types Form.cs  
+        </member>
+        <member name="M:Itron.Metering.TOU.CDayType.UsedByHoliday(Itron.Metering.TOU.CTOUSchedule)">
+            <summary>
+            This method looks to see if this day type is being used in a 
+            holiday within the given TOU Schedule
+            </summary>
+            <param name="sched">
+            Represents the TOU Schedule to search within.
+            </param>
+            <returns>
+            Returns true if this day type is used in a holiday and
+            false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved method from Day Types Form.cs  
+        </member>
+        <member name="P:Itron.Metering.TOU.CDayType.Type">
+            <summary>
+            Property to get the type of the DayType
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CDayType.Index">
+            <summary>
+            Property to get the index of the DayType
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="T:Itron.Metering.TOU.CEvent">
+            <summary>
+            Represents an event that takes place during a year.  This information
+            includes the type of event (Season or Holiday), the date, and name.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CEvent.m_Date">
+            <summary>
+            Represents the date of the event
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CEvent.m_intIndex">
+            <summary>
+            Represents the index of the event in the Season or Holiday Collection
+            depending upon the event type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CEvent.m_eEventType">
+            <summary>
+            Represents the type of event, rather it be a Season or a Holiday
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CEvent.m_strName">
+            <summary>
+            Represents the name of the event(if the event is a Season the name will 
+            be season, if the even is a holiday the name will be the name of the 
+            holiday)
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CEvent.#ctor(System.DateTime,Itron.Metering.TOU.eEventType,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the Event object
+            </summary>
+            <example>
+            <code>
+            CEvent event = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2, "Christmas");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            04/26/06 rrr N/A	 N/A	Added a string parameter and instance variable 
+            							initialization
+        </member>
+        <member name="M:Itron.Metering.TOU.CEvent.CompareTo(System.Object)">
+            <summary>
+            Used to be able to compare two CEvent objects based on the date
+            </summary>
+            <param name="obj">
+            The event to compare to the current event
+            </param>
+            <returns>
+            An int that represents the objects being equal, less than, or greater than
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CEvent.Date">
+            <summary>
+            Property to get/set the Event Date
+            </summary>
+            <example>
+            <code>
+            CEvent event = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2, "Christmas");
+            DateTime temp = event.Time;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            06/29/06 mah                Added set method
+        </member>
+        <member name="P:Itron.Metering.TOU.CEvent.Type">
+            <summary>
+            Property to get the Event Type (Holiday or Season)
+            </summary>
+            <example>
+            <code>
+            CEvent event = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2, "Christmas");
+            eEventType temp = event.Type;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CEvent.Index">
+            <summary>
+            Property to get the Event Index.  This index will tell you the 
+            index to look at in the Season or Holiday collection depending on the
+            Event Type
+            </summary>
+            <example>
+            <code>
+            CEvent event = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2, "Christmas");
+            int intIndex = event.Index;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class 
+            08/07/06 ach N/A     N/A    added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CEvent.Name">
+            <summary>
+            Property to get the name of the event.  Will return the word season is we
+            have a season or the name of a holiday
+            </summary>
+            <example>
+            <code>
+            CEvent event = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2, "Christmas");
+            string strName = event.Name;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/26/06 rrr N/A	 N/A	Added property to get the value of the new
+            							name instance variable 
+        </member>
+        <member name="T:Itron.Metering.TOU.CEventCollection">
+            <summary>
+            Represents a list of events that happen during a year
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CEventCollection.#ctor">
+            <summary>
+            Creates an instance of the Event Collection object
+            </summary>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CEventCollection.Item(System.Int32)">
+            <summary>
+            Gets an Event at an index of the EventCollection.  Allows access
+            to elements like an array
+            </summary>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            CEvent temp = coll[0];
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CEventCollection.Add(Itron.Metering.TOU.CEvent)">
+            <summary>
+            Adds an Event to the end of the EventCollection
+            </summary>
+            <param name="objToAdd">
+            The Event to be added
+            </param>
+            <returns>
+            The zero base index of the Event added
+            </returns>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            coll.Add(new CEvent());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CEventCollection.Insert(System.Int32,Itron.Metering.TOU.CEvent)">
+            <summary>
+            Adds an Event to the EventCollection at the given index
+            </summary>
+            <param name="intIndex">
+            Index to insert the Event into in the collection
+            </param>
+            <param name="objToAdd">
+            The Event to be added
+            </param>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            coll.Insert(3, new CEvent());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CEventCollection.IndexOf(Itron.Metering.TOU.CEvent)">
+            <summary>
+            Returns the index of the first occurance of the given Event.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="objFind">
+            Name of the Event to find the index of
+            </param>
+            <returns>
+            The index of the Event
+            </returns>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            CEvent temp = new CEvent();
+            coll.Add(temp);
+            int intIndex = coll.IndexOf(temp);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CEventCollection.Sort">
+            <summary>
+            Used to sort the event collection based on the date of the CEvent objects
+            </summary>
+            <example>
+            <code>
+            CEventCollection coll = new CEventCollection();
+            CEvent temp = new CEvent(new DateTime(2006,1,1), HOLIDAY, 2);
+            CEvent temp1 = new CEvent(new DateTime(2005,1,1), HOLIDAY, 2);
+            CEvent temp2 = new CEvent(new DateTime(2004,1,1), HOLIDAY, 2);
+            coll.Add(temp);
+            coll.Add(temp1);
+            coll.Add(temp2);
+            coll.Sort();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="T:Itron.Metering.TOU.FCSExport">
+            <summary>
+            Static class that contains functionality for exporting files for use with
+            the FCS system.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.FCSExport.#ctor">
+            <summary>
+            Constructor for FCSExport
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.FCSExport.ExportTOU(System.String,Itron.Metering.TOU.CTOUSchedule)">
+            <summary>
+            Exports the TOU file to the specified directory for use with FCS TOU reconfigure
+            </summary>
+            <param name="strExportDirectory">The directory to export the TOU file to.</param>
+            <param name="ExportedTOUSchedule">The TOU schedule to export.</param>
+            <exception cref="T:System.ArgumentException">Thrown when the Export Directory does not exist or the TOU file does not exist.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if the ExportedTOUSchedule object is null.</exception>
+        </member>
+        <member name="P:Itron.Metering.TOU.FCSExport.TOUExportVersion">
+            <summary>
+            Provides access to the string created to represent the TOU Export Version.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.CHoliday">
+            <summary>
+            Represents a holiday that takes place during the year
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_intHolidayID">
+            <summary>
+            Represents the ID of the holiday
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_strHolidayName">
+            <summary>
+            Represents the name of the holiday
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_dtHolidayDate">
+            <summary>
+            DateTime object that represents the month, day, year of the holiday.
+            If the Holiday is yearly, year will hold a default value of 2000.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_HolidayTypeIndex">
+            <summary>
+            Represents what type of Holiday this day is (Type 1 or Type 2)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_YearFrequency">
+            <summary>
+            Represents if the holiday occurs in a single year or every year.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_MoveFromSat">
+            <summary>
+            Represents where to move a Saturday holiday to
+            (Don't, Previous Friday, or Following Monday)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHoliday.m_MoveFromSun">
+            <summary>
+            Represents where to move a Sunday holiday to
+            (Don't, Previous Friday, or Following Monday)
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CHoliday.#ctor(System.Int32,System.String,System.DateTime,System.Int32,Itron.Metering.TOU.eFrequency)">
+            <summary>
+            Creates an instance of a Holiday object that does not move holidays.
+            This is used in conjunction with adding a fixed holiday which does 
+            not need to be moved as the date is specifically picked for a
+            specific day.
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday myHoliday = new CHoliday(2, "BDay", Date, 0, eFrequency.SINGLE);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            05/23/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CHoliday.#ctor(System.Int32,System.String,System.DateTime,System.Int32,Itron.Metering.TOU.eFrequency,Itron.Metering.TOU.eMoveHoliday,Itron.Metering.TOU.eMoveHoliday)">
+            <summary>
+            Creates an instance of a Holiday object that moves holidays based
+            upon given parameters.  This is used in conjuction with adding a
+            recurring holiday which can be moved if it falls on a Saturday or
+            Sunday.
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday myHoliday = new CHoliday(2, "BDay", Date, 0, eFrequency.SINGLE
+                                        eMoveHoliday.FRI, eMoveHoliday.MON);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            05/23/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.ID">
+            <summary>
+            Property to get the ID
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, singleYear);
+            int intID = hol.ID;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            05/23/06 ach N/A     N/A    Creation of class
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.Name">
+            <summary>
+            Properties to get and set the name
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, singleYear);
+            string strName = hol.Name;
+            hol.Name = "holiday2";
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            05/23/06 ach N/A     N/A    Creation of class
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.Date">
+            <summary>
+            Properties to get and set the Date
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, singleYear);
+            DateTime date = hol.Date;
+            hol.Date = date;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            05/23/06 ach N/A     N/A    Creation of class
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.Index">
+            <summary>
+            Properties to get and set the Type Index
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            bool singleYear = true;
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, singleYear);
+            int intTypeIndex = hol.Index;
+            hol.Index = 0;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            05/23/06 ach N/A     N/A    Creation of class
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.Frequency">
+            <summary>
+            Properties to get and set whether this holiday occurs in a single year
+            or multiple years.
+            </summary>
+            <example>
+            <code>
+            DateTime Date = new DateTime(2006, 5, 23);
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, eFrequency.SINGLE);
+            hol.Frequency = eFrequency.SINGLE;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            05/23/06 ach N/A     N/A    Creation of class
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.MoveSaturday">
+            <summary>
+            Property to get if and where a Saturday Holiday will be moved.
+            </summary>
+            <example>
+            <code>
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, false);
+            eMoveHoliday MoveSaturday = hol.MoveSaturday;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            07/04/06 ach N/A     N/A    Added ability to store moving individual
+                                        holidays 
+        </member>
+        <member name="P:Itron.Metering.TOU.CHoliday.MoveSunday">
+            <summary>
+            Property to get if and where a Sunday Holiday will be moved.
+            </summary>
+            <example>
+            <code>
+            CHoliday hol = new CHoliday(2, "holiday", Date, 0, false);
+            eMoveHoliday MoveSunday = hol.MoveSunday;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ----------------------------------------
+            07/04/06 ach N/A     N/A    Added ability to store moving individual
+                                        holidays 
+        </member>
+        <member name="T:Itron.Metering.TOU.CHolidayLists">
+            <summary>
+            This class holds all of the holiday lists and supports the
+            addition, deletion, and modification of individual lists
+            and holidays.  All holidays are stored in this class and
+            are accessed through selecting a 'current' list by it's ID
+            or name and having the methods to add, delete, and modify 
+            holidays apply to the current list.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_xmldomColl">
+            <summary>
+            Represents the Holiday List XML file
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_xmlnodelistLists">
+            <summary>
+            Holds all the holiday lists
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_xmlnodeCurrentList">
+            <summary>
+            Represents the holiday list currently being accessed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_xmlnodeCurrentHoliday">
+            <summary>
+            Represents the holiday currently being accessed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_xmlnodeRoot">
+            <summary>
+            Represents the root of all the holiday lists
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CHolidayLists.m_intNextID">
+            <summary>
+            Represents the next available ID a holiday or holiday list
+            can use.  All lists and holidays must have a unique ID for
+            compatability with previous TOU Schedules.  No list may have
+            the same ID as another list or as a holiday within any list.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.#ctor">
+            <summary>
+            Creates an instance of the Holiday Lists
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+            06/19/06 ach N/A     N/A    Updated ID management for compatability
+                                        with older TOU Schedules
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.ClearCurrentList">
+            <summary>
+            This class sets the current list to null to indicate that 
+            no list is currently being accessed.  This will be used when
+            adding a new list as no list should be accessed when a new list
+            is being added to the collection.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.NoListAccess">
+            <summary>
+            This class returns whether or not a list is currently being
+            accessed.  If no list is being accessed true is returned, if
+            a list is being accessed false is returned.
+            </summary>
+            <returns>
+            True if no list is being accessed, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.AddList(System.String)">
+            <summary>
+            This class takes a holiday list as an xml node and 
+            adds it to the collection of holiday lists.
+            </summary>
+            <param name="listName">
+            Represents the name of the new holiday list being added
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.DeleteList(System.String)">
+            <summary>
+            This class take a holiday list name and
+            deletes the list from the collection of holiday lists.  If
+            the List to be deleted is not in the collection of lists
+            an ArgumentException will be thrown by the call to RemoveChild.
+            </summary>
+            <param name="ListName">
+            Represents the name of the holiday list to delete
+            </param>
+            <exception cref="T:System.ArgumentException">
+            The list to be deleted is not in the collection of lists.
+            </exception>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.EmptyList(System.String,System.Int32)">
+            <summary>
+            This method removes all the children from the currently
+            accessed list and adds back the given name and id.  It
+            effectively removes all the holidays from the list so the
+            list can be easily rebuilt.
+            </summary>
+            <param name="ListName">
+            Holds the name of the list that is being emptied.
+            </param>
+            <param name="ListID">
+            Holds the ID of the list that is being emptied.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/09/06 ach N/A	 N/A	Created method to assist in saving lists
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.AddHoliday(Itron.Metering.TOU.CHoliday)">
+            <summary>
+            This class adds the holiday to the currently accessed holiday
+            list.
+            </summary>
+            <param name="HolidayToAdd">
+            Represents a Holiday type to be added to the currently accessed list.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.HolidayToXml(Itron.Metering.TOU.CHoliday)">
+            <summary>
+            This method takes a Holiday Object and creates a 
+            corresponding xml node.
+            </summary>
+            <param name="Holiday">
+            Represents the Holiday who information will be entered
+            into a xml node.
+            </param>
+            <returns>
+            An xml node representing the Holiday. 
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.XmlToHoliday(System.Xml.XmlNode)">
+            <summary>
+            This class takes a xml node of a holiday and converts it
+            to a holiday type.
+            </summary>
+            <param name="HolNode">
+            Represents a xml node of a holiday.
+            </param>
+            <returns>
+            A holiday type that corresponds to the xml node parameter.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.ListAtIndex(System.Int32)">
+            <summary>
+            This method selects the list located at the specified index.
+            </summary>
+            <param name="intIndex">
+            The index of the list to be returned
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            If the provided index is less than zero or greater than the
+            number of lists in the collection.
+            </exception>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.ListByName(System.String)">
+            <summary>
+            This class selects the list by the given name.  If the name
+            provided is not in the current list is set to null.
+            </summary>
+            <param name="strName">
+            Represents the name of the list to be selected.
+            </param>
+            Revision History
+            M/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.ListByID(System.Int32)">
+            <summary>
+            This method selects the list by the given ID.  If there is no
+            list with a matching ID then current list is set to null.
+            </summary>
+            <param name="listID">
+            Represents the id of the list to be selected.
+            </param>
+            Revision History
+            M/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.Count">
+            <summary>
+            This class returns how many lists are in the collection.
+            </summary>
+            <returns>
+            The number of lists in the collection.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.GetHolidays">
+            <summary>
+            This class returns an array of holidays contained in the current list.
+            Note: This array is a copy of what the list contains and thus any 
+            changes made in the array once retrieved will not be reflected in the
+            list unless the modify holiday method is used when a holiday is changed.
+            </summary>
+            <returns>
+            An array of Holidays that the current list contains.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.Save">
+            <summary>
+            This method saves the current list to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Added save ability for lists
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.UpdateNextID">
+            <summary>
+            This method resets all the IDs starting at 1 so that if any list
+            or holiday was deleted there are no gaps between IDs.  The method
+            will give each list and holiday a new ID so that each are unique
+            and there will be no spaces between holidays or lists if there
+            are deletions.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/19/06 ach N/A	 N/A    Updated ID management for compatability
+                                        with older TOU Schedules.
+        </member>
+        <member name="M:Itron.Metering.TOU.CHolidayLists.UpdateXmlFormat">
+            <summary>
+            This method updates the Xml format so that the node for 'EveryYear'
+            will have attributes concerning where to move the holiday if it 
+            falls on a Saturday or Sunday.  This method will find all the nodes
+            of 'EveryYear' and if they do not contain attributes will create 
+            attributes for moving Saturday and Sunday holidays to whatever the
+            data items stored for moving Saturday and Sunday holidays exist 
+            from the previous editor.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/04/06 ach N/A	 N/A    Updated to have individual holidays 
+                                        store where to move weekend holidays
+        </member>
+        <member name="P:Itron.Metering.TOU.CHolidayLists.Name">
+            <summary>
+            Property to get and set (rename) the name of the 
+            currently accessed list.  
+            Warning: Programmer should check to ensure no other list has
+            the same name before using the set property as this could cause
+            errors.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/02/06 ach N/A	 N/A	Creation of Class
+            02/06/07 ach 8.0     134    Added support for quotes and appostrophes
+        </member>
+        <member name="P:Itron.Metering.TOU.CHolidayLists.NextID">
+            <summary>
+            Property to get the next ID that can be used for a holiday or 
+            a holiday list.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/19/06 ach N/A	 N/A    Updated ID management for compatability
+                                        with older TOU Schedules.
+        </member>
+        <member name="P:Itron.Metering.TOU.CHolidayLists.ID">
+            <summary>
+            Property to get the ID of the currently accessed list
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/09/06 ach N/A	 N/A	Added property to get ID
+        </member>
+        <member name="P:Itron.Metering.TOU.CHolidayLists.NumberOfFixedHolidays">
+            <summary>
+            Property to get the number of fixed holidays.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 ach N/A	 N/A	Added property
+        </member>
+        <member name="P:Itron.Metering.TOU.CHolidayLists.NumberOfRecurringHolidays">
+            <summary>
+            Property to get the number of recurring holidays.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 ach N/A	 N/A	Added property
+        </member>
+        <member name="T:Itron.Metering.TOU.Int16Collection">
+            <summary>
+            This class is a collection of integers that will be used in
+            the seasons class to hold the pattern ids for the various
+            holiday and normal day types.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.Int16Collection.Item(System.Int32)">
+            <summary>
+            Allows for indexing into the collection like an array.
+            </summary>
+            <param name="index">
+            The index of the int that will be returned.
+            </param>
+            <returns>
+            The integer at the given location
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.Int16Collection.Add(System.Int16)">
+            <summary>
+            Adds the value to the collection.
+            </summary>
+            <param name="value">
+            The integer value that is to be added to the collection.
+            </param>
+            <returns>
+            The index where the value was added.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.Int16Collection.IndexOf(System.Int16)">
+            <summary>
+            Returns the value of the given value.
+            </summary>
+            <param name="value">
+            The value whose index is to be found.
+            </param>
+            <returns>
+            The index of the given value in the collection.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.Int16Collection.Insert(System.Int32,System.Int16)">
+            <summary>
+            Inserts the given value at the specified index.
+            </summary>
+            <param name="index">
+            The location in the collection where the value will be added.
+            </param>
+            <param name="value">
+            The value that will be inserted at the given index.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.Int16Collection.Remove(System.Int16)">
+            <summary>
+            Removes the specified value from the collection.
+            </summary>
+            <param name="value">
+            The value that will be removed from the collection.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Creation of class  
+        </member>
+        <member name="T:Itron.Metering.TOU.CPattern">
+            <summary>
+            Represents a pattern in a TOU Schedule through holding the
+            pattern ID and Name as well as a collection of switchpoints
+            that represent what rate or outputs are used at what times.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CPattern.m_intPatternID">
+            <summary>
+            Represents the PatternID
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CPattern.m_strPatternName">
+            <summary>
+            Represents the PatternName
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CPattern.m_colSwitchPoints">
+            <summary>
+            List of SwitchPoint objects which has the start time, stop time,
+            rateoutput index, and the type (Rate or Output).  This list will
+            be sorted by the start time.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CPattern.#ctor(System.Int32,System.String,Itron.Metering.TOU.CSwitchPointCollection)">
+            <summary>
+            Creates an instace of a Pattern object
+            </summary>
+            <example>
+            <code>
+            CPattern patt = new CPattern(2, "Pattern  1", new CSwitchPointCollection());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CPattern.Equals(Itron.Metering.TOU.CPattern)">
+            <summary>
+            This method checks to see if the given and current patterns 
+            contain the same switchpoints.
+            </summary>
+            <param name="Pattern"></param>
+        </member>
+        <member name="P:Itron.Metering.TOU.CPattern.ID">
+            <summary>
+            Property to get the Pattern ID
+            </summary>
+            <example>
+            <code>
+            CPattern myPattern = new CPattern(2, "Pattern  1", new CSwitchPointCollection());
+            int intID = myPattern.ID;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CPattern.Name">
+            <summary>
+            Property to get and set Pattern Name
+            </summary>
+            <example>
+            <code>
+            CPattern myPattern = new CPattern(2, "Pattern  1", new CSwitchPointCollection());
+            string strName = myPattern.Name;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class 
+            07/26/06 ach N/A     N/A    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CPattern.SwitchPoints">
+            <summary>
+            Property to get and set the SwitchPoints of the Pattern sorted by start time
+            </summary>
+            <example>
+            <code>
+            CPattern myPattern = new CPattern(2, "Pattern  1", new CSwitchPointCollection());
+            CSwitchPointCollection coll = myPattern.SwitchPoints;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/26/06 ach N/A     N/A    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CPattern.OverlappingRates">
+            <summary>
+            Property to get if the pattern has overlapping rates
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/26/07 ach 8.0     124    Added get property
+        </member>
+        <member name="P:Itron.Metering.TOU.CPattern.FullCoverage">
+            <summary>
+            Property to get if the pattern covers all 24 hours
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/26/07 ach 8.0     124    Added get property
+        </member>
+        <member name="T:Itron.Metering.TOU.CPatternCollection">
+            <summary>
+            Class Represents the list of patterns availabe in a TOU Schedule
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CPatternCollection.#ctor">
+            <summary>
+            Creates an instance of the Pattern Collection object
+            </summary>
+            <example>
+            <code>
+            CPatternCollection coll = new CPatternCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CPatternCollection.FindPatternID(Itron.Metering.TOU.CSwitchPointCollection)">
+            <summary>
+            THis method looks for a pattern matching the given collection
+            of switchpoints.
+            </summary>
+            <param name="SwitchPoints">The collection of switchpoints to search for.</param>
+            <returns>It returns the matching pattern's ID or -1 for no match.</returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CPatternCollection.SearchID(System.Int32)">
+            <summary>
+            Searches the collection for the given pattern ID and returns the index.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="intPatternID">
+            The ID to search for
+            </param>
+            <returns>
+            The index of the Pattern ID
+            </returns>
+            <example>
+            <code>
+            CPatternCollection coll = new CPatternCollection();
+            CPattern temp = new CPattern();
+            coll.Add(temp);
+            int intIndex = coll.SearchID(temp.PatternID);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CPatternCollection.SearchName(System.String)">
+             <summary>
+             Searches the collection for the given pattern name and returns the index.
+             If the item is not found in the collection then an ArgumentException 
+             will be thrown
+             </summary>
+             <param name="strPatternName">
+             The pattern name to search for
+             </param>
+             <returns>
+             The index of the pattern 
+             </returns>
+             <remarks>
+             Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+             08/15/07 MAH		Created			
+            
+            	</remarks>
+        </member>
+        <member name="M:Itron.Metering.TOU.CPatternCollection.GetNextPatternID">
+            <summary>
+            Returns the next available (unused) pattern ID.  This method assumes
+            that gaps are allowed between pattern IDs
+            </summary>
+            <returns>
+            An ID that can be used to create a new pattern 
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/04/06 mah N/A	 N/A	Added this method  
+        </member>
+        <member name="T:Itron.Metering.TOU.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.Properties.Resources.SAVING_TOU_SCHEDULE">
+            <summary>
+              Looks up a localized string similar to Saving TOU Schedule....
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.SCSTOUSchedule">
+            <summary>
+            SCS TOU Schedule class - Used for reading TOU out of the meter
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.SCSTOUSchedule.#ctor">
+            <summary>
+            Default SCSTOUSchedule constructor
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.CSeason">
+            <summary>
+            Class represents a season in a TOU Schedule through storing
+            the season ID, Name, and arrays of Holidays and NormalDays.
+            The arrays hold the patternID's to use for the particular Holidays
+            and Normal Days.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSeason.m_intSeasonID">
+            <summary>
+            Represents the Season ID for the season
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSeason.m_strSeasonName">
+            <summary>
+            Represents the name of the season
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSeason.m_aintNormalDays">
+            <summary>
+            List of Pattern ID's for the normal days within the Season
+            Note: This should be changed to a List if the project
+            is switched to the .Net 2.0 Compact Framework.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSeason.m_aintHolidays">
+            <summary>
+            List of Pattern ID's for the holidays within the Season
+            Note: This should be changed to a List if the project
+            is switched to the .Net 2.0 Compact Framework.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSeason.m_TypicalWeek">
+            <summary>
+            The typical week for this season.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeason.#ctor(System.Int32,System.String,Itron.Metering.TOU.Int16Collection,Itron.Metering.TOU.Int16Collection,System.String[])">
+            <summary>
+            Creates an instance of a Season object
+            </summary>
+            <example>
+            <code>
+            CSeason mySeason = new CSeason(2, "Season 1", new int[4], new int[2]);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class 
+            04/16/14 jrf 3.50.78 489749 Added setting typical week.
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeason.ID">
+            <summary>
+            Property to get the SeasonID
+            </summary>
+            <example>
+            <code>
+            CSeason mySeason = new CSeason(2, "Season 1", new int[4], new int[2]);
+            int intID = mySeason.ID;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeason.Name">
+            <summary>
+            Property to get the Season name
+            </summary>
+            <example>
+            <code>
+            CSeason mySeason = new CSeason(2, "Season 1", new int[4], new int[2]);
+            string strName = mySeason.Name;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeason.NormalDays">
+            <summary>
+            Property to get the list of normal days for the season
+            </summary>
+            <example>
+            <code>
+            CSeason mySeason = new CSeason(2, "Season 1", new int[4], new int[2]);
+            int[] list = mySeason.NormalDays;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            06/28/06 ach N/A     N/A    Added the set property 
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeason.Holidays">
+            <summary>
+            Property to get the list of holidays for the season
+            </summary>
+            <example>
+            <code>
+            CSeason mySeason = new CSeason(2, "Season 1", new int[4], new int[2]);
+            int[] list = mySeason.Holidays;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            06/28/06 ach N/A     N/A    Added the set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeason.TypicalWeek">
+            <summary>
+            Property to get the typical week array.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeason.ResizeNormalDays(System.Int32)">
+            <summary>
+            This method will resize the normal day array so that it will 
+            hold the correct number of days with the correct pattern id.
+            Since day types can only be removed from the end, if the new length
+            is smaller then the array will be made smaller with the same
+            pattern ids remaining.  If the new length is larger then the
+            current day types will keep their pattern ids with new day types
+            being assigned the pattern id the first day type uses.
+            </summary>
+            <param name="nLength">
+            Represents the new length of the array.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/14/06 ach N/A	 N/A	Added to support removal of day types
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeason.ResizeHolidays(System.Int32)">
+            <summary>
+            This method will resize the holiday day array so that it will 
+            hold the correct number of days with the correct pattern id.
+            Since day types can only be removed from the end, if the new length
+            is smaller then the array will be made smaller with the same
+            pattern ids remaining.  If the new length is larger then the
+            current day types will keep their pattern ids with new day types
+            being assigned the pattern id the first day type uses.
+            </summary>
+            <param name="nLength">
+            Represents the new length of the array.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/14/06 ach N/A	 N/A	Added to support removal of day types
+        </member>
+        <member name="T:Itron.Metering.TOU.CSeasonCollection">
+            <summary>
+            Represents a list of seasons in a TOU Schedule
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.#ctor">
+            <summary>
+            Creates an instance of the Season Collection object
+            </summary>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CSeasonCollection.Item(System.Int32)">
+            <summary>
+            Gets/Sets a Season at an index of the SeasonCollection.  Allows access
+            to elements like an array
+            </summary>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            CSeason temp = coll[0];
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.Add(Itron.Metering.TOU.CSeason)">
+            <summary>
+            Adds a Season to the end of the SeasonCollection
+            </summary>
+            <param name="objToAdd">
+            The Season to be added
+            </param>
+            <returns>
+            The zero base index of the Season added
+            </returns>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            coll.Add(new CSeason());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.Insert(System.Int32,Itron.Metering.TOU.CSeason)">
+            <summary>
+            Adds a Season to the SeasonCollection at the given index
+            </summary>
+            <param name="intIndex">
+            Index to insert the Season into in the collection
+            </param>
+            <param name="objToAdd">
+            The Season to be added
+            </param>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            coll.Insert(3, new CSeason());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.IndexOf(Itron.Metering.TOU.CSeason)">
+            <summary>
+            Returns the index of the first occurance of the given Season.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="objFind">
+            Name of the Season to find the index of
+            </param>
+            <returns>
+            The index of the Season
+            </returns>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            CSeason temp = new CSeason();
+            coll.Add(temp);
+            int intIndex = coll.IndexOf(temp);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.SearchID(System.Int32)">
+            <summary>
+            Searches the collection for the given Season ID and returns the index.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="intSeasonID">
+            The ID to search for
+            </param>
+            <returns>
+            The index of the Season ID
+            </returns>
+            <example>
+            <code>
+            CSeasonCollection coll = new CSeasonCollection();
+            CSeason temp = new CSeason();
+            coll.Add(temp);
+            int intIndex = coll.SearchID(temp.SeasonID);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSeasonCollection.GetNextSeasonID">
+            <summary>
+            Returns the next available (unused) season ID.  This method assumes
+            that gaps are allowed between season IDs
+            </summary>
+            <returns>
+            An ID that can be used to create a new season 
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 mah N/A	 N/A	Added this method  
+        </member>
+        <member name="T:Itron.Metering.TOU.CSwitchPoint">
+            <summary>
+            Class represents a switch point in a pattern of a TOU Schedule.
+            Contains a start and stop time, whether the type is a rate or output
+            and an index that represents what rate or output in the arrays to use.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSwitchPoint.m_intStartTime">
+            <summary>
+            Variable represents the start time in minutes since 
+            midnight.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSwitchPoint.m_intStopTime">
+            <summary>
+            Variable represents the stop time in minute since
+            midnight
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSwitchPoint.m_intRateOutputIndex">
+            <summary>
+            Variable represents the the Rate or Output index used
+            to reference into the rate or output arrays depending
+            on switchpoint type.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CSwitchPoint.m_eSwitchPointType">
+            <summary>
+            variable represents the switch point type (Rate or Output)
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSwitchPoint.#ctor(System.Int32,System.Int32,System.Int32,Itron.Metering.TOU.eSwitchPointType)">
+            <summary>
+            Creates an instance of the SwitchPoint object
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint(0, 120, 2, RATE);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSwitchPoint.Equals(Itron.Metering.TOU.CSwitchPoint)">
+            <summary>
+            This method checks to see if the current switchpoint's properties
+            match those of the given switchpoint.
+            </summary>
+            <param name="SwitchPoint">The switchpoint to compare to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSwitchPoint.CompareTo(System.Object)">
+            <summary>
+            Used to be able to compare two CSwitchPoint objects based on the start time
+            </summary>
+            <param name="obj">
+            The switch point to compare to the current switch point
+            </param>
+            <returns>
+            An int that represents the objects being equal, less than, or greater than
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.StartTime">
+            <summary>
+            Property to get the StartTime which is represented as 
+            minutes since midnight
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint(0, 120, 2, RATE);
+            int intTime = myPoint.StartTime;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            01/26/07 ach N/A     N/A    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.StopTime">
+            <summary>
+            Property to get the Stop Time which is represented as minutes
+            since midnight
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint(0, 120, 2, RATE);
+            int intTime = myPoint.StopTime;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            01/22/07 ach 8.0     N/A    Modified get property to return 1440 if
+                                        stop time is 0
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.RateOutputIndex">
+            <summary>
+            Property to set/get the Rate or Output Index
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint(0, 120, 2, RATE);
+            int intIndex = myPoint.RateOutputIndex;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.SwitchPointType">
+            <summary>
+            Property to get and set the Switch Point Type
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint();
+            eSwitchPointType myType = myPoint.SwitchPointType;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            01/25/07 ach 8.0     N/A    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.TimeOfStart">
+            <summary>
+            Property to get the Time of the start point of the Switch Point Type
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint();
+            DateTime timeStart = myPoint.TimeOfStart;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/26/06 rrr N/A	 N/A	Added to convert the start time (which is in
+            							minutes since midnight) to a DateTime object 
+            06/19/06 mah                Added set method to allow updating of Switch Points
+            
+        </member>
+        <member name="P:Itron.Metering.TOU.CSwitchPoint.TimeOfStop">
+            <summary>
+            Property to get the Time of the stop point of the Switch Point Type
+            </summary>
+            <example>
+            <code>
+            CSwitchPoint myPoint = new CSwitchPoint();
+            DateTime timeStop = myPoint.TimeOfStop;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/26/06 rrr N/A	 N/A	Added to convert the stop time (which is in
+            							minutes since midnight) to a DateTime object 
+            01/25/07 ach 8.0     N/A    changed the set to set the stop time to 1440
+                                        if the stop time hour and minute are both 0
+        </member>
+        <member name="T:Itron.Metering.TOU.CSwitchPointCollection">
+            <summary>
+            Represents a list of switch points in a pattern
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CSwitchPointCollection.#ctor">
+            <summary>
+            Creates an instance of the switch point collection object
+            </summary>
+            <example>
+            <code>
+            CSwitchPointCollection coll = new CSwitchPointCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CSwitchPointCollection.Sort">
+            <summary>
+            Used to sort the switch point collection based on the start time
+            of the CSwitchPoint objects
+            </summary>
+            <example>
+            <code>
+            CSwitchPointCollection coll = new CSwitchPointCollection();
+            CSwitchPoint temp = new CSwitchPoint(120,280,2,RATE);
+            CSwitchPoint temp1 = new CSwitchPoint(0,50,2,RATE);
+            CSwitchPoint temp2 = new CSwitchPoint(50,120,2,RATE);
+            coll.Add(temp);
+            coll.Add(temp1);
+            coll.Add(temp2);
+            coll.Sort();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="T:Itron.Metering.TOU.eTypicalDay">
+            <summary>
+            Enumeration to represent the days of the week
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.SUNDAY">
+            <summary>
+            Represents Sunday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.MONDAY">
+            <summary>
+            Represents Monday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.TUESDAY">
+            <summary>
+            Represents Tuesday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.WEDNESDAY">
+            <summary>
+            Represents Wednesday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.THURSDAY">
+            <summary>
+            Represents Thursday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.FRIDAY">
+            <summary>
+            Represents Friday's position in the array
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypicalDay.SATURDAY">
+            <summary>
+            Represents Saturday's position in the array
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eDayType">
+            <summary>
+            Enumeration to represent the two DayTypes (Normal and Holiday)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eDayType.NORMAL">
+            <summary>
+            Normal day type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eDayType.HOLIDAY">
+            <summary>
+            Holiday day type
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eSwitchPointType">
+            <summary>
+            Enumeration to represent the two SwitchPointTypes (Rate and Output);
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eSwitchPointType.RATE">
+            <summary>
+            Rate switch point type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eSwitchPointType.OUTPUT">
+            <summary>
+            output switch point type
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eEventType">
+            <summary>
+            Enumeration to represent the two Event Types for a Year (Holiday and 
+            Season)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eEventType.SEASON">
+            <summary>
+            Season event type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eEventType.HOLIDAY">
+            <summary>
+            Holiday event type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eEventType.NO_EVENT">
+            <summary>
+            Used to indcate that there is no event
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eEventType.TO_DST">
+            <summary>
+            The Start of DST
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eEventType.FROM_DST">
+            <summary>
+            The End of DST
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eTypeIndex">
+            <summary>
+            enum to hold the holiday day types (Type 1 or Type 2)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypeIndex.TYPE_1">
+            <summary>
+            Represents the index for Holiday Type 1
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eTypeIndex.TYPE_2">
+            <summary>
+            Represents the index for Holiday Type 2
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eFrequency">
+            <summary>
+            enum to hold how often the holiday occurs (Single or Multi)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eFrequency.SINGLE">
+            <summary>
+            Represents a holiday that occurs in a single year
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eFrequency.MULTI">
+            <summary>
+            Represents a holiday that occurs every year (MULTIple years)
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.eMoveHoliday">
+            <summary>
+            enum to hold where a holiday that occurs over multiple years
+            is moved to if it falls on a weekend
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eMoveHoliday.DONT">
+            <summary>
+            Represents not moving the holiday if it falls on a weekend
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eMoveHoliday.FRI">
+            <summary>
+            Represents moving the holiday to the previous Friday
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.eMoveHoliday.MON">
+            <summary>
+            Represents moving the holiday to the following Monday
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.TOU.CTOUSchedule">
+            <summary>
+            Class to represent a TOU Schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.WEEKCOUNT">
+            <summary>
+            Number of Days in the Week
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.Q1000_DEVICE">
+            <summary>
+            Represents the name of the Q1000
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.SENTINEL_ADV_DEVICE">
+            <summary>
+            Represents the name of Sentinel Advanced
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.SENTINEL_BAS_DEVICE">
+            <summary>
+            Represents the name of Sentinel Basic
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.VECTRON_DEVICE">
+            <summary>
+            Represents the name of Vectron
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.CENTRON_DEVICE">
+            <summary>
+            Represents the name of Centron
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.CENTRON_MONO_DEVICE">
+            <summary>
+            Represents the name of Centron Mono
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.CENTRON_POLY_DEVICE">
+            <summary>
+            Represents the name of Centron Poly
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.CENTRON_POLY_DEVICE_OBSOLETE">
+            <summary>
+            Represents the name of Centron Poly
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.FULCRUM_DEVICE">
+            <summary>
+            Represents the name of Fulcrum
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.QUANTUM_DEVICE">
+            <summary>
+            Represents the name of Quantum
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.DMTMTR200_DEVICE">
+            <summary>
+            Represents the name of the 200 Series
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrTypicalWeek">
+            <summary>
+            Array that will have 7 strings to represent each of the 
+            seven days of the week.  The week starts on Sunday so index zero
+            will represent Sunday.  The strings contained within the array will
+            be the day type of that particular day (i.e. Sunday, Saturday, Weekday)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrNormalDays">
+            <summary>
+            StringCollection that contians the names of all of the normal days
+            that are available in the TOU Schedule (i.e. Sunday, Weekday)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrHolidays">
+            <summary>
+            StringCollection that holds the names of all the types of holidays
+            that are available in the TOU Schedule (i.e. Holiday Type 1)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrRates">
+            <summary>
+            StringCollection that holds the names of all of the Rates available
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrOutputs">
+            <summary>
+            Array that holds the names of all available outputs
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_colYears">
+            <summary>
+            Collection of year objects that will hold one year object for 
+            each of the years in the TOU Schedule.  This collection will be sorted
+            by year
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_colSeasons">
+            <summary>
+            Collection of season objects that will hold one season object for 
+            each of the available seasons in a TOU Schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_colPatterns">
+            <summary>
+            Collecton of pattern objects that will hold one pattern object for
+            each of the available patterns in a TOU Schedule 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrSupportedDevices">
+            <summary>
+            StringCollection of the names of the devices supported
+            for the current TOU Schedule.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_astrDeviceTypeNames">
+            <summary>
+            Array of the names of all of the possible device types supported
+            by this version of the TOU File.  This may be a superset
+            of the device types supported by any given instance of the TOU Schedule.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_xmldomSchedule">
+            <summary>
+            Variable used to represent the xml file
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_strFileName">
+            <summary>
+            Variable used to represent the file name of the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_strTOUName">
+            <summary>
+            Variable used to represent the TOU name of the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_intTOUID">
+            <summary>
+            Variable used to represent the TOU ID for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_intTOUExportCount">
+            <summary>
+            Variable used to represent the Export Version used in FCS Export.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_intStartYear">
+            <summary>
+            variable used to represent the Start Year for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_intDuration">
+            <summary>
+            Variable used to represent the Duration in years for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_strDescription">
+            <summary>
+            Variable used to represent the the Description for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_dtDateCreated">
+            <summary>
+            Variable used to represent the Date Created for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_dtDateModified">
+            <summary>
+            Variable used to represent the Date Modified for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_intHolidayListID">
+            <summary>
+            Variable used to represent the applied Holiday List ID 
+            for the current schedule
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_xmlWriter">
+            <summary>
+            Variable used to write the TOU Schedule out to file
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_blnUseInvariant">
+            <summary>
+            Variable used to store whether to use a specific 
+            culture format with dates
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_CultureFormat">
+            <summary>
+            Variable to hold what culture information to use with date formating
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_strProductName">
+            <summary>
+            Variable to hold the product name for file writing purposes
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUSchedule.m_strVersionNumber">
+            <summary>
+            Variable to hold the product version for file writing purposes
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.TOU.CTOUSchedule.ShowProgressEvent">
+            <summary>
+                Event inherited from the IProgressable interface
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.TOU.CTOUSchedule.HideProgressEvent">
+            <summary>
+                Event inherited from the IProgressable interface
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.TOU.CTOUSchedule.StepProgressEvent">
+            <summary>
+                Event inherited from the IProgressable interface
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.#ctor(System.String)">
+            <summary>
+            Constructor to create an instacnce to the TOU Schedule class.  Opens
+            the TOU Schedule passed in as a parameter.  Starts to fill in the 
+            collections to hold the schedule information.  If there is a problem 
+            with loading the XmlDocument an XmlException will be thrown
+            </summary>
+            <param name="strFileName">
+            Represents the file name of the schedule that will be opened.
+            </param>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsSupported(System.String)">
+            <summary>
+            Checks if the given device name is supported by the TOU Schedule
+            </summary>
+            <param name="strDeviceName">
+            The name of the device to check for
+            </param>
+            <returns>
+            true if the device is supported and false otherwise
+            </returns>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            bool blnSupported = IsSupported("CENTRON");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            10/12/06 mcm 7.35.04 59,66  Support both versions of the CENTRON Poly string
+            
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetDayType(System.String)">
+            <summary>
+            Used to take in the name of a DayType and get the Type and Name for
+            that DayType
+            </summary>
+            <param name="strName">
+            The name of the DayType to look up
+            </param>
+            <returns>
+            A CDayType object that will have the Type and Index of the DayType.
+            If the oject is not found then a null object will be returned.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.AddDayType(Itron.Metering.TOU.CDayType,System.String)">
+            <summary>
+            This method adds the day type to either the normal day or 
+            holiday array depending on the day type.  If the array 
+            holding these values is not large enough, it will be extended
+            to hold the new day.  
+            </summary>
+            <param name="day">
+            Represents the day type to be added.
+            </param>
+            <param name="strName">
+            Represents the name of the day type to be added.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved from Day Types Form.cs 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsSeasonUsed(System.Int32)">
+            <summary>
+            This method checks to see if the given season is used within 
+            the schedule.
+            </summary>
+            <param name="nSeasonID">
+            Represents the ID of the season to be searched for.
+            </param>
+            <returns>
+            True if the season is being used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/30/06 mah N/A	 N/A	Added method 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsPatternUsed(System.Int32)">
+            <summary>
+            This method checks to see if the given pattern is used within 
+            the schedule.
+            </summary>
+            <param name="nPatternID">
+            Represents the ID of the pattern to be searched for.
+            </param>
+            <returns>
+            True if the pattern is being used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/30/06 mah N/A	 N/A	Added method 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsRateUsed(System.String)">
+            <summary>
+            This method checks to see if the given rate is used within 
+            the schedule.
+            </summary>
+            <param name="strRate">
+            Represents the name of the rate to be searched for.
+            </param>
+            <returns>
+            True if the Rate is being used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved from Rates Form.cs 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsOutputUsed(System.String)">
+            <summary>
+            This method checks to see if the given Output is used within 
+            the schedule.
+            </summary>
+            <param name="strOutput">
+            Represents the name of the Output to be searched for.
+            </param>
+            <returns>
+            True if the Output is being used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved from Output Form.cs 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsNormalDayTypeUsed(System.String)">
+            <summary>
+            This method returns whether or not a normal day type is used
+            in the schedule.
+            </summary>
+            <param name="strName">
+            Represents the name of the normal day type.
+            </param>
+            <returns>
+            True if the normal day type is used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 ach N/A	 N/A	Added support for searching day type use
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsHolidayTypeUsed(System.Int32)">
+            <summary>
+            This method returns whether or not a holiday day type is used
+            in the schedule.
+            </summary>
+            <param name="nIndex">
+            Represents the index of the holiday type.
+            </param>
+            <returns>
+            True if the holiday day type is used, false otherwise.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 ach N/A	 N/A	Added support for searching day type use
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.ClearHolidayEvents">
+            <summary>
+            This method clears all the holiday events from every year
+            in the schedule.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/28/06 ach N/A	 N/A	Moved from frmMain.cs 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.DeleteSeason(System.Int32)">
+            <summary>
+            This method safely deletes a season from the TOU schedule by 
+            clearing all occurrences of associated season change events 
+            and by deleting the season entry itself
+            </summary>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/03/06 mah N/A	 N/A	Added method 
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetRateIndex(System.String)">
+            <summary>
+            Given a valid rate name this method returns the index of the
+            rate
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 mah N/A	 N/A	Added method 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetSeasonIndex(System.DateTime)">
+            <summary>
+            This method returns an index to the season that contains the
+            given target date
+            </summary>
+            <param name="dateTarget">
+            The target date
+            </param>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/30/06 mah 8.00	 N/A	Added method
+            11/26/07 mrj 9.00.27 3447	Fixed issue with finding the season
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetOutputIndex(System.String)">
+            <summary>
+            Given a valid output name this method returns the index of the
+            rate
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/05/06 mah N/A	 N/A	Added method 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.Save">
+            <summary>
+            Enables saving a schedule to the same location.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/10/06 ach N/A	 N/A	Added method 
+            10/07/08 jrf 9.50.16        Adding showing progress during a save.
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.SaveAs(System.String)">
+            <summary>
+            Enables saving a schedule to a given location
+            </summary>
+            <param name="strFileName">
+            Represents the location to be saved to.
+            </param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/10/06 ach N/A	 N/A	Added method 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.FindPattern(System.DateTime)">
+            <summary>
+            This method finds a pattern for a given date.
+            </summary>
+            <param name="dtDate">The date for which to find the pattern.</param>
+            <returns>CPattern for the given date, "null" if date not found.</returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetNextTOUScheduleID">
+            <summary>
+            This static method gets the lowest unused TOU Schedule ID.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.TOUScheduleIDExists(System.UInt16)">
+            <summary>
+            This static method checks to see if the given TOU schedule ID exists.
+            </summary>
+            <param name="usTOUID">The TOU schedule ID to check.</param>
+            <returns>A bool indicating if the TOU Schedule exists.</returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetNextSeasonStartDate(System.DateTime)">
+            <summary>
+            This method gets the next season start date after the given time.
+            </summary>
+            <param name="CurrentTime">The time to use to determine the next season.</param>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetNextDSTEvent(System.DateTime)">
+            <summary>
+            This method gets the next DST change event after the given time.
+            </summary>
+            <param name="CurrentTime">The time to use to determine the next DST transition date.</param>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Patterns">
+            <summary>
+            Property to get the Pattern Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            CPatternCollection coll = sched.Patterns;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Seasons">
+            <summary>
+            Property to get the Season Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            CSeasonCollection coll = sched.Seasons;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Years">
+            <summary>
+            Property to get the Year Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            CYearCollection coll = sched.Years;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.NormalDays">
+            <summary>
+            Property to get and set the Normal Days String COllection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            StringCollection normal = sched.NormalDays;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/25/06 ach N/A     N/A    Modified to use String Collection
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Holidays">
+            <summary>
+            Property to get and set the Holidays String Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            StringCollection holidays = sched.Holidays;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/25/06 ach N/A     N/A    modified to use String Collection
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Rates">
+            <summary>
+            Property to get and set the Rates String Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            StringCollection rates = sched.Rates;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/24/06 ach N/A     N/A    modified to use String Collection
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Outputs">
+            <summary>
+            Property to get and set the Outputs String Collection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            StringCollection outputs = sched.Outputs;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/24/06 ach N/A     N/A    modified to use String Collection
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.TypicalWeek">
+            <summary>
+            Property to get the Typical Week array
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            string[] week = sched.TypicalWeek;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            06/28/06 ach N/A     N/A    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.SupportedDevices">
+            <summary>
+            Property to get and set the Supported Devices StringCollection
+            </summary>
+            <example>
+            <code>
+            CTOUSchedule sched = new CTOUSchedule("C:\\Documents\\0001test.xml");
+            StringCollection Devices = sched.SupportedDevices;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            07/25/06 ach N/A     N/A    Modified to use StringCollection
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.DeviceTypeNames">
+            <summary>
+            Property to get a list of all of the currently defined 
+            device types.  This list does not indicate whether a given
+            device type is supported by a given instance of the schedule
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/06/06 mah N/A	 N/A	Added this method  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.FileName">
+            <summary>
+            Property return the file name of the TOU schedule (minus the path)
+            and to set the file name of the TOU schedule.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.DirectoryName">
+            <summary>
+            Property to return the path in which TOU schedule currently resides.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.DateCreated">
+            <summary>
+            Property to get and set the Date Created
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.DateModified">
+            <summary>
+            Property to get and set the Date Modified
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.TOUName">
+            <summary>
+            Property to get and setthe TOU Name
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.TOUID">
+            <summary>
+            Property to get and setthe TOU ID
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.TOUExportCount">
+            <summary>
+            Propert to get and set the Export Version for FCS Export
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.StartYear">
+            <summary>
+            Property to get and set the Start Year
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/07 ach 8.0     167    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.EndYear">
+            <summary>
+            Gets the year that the TOU schedule ends
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Duration">
+            <summary>
+            Property to get and set the Duration
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/07 ach 8.0     167    Added set method.
+            10/08/08 jrf 9.50.16        Fixed error when setting duration below
+                                        the current years count.
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Description">
+            <summary>
+            Property to get and set the Description
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.HolidayListID">
+            <summary>
+            Property to get and set the Holiday List ID
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.Culture">
+            <summary>
+            Property to get the culture used
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.RatesOverlap">
+            <summary>
+            Property to get whether or not rates in the schedule overlap
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.FullCoverage">
+            <summary>
+            Property to get whether or not all patterns in the schedule cover all 24 hours
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.ProductName">
+            <summary>
+            Property to get and set the Product Name for what is using the schedule
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.ProductVersion">
+            <summary>
+            Property to get and set the version of the product using the schedule
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.SeasonStartDates">
+            <summary>
+            Property to get all of the season start dates from the schedule.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.DSTEvents">
+            <summary>
+            Property to get all of the DST change dates from the schedule.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUSchedule.SeasonChangeEvents">
+            <summary>
+            Property to get all of the Season change dates from the schedule.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.ConvertSeasonID(System.Int32)">
+            <summary>
+            Converts a given Season ID into the index of that season based on
+            the Season Collection
+            </summary>
+            <param name="intSeasonID">
+            The ID of the season to get the index of
+            </param>
+            <returns>
+            The index of the Season ID based on the Season Collection
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetDayName(Itron.Metering.TOU.eDayType,System.Int32)">
+            <summary>
+            Takes a day type and an index to retrieve the name that matches
+            these parameters.
+            </summary>
+            <param name="eType">
+            The type of day to be looked up.  Tells whether to look in the
+            Normal or Holiday collection
+            </param>
+            <param name="intIndex">
+            The index to check in the collection to get the name 
+            </param>
+            <returns>
+            The name of the day
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            02/05/07 ach 8.0     96     Added Try-Catch to attempt to reduce program crashes
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildTypicalWeek">
+            <summary>
+            Method to fill in the collection for the typical week from the 
+            xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            06/02/06 ach N/A     N/A    Updated comments explaining GetDayName use
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildYears">
+            <summary>
+            Method to fill in the collection for the years from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class 
+            04/26/06 rrr N/A	 N/A	Added retrieving of holiday name from xml file
+            							and setting of season name as season 
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.CreateEvent(Itron.Metering.TOU.eEventType,System.Int32,System.String,System.String)">
+            <summary>
+            Creates a new CEvent object based on the given info 
+            </summary>
+            <param name="eType">
+            The eEventType for the CEvent
+            </param>
+            <param name="intIndex">
+            The index of the CEvent
+            </param>
+            <param name="strDate">
+            The date of the CEvent
+            </param>
+            <param name="strName">
+            The name of the CEvent
+            </param>
+            <returns>
+            A new CEvent object with the given info</returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            04/26/06 rrr N/A	 N/A	Added string for the name of the event
+            06/02/06 ach N/A     N/A    Modified to use culture specific date 
+            							formatting
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildRates">
+            <summary>
+            Method to fill in the collection for the rates from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildOutputs">
+            <summary>
+            Method to fill in the collection for the outputs from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildDayTypes">
+            <summary>
+            Method to fill in the collection for the normal days and holidays
+            from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildSeasons">
+            <summary>
+            Method to fill in the collection for the seasons from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class 
+            04/16/14 jrf 3.50.78 489749 Modified to add the typical week when constructing season.
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildPatterns">
+            <summary>
+            Method to fill in the collection for the patterns from the xml file
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.BuildSupportedDevices">
+            <summary>
+            Method to fill in the array for the supported devices from the xml file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetTOUInformation">
+            <summary>
+            Retrieves the general TOU Information from xml file.  This includes
+            Name, ID, Start Year, Duration, Holiday List, Description, Date Created,
+            Date Modified, and Date Time Invariant. 
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/28/06 rrr N/A	 N/A	Added to get the TOU_Information section
+            							of the TOU xml file 
+            06/02/06 ach N/A     N/A    Added functionality to read information
+            							concerning date formatting
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteTOUInformation(System.String)">
+            <summary>
+            This method writes the TOU Information and Supported 
+            Devices information out to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							TOU Schedule to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteTypicalWeek">
+            <summary>
+            Method to write the Typical Week information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							TypicalWeek to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteYears">
+            <summary>
+            Method to write the Years information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							Years to file		
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteRates">
+            <summary>
+            Method to write the rates information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							the rates to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteOutputs">
+            <summary>
+            Method to write the outputs information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							the outputs to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteDayTypes">
+            <summary>
+            Method to write the day types information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							day types to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WriteSeasons">
+            <summary>
+            Method to write the season informatino to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							seasons to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.WritePatterns">
+            <summary>
+            Method to write the pattern information to file.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -----------
+            05/31/06 ach N/A     N/A    Added functionality to write
+            							patterns to file
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.StringToDate(System.String)">
+            <summary>
+            This method converts a string representation of a date into a
+            DateTime object with culture specific information.
+            </summary>
+            <param name="strDate">
+            String representation of the Date.
+            </param>
+            <returns>
+            A DateTime object representing strDate.
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/28/06 rrr N/A	 N/A	Added to convert the Date string to a DateTime
+            							object  
+            06/28/06 ach N/A     N/A    Modified to use culture specific date 
+            							formatting
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.IsHoliday(System.DateTime)">
+            <summary>
+            This method checks to see if the supplied date is a hoilday.  If it
+            is then it returns the holiday index.  If not it returns -1.
+            </summary>
+            <param name="dtDate">The supplied date to look for.</param>
+            <returns>
+            Returns the holiday index if the date is a holiday, else it returns -1.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.GetScheduleIDs">
+            <summary>
+            This static method retreives the list of IDs from all TOU schedules.
+            </summary>
+            <returns>A list of TOU schedule IDs.</returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.OnShowProgress(Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Raises the event to show the progress bar.
+            </summary>
+            <param name="e">The event arguments to use.</param>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.OnStepProgress(Itron.Metering.Progressable.ProgressEventArgs)">
+            <summary>
+            Raises the event that causes the progress bar to perform a step
+            </summary>
+            <param name="e">The event arguments to use.</param>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUSchedule.OnHideProgress(System.EventArgs)">
+            <summary>
+            Raises the event that hides or closes the progress bar
+            </summary>
+            <param name="e">The event arguments to use.</param>
+        </member>
+        <member name="T:Itron.Metering.TOU.CTOUScheduleFile">
+            <summary>
+            Represents and TOU Schedule File, has its ID, Name, and FilePath. 
+            This will be used to create a TOUSchedule.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUScheduleFile.m_intTOUID">
+            <summary>
+            Represents the ID of a TOU Schedule File
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUScheduleFile.m_strTOUName">
+            <summary>
+            Represents the Name of a TOU Schedule File
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUScheduleFile.m_strFilePath">
+            <summary>
+            Represents the FilePath of a TOU Schedule File
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFile.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Constructor to create an instance of the TOU Schedule File class
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFile sched = new CTOUScheduleFile(2, "TOU Schedule", 
+            									"C:\\Documents\\This.xml");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUScheduleFile.ID">
+            <summary>
+            Property to get the ID of a TOU Schedule
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFile sched = new CTOUScheduleFile(2, "TOU Schedule", 
+            									"C:\\Documents\\This.xml");
+            int intTOUID = sched.ID;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUScheduleFile.Name">
+            <summary>
+            Property to get the name of a TOU Schedule
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFile sched = new CTOUScheduleFile(2, "TOU Schedule", 
+            									"C:\\Documents\\This.xml");
+            string strTOUName = sched.Name;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUScheduleFile.FilePath">
+            <summary>
+            Property to get the full file path of a TOU Schedule
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFile sched = new CTOUScheduleFile(2, "TOU Schedule", 
+            									"C:\\Documents\\This.xml");
+            string strFilePath = sched.FilePath;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFile.FindIndexOf(System.String,System.Collections.Generic.List{Itron.Metering.TOU.CTOUScheduleFile}@,System.Int32@)">
+             <summary>
+             This method searchs the list of given TOU files for a specific TOU name.  If that
+             schedule name is found, the index of the item will be returned
+             </summary>
+             <param name="strTOUName" type="string"></param>
+             <param name="lstTOUs"></param>
+             <param name="nListIndex"></param>
+             <returns>
+              A flag indicating whether or not the given display name was found in the list of items
+             </returns>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              08/03/07 MAH		Created
+            
+             </remarks>
+        </member>
+        <member name="T:Itron.Metering.TOU.CTOUScheduleFileCollection">
+            <summary>
+            This class represents the collection of TOU Schedules in the TOU
+            schedule directory.  This is not a read only collection so programmers
+            be careful with the collection.
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFileCollection coll = new CTOUScheduleFileCollection();
+            foreach(CTOUScheduleFile sched in coll)
+            {
+            	CTOUSchedule mySched = new CTOUSchedule(sched.FilePath);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUScheduleFileCollection.m_strDataDirectory">
+            <summary>
+            Variable to represent the billing schedule directory
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CTOUScheduleFileCollection.CALENDAR_EDITOR">
+            <summary>
+            Name of the registry key which identifies the TOU file locations
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.#ctor">
+            <summary>
+            Constructor for TOU Schedule File Collection class.  Gets the TOU 
+            Schedule directory and then adds each of the schedules to the collection.
+            The directory will be found using the RegistryAccessCE (for Windows CE)
+            or the RegistryAccess (for Windows Desktop) class and the 
+            GetDataDirectory method.  If the directory is not found an Exception
+            will be thrown to say the directory does not exist.
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFileCollection coll = new CTOUScheduleFileCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class
+            10/16/06 mrj 7.35.05        Sort the TOU schedule collection
+              
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.#ctor(System.String)">
+            <summary>
+            Constructor for TOU Schedule File Collection class.  Gets the TOU 
+            Schedule directory and then adds each of the schedules that supports the 
+            given device name to the collection.
+            The directory will be found using the RegistryAccessCE (for Windows CE)
+            or the RegistryAccess (for Windows Desktop) class and the 
+            GetDataDirectory method.  If the directory is not found and Exception
+            will be thrown to say the directory does not exist.  If there are problems
+            with loading or reading the xml document then an XmlException will be thrown
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFileCollection coll = new CTOUScheduleFileCollection("CENTRON");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class
+            10/11/06 mrj 7.35.04 52     Sort the TOU schedule collection
+            10/12/06 mcm 7.35.04 59,66  Support both versions of the CENTRON Poly string
+            
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.Refresh(System.String)">
+            <summary>
+            Used to refresh the collection of TOU Schedules
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.TOU.CTOUScheduleFileCollection.Item(System.Int32)">
+            <summary>
+            Gets an index of CTOUScheduleFileCollection.  Allows the user 
+            to index the collection in the same manner as an array
+            </summary>
+            <example>
+            <code>
+            CTOUScheduleFileCollection coll = new CTOUScheduleFileCollection();
+            CTOUScheduleFile sched = coll[0];
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.Delete(System.String)">
+            <summary>
+            Deletes the provided file from the computer.
+            </summary>
+            <param name="strPath">
+            Represents the file path of the schedule to be deleted.
+            </param>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/16/07 ach 8.0     90     Added to delete TOU Schedule Files
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.Find(System.String)">
+            <summary>
+            Returns a TOU schedule file based on the tou schedule name provided.
+            </summary>
+            <param name="strTOUName">
+            The name of the TOU schedule to find.
+            </param>
+            <returns>
+            Returns a CTOUScheduleFile if the schedule exists or it returns null.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.Find(System.Int32)">
+            <summary>
+            Returns a TOU schedule file based on the tou schedule name provided.
+            </summary>
+            <param name="iTOUID">
+            The ID of the TOU schedule to find.
+            </param>
+            <returns>
+            Returns a CTOUScheduleFile if the schedule exists or it returns null.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.FindSchedule(System.String)">
+            <summary>
+            Returns a TOU schedule based on the tou schedule name provided.
+            </summary>
+            <param name="strTOUName">
+            The name of the TOU schedule to find.
+            </param>
+            <returns>
+            Returns a CTOUSchedule if the schedule exists or it returns null.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.TOU.CTOUScheduleFileCollection.FindSchedule(System.Int32)">
+            <summary>
+            Returns a TOU schedule based on the tou schedule name provided.
+            </summary>
+            <param name="iTOUID">
+            The ID of the TOU schedule to find.
+            </param>
+            <returns>
+            Returns a CTOUSchedule if the schedule exists or it returns null.
+            </returns>
+        </member>
+        <member name="T:Itron.Metering.TOU.TOUScheduleComparer">
+            <summary>
+            This compare class is used to sort the TOU schedule collection in the
+            CTOUScheduleFileCollection class.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.TOUScheduleComparer.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.TOUScheduleComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+            <summary>
+            Implements the compare method for comparing CTOUScheduleFile objects. It
+            compares the TOU schedule names only.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Itron.Metering.TOU.CYear">
+            <summary>
+            Class to represent all the data contained in a year of a TOU Schedule.
+            It holds the number of the year and a collection of events that occur
+            within that year.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CYear.m_intYear">
+            <summary>
+            Represents the year of the current object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.TOU.CYear.m_colEvents">
+            <summary>
+            Collection that holds all the events of the current Year
+            This collection will be sorted by the Date
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CYear.#ctor(System.Int32,Itron.Metering.TOU.CEventCollection)">
+            <summary>
+            Creates an instace of a Year object
+            </summary>
+            <example>
+            <code>
+            CYear myYear = new CYear(2006, new CEventCollection());
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYear.CompareTo(System.Object)">
+            <summary>
+            Used to be able to compare two CYear objects based on the year
+            </summary>
+            <param name="obj">
+            The year to compare to the current year
+            </param>
+            <returns>
+            An int that represents the objects being equal, less than, or greater than
+            </returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CYear.Year">
+            <summary>
+            Property to get the year
+            </summary>
+            <example>
+            <code>
+            CYear myYear = new CYear(2006, new CEventCollection());
+            int intYear = myYear.Year;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+            02/15/07 ach 8.0     167    Added set property
+        </member>
+        <member name="P:Itron.Metering.TOU.CYear.Events">
+            <summary>
+            Property to get the events for the current year.  These events will be 
+            sorted by date.
+            </summary>
+            <example>
+            <code>
+            CYear myYear = new CYear(2006, new CEventCollection());
+            CEventCollection coll = myYear.Events;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CYear.HolidayCount">
+            <summary>
+            Property to get the number of holiday events in the year.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Added property 
+        </member>
+        <member name="P:Itron.Metering.TOU.CYear.SeasonCount">
+            <summary>
+            Property to get the number of season events in the year.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            07/25/06 ach N/A	 N/A	Added property 
+        </member>
+        <member name="T:Itron.Metering.TOU.CYearCollection">
+            <summary>
+            Reprsents a list of years in a TOU Schedule
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.#ctor">
+            <summary>
+            Creates an instance of the Year Collection object
+            </summary>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.TOU.CYearCollection.Item(System.Int32)">
+            <summary>
+            Gets a Year at an index of the YearCollection.  Allows access
+            to elements like an array
+            </summary>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            CYear temp = coll[0];
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.Add(Itron.Metering.TOU.CYear)">
+            <summary>
+            Adds a Year to the end of the YearCollection
+            </summary>
+            <param name="objToAdd">
+            The Year to be added
+            </param>
+            <returns>
+            The zero base index of the Year added
+            </returns>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            coll.Add(new CYear(2004, new CEventCollection()));
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.Insert(System.Int32,Itron.Metering.TOU.CYear)">
+            <summary>
+            Adds a Year to the YearCollection at the given index
+            </summary>
+            <param name="intIndex">
+            Index to insert the Year into in the collection
+            </param>
+            <param name="objToAdd">
+            The Year to be added
+            </param>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            coll.Insert(3, new CYear(2004, new CEventCollection()));
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.IndexOf(Itron.Metering.TOU.CYear)">
+            <summary>
+            Returns the index of the first occurance of the given Year.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="objFind">
+            Name of the Year to find the index of
+            </param>
+            <returns>
+            The index of the Year
+            </returns>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            CYear temp = new CYear(2004, new CEventCollection());
+            coll.Add(temp);
+            int intIndex = coll.IndexOf(temp);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.SearchYear(System.Int32)">
+            <summary>
+            Searches the collection for the given year and returns the index.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="intYear">
+            The year to search for
+            </param>
+            <returns>
+            The index of the year
+            </returns>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            CYear temp = new CYear(2004, new CEventCollection());
+            coll.Add(temp);
+            int intIndex = coll.SearchYear(temp.Year);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.TOU.CYearCollection.Sort">
+            <summary>
+            Used to sort the year collection based on the years of the CYear objects
+            </summary>
+            <example>
+            <code>
+            CYearCollection coll = new CYearCollection();
+            CYear temp = new CYear(2004, new CEventCollection());
+            CYear temp1 = new CYear(2003, new CEventCollection());
+            coll.Add(temp);
+            coll.Add(temp1);
+            coll.Sort();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/15/06 rrr N/A	 N/A	Creation of class  
+        </member>
+    </members>
+</doc>

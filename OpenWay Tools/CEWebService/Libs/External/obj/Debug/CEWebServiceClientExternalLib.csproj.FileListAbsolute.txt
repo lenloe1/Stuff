@@ -1,0 +1,18 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientExternal.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientExternal.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientBase.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientBase.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternal.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternal.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternal.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternal.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientExternal.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientExternal.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientBase.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\bin\Debug\CEWebServiceClientBase.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\External\obj\Debug\CEWebServiceClientExternalLib.csproj.CopyComplete

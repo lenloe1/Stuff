@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Metering.ZigBee.EZSP</RootNamespace>
+    <AssemblyName>Itron.Metering.ZigBee.EZSP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Itron.Metering.ZigBee.EZSP.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Itron.Metering.ZigBee.EZSP.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Itron.Metering.ZigBee.EZSP.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Itron.Metering.ZigBee.EZSP.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\SE11ZigBeeApplication.cs" />
+    <Compile Include="Applications\ZCLFrame.cs" />
+    <Compile Include="Applications\ZigBeeAttributeResponse.cs" />
+    <Compile Include="Applications\ZigBeeEndpointInfo.cs" />
+    <Compile Include="ASH\ASHProtocol.cs" />
+    <Compile Include="EZSP\EmberApsFrame.cs" />
+    <Compile Include="EZSP\EmberBindingTableEntry.cs" />
+    <Compile Include="EZSP\EmberCurentSecurityState.cs" />
+    <Compile Include="EZSP\EmberInitialSecurityState.cs" />
+    <Compile Include="EZSP\EmberKeyStruct.cs" />
+    <Compile Include="EZSP\EmberMulticastTableEntry.cs" />
+    <Compile Include="EZSP\EmberNeighborTableEntry.cs" />
+    <Compile Include="EZSP\EmberNetworkParameters.cs" />
+    <Compile Include="EZSP\EmberRouteTableEntry.cs" />
+    <Compile Include="EZSP\EZSPEventArguments.cs" />
+    <Compile Include="EZSPLogger.cs" />
+    <Compile Include="EZSP\EZSPProtocol.cs" />
+    <Compile Include="ASH\EZSPSerialCommunications.cs" />
+    <Compile Include="EZSP\IncomingMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Applications\ZigBeeApplication.cs" />
+    <Compile Include="EZSP\ZigBeeEnergyScanResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Itron.Metering.Communications\Itron.Metering.Communications.csproj">
+      <Project>{A7D80805-B020-42A2-B843-28A5E72609A7}</Project>
+      <Name>Itron.Metering.Communications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.DeviceDataTypes\Itron.Metering.DeviceDataTypes.csproj">
+      <Project>{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}</Project>
+      <Name>Itron.Metering.DeviceDataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj">
+      <Project>{1C2BA173-78D6-4818-A68A-3773173F9104}</Project>
+      <Name>Itron.Metering.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Zigbee.Radio\Itron.Metering.Zigbee.Radio.csproj">
+      <Project>{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}</Project>
+      <Name>Itron.Metering.Zigbee.Radio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ItronIEMPublic.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="UpdateAssemblyInfo" Condition="'$(BuildVersion)' != '' And Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  </Target>
+  <Target Name="UpdateAssemblyInfo">
+    <Message Text="Updating Version to $(BuildVersion)" Importance="high" />
+    <Time Format="yyyy">
+      <Output TaskParameter="FormattedTime" PropertyName="CurrentYear" />
+    </Time>
+    <Attrib Files="$(ProjectDir)Properties\AssemblyInfo.cs" ReadOnly="false" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="(AssemblyVersion|AssemblyFileVersionAttribute|AssemblyFileVersion)\(&quot;.*&quot;\)" ReplacementText="$1(&quot;$(BuildVersion)&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCompany\(&quot;.*&quot;\)" ReplacementText="AssemblyCompany(&quot;Itron, Inc&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCopyright\(&quot;.*&quot;\)" ReplacementText="AssemblyCopyright(&quot;Copyright © Itron, Inc $(CurrentYear)&quot;)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

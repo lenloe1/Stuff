@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9EC8200-93C2-43D5-AFD4-8F444450129C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Metering.CustomerValidation</RootNamespace>
+    <AssemblyName>Itron.Metering.CustomerValidation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Itron.Metering.CustomerValidation.XML</DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.CustomerValidation.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Itron.Metering.CustomerValidation.XML</DocumentationFile>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.CustomerValidation.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Itron.Metering.CustomerValidation.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Itron.Metering.CustomerValidation.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.CustomerValidation.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20113.351, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Ribbon.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestProgressEventArgs.cs" />
+    <Compile Include="TestResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestResults.cs" />
+    <Compile Include="Validation Tests\ClearActivityStatusTest.cs" />
+    <Compile Include="Validation Tests\ClearBillingTest.cs" />
+    <Compile Include="Validation Tests\ConnectDisconnectTest.cs" />
+    <Compile Include="Validation Tests\DeviceStatusTest.cs" />
+    <Compile Include="Validation Tests\HANRadioTest.cs" />
+    <Compile Include="Validation Tests\NormalDisplayTest.cs" />
+    <Compile Include="Validation Tests\ValidateProgramTest.cs" />
+    <Compile Include="Validation Tests\ValidateSecurityKeysTest.cs" />
+    <Compile Include="Validation Tests\ValidationTest.cs" />
+    <Compile Include="ValidationTestRun.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ItronIEMPublic.snk" />
+    <None Include="Migrated rules for Itron.Metering.CustomerValidation.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Communications\Itron.Metering.Communications.csproj">
+      <Project>{A7D80805-B020-42A2-B843-28A5E72609A7}</Project>
+      <Name>Itron.Metering.Communications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Datafiles\Itron.Metering.Datafiles.csproj">
+      <Project>{2FCF6554-0C01-414A-827C-7101126BA6AC}</Project>
+      <Name>Itron.Metering.Datafiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.DeviceDataTypes\Itron.Metering.DeviceDataTypes.csproj">
+      <Project>{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}</Project>
+      <Name>Itron.Metering.DeviceDataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Device\Itron.Metering.Device.csproj">
+      <Project>{D019F65F-9C7E-4F65-93D4-A0734D76816E}</Project>
+      <Name>Itron.Metering.Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.DST\Itron.Metering.DST.csproj">
+      <Project>{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}</Project>
+      <Name>Itron.Metering.DST</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Progressable\Itron.Metering.Progressable.csproj">
+      <Project>{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}</Project>
+      <Name>Itron.Metering.Progressable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.ReplicaSettings\Itron.Metering.ReplicaSettings.csproj">
+      <Project>{41f124a1-d1fe-4d8a-947d-7e3cddb8696b}</Project>
+      <Name>Itron.Metering.ReplicaSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.SharedControls\Itron.Metering.SharedControls.csproj">
+      <Project>{A078716A-19FB-4398-B42E-3D14726BD3E2}</Project>
+      <Name>Itron.Metering.SharedControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj">
+      <Project>{1C2BA173-78D6-4818-A68A-3773173F9104}</Project>
+      <Name>Itron.Metering.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Zigbee.BeltClipRadio\Itron.Metering.Zigbee.BeltClipRadio.csproj">
+      <Project>{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}</Project>
+      <Name>Itron.Metering.Zigbee.BeltClipRadio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.ZigBeeRadioServerObjects\Itron.Metering.ZigBeeRadioServerObjects.csproj">
+      <Project>{E4136E1A-01DB-40C8-99E2-C83888403DFD}</Project>
+      <Name>Itron.Metering.ZigBeeRadioServerObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Zigbee.Radio\Itron.Metering.Zigbee.Radio.csproj">
+      <Project>{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}</Project>
+      <Name>Itron.Metering.Zigbee.Radio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

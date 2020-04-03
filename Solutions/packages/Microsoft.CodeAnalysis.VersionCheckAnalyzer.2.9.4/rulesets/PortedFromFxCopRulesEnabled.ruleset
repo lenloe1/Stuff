@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<RuleSet Name="PortedFromFxCop Rules Enabled with default action" Description="All PortedFromFxCop Rules are enabled with default action. PortedFromFxCop Rules with IsEnabledByDefault = false are force enabled with default action. Non-PortedFromFxCop Rules are disabled." ToolsVersion="15.0">
+   <!-- PortedFromFxCop Rules -->
+
+   <!-- Other Rules -->
+   <Rules AnalyzerId="Microsoft.CodeAnalysis.VersionCheckAnalyzer" RuleNamespace="Microsoft.CodeAnalysis.VersionCheckAnalyzer">
+      <Rule Id="CA9999" Action="None" />             <!-- Analyzer version mismatch -->
+   </Rules>
+</RuleSet>

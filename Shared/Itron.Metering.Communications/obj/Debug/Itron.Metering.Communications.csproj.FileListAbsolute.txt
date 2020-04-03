@@ -1,0 +1,32 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Communications.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.CommStrings.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.PSEM.PSEMStrings.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.SCS.SCSStrings.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Communications.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Communications.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.CommStrings.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.PSEM.PSEMStrings.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.SCS.SCSStrings.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Communications\obj\Debug\Itron.Metering.Communications.pdb

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.Device.PSEM</id>
+		<version>$PackageVersion$</version>
+		<authors>Itron Inc</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes/>
+		<description>PSEM device libraries used for communicating with the OpenWay CENTRON and related devices</description>
+		<copyright>Copyright ©2017 Itron, Inc</copyright>
+		<tags>itron metering device psem openway communications</tags>
+		<dependencies>
+			<dependency id="Itron.Metering.Shared" version="$PackageVersion$" />
+			<dependency id="Itron.Metering.OWOC.C1219Tables" version="0.0.223" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="..\Shared\Itron.Metering.Device\bin\Release\Itron.Metering.Device.dll" target="lib\Itron.Metering.Device.dll" />
+		<file src="..\Shared\Itron.Metering.Communications\bin\Release\Itron.Metering.Communications.dll" target="lib\Itron.Metering.Communications.dll" />
+		<file src="..\Shared\Itron.Metering.AMIConfiguration\bin\Release\Itron.Metering.AMIConfiguration.dll" target="lib\Itron.Metering.AMIConfiguration.dll" />
+		<file src="..\Shared\Itron.Metering.DST\bin\Release\Itron.Metering.DST.dll" target="lib\Itron.Metering.DST.dll" />
+		<file src="..\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Release\Itron.Metering.ReplicaSettings.dll" target="lib\Itron.Metering.ReplicaSettings.dll" />
+		<file src="..\Shared\Itron.Metering.TOU\bin\Release\Itron.Metering.TOU.dll" target="lib\Itron.Metering.TOU.dll" />
+		<file src="..\Shared\Itron.Metering.ZigBee.BeltClipRadio\bin\Release\Itron.Metering.ZigBee.BeltClipRadio.dll" target="lib\Itron.Metering.ZigBee.BeltClipRadio.dll" />
+		<file src="..\Shared\Itron.Metering.ZigBee.EZSP\bin\Release\Itron.Metering.ZigBee.EZSP.dll" target="lib\Itron.Metering.ZigBee.EZSP.dll" />
+		<file src="..\Shared\Itron.Metering.ZigBee.Radio\bin\Release\Itron.Metering.ZigBee.Radio.dll" target="lib\Itron.Metering.ZigBee.Radio.dll" />
+	</files>
+</package>

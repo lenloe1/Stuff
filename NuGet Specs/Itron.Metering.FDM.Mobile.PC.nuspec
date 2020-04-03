@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.FDM.Mobile.PC</id>
+		<version>3.7.1.10-Ext</version>
+		<authors>Itron, Inc.</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes>3.7.1.10 Release</releaseNotes>
+		<description>FDM Mobile Client .dlls needed for developing workflows.</description>
+		<copyright>Copyright ©2017 Itron, Inc</copyright>
+		<tags>fdm mobile client</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="CompactContainer.dll" target="lib\Itron.FDM.PC\CompactContainer.dll" />
+		<file src="Itron.Communication.dll" target="lib\Itron.FDM.PC\Itron.Communication.dll" />
+		<file src="Itron.Devices.dll" target="lib\Itron.FDM.PC\Itron.Devices.dll" />
+		<file src="Itron.Devices.Communication.dll" target="lib\Itron.FDM.PC\Itron.Devices.Communication.dll" />
+		<file src="Itron.Fdm.Data.Entities.Core.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Data.Entities.Core.dll" />
+		<file src="Itron.Fdm.Mobile.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.dll" />
+		<file src="Itron.Fdm.Mobile.Controls.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.Controls.dll" />
+		<file src="Itron.Fdm.Mobile.DataAccess.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.DataAccess.dll" />
+		<file src="Itron.Fdm.Mobile.Model.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.Model.dll" />
+		<file src="Itron.Fdm.Mobile.WorkflowEngine.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.WorkflowEngine.dll" />
+		<file src="Itron.Fdm.Mobile.dll" target="lib\Itron.FDM.PC\Itron.Fdm.Mobile.dll" />
+		<file src="mdapicsh.dll" target="lib\Itron.FDM.PC\mdapicsh.dll" />
+		<file src="Itron.Mobile.dll" target="lib\Itron.FDM.PC\Itron.Mobile.dll" />
+		<file src="Itron.Mobile.Targets.dll" target="lib\Itron.FDM.PC\Itron.Mobile.Targets.dll" />
+	</files>
+</package>

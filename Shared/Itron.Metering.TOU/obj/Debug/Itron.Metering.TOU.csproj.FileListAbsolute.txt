@@ -1,0 +1,30 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.TOU.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.TOU\obj\Debug\Itron.Metering.TOU.pdb

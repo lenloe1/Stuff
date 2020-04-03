@@ -1,0 +1,1 @@
+These are GIMP xcf image files.  They can be edited in the GIMP, which is a free image editing program.  This is the best way to edit the icons and images because they contain the original layers and transparencies.

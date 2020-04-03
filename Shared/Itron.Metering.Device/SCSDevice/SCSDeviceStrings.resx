@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0"/>
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string"/>
+							<xsd:attribute name="type" type="xsd:string"/>
+							<xsd:attribute name="mimetype" type="xsd:string"/>
+							<xsd:attribute ref="xml:space"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string"/>
+							<xsd:attribute name="name" type="xsd:string"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+							<xsd:attribute ref="xml:space"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<data name="WRONG_DEVICE_TYPE" xml:space="preserve">
+    <value>Wrong Device Type</value>
+  </data>
+	<data name="SECURITY_ERROR" xml:space="preserve">
+    <value>Security Error</value>
+  </data>
+	<data name="NO_RESPONSE" xml:space="preserve">
+    <value>No Response</value>
+  </data>
+	<data name="LOGON_REQUEST" xml:space="preserve">
+    <value>Logon Request</value>
+  </data>
+	<data name="PORT_NOT_OPEN" xml:space="preserve">
+    <value>Port Not Open</value>
+  </data>
+	<data name="SECURITY_REQUEST" xml:space="preserve">
+    <value>Security Request</value>
+  </data>
+	<data name="LOGOFF_REQUEST" xml:space="preserve">
+    <value>Logoff Request</value>
+  </data>
+	<data name="STOP_CLOCK_FLAG" xml:space="preserve">
+    <value>Stop Clock Flag</value>
+  </data>
+	<data name="REAL_TIME_CLOCK" xml:space="preserve">
+    <value>Real Time Clock</value>
+  </data>
+	<data name="CLOCK_RECONFIGURE_FLAG" xml:space="preserve">
+    <value>Clock Reconfigure Flag</value>
+  </data>
+	<data name="LOGON_FAILED" xml:space="preserve">
+    <value>Logon Failed</value>
+  </data>
+	<data name="SECURITY_FAILED" xml:space="preserve">
+    <value>Security Failed</value>
+  </data>
+	<data name="LOGOFF_FAILED" xml:space="preserve">
+    <value>Logoff Failed</value>
+  </data>
+	<data name="CLOCK_ADJUST_FAILED" xml:space="preserve">
+    <value>Clock Adjust Failed</value>
+  </data>
+	<data name="CROSS_INTERVAL_BOUNDARY" xml:space="preserve">
+    <value>Crosses Interval Boundary</value>
+  </data>
+	<data name="INTERVAL_LENGTH" xml:space="preserve">
+    <value>Interval Length</value>
+  </data>
+	<data name="DEVICE_TIME" xml:space="preserve">
+    <value>Device Time</value>
+  </data>
+	<data name="FIRMWARE_VERSION" xml:space="preserve">
+    <value>Firmware Version</value>
+  </data>
+	<data name="SOFTWARE_VERSION" xml:space="preserve">
+    <value>Software Version</value>
+  </data>
+	<data name="PROGRAM_ID" xml:space="preserve">
+    <value>Program ID</value>
+  </data>
+	<data name="UNIT_ID" xml:space="preserve">
+    <value>Unit ID</value>
+  </data>
+	<data name="SERIAL_NUMBER" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+	<data name="TOU_BASE_ADDRESS" xml:space="preserve">
+    <value>TOU Base Address</value>
+  </data>
+	<data name="OPERATING_SETUP" xml:space="preserve">
+    <value>Operating Setup</value>
+  </data>
+	<data name="MODEL_TYPE" xml:space="preserve">
+    <value>Device Model Type</value>
+  </data>
+	<data name="TOU_RUN_FLAG" xml:space="preserve">
+    <value>TOU Run Flag</value>
+  </data>
+	<data name="TOU_RECONFIGURE_FLAG" xml:space="preserve">
+    <value>TOU Reconfigure Flag</value>
+  </data>
+	<data name="CLOCK_RUN_FLAG" xml:space="preserve">
+    <value>Clock Run Flag</value>
+  </data>
+	<data name="VEC_DEVICE_TYPE" xml:space="preserve">
+    <value>VEC</value>
+  </data>
+	<data name="LOW_BATTERY" xml:space="preserve">
+    <value>Low Battery</value>
+  </data>
+	<data name="REGISTER_FULL_SCALE" xml:space="preserve">
+    <value>Demand Register Full Scale</value>
+  </data>
+	<data name="CLOCK_TOU_MM_ERROR" xml:space="preserve">
+    <value>Clock/TOU/Mass Memory Error</value>
+  </data>
+	<data name="REVERSE_POWER_FLOW" xml:space="preserve">
+    <value>Reverse Power Flow</value>
+  </data>
+	<data name="SERVICE_TYPE_1" xml:space="preserve">
+    <value>2 Element 3 Wire Delta</value>
+  </data>
+	<data name="SERVICE_TYPE_2" xml:space="preserve">
+    <value>2 Element Network</value>
+  </data>
+	<data name="SERVICE_TYPE_3" xml:space="preserve">
+    <value>2-1/2 Element 4 Wire WYE</value>
+  </data>
+	<data name="SERVICE_TYPE_4" xml:space="preserve">
+    <value>3 Element 4 Wire Delta</value>
+  </data>
+	<data name="SERVICE_TYPE_5" xml:space="preserve">
+    <value>3 Element 4 Wire WYE</value>
+  </data>
+	<data name="SERVICE_TYPE_6" xml:space="preserve">
+    <value>2 Element 4 Wire WYE</value>
+  </data>
+	<data name="SERVICE_TYPE_7" xml:space="preserve">
+    <value>2 Element 4 Wire Delta</value>
+  </data>
+	<data name="SERVICE_TYPE_8" xml:space="preserve">
+    <value>2 Element Singlephase</value>
+  </data>
+	<data name="SERVICE_TYPE_UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+	<data name="PHASOR_CHECK" xml:space="preserve">
+    <value>Phasor Check</value>
+  </data>
+	<data name="CURRENT_CHECK" xml:space="preserve">
+    <value>Current Check</value>
+  </data>
+	<data name="VOLTAGE_CHECK" xml:space="preserve">
+    <value>Voltage Check</value>
+  </data>
+	<data name="POWER_FACTOR_CHECK" xml:space="preserve">
+    <value>Power Factor Check</value>
+  </data>
+	<data name="DC_DETECT_A" xml:space="preserve">
+    <value>DC Detection A</value>
+  </data>
+	<data name="DC_DETECT_B" xml:space="preserve">
+    <value>DC Detection B</value>
+  </data>
+	<data name="DC_DETECT_C" xml:space="preserve">
+    <value>DC Detection C</value>
+  </data>
+	<data name="DC_DETECT_T" xml:space="preserve">
+    <value>DC Detection Total</value>
+  </data>
+	<data name="TOOLBOX_DATA" xml:space="preserve">
+    <value>Toolbox Data</value>
+  </data>
+	<data name="DIAGNOSTICS" xml:space="preserve">
+    <value>Diagnostics</value>
+  </data>
+	<data name="SERVICE_TYPE" xml:space="preserve">
+    <value>Service Type</value>
+  </data>
+	<data name="RESET_DIAG_COUNTERS_FAILED" xml:space="preserve">
+    <value>Reset Diagnostic Counters Failed</value>
+  </data>
+	<data name="RESET_DIAG" xml:space="preserve">
+    <value>Reset Diagnostics</value>
+  </data>
+	<data name="FULC_DEVICE_TYPE" xml:space="preserve">
+    <value>X20</value>
+  </data>
+	<data name="PHASE_LOSS" xml:space="preserve">
+    <value>Loss of Phase</value>
+  </data>
+	<data name="TOU_ERROR" xml:space="preserve">
+    <value>TOU Error</value>
+  </data>
+	<data name="INPUT_OUTPUT_ERROR" xml:space="preserve">
+    <value>I/O Error</value>
+  </data>
+	<data name="MASS_MEMORY_ERROR" xml:space="preserve">
+    <value>Mass Memory Error</value>
+  </data>
+	<data name="CLOCK_ERROR" xml:space="preserve">
+    <value>Clock Error</value>
+  </data>
+	<data name="DISK_REVERSE_DIRECTION" xml:space="preserve">
+    <value>Disk Reverse Direction</value>
+  </data>
+	<data name="MT2_DEVICE_TYPE" xml:space="preserve">
+    <value>MT2</value>
+  </data>
+	<data name="SYSTEM_ERRORS" xml:space="preserve">
+    <value>System Errors</value>
+  </data>
+	<data name="LOAD_PROFILE_FLAG" xml:space="preserve">
+    <value>Load Profile Flag</value>
+  </data>
+	<data name="ADJUST_CLOCK" xml:space="preserve">
+    <value>Adjust Clock</value>
+  </data>
+	<data name="EVENT_NOT_A_START_YEEVENT_NOT_A_START_YEAR" xml:space="preserve">
+    <value>The TOU Event is not a Start Year</value>
+  </data>
+	<data name="EVENT_HAS_NO_MONTH" xml:space="preserve">
+    <value>The TOU Event has no month associated with it</value>
+  </data>
+	<data name="EVENT_HAS_NO_DAY" xml:space="preserve">
+    <value>The TOU Event has no day associated with it</value>
+  </data>
+	<data name="DST_EVENT_INCORRECT_FORMAT" xml:space="preserve">
+    <value>DST Event is not in the proper format</value>
+  </data>
+	<data name="EVENT_NOT_A_DST_CHANGE" xml:space="preserve">
+    <value>The TOU Event is not a DST change</value>
+  </data>
+	<data name="REGISTER_MAPPINGS" xml:space="preserve">
+    <value>Register Mappings</value>
+  </data>
+	<data name="FORM_5S" xml:space="preserve">
+    <value>5S or 12S (2 elements)</value>
+  </data>
+	<data name="FORM_6S" xml:space="preserve">
+    <value>6S (2-1/2 elements)</value>
+  </data>
+	<data name="FORM_9S" xml:space="preserve">
+    <value>9S/8S or 16S/15S (3 elements)</value>
+  </data>
+	<data name="MODEL_TYPE_D" xml:space="preserve">
+    <value>Demand</value>
+  </data>
+	<data name="MODEL_TYPE_DT" xml:space="preserve">
+    <value>Demand and Time of Use</value>
+  </data>
+	<data name="MODEL_TYPE_DTL" xml:space="preserve">
+    <value>Demand, Time of Use, and Load Profile</value>
+  </data>
+	<data name="UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+	<data name="FULC_METER_NAME" xml:space="preserve">
+    <value>FULCRUM</value>
+  </data>
+	<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader></root>

@@ -1,0 +1,859 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.AMIConfiguration</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.AMIConfiguration.ConfigurationError">
+            <summary>
+            Error Codes for the Configuration object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.SUCCESS">
+            <summary>
+            Operation succeded
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.GENERAL_ERROR">
+            <summary>
+            Operation failed
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.USER_ABORT">
+            <summary>
+            Operation failed - aborted by user
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.FILE_NOT_FOUND">
+            <summary>
+            Operation failed - specified file was not found
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.INVALID_PROGRAM">
+            <summary>
+            Operation failed - the program is not valid
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.ITEM_NOT_FOUND">
+            <summary>
+            Operation failed - specified item was not found
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.TIMEOUT">
+            <summary>
+            Operation failed - the device timed out
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.COMMUNICATION_ERROR">
+            <summary>
+            Operation failed - error communicating with device
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.PROMPT_FOR_ERROR">
+            <summary>
+            Operation failed - error occured during the prompt for
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.FAILED_PROCEDURE">
+            <summary>
+            Operation failed - a procedure call failed
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.UNABLE_TO_OPEN_PORT">
+            <summary>
+            Operation failed - the specified port could not be opened
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.SERVICE_NOT_SUPPORTED">
+            <summary>
+            Operation failed - PSEM service not supported
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.SECURITY_ERROR">
+            <summary>
+            Operation failed - PSEM security error
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.OPERATION_NOT_POSSIBLE">
+            <summary>
+            Operation failed - PSEM operation not possible
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.INNAPROPRIATE_ACTION_REQUEST">
+            <summary>
+            Operation failed - PSEM innapropriate action request
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.DEVICE_BUSY">
+            <summary>
+            Operation failed - PSEM device busy
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.DATA_NOT_READY">
+            <summary>
+            Operation failed - PSEM data not ready
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.DATA_LOCKED">
+            <summary>
+            Operation failed - PSEM data locked
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.RENEGOTIATE_REQUEST">
+            <summary>
+            Operation failed - PSEM renegotiate request
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.INVALID_SERVICE_SEQUENCE_STATE">
+            <summary>
+            Operation faiiled - PSEM invalid service sequence state
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ConfigurationError.INVALID_ICS_GATEWAY_ADDRESS">
+            <summary>
+            Operation failed - The ICS gateway address format is not valid
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfigurationItem">
+            <summary>
+            Constants used for calling SetValue and GetValue
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigurationItem.UNIT_ID">
+            <summary>
+            The meter's unit ID
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigurationItem.CUSTOMER_SERIAL_NUMBER">
+            <summary>
+            The meter's customer serial number
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigurationItem.CANADIAN_METER">
+            <summary>
+            Indicates if the meter is Canadian
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.ProcedureResultCodes">
+            <summary>
+            Result codes that are returned in table 08 after a procedure has
+            been written to table 07
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.COMPLETED">
+            <summary>
+            COMPLETED - Procedure success
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.NOT_FULLY_COMPLETED">
+            <summary>
+            NOT_FULLY_COMPLETED - Procedure in-progress
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.INVALID_PARAM">
+            <summary>
+            INVALID_PARAM - Procedure ignored
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.DEVICE_SETUP_CONFLICT">
+            <summary>
+            DEVICE_SETUP_CONFLICT - Procedure ignored
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.TIMING_CONSTRAINT">
+            <summary>
+            TIMING_CONSTRAINT - Procedure ignored
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.NO_AUTHORIZATION">
+            <summary>
+            NO_AUTHORIZATION - Procedure ignored
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.ProcedureResultCodes.UNRECOGNIZED_PROC">
+            <summary>
+            UNRECONGNIZED_PROC - Procedure ignored
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.IANSIConfiguration">
+            <summary>
+            Interface for ANSI meter Configuration classes
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.Logon(System.UInt16,System.String,System.String,System.String,System.UInt32)">
+            <summary>
+            Logs on to the meter
+            </summary>
+            <param name="usUserID">The user ID number</param>
+            <param name="strUserName">The user's name</param>
+            <param name="strPassword">Logon security password</param>
+            <param name="strSerialPort">The serial port used to log on to the meter</param>
+            <param name="uiBaudRate">The desired baud rate to use during communications</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.Logoff">
+            <summary>
+            Logs off of the meter
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.FactoryConfigure(System.String)">
+            <summary>
+            Configures the meter without displaying a prompt for dialog
+            </summary>
+            <param name="strEDLFileName">The path of the EDL program</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.Configure(System.String)">
+            <summary>
+            Configures the meter and displays a prompt for dialog
+            </summary>
+            <param name="strEDLFileName">The path of the EDL program</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.SetValue(System.UInt32,System.Object)">
+            <summary>
+            Sets the specified item into the program
+            </summary>
+            <param name="uiID">The item to set.</param>
+            <param name="objValue">The value of the item being set</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.GetValue(System.UInt32,System.Object@)">
+            <summary>
+            Gets the specified item from the program.
+            </summary>
+            <param name="uiID">The item to get.</param>
+            <param name="objValue">The value of the item requested.</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.FactoryConfigureICSRegister(System.String)">
+            <summary>
+            Configures only the register portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16,System.Byte)">
+            <summary>
+            Configures only the comm module portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICS comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICS comm module for filtering ERT data.</param>
+            <returns>ConfigurationError code.</returns>
+            <param name="byIsERTPopulated">Determines whether or not the ICS comm module puplishes ERT tables
+            in std. table 0.</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16,System.Boolean)">
+            <summary>
+            Configures only the comm module portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICS comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICS comm module for filtering ERT data.</param>
+            <returns>ConfigurationError code.</returns>
+            <param name="blnIsERTPopulated">Determines whether or not the ICS comm module puplishes ERT tables
+            in std. table 0.</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.IANSIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16)">
+            <summary>
+            Configures only the comm module portion of a 4G ICM meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICM comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICM comm module for filtering ERT data.
+            A value of 0 will indicate utility ID should not be configured.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfiguration">
+            <summary>
+            Configures an AMI meter from an EDL file and prompt for values 
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.#ctor(System.Boolean)">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.CreateInstance(Itron.Metering.Communications.PSEM.CPSEM)">
+            <summary>
+            Creates Instance of AMIConfirguration Device
+            </summary>
+             Revison History:
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.CreateInstanceM2Gateway(Itron.Metering.Communications.PSEM.CPSEM)">
+            <summary>
+            Creates an instance of AMIConfigureM2Gateway
+            </summary>
+            <param name="m_PSEM"></param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.Logon(System.UInt16,System.String,System.String,System.String,System.UInt32)">
+            <summary>
+            Logs on to the meter.
+            </summary>
+            <param name="usUserID">User ID for the user logging on to the meter.</param>
+            <param name="strUserName">User name for the user logging on to the meter.</param>
+            <param name="strPassword">Password required for logging on to the meter.</param>
+            <param name="strSerialPort">Specifies which serial port to use.</param>
+            <param name="uiBaudRate">Specifies the baud rate to initialize with.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.Logoff">
+            <summary>
+            Logs off of the meter.
+            </summary>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.FactoryConfigure(System.String)">
+            <summary>
+            Configures the meter with the specified EDL file and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.FactoryConfigureICSRegister(System.String)">
+            <summary>
+            Configures only the register portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16,System.Byte)">
+            <summary>
+            Configures only the comm module portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICS comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICS comm module for filtering ERT data.</param>
+            <param name="byIsERTPopulated">Determines whether or not the ICS comm module puplishes ERT tables
+            in std. table 0.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16,System.Boolean)">
+            <summary>
+            Configures only the comm module portion of an ICS meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICS comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICS comm module for filtering ERT data.</param>
+            <param name="blnIsERTPopulated">Determines whether or not the ICS comm module puplishes ERT tables
+            in std. table 0.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.FactoryConfigureICSCommModule(System.String,System.String,System.UInt16)">
+            <summary>
+            Configures only the comm module portion of a 4G ICM meter with the specified EDL file 
+            and does not display a prompt for dialog.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <param name="strGatewayAddress">The Gateway IP address of the ICS comm module.</param>
+            <param name="usERTUtilityID">The utility ID used by the ICS comm module for filtering ERT data.
+            A value of 0 will indicate utility ID should not be configured.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.Configure(System.String)">
+            <summary>
+            Configures the meter with the specified EDL file and displays a dialog
+            to retrieve the prompt for values.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.SetValue(System.UInt32,System.Object)">
+            <summary>
+            Sets the value of the specified item.
+            </summary>
+            <param name="uiID">The ID of the item to set.</param>
+            <param name="objValue">The value the item will be set to.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfiguration.GetValue(System.UInt32,System.Object@)">
+            <summary>
+            Returns a value for the specified item.
+            </summary>
+            <param name="uiID">The ID of the item to get.</param>
+            <param name="objValue">The value of the item.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfiguration.m_SerialPort">
+            <summary>
+            SerialPort object used for communications with the meter.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfiguration.m_PSEM">
+            <summary>
+            PSEM object used to send and recieve PSEM commands
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfiguration.m_ConfigureDevice">
+            <summary>
+            Contains the functions the configure the meter
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfigurationResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigurationResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigurationResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigurationResources.UnexpectedGetValueType">
+            <summary>
+              Looks up a localized string similar to Unexpected type returned by GetValue..
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfigureDevice">
+            <summary>
+            Handles the configuration of an AMI meter.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.AMIConfiguration.AMIConfigureDevice.HideProgressEvent">
+            <summary>
+            Event that hides the progress bar
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ShowProgressEvent">
+            <summary>
+            Event that shows the progress bar
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.AMIConfiguration.AMIConfigureDevice.StepProgressEvent">
+            <summary>
+            Event that causes the progress bar to perform a step
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.VENDOR_NAME">
+            <summary>
+            Vendor name to program into the meter
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SET_MASK">
+            <summary>
+            Flags used for setting the meter time
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.COMPLETE_CONFIG">
+            <summary>
+            Clear all registers upon configuration
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.COMPLETE_CANADIAN_CONFIG">
+            <summary>
+            Clear all registers and make the meter Canadian
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ConfigurationOptions">
+            <summary>
+            Options to indicate what data to configure.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ConfigurationOptions.Full">
+            <summary>
+            Full configuration, all data should be configured.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ConfigurationOptions.ICSRegisterOnly">
+            <summary>
+            ICS Register only configuration, only ICS register data should be configured
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ConfigurationOptions.ICSCommModuleOnly">
+            <summary>
+            ICS Comm Module only configuration, only ICS comm module data should be configured.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.#ctor(Itron.Metering.Communications.PSEM.CPSEM)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="PSEMObject">PSEM protocol object that is currently logged on to the meter.</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.Configure(System.String)">
+            <summary>
+            Configures the meter with the specified EDL file and displays a dialog
+            to retrieve the prompt for values.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.LoadEDLFileToTableSet(System.String)">
+            <summary>
+            Loads the EDL file into the table set. Use before any partial configuraitons.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file.</param>
+            <returns>ConfigurationError code.</returns>
+            Revison History:
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/09/12 jkw 7.40.00 N/A	   Created
+            
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.WriteTableByElementRange(Itron.Common.C1219Tables.Centron.CentronTblEnum,System.Int32[],Itron.Common.C1219Tables.Centron.CentronTblEnum,System.Int32[])">
+            <summary>
+            Loads the EDL file into the table set. Use before any partial configuraitons.
+            </summary>
+            <param name="startElement">Start table element</param>
+            <param name="anStartIndex">Start table element index array. null if none.</param>
+            <param name="endElement">End table element. Must be in the same table</param>
+            <param name="anEndIndex">End table element index array. null if none.</param>
+            <returns>ConfigurationError code.</returns>
+            Revison History:
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/09/12 jkw 7.40.00 N/A	   Created
+            
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.GetFieldArrayLastIndex(Itron.Common.C1219Tables.Centron.CentronTblEnum)">
+            <summary>
+            Returns the last index of the field array
+            </summary>
+            <param name="element">Field array table element</param>
+            <returns>Last index</returns>
+            Revison History:
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/09/12 jkw 2.60.XX N/A	   Created - Lithium
+            
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.WriteTable(System.UInt16)">
+            <summary>
+            Writes the specified table to the meter.
+            </summary>
+            <param name="usTableID">Table number for the table to write</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ReadTable(System.UInt16)">
+            <summary>
+            Reads the specified table from the meter and stores it in the program tables
+            </summary>
+            <param name="usTableID">The table number of the table to read.</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsCanadian">
+            <summary>
+            Gets or sets a boolean that determines if the meter is Canadian
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.UnitID">
+            <summary>
+            Gets or sets the Unit ID
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.CustomerSerialNumber">
+            <summary>
+            Gets or sets the Customer Serial Number
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.InitialDateTime">
+            <summary>
+            Gets or sets the date and time to initialize the meter with.
+            If this value is null the current time will be used.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.PSEM">
+            <summary>
+            Gets or sets the PSEM object
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsFactoryConfig">
+            <summary>
+            Gets or sets whether or not the factory interface is being used.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.GatewayAddress">
+            <summary>
+            Gets or sets the Gateway address to configure in the ICS comm module.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ERTUtilityID">
+            <summary>
+            Gets or sets the ERT utility ID to configure in the ICS comm module.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsERTPopulated">
+            <summary>
+            Gets or sets the ERT utility ID to configure in the ICS comm module.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.AMIConfiguration.AMIConfigureDevice.FactoryConfigType">
+            <summary>
+            Gets or sets the what data should be configured.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.InterpretPSEMResult(Itron.Metering.Communications.PSEM.PSEMResponse)">
+            <summary>
+            Translates a PSEM ResultCode into a ConfigurationError
+            </summary>
+            <param name="PSEMResult">PSEMResultCode to translate</param>
+            <returns>The corresponding ConfigurationError</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.CorrectProgramforMissingItems">
+            <summary>
+            Check for missing configuration items and fix them
+            </summary>
+            <returns>ConfigurationError Code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.LoadFactoryPromptForItems">
+            <summary>
+            Loads the Factory prompt for values into the program tables
+            </summary>
+            <returns>ConfigurationError Code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetClock">
+            <summary>
+            Calls the procedure necessary to set the meter's clock
+            </summary>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ClearStatusFlags">
+            <summary>
+            Calls the procedure to clear Standard and Manufacturer status flags
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.OpenConfiguration">
+            <summary>
+            Calls the procedure to Open 2048 for writing
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.CloseConfiguration">
+            <summary>
+            Calls the procedure to Open 2048 for writing
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.ActivateICSConfiguration">
+            <summary>
+            Calls the procedure necessary to activate configuration values in the ICS comm module.
+            </summary>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetSoftwareVersionInformation">
+            <summary>
+            Sets the software version information into the program
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetDateLastProgrammed">
+            <summary>
+            Sets the date last programmed
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetICSGatewayAddress">
+            <summary>
+            Sets the ICS Gateway Address.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetICSERTUtilityID">
+            <summary>
+            Sets the ICS ERT Utility ID.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.SetICSIsERTPopulated">
+            <summary>
+            Sets the ICS Is ERT Populated field.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.Read2048Offsets">
+            <summary>
+            Reads the Sub Table offsets for 2048 from the meter and places them 
+            in the Program table so that the data locations loaded by the EDL 
+            file will match those in the meter.
+            </summary>
+            <returns>ConfigurationError Code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.WriteConfiguration">
+            <summary>
+            Writes the configuration tables to the meter
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.GetTablesToConfigure">
+            <summary>
+            Generates a list of table numbers that are in the order that the meter
+            will be configured.
+            </summary>
+            <returns>List of table numbers</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsICSERTDataSupported">
+            <summary>
+            This method determines if ICS ERT data is or is going to be supported.
+            </summary>
+            <returns>Boolean indicating whether or not ICS ERT data can be written to the meter.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.GetRegFWVersion">
+            <summary>
+            Gets the register FW version from Table 1
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsCriticalTable(System.UInt16)">
+            <summary>
+            Determines whether or not a table is critical to the Configuration
+            </summary>
+            <param name="usTableID">The table number.</param>
+            <returns>
+            True if the table is a critical table.
+            False otherwise.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsTableSupported(System.UInt16)">
+            <summary>
+            Determines if the table is supported by the meter.
+            </summary>
+            <param name="TableID">The ID of the table to check.</param>
+            <returns>True if the table is supported false otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.IsICSConfigTable(System.UInt16)">
+            <summary>
+            Determines if the table is an ICS configuration table.
+            </summary>
+            <param name="TableID">The ID of the table to check.</param>
+            <returns>True if the table is supported false otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.OnShowProgress(Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Raises a ShowProgressEvent for this control
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.OnStepProgress(Itron.Metering.Progressable.ProgressEventArgs)">
+            <summary>
+            Raises a StepProgressEvent for this control
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureDevice.OnHideProgress(System.EventArgs)">
+            <summary>
+            Raises a HideProgressEvent for this control
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_CentronAMITables">
+            <summary>
+            handles reading from and writing to EDL files
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_bIsCanadian">
+            <summary>
+            whether or not the meter is Canadian
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_strUnitID">
+            <summary>
+            User configurable unit id
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_strCustomerSerialNumber">
+            <summary>
+            User configurable customer serial number
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_PSEM">
+            <summary>
+            PSEM object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureDevice.m_InitialDateTime">
+            <summary>
+            date and time to initialize the meter with
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway">
+            <summary>
+            Handles the configuration of the M2 Gateway module
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.#ctor(Itron.Metering.Communications.PSEM.CPSEM)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="PSEMObject">PSEM protocol object</param>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.Configure(System.String)">
+            <summary>
+            Configures the meter with the specified EDL file and displays a dialog
+            to retrieve the prompt for values.
+            </summary>
+            <param name="strEDLFileName">Path and filename of the EDL file</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.ReadTable(System.UInt16)">
+            <summary>
+            Reads the specified table from the meter and stores it in the program tables
+            </summary>
+            <param name="usTableID">The table number of the table to read.</param>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.SetSoftwareVersionInformation">
+            <summary>
+            Sets the software version information into the program
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.WriteConfiguration">
+            <summary>
+            Writes the configuration tables to the meter
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.GetTablesToConfigure">
+            <summary>
+            Generates a list of table numbers that are in the order that the meter
+            will be configured.
+            </summary>
+            <returns>List of table numbers</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.CloseConfiguration">
+            <summary>
+            Calls the procedure to save the configuration
+            </summary>
+            <returns>ConfigurationError code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.LoadFactoryPromptForItems">
+            <summary>
+            Loads the Factory prompt for values into the program tables
+            </summary>
+            <returns>ConfigurationError Code</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.SetDateLastProgrammed">
+            <summary>
+            Sets the date last programmed
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.IsTableSupported(System.UInt16)">
+            <summary>
+            Determines if the table is supported by the meter.
+            </summary>
+            <param name="TableID">The ID of the table to check.</param>
+            <returns>True if the table is supported false otherwise.</returns>
+        </member>
+        <member name="M:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.WriteTable(System.UInt16)">
+            <summary>
+            Writes the specified table to the meter.
+            </summary>
+            <param name="usTableID">Table number for the table to write</param>
+            <returns>ConfigurationError code.</returns>
+        </member>
+        <member name="F:Itron.Metering.AMIConfiguration.AMIConfigureM2Gateway.m_GatewayTables">
+            <summary>
+            handles reading from and writing to M2 Gateway EDL files
+            </summary>
+        </member>
+    </members>
+</doc>

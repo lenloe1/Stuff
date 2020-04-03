@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D019F65F-9C7E-4F65-93D4-A0734D76816E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Metering.Device</RootNamespace>
+    <AssemblyName>Itron.Metering.Device</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <WarningsNotAsErrors>618</WarningsNotAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Itron.Metering.Device.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.Device.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Itron.Metering.Device.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.Device (2).ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <DocumentationFile>bin\Release\Itron.Metering.Device.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\Itron.Metering.Device.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.Device (2).ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Itron.Common.C1219Tables.ANSIStandard, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.ANSIStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Itron.Common.C1219Tables.Centron, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.Centron.dll</HintPath>
+    </Reference>
+    <Reference Include="Itron.Common.C1219Tables.LandisGyr, Version=7.1.0.0, Culture=neutral, PublicKeyToken=e8674cac5a63dc2b, processorArchitecture=x86">
+      <HintPath>..\..\Solutions\packages\Itron.Metering.OWOC.C1219Tables.0.0.223\lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.LandisGyr.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANSIDevice\ANSIMeter.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayAdvPolyITRFBridge\OpenWayAdvPolyITRFBridge.cs" />
+    <Compile Include="ANSIDevice\Bridge\CBridgeDevice.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayAdvPolyITRFBridge\OpenWayAdvPolyITRFBridge_IBridge.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayAdvPolyITRFBridge\OpenWayAdvPolyITRFBridge_IPreviousSeason.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayAdvPolyITRFBridge\OpenWayAdvPolyITRFBridge_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayITRDBridge\OpenWayITRDBridge_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayITRDBridge\OpenWayITRDBridge.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayITRDBridge\OpenWayITRDBridge_IBridge.cs" />
+    <Compile Include="ANSIDevice\Bridge\OpenWayITRDBridge\OpenWayITRDBridge_IPreviousSeason.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_ICommModVersions.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IHANInformation.cs" />
+    <Compile Include="ANSIDevice\HAN\HANInformation.cs" />
+    <Compile Include="ANSIDevice\Interfaces\ICommModVersions.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IDiagnosticEvents.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IPreviousSeason.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IChoiceConnect.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IVoltMonitorCounts.cs" />
+    <Compile Include="ANSIDevice\OpenWayICSGateway\CommonFirmwareDownload.cs" />
+    <Compile Include="ANSIDevice\OpenWayICSGateway\ICS_ERT_TableReader.cs" />
+    <Compile Include="ANSIDevice\OpenWayICSGateway\ICS_Gateway_ICommModVersions.cs" />
+    <Compile Include="ANSIDevice\OpenWayITR1\OpenWayITR1.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRH\OpenWayITRH.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRU\OpenWayITRU.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRU\OpenWayITRU_IDiagnosticEvents.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRU\OpenWayITRU_IFirmwareDownload.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRU\OpenWayITRU_IHANInformation.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRV\OpenWayITRV.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRV\OpenWayITRV_IDiagnosticEvents.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRV\OpenWayITRV_IFirmwareDownload.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRV\OpenWayITRV_IHANInformation.cs" />
+    <Compile Include="ANSIDevice\OpenWayPolyITRK\OpenWayPolyITRK.cs" />
+    <Compile Include="ANSIDevice\OpenWayPolyITRK\OpenWayPolyITRK_ICreateEDL.cs" />
+    <Compile Include="ANSIDevice\OpenWayPolyITRK\OpenWayPolyITRK_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\Tables\BellWeatherMfgTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2372.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2377.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2437.cs" />
+    <Compile Include="ANSIDevice\ANSIDevice\ANSIDevice.cs" />
+    <Compile Include="ANSIDevice\ANSIDevice\ANSIDevice_IConfiguration.cs" />
+    <Compile Include="ANSIDevice\ANSIDisplayItem.cs" />
+    <Compile Include="ANSIDevice\ANSIEventDictionary.cs" />
+    <Compile Include="ANSIDevice\C1219_CalendarRcd.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_CommEventDictionary.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_EventDictionary.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_FWDownloadEventDictionary.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IClientMetering.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IConfiguration.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IFirmwareDownload.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IPending.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IPendingTOU.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_LoadProfile.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_MFGTable2048.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_HANEventDictionary.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\CENTRON_AMI_ServiceLimiting.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\OpenWayDisplayItem.cs" />
+    <Compile Include="ANSIDevice\CENTRON_AMI\SignedAuthenticationKey.cs" />
+    <Compile Include="ANSIDevice\CommModules\CiscoCommModule.cs" />
+    <Compile Include="ANSIDevice\CommModules\CommModuleBase.cs" />
+    <Compile Include="ANSIDevice\CommModules\ICSCommModule.cs" />
+    <Compile Include="ANSIDevice\CommModules\PLANCommModule.cs" />
+    <Compile Include="ANSIDevice\CommModules\RFLANCommModule.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IClientMetering.cs" />
+    <Compile Include="ANSIDevice\Interfaces\ICreateEDL.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IPending.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IPendingTOU.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPolyITRF\OpenWayAdvPolyITRF.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPolyITRF\OpenWayAdvPolyITRF_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPoly\OpenWayAdvPoly.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPoly\OpenWayAdvPoly_ICreateEDL.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPoly\OpenWayAdvPoly_ISiteScan.cs" />
+    <Compile Include="ANSIDevice\OpenWayAdvPoly\OpenWayAdvPoly_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPolyITRE\OpenWayBasicPolyITRE.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPolyITRE\OpenWayBasicPolyITRE_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPoly\OpenWayBasicPoly.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPoly\OpenWayBasicPoly_ICreateEDL.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPoly\OpenWayBasicPoly_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayBasicPoly\OpenWayBasicPoly_MFGTable2048.cs" />
+    <Compile Include="ANSIDevice\OpenWayICSGateway\ICS_Gateway.cs" />
+    <Compile Include="ANSIDevice\OpenWayICSGateway\ICS_Gateway_EventDictionary.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRD\OpenWayITRD_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRD\OpenWayITRD.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRJ\OpenWayITRJ.cs" />
+    <Compile Include="ANSIDevice\OpenWayITRJ\OpenWayITRJ_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway_EventDictionary.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway_IConfiguration.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway_ICreateEDL.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway_IPending.cs" />
+    <Compile Include="ANSIDevice\OpenWayM2Gateway\M2_Gateway_IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\OpenWaySL7000Gateway\SL7000_Gateway.cs" />
+    <Compile Include="ANSIDevice\SENTINEL\SENTINEL_EventDictionary.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSIDataSourceTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSIRegisterTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ICSMfgTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2191.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2221.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2265.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2361.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2640.cs" />
+    <Compile Include="ANSIDevice\Tables\HANTablesForRIB.cs" />
+    <Compile Include="ANSIDevice\Tables\IPMfgTables.cs" />
+    <Compile Include="ANSIDevice\Tables\M2GatewayTables.cs" />
+    <Compile Include="ANSIDevice\Tables\MFGDataSourceTables.cs" />
+    <Compile Include="ANSIDevice\Tables\MFGLoadProfileTables.cs" />
+    <Compile Include="ANSIDevice\Tables\MFGTable2053.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayFWDowloadEventTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayHANEventTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGExtSelfReadTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGPowerMonitorTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2079.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2082.cs" />
+    <Compile Include="ANSIDevice\Tables\HANLANCommLogs.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayCommModule_2064.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayFirmwareMFGTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2108.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2112MetrologyStatistics.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2123.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2127.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayDisconnectSwitchTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2061.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMfgTable2078.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2168.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2170.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2175.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2428.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2429.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2193.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2194.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2195.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2198.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2220.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2270.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2260DSTCalendar.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2260SR30Config.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2260HANEvents.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2261.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2219.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2264.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2281.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2290.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2360.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2612.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable2760.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTable3043.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGTamperTapTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayMFGVoltageMonitoringTables.cs" />
+    <Compile Include="ANSIDevice\Tables\OpenWayPolyMFGTable2091.cs" />
+    <Compile Include="ANSIDevice\Tables\PLANTables.cs" />
+    <Compile Include="ANSIDevice\Tables\RFLANMfgTables.cs" />
+    <Compile Include="ANSIDevice\Tables\TemperatureDataMfgTables.cs" />
+    <Compile Include="DisplayItem.cs" />
+    <Compile Include="ANSIDevice\Interfaces\IHANInformation.cs" />
+    <Compile Include="Interfaces\IValidateProgram.cs" />
+    <Compile Include="ANSIDevice\LIDRetriever.cs" />
+    <Compile Include="ANSIDevice\LIDs.cs" />
+    <Compile Include="ANSIDevice\LIDWriter.cs" />
+    <Compile Include="ANSIDevice\ANSILoadProfileStatus.cs" />
+    <Compile Include="ANSIDevice\ProcedureDefinitions.cs" />
+    <Compile Include="ANSIDevice\PSEMException.cs" />
+    <Compile Include="ANSIDevice\Quantities\ANSIQuantity.cs" />
+    <Compile Include="ANSIDevice\SENTINEL\SENTINELDisplayItem.cs" />
+    <Compile Include="ANSIDevice\SENTINEL\SENTINEL_MFGTable2048.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSIEventTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSILoadProfileTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSIModemTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSITables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSITimeAndTOUTables.cs" />
+    <Compile Include="ANSIDevice\Tables\ANSIVQTables.cs" />
+    <Compile Include="ANSIDevice\Tables\HANMfgTables.cs" />
+    <Compile Include="ANSIDevice\Tables\MFGTable2048.cs" />
+    <Compile Include="ANSIDevice\Tables\MFGTables.cs" />
+    <Compile Include="ANSIDevice\Tables\StdNetworkTables.cs" />
+    <Compile Include="ANSIDevice\Tables\TableBase.cs" />
+    <Compile Include="Interfaces\IConfiguration.cs" />
+    <Compile Include="Interfaces\ICustomSchedule.cs" />
+    <Compile Include="Interfaces\IERTCheck.cs" />
+    <Compile Include="Interfaces\IFirmwareDownload.cs" />
+    <Compile Include="Interfaces\ISiteScan.cs" />
+    <Compile Include="ItronDevice.cs" />
+    <Compile Include="ItronDeviceResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Third Party\RAVEn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenWay Tools\Itron.Metering.ReplicaSettings\Itron.Metering.ReplicaSettings.csproj">
+      <Project>{41f124a1-d1fe-4d8a-947d-7e3cddb8696b}</Project>
+      <Name>Itron.Metering.ReplicaSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.AMIConfiguration\Itron.Metering.AMIConfiguration.csproj">
+      <Project>{012CB69B-5E05-43A6-9931-76FA42642E71}</Project>
+      <Name>Itron.Metering.AMIConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Communications\Itron.Metering.Communications.csproj">
+      <Project>{A7D80805-B020-42A2-B843-28A5E72609A7}</Project>
+      <Name>Itron.Metering.Communications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.DeviceDataTypes\Itron.Metering.DeviceDataTypes.csproj">
+      <Project>{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}</Project>
+      <Name>Itron.Metering.DeviceDataTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.DST\Itron.Metering.DST.csproj">
+      <Project>{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}</Project>
+      <Name>Itron.Metering.DST</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Progressable\Itron.Metering.Progressable.csproj">
+      <Project>{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}</Project>
+      <Name>Itron.Metering.Progressable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.TOU\Itron.Metering.TOU.csproj">
+      <Project>{A9FD2A7A-3493-4331-8F7F-790139E1E651}</Project>
+      <Name>Itron.Metering.TOU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj">
+      <Project>{1C2BA173-78D6-4818-A68A-3773173F9104}</Project>
+      <Name>Itron.Metering.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Zigbee.BeltClipRadio\Itron.Metering.Zigbee.BeltClipRadio.csproj">
+      <Project>{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}</Project>
+      <Name>Itron.Metering.Zigbee.BeltClipRadio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itron.Metering.Zigbee.Radio\Itron.Metering.Zigbee.Radio.csproj">
+      <Project>{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}</Project>
+      <Name>Itron.Metering.Zigbee.Radio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ANSIDevice\ANSIDeviceStrings.resx">
+      <LastGenOutput>ANSIDeviceStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceClassDiagram.cd" />
+    <None Include="ItronIEMPublic.snk" />
+    <None Include="Migrated rules for Itron.Metering.Device %282%29.ruleset" />
+    <None Include="Migrated rules for Itron.Metering.Device.ruleset" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\Itron.Metering\CodeAnalysisDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLMSDevice\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="UpdateAssemblyInfo" Condition="'$(BuildVersion)' != '' And Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  </Target>
+  <Target Name="UpdateAssemblyInfo">
+    <Message Text="Updating Version to $(BuildVersion)" Importance="high" />
+    <Time Format="yyyy">
+      <Output TaskParameter="FormattedTime" PropertyName="CurrentYear" />
+    </Time>
+    <Attrib Files="$(ProjectDir)Properties\AssemblyInfo.cs" ReadOnly="false" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="(AssemblyVersion|AssemblyFileVersionAttribute|AssemblyFileVersion)\(&quot;.*&quot;\)" ReplacementText="$1(&quot;$(BuildVersion)&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCompany\(&quot;.*&quot;\)" ReplacementText="AssemblyCompany(&quot;Itron, Inc&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCopyright\(&quot;.*&quot;\)" ReplacementText="AssemblyCopyright(&quot;Copyright © Itron, Inc $(CurrentYear)&quot;)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

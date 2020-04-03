@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.ZigBeeRadioServerObjects</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService">
+            <summary>
+            Specifies the service contract for the WCF service that will manage the ZigBee radios for
+            all Itron applications.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.IsScanningDevices">
+            <summary>
+            Gets whether or not the service is currently set to scan for devices when a radio is 
+            available for use.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.SubscribeToScans">
+            <summary>
+            Subscribes to device scanned events.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.UnsubscribeFromScans">
+            <summary>
+            Unsubscribe to device scanned events.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.AvailableRadioCount">
+            <summary>
+            Gets the number of radios that are currently available for use.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.RequestZigBeeRadio">
+            <summary>
+            Request a ZigBee radio from the service.
+            </summary>
+            <returns>A token for the radio that has been given or null if no radio is available.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.ReleaseZigBeeRadio(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Releases the specified radio token back to the radio management service.
+            </summary>
+            <param name="Radio">The radio token that is to be released.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.GetVisibleDevices">
+            <summary>
+            Gets a list of the devices that seen during the last scan of the ZigBee network.
+            </summary>
+            <returns>The list of devices that were seen.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioService.GetRadioInformation">
+            <summary>
+            Gets a list of all radios that are being managed by the service.
+            </summary>
+            <returns>The list of radios.</returns>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioCallBack">
+            <summary>
+            Call back interface for the ZigBee radio management service.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.IZigBeeRadioCallBack.NotifyNetworkScanned(System.Collections.Generic.List{Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice})">
+            <summary>
+            Notifies the client that a new scan is available.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice">
+            <summary>
+            Class that represents an individual device on the ZigBee network.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.#ctor(System.UInt64,System.Byte,System.SByte,System.DateTime)">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.Equals(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice)">
+            <summary>
+            Determines if the ZigBeeDevice object is equal to the current object
+            </summary>
+            <param name="other">The ZigBeeDevice object to compare</param>
+            <returns>True if the objects are equal false otherwise.</returns>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.ExPANID">
+            <summary>
+            Gets or sets the PAN ID for the current device
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.LogicalChannel">
+            <summary>
+            Gets or sets the Channel used for scanning of the current device
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.LastHopRSSI">
+            <summary>
+            Gets or set the last hop rssi
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.ScanTime">
+            <summary>
+            Gets or sets the time that the device was last scanned.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.IsItronDevice">
+            <summary>
+            Gets whether or not the current device is an Itron device
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.DeviceType">
+            <summary>
+            Gets the device type of the device assuming that it is an Itron device.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice.ScanChannel">
+            <summary>
+            Gets the Channel number that is to be used when issuing a start command.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker">
+            <summary>
+            Keeps track of visible ZigBee Device using a ZigBeeRadioCallBack object.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.DEFAULT_KEEP_TIME">
+            <summary>
+            The default amount of time to keep a device in the list once it has been seen.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.DevicesUpdated">
+            <summary>
+            Event raised when the list of tracked items has been updated.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.ElectricMetersUpdated">
+            <summary>
+            Event raised when the list of tracked electric meters has been updated.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.CellRelaysUpdated">
+            <summary>
+            Event raised when the list of tracked Cell Relays have has updated.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack)">
+            <summary>
+            Constructor. Creates a device tracker using the default keep time.
+            </summary>
+            <param name="callback">The callback for the radio service that should be tracked.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack,System.TimeSpan)">
+            <summary>
+            Constructor Creates a device tracker using the specified keep time.
+            </summary>
+            <param name="callback">The callback for the radio service that should be tracked.</param>
+            <param name="timeToKeep">The amount of time to keep a device once it has been seen.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.Clear">
+            <summary>
+            Clears the current list of devices.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.Devices">
+            <summary>
+            Gets the list of devices that are currently being tracked.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.ElectricMeters">
+            <summary>
+            Gets the list of Electric Meters that are being tracked.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.CellRelays">
+            <summary>
+            Gets the list of Cell Relays that are being tracked.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.TimeToKeep">
+            <summary>
+            Gets or sets the amount of time to keep a device in the list once it
+            has been seen.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.m_RadioCallBack_NetworkScanned(System.Object,Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs)">
+            <summary>
+            Handles the networks scanned 
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.OnDevicesUpdated(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs)">
+            <summary>
+            Raises the DevicesUpdated event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.OnElectricMetersUpdated(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs)">
+            <summary>
+            Raises the ElectricMetersUpdated event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDeviceTracker.OnCellRelaysUpdated(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs)">
+            <summary>
+            Raises the CellRelaysUpdated event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack">
+            <summary>
+            CallBack class that handles the call backs from the ZigBee Radio manager.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack.NetworkScanned">
+            <summary>
+            Event that is raised when a new network scan is available.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack.NotifyNetworkScanned(System.Collections.Generic.List{Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice})">
+            <summary>
+            Notifies the client that a new scan is available.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack.OnNetworkScanned(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs)">
+            <summary>
+            Raises the NetworkScanned event.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel">
+            <summary>
+            Client channel class for the ZigBee radio management service.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CallBack">The client's CallBack object.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CallBack">The client's CallBack object.</param>
+            <param name="endpointConfigurationName">The name of the endpoint configuration to use.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="CallBack">The client's CallBack object.</param>
+            <param name="binding">The binding to use for the connection.</param>
+            <param name="remoteAddress">The endpoint address for the connection.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack,System.String,System.ServiceModel.EndpointAddress)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CallBack">The client's CallBack object.</param>
+            <param name="endpointConfigurationName">The name of the endpoint configuration to use.</param>
+            <param name="remoteAddress">The enpoint address to use for the connection.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioCallBack,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="CallBack">The client's CallBack object.</param>
+            <param name="endpointConfigurationName">The name of the configuration to use for the connection.</param>
+            <param name="remoteAddress">The enpoint address to use for the connection.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.SubscribeToScans">
+            <summary>
+            Subscribes to device scanned events.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.UnsubscribeFromScans">
+            <summary>
+            Unsubscribe to device scanned events.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.IsScanningDevices">
+            <summary>
+            Gets whether or not the host is currently scanning for devices.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.AvailableRadioCount">
+            <summary>
+            Gets the current count of available radios.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.RequestZigBeeRadio">
+            <summary>
+            Requests a radio from the host.
+            </summary>
+            <returns>Null if no radio is available or a token to an available radio.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.ReleaseZigBeeRadio(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Releases the specified radio back to the host.
+            </summary>
+            <param name="Radio">The radio token to release.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.GetVisibleDevices">
+            <summary>
+            Gets the list of devices that have been seen during the latest scans.
+            </summary>
+            <returns>The list of devices seen.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioChannel.GetRadioInformation">
+            <summary>
+            Gets a list of all radios that are being managed by the service.
+            </summary>
+            <returns>The list of radios.</returns>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEvent">
+            <summary>
+            Delegate for the Network Scanned event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs">
+            <summary>
+            Event arguments for the network scanned event.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs.#ctor(System.Collections.Generic.List{Itron.Metering.ZigBeeRadioServerObjects.ZigBeeDevice})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="devices">The list of events seen during the most recent scan.</param>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioScannedEventArgs.Devices">
+            <summary>
+            Gets the list of devices in the scan.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService">
+            <summary>
+            The server object for the ZigBee radio manager service.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.Finalize">
+            <summary>
+            Deconstructor.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.Dispose">
+            <summary>
+            Disposes the object so that it can be garbage collected.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.SubscribeToScans">
+            <summary>
+            Subscribes to device scanned events.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.UnsubscribeFromScans">
+            <summary>
+            Unsubscribe to device scanned events.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.RequestZigBeeRadio">
+            <summary>
+            Requests a radio from the radio management service.
+            </summary>
+            <returns>A token to a ZigBee radio or null if no radios are available.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.ReleaseZigBeeRadio(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Releases the specified radio back to the radio management service.
+            </summary>
+            <param name="Radio">The radio object to be released.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.GetVisibleDevices">
+            <summary>
+            Gets the list of devices that were seen during the last scan.
+            </summary>
+            <returns>The list of ZigBee devices that were seen last.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.RestartService">
+            <summary>
+            Restarts the ZigBee Radio Manager Service
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.StartService">
+            <summary>
+            Starts the ZigBee Radio Manager Service
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.StopService">
+            <summary>
+            Stops the ZigBee Radio Manager Service
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.GetRadioInformation">
+            <summary>
+            Gets a list of all radios that are being managed by the service.
+            </summary>
+            <returns>The list of radios.</returns>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.IsScanningDevices">
+            <summary>
+            Gets whether or not the service is set to scan for ZigBee devices.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.AvailableRadioCount">
+            <summary>
+            Gets the number of radios that are currently available.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.ScanForDevicesCallBack(System.Object)">
+            <summary>
+            Scans for available devices using an available radio. This method is meant to be used
+            as a TimerCallBack delegate for m_InitiateScanTimer.
+            </summary>
+            <param name="stateInfo">The CallBack state info.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.NotifySubscribers">
+            <summary>
+            Notifies all subscribers that a scan has completed.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.ScanUsingUSBBeltClipRadio(System.Int32)">
+            <summary>
+            Scan for devices using a USB Belt Clip Radio
+            </summary>
+            <param name="iChannel">The channel to scan.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.StoreZigBeeNetworks(Itron.Metering.Zigbee.ZigbeeNetwork[],System.Nullable{System.SByte})">
+            <summary>
+            This method stores the ZigBee networks
+            </summary>
+            <param name="ZigBeeNetworks">Array of ZigBee Networks.</param>
+            <param name="RSSI">Optional RSSI to use for IA Dongle scan.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.CreateUSBWatcher">
+            <summary>
+            Creates a ManagementEventWatcher that will raise an event when a usb device is added.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_USBEventWatcher_EventArrived(System.Object,System.Management.EventArrivedEventArgs)">
+            <summary>
+            Handles the USB event watcher EventArrived event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.GetIADongleRadioList">
+            <summary>
+            Gets the list of IA ZigBee radios that are currently connected to the computer.
+            </summary>
+            <returns>The list of device addresses for all connected radios.</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.GetUSBRadioList">
+            <summary>
+            Gets the list of USB Belt Clip Radios that are currently connected to the computer.
+            </summary>
+            <returns>The list of USB Belt Clip Radios</returns>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.UpdateRadioLists">
+            <summary>
+            Updates the list of radios that are currently connected to the computer.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.RemoveUnusedRadios(System.Collections.Generic.List{Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken})">
+            <summary>
+            Removes any radios that are no longer connected to the computer.
+            </summary>
+            <param name="NewRadios">The list of radios that are connected to the computer.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.AddNewRadios(System.Collections.Generic.List{Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken})">
+            <summary>
+            Adds radio tokens to the available list if they are new.
+            </summary>
+            <param name="NewRadios">The list of currently attached IA radios.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.WriteLog(Itron.Metering.Utilities.Logger.LoggingLevel,System.String)">
+            <summary>
+            Writes a log entry to the log file.
+            </summary>
+            <param name="Level">The level of the message you would like to write.</param>
+            <param name="strMessage">The message you would like to write.</param>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_AvailableRadios">
+            <summary>
+            The list of radios that are currently available
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_RadiosInUse">
+            <summary>
+            The list of radios that are currently in use
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_ZigBeeDevices">
+            <summary>
+            The list of devices that were seen in the last scan
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_USBEventWatcher">
+            <summary>
+            Watches for a USB device to be inserted or removed
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_ScanningRadio">
+            <summary>
+            The radio that is currently being used for scanning
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_ScanningRadioSemaphore">
+            <summary>
+            Semaphore used to prevent giving the scanning radio away while it is in use.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_InitiateScanTimer">
+            <summary>
+            Timer used to initiate a scan.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_ScanSubscribers">
+            <summary>
+            The list of clients that have subscribed to the scan events
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioService.m_Logger">
+            <summary>
+            Logger used for debug purposes.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken">
+            <summary>
+            A Token that is used by the ZigBeeRadioManager to represent a specific ZigBee radio.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType">
+            <summary>
+            Enumeration for the radio type that this token represents.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType.IADongle">
+            <summary>
+            Integration Associates USB dongle radio.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType.BluetoothRadio">
+            <summary>
+            Itron ZigBee radio connected by Bluetooth
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType.USBRadio">
+            <summary>
+            Itron ZigBee radio connected by USB
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType.TelegesisRadio">
+            <summary>
+            Telegesis radio running BCR code.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioStatus">
+            <summary>
+            Enumeration for the status of a ZigBee Radio
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioStatus.Available">
+            <summary>
+            The radio is currently available for use.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioStatus.InUse">
+            <summary>
+            The radio is currently in use.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.#ctor(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.ZigBeeRadioType,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="radioType">The type of the radio the token represents.</param>
+            <param name="radioIdentifier">The identifier of the radio the token represents.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.Equals(Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken)">
+            <summary>
+            Determines whether or not the specified radio token is equal to the current
+            radio token.
+            </summary>
+            <param name="other">The radio token to check.</param>
+            <returns>True if the radio tokens are equal false otherwise.</returns>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.RadioType">
+            <summary>
+            Gets the radio type for the radio this token represents.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.RadioIdentifier">
+            <summary>
+            Gets the identifier for the radio this token represents.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.Status">
+            <summary>
+            Gets the current status of the radio.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.m_RadioType">
+            <summary>
+            The type of radio that this token represents.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.m_strRadioID">
+            <summary>
+            The identifier for the radio this token represents.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioServerObjects.ZigBeeRadioToken.m_CurrentStatus">
+            <summary>
+            The current status of the radio.
+            </summary> 
+        </member>
+    </members>
+</doc>

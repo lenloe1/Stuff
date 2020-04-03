@@ -1,0 +1,2862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NON_FATAL_1" xml:space="preserve">
+    <value>Non-Fatal Error #1 - Low Battery</value>
+  </data>
+  <data name="NON_FATAL_2" xml:space="preserve">
+    <value>Non-Fatal Error #2 - Loss of Phase</value>
+  </data>
+  <data name="NON_FATAL_3" xml:space="preserve">
+    <value>Non-Fatal Error #3 - Clock, TOU Error</value>
+  </data>
+  <data name="NON_FATAL_4" xml:space="preserve">
+    <value>Non-Fatal Error #4 - Reverse Power Flow</value>
+  </data>
+  <data name="NON_FATAL_5" xml:space="preserve">
+    <value>Non-Fatal Error #5 - Load Profile Error</value>
+  </data>
+  <data name="NON_FATAL_6" xml:space="preserve">
+    <value>Non-Fatal Error #6 - Full Scale Overflow</value>
+  </data>
+  <data name="NON_FATAL_9" xml:space="preserve">
+    <value>Non-Fatal Error #9 - SiteScan Error</value>
+  </data>
+  <data name="FATAL_1" xml:space="preserve">
+    <value>Fatal Error #1 - Processor Flash Error</value>
+  </data>
+  <data name="FATAL_2" xml:space="preserve">
+    <value>Fatal Error #2 - Processor RAM Error</value>
+  </data>
+  <data name="FATAL_3" xml:space="preserve">
+    <value>Fatal Error #3 - Data Flash Error</value>
+  </data>
+  <data name="FATAL_4" xml:space="preserve">
+    <value>Fatal Error #4 - Metrology Communications Error</value>
+  </data>
+  <data name="FATAL_5" xml:space="preserve">
+    <value>Fatal Error #5 - Power Down Error</value>
+  </data>
+  <data name="FATAL_6" xml:space="preserve">
+    <value>Fatal Error #6 - File System Error</value>
+  </data>
+  <data name="FATAL_7" xml:space="preserve">
+    <value>Fatal Error #7 - Operating System Error</value>
+  </data>
+  <data name="ISC_ERROR" xml:space="preserve">
+    <value>Insufficient Security Clearance</value>
+  </data>
+  <data name="PROCEDURE_ERROR" xml:space="preserve">
+    <value>Procedure Error</value>
+  </data>
+  <data name="SERV_3ELEM_3PHASE_4WIRE_WYE" xml:space="preserve">
+    <value>3 Element 3 Phase 4-Wire WYE</value>
+  </data>
+  <data name="SERV_25ELEM_3PHASE_4WIRE_WYE" xml:space="preserve">
+    <value>2.5 Element 3 Phase 4-Wire WYE (6S/46S)</value>
+  </data>
+  <data name="SERV_2ELEM_NETWORK" xml:space="preserve">
+    <value>2 Element Network</value>
+  </data>
+  <data name="SERV_3ELEM_3PHASE_4WIRE_DELTA" xml:space="preserve">
+    <value>3 Element 3 Phase 4-Wire Delta</value>
+  </data>
+  <data name="SERV_2ELEM_3PHASE_4WIRE_WYE" xml:space="preserve">
+    <value>2 Element 3 Phase 4-Wire WYE</value>
+  </data>
+  <data name="SERV_2ELEM_3PHASE_3WIRE_DELTA" xml:space="preserve">
+    <value>2 Element 3 Phase 3-Wire Delta</value>
+  </data>
+  <data name="SERV_2ELEM_3PHASE_4WIRE_DELTA" xml:space="preserve">
+    <value>2 Element 3 Phase 4-Wire Delta</value>
+  </data>
+  <data name="SERV_2ELEM_SINGLE_PHASE" xml:space="preserve">
+    <value>2 Element Single Phase</value>
+  </data>
+  <data name="SERV_1ELEM_SINGLE_PHASE" xml:space="preserve">
+    <value>1 Element Single Phase 3 Wire</value>
+  </data>
+  <data name="SERV_1ELEM_SINGLE_PHASE_2_WIRE" xml:space="preserve">
+    <value>1 Element Single Phase 2 Wire</value>
+  </data>
+  <data name="SERV_2_5_ELEMENT_4_WIRE_WYE_9S" xml:space="preserve">
+    <value>2.5 Element 3 Phase 4 Wire WYE (9S)</value>
+  </data>
+  <data name="UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="CURRENT_DATE" xml:space="preserve">
+    <value>Current Date</value>
+  </data>
+  <data name="LAST_SR" xml:space="preserve">
+    <value>Last Self Read</value>
+  </data>
+  <data name="LAST_DR" xml:space="preserve">
+    <value>Last Demand Reset</value>
+  </data>
+  <data name="SNAPSHOT_1" xml:space="preserve">
+    <value>(SS1)</value>
+  </data>
+  <data name="SELF_READ_1" xml:space="preserve">
+    <value>(SR1)</value>
+  </data>
+  <data name="RATE_A" xml:space="preserve">
+    <value>Rate A</value>
+  </data>
+  <data name="RATE_B" xml:space="preserve">
+    <value>Rate B</value>
+  </data>
+  <data name="RATE_C" xml:space="preserve">
+    <value>Rate C</value>
+  </data>
+  <data name="RATE_D" xml:space="preserve">
+    <value>Rate D</value>
+  </data>
+  <data name="RATE_E" xml:space="preserve">
+    <value>Rate E</value>
+  </data>
+  <data name="RATE_F" xml:space="preserve">
+    <value>Rate F</value>
+  </data>
+  <data name="RATE_G" xml:space="preserve">
+    <value>Rate G</value>
+  </data>
+  <data name="PRS" xml:space="preserve">
+    <value>prs</value>
+  </data>
+  <data name="MAX" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="PRV" xml:space="preserve">
+    <value>prv</value>
+  </data>
+  <data name="PROJ" xml:space="preserve">
+    <value>proj</value>
+  </data>
+  <data name="CUM" xml:space="preserve">
+    <value>cum</value>
+  </data>
+  <data name="CCUM" xml:space="preserve">
+    <value>ccum</value>
+  </data>
+  <data name="MIN" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="KILO" xml:space="preserve">
+    <value>k</value>
+  </data>
+  <data name="WH_D" xml:space="preserve">
+    <value>Wh d</value>
+  </data>
+  <data name="W_D" xml:space="preserve">
+    <value>W d</value>
+  </data>
+  <data name="WH_R" xml:space="preserve">
+    <value>Wh r</value>
+  </data>
+  <data name="W_R" xml:space="preserve">
+    <value>W r</value>
+  </data>
+  <data name="VAH_ARITH_D" xml:space="preserve">
+    <value>VAh Arith d</value>
+  </data>
+  <data name="VA_ARITH_D" xml:space="preserve">
+    <value>VA Arith d</value>
+  </data>
+  <data name="VAH_ARITH_R" xml:space="preserve">
+    <value>VAh Arith r</value>
+  </data>
+  <data name="VA_ARITH_R" xml:space="preserve">
+    <value>VA Arith r</value>
+  </data>
+  <data name="VAH_VEC_D" xml:space="preserve">
+    <value>VAh Vec d</value>
+  </data>
+  <data name="VA_VEC_D" xml:space="preserve">
+    <value>VA Vec d</value>
+  </data>
+  <data name="VAH_VEC_R" xml:space="preserve">
+    <value>VAh Vec r</value>
+  </data>
+  <data name="VA_VEC_R" xml:space="preserve">
+    <value>VA Vec r</value>
+  </data>
+  <data name="VAH_LAG" xml:space="preserve">
+    <value>VAh Lag</value>
+  </data>
+  <data name="VA_LAG" xml:space="preserve">
+    <value>VA Lag</value>
+  </data>
+  <data name="VARH_D" xml:space="preserve">
+    <value>VARh d</value>
+  </data>
+  <data name="VAR_D" xml:space="preserve">
+    <value>VAR d</value>
+  </data>
+  <data name="VARH_R" xml:space="preserve">
+    <value>VARh r</value>
+  </data>
+  <data name="VAR_R" xml:space="preserve">
+    <value>VAR r</value>
+  </data>
+  <data name="WH_NET" xml:space="preserve">
+    <value>Wh net</value>
+  </data>
+  <data name="W_NET" xml:space="preserve">
+    <value>W net</value>
+  </data>
+  <data name="WH_UNI" xml:space="preserve">
+    <value>Wh</value>
+  </data>
+  <data name="W_UNI" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="UNASSIGNED" xml:space="preserve">
+    <value>Unassigned</value>
+  </data>
+  <data name="READ_NOT_SUPPORTED_EXCEPTION" xml:space="preserve">
+    <value>The table does not support reading. It is a write-only table.</value>
+  </data>
+  <data name="OFFSET_WRITE_NOT_SUPPORTED_EXCEPTION" xml:space="preserve">
+    <value>The table does not support offset writes.</value>
+  </data>
+  <data name="ERR_RETRIEVING_NUM_TIMES_PROG" xml:space="preserve">
+    <value>Error Retrieving the Number of Times Programmed</value>
+  </data>
+  <data name="INVALID_ARRAY_SIZE" xml:space="preserve">
+    <value>Invalid Array Size</value>
+  </data>
+  <data name="INVALID_ESN" xml:space="preserve">
+    <value>Invalid Encoded ESN</value>
+  </data>
+  <data name="IS_SYNCH_NOW" xml:space="preserve">
+    <value>Is Synchronized Now</value>
+  </data>
+  <data name="NO_STATISTIC" xml:space="preserve">
+    <value>No Statistic Reported</value>
+  </data>
+  <data name="NUM_ACTIVE_ASSOC" xml:space="preserve">
+    <value>Number of Active Associations</value>
+  </data>
+  <data name="NUM_ASSOC_TIMEOUTS" xml:space="preserve">
+    <value>Number of Association Timeots</value>
+  </data>
+  <data name="NUM_BYTES_REC" xml:space="preserve">
+    <value>Number of Bytes Received</value>
+  </data>
+  <data name="NUM_BYTES_SENT" xml:space="preserve">
+    <value>Number of Bytes Sent</value>
+  </data>
+  <data name="NUM_CHECKSUM_ERRS" xml:space="preserve">
+    <value>Number of Checksum Errors</value>
+  </data>
+  <data name="NUM_COLLISIONS" xml:space="preserve">
+    <value>Number of Collisions</value>
+  </data>
+  <data name="NUM_DEREG_REQUESTED" xml:space="preserve">
+    <value>Number of Deregistrations Requested</value>
+  </data>
+  <data name="NUM_FRAMING_ERRS" xml:space="preserve">
+    <value>Number of Framing Errors</value>
+  </data>
+  <data name="NUM_MSG_OVERRUNS" xml:space="preserve">
+    <value>Number of Message Overruns</value>
+  </data>
+  <data name="NUM_PDU_DPD" xml:space="preserve">
+    <value>Number of &lt;acse_pdu&gt; Dropped</value>
+  </data>
+  <data name="NUM_PDU_FWD" xml:space="preserve">
+    <value>Number of &lt;acse_pdu&gt; Forwarded</value>
+  </data>
+  <data name="NUM_PDU_REC" xml:space="preserve">
+    <value>Number of &lt;acse_pdu&gt; Received</value>
+  </data>
+  <data name="NUM_PDU_SENT" xml:space="preserve">
+    <value>Number of &lt;acse_pdu&gt; Sent</value>
+  </data>
+  <data name="NUM_RECEP_ERRS" xml:space="preserve">
+    <value>Number of Reception Errors</value>
+  </data>
+  <data name="NUM_REG_DENIED" xml:space="preserve">
+    <value>Number of Registrations Denied</value>
+  </data>
+  <data name="NUM_REG_FAILED" xml:space="preserve">
+    <value>Number of Registrations Failed</value>
+  </data>
+  <data name="NUM_REG_REC" xml:space="preserve">
+    <value>Number of Registrations Received</value>
+  </data>
+  <data name="NUM_REG_SENT" xml:space="preserve">
+    <value>Number of Registrations Sent</value>
+  </data>
+  <data name="NUM_SIGNAL_CARRIERS_LOST" xml:space="preserve">
+    <value>Number of Signal Carriers Lost</value>
+  </data>
+  <data name="NUM_TRANS_ERRS" xml:space="preserve">
+    <value>Number of Transmission Errors</value>
+  </data>
+  <data name="NUM_SUCCESSFUL_REG" xml:space="preserve">
+    <value>Number of Successful Registrations</value>
+  </data>
+  <data name="RESYNCH_COUNT" xml:space="preserve">
+    <value>Resynchronization Count</value>
+  </data>
+  <data name="SIGNAL_STRENGTH_DBM" xml:space="preserve">
+    <value>Signal Strength (dbm)</value>
+  </data>
+  <data name="SIGNAL_STRENGTH_PERCENT" xml:space="preserve">
+    <value>Signal Strength (%)</value>
+  </data>
+  <data name="TABLE_READ_EXP" xml:space="preserve">
+    <value>Table Read Exception</value>
+  </data>
+  <data name="CANADIAN_LOG_CLEARED" xml:space="preserve">
+    <value>Canadian Log Cleared</value>
+  </data>
+  <data name="CANADIAN_LOG_PTRS_UPDATED" xml:space="preserve">
+    <value>Canadian Log Pointers Updated</value>
+  </data>
+  <data name="CLOCK_RESET_BY_HOST" xml:space="preserve">
+    <value>Clock Reset by Host</value>
+  </data>
+  <data name="DEMAND_RESET" xml:space="preserve">
+    <value>Demand Reset Occurred</value>
+  </data>
+  <data name="METER_REPROGRAMMED" xml:space="preserve">
+    <value>Meter Reprogrammed</value>
+  </data>
+  <data name="ENTER_TEST_MODE" xml:space="preserve">
+    <value>Test Mode Started</value>
+  </data>
+  <data name="EXIT_TEST_MODE" xml:space="preserve">
+    <value>Test Mode Stopped</value>
+  </data>
+  <data name="HIST_LOG_CLEARED" xml:space="preserve">
+    <value>History Log Cleared</value>
+  </data>
+  <data name="HIST_PTRS_UPDATED" xml:space="preserve">
+    <value>History Log Pointers Updated</value>
+  </data>
+  <data name="ILLEGAL_CONFIG_ERROR" xml:space="preserve">
+    <value>Configuration Error Detected</value>
+  </data>
+  <data name="LOAD_PROFILE_RESET" xml:space="preserve">
+    <value>Load Profile Reset</value>
+  </data>
+  <data name="LOGON_SUCCESSFUL" xml:space="preserve">
+    <value>Logon Successful</value>
+  </data>
+  <data name="LOSS_OF_PHASE_RESTORE" xml:space="preserve">
+    <value>Loss of Phase Restore</value>
+  </data>
+  <data name="LOW_BATTERY" xml:space="preserve">
+    <value>Low Battery Detected</value>
+  </data>
+  <data name="MASS_MEMORY_ERROR" xml:space="preserve">
+    <value>Load Profile Error</value>
+  </data>
+  <data name="POWER_DOWN" xml:space="preserve">
+    <value>Power Outage</value>
+  </data>
+  <data name="POWER_RESTORED" xml:space="preserve">
+    <value>Power Restored</value>
+  </data>
+  <data name="REGISTER_FULL_SCALE" xml:space="preserve">
+    <value>Demand Overload Detected</value>
+  </data>
+  <data name="REVERSE_POWER_FLOW" xml:space="preserve">
+    <value>Reverse Rotation Detected</value>
+  </data>
+  <data name="REVERSE_POWER_FLOW_RESTORED" xml:space="preserve">
+    <value>Reverse Power Flow Restored</value>
+  </data>
+  <data name="SECURITY_FAILED" xml:space="preserve">
+    <value>ANSI Security Failed</value>
+  </data>
+  <data name="SECURITY_SUCCESSFUL" xml:space="preserve">
+    <value>Security Successful</value>
+  </data>
+  <data name="SELF_READ_OCCURRED" xml:space="preserve">
+    <value>Self Read Occurred</value>
+  </data>
+  <data name="TOU_ERROR" xml:space="preserve">
+    <value>TOU Error</value>
+  </data>
+  <data name="TOU_SEASON_CHANGED" xml:space="preserve">
+    <value>TOU Season Changed</value>
+  </data>
+  <data name="ABC_PH_ROTATION_ACTIVE" xml:space="preserve">
+    <value>ABC Phase Rotation Active</value>
+  </data>
+  <data name="CBA_PH_ROTATION_ACTIVE" xml:space="preserve">
+    <value>CBA Phase Rotation Active</value>
+  </data>
+  <data name="CPC_COMM_ERROR" xml:space="preserve">
+    <value>CPC Communication Error</value>
+  </data>
+  <data name="EXTERNAL_EVENT" xml:space="preserve">
+    <value>External Event</value>
+  </data>
+  <data name="INVERSION_TAMPER" xml:space="preserve">
+    <value>Inversion tamper</value>
+  </data>
+  <data name="REMOVAL_TAMPER" xml:space="preserve">
+    <value>Removal tamper</value>
+  </data>
+  <data name="SELF_READ_CLEARED" xml:space="preserve">
+    <value>Self Read Cleared</value>
+  </data>
+  <data name="DR" xml:space="preserve">
+    <value> (DR)</value>
+  </data>
+  <data name="SR" xml:space="preserve">
+    <value> (SR)</value>
+  </data>
+  <data name="MEGA" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="REG_FW_TABLE" xml:space="preserve">
+    <value>Register/Display Firmware Download Table</value>
+  </data>
+  <data name="RFLAN_FW_TABLE" xml:space="preserve">
+    <value>Comm Module Firmware Download Table</value>
+  </data>
+  <data name="TOU_CONFIG_TABLE" xml:space="preserve">
+    <value>TOU Configuration Table</value>
+  </data>
+  <data name="ZIGBEE_FW_TABLE" xml:space="preserve">
+    <value>Zigbee Firmware Download Table</value>
+  </data>
+  <data name="ACTIVATE_ABSOLUTE_TIME" xml:space="preserve">
+    <value>Activate at absolute time</value>
+  </data>
+  <data name="ACTIVATE_BY_EVENT" xml:space="preserve">
+    <value>Activate upon event</value>
+  </data>
+  <data name="SW_INIT_EVENT" xml:space="preserve">
+    <value>Software initiated event</value>
+  </data>
+  <data name="UNKNOWN_TABLE" xml:space="preserve">
+    <value>Unknown Table</value>
+  </data>
+  <data name="UNSUPPORTED_ACTIVATION_TYPE" xml:space="preserve">
+    <value>Unsupported Activation Type</value>
+  </data>
+  <data name="FW_DOWNLOAD_COMPLETE" xml:space="preserve">
+    <value>Download complete.  Table ready for activation.</value>
+  </data>
+  <data name="FW_DOWNLOAD_INCOMPLETE" xml:space="preserve">
+    <value>Firmware download in process.</value>
+  </data>
+  <data name="RATE_CHANGE" xml:space="preserve">
+    <value>Rate Change</value>
+  </data>
+  <data name="CURRENT_TIME" xml:space="preserve">
+    <value>Current Time</value>
+  </data>
+  <data name="COMM_STATUS_FIELD_1" xml:space="preserve">
+    <value>Comm. Status Field 1</value>
+  </data>
+  <data name="COMM_STATUS_FIELD_2" xml:space="preserve">
+    <value>Comm. Status Field 2</value>
+  </data>
+  <data name="COMM_STATUS_FIELD_3" xml:space="preserve">
+    <value>Comm. Status Field 3</value>
+  </data>
+  <data name="MINUTES_ON_BATTERY" xml:space="preserve">
+    <value>Minutes on Battery</value>
+  </data>
+  <data name="NUMBER_INVERSION_TAMPERS" xml:space="preserve">
+    <value>Number of Inversion Tampers</value>
+  </data>
+  <data name="NUMBER_REMOVAL_TAMPERS" xml:space="preserve">
+    <value>Number of Removal Tampers</value>
+  </data>
+  <data name="NUMBER_POWER_OUTAGES" xml:space="preserve">
+    <value>Number of Power Outages</value>
+  </data>
+  <data name="PHASE_A" xml:space="preserve">
+    <value>(a)</value>
+  </data>
+  <data name="PHASE_B" xml:space="preserve">
+    <value>(b)</value>
+  </data>
+  <data name="PHASE_C" xml:space="preserve">
+    <value>(c)</value>
+  </data>
+  <data name="PRIMARY" xml:space="preserve">
+    <value>Primary</value>
+  </data>
+  <data name="RAW" xml:space="preserve">
+    <value>Raw</value>
+  </data>
+  <data name="SECONDARY" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="USER_DATA_1" xml:space="preserve">
+    <value>User Data Field 1</value>
+  </data>
+  <data name="USER_DATA_2" xml:space="preserve">
+    <value>User Data Field 2</value>
+  </data>
+  <data name="USER_DATA_3" xml:space="preserve">
+    <value>User Data Field 3</value>
+  </data>
+  <data name="BILLING_SCHED_EXPIRED" xml:space="preserve">
+    <value>Billing Schedule Expiration</value>
+  </data>
+  <data name="CLEAR_BILLING_DATA" xml:space="preserve">
+    <value>Clear Billing Data</value>
+  </data>
+  <data name="EVENT_LOG_CLEARED" xml:space="preserve">
+    <value>Event Log Cleared</value>
+  </data>
+  <data name="LOAD_FIRMWARE" xml:space="preserve">
+    <value>Load Firmware</value>
+  </data>
+  <data name="PENDING_TABLE_ACTIVATION" xml:space="preserve">
+    <value>Pending Table Activation</value>
+  </data>
+  <data name="PENDING_TABLE_CLEAR" xml:space="preserve">
+    <value>Pending Table Clear</value>
+  </data>
+  <data name="REG_DWLD_FAILED" xml:space="preserve">
+    <value>Register Firmware Upload Failed</value>
+  </data>
+  <data name="REG_DWLD_SUCCEEDED" xml:space="preserve">
+    <value>Register Firmware Upload Succeeded</value>
+  </data>
+  <data name="RFLAN_DWLD_FAILED" xml:space="preserve">
+    <value>Communication Module Firmware Upload Failed</value>
+  </data>
+  <data name="RFLAN_DWLD_SUCCEEDED" xml:space="preserve">
+    <value>Communication Module Firmware Upload Succeeded</value>
+  </data>
+  <data name="TOU_SCHEDULE_ERROR" xml:space="preserve">
+    <value>TOU Schedule Error</value>
+  </data>
+  <data name="ZIGBEE_DWLD_FAILED" xml:space="preserve">
+    <value>HAN Module Firmware Upload Failed</value>
+  </data>
+  <data name="ZIGBEE_DWLD_SUCCEEDED" xml:space="preserve">
+    <value>HAN Module Firmware Upload Succeeded</value>
+  </data>
+  <data name="FATAL_ERROR" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="LOAD_VOLT_PRESENT" xml:space="preserve">
+    <value>Load Voltage Present</value>
+  </data>
+  <data name="REG_DWLD_ALREADY_ACTIVE" xml:space="preserve">
+    <value>Register Firmware Upload Already Active</value>
+  </data>
+  <data name="REG_DWLD_INITIATED" xml:space="preserve">
+    <value>Register Firmware Upload Initiated</value>
+  </data>
+  <data name="REG_DWLD_INITIATION_FAILED" xml:space="preserve">
+    <value>Register Firmware Upload Initialization Failed</value>
+  </data>
+  <data name="THIRD_PARTY_HAN_FW_DWLD_STATUS" xml:space="preserve">
+    <value>Third Party HAN Device Firmware Download Status</value>
+  </data>
+  <data name="REG_FW_DL_STATUS" xml:space="preserve">
+    <value>Register Firmware Download Status</value>
+  </data>
+  <data name="REMOTE_CONNECT_FAILED" xml:space="preserve">
+    <value>Remote Connect Failed</value>
+  </data>
+  <data name="REMOTE_CONNECT_RELAY_ACTIVATED" xml:space="preserve">
+    <value>Remote connect success</value>
+  </data>
+  <data name="REMOTE_CONNECT_RELAY_INITIATED" xml:space="preserve">
+    <value>Remote Connect Armed</value>
+  </data>
+  <data name="REMOTE_DISCONNECT_FAILED" xml:space="preserve">
+    <value>Remote disconnect failed.</value>
+  </data>
+  <data name="REMOTE_DISCONNECT_RELAY_ACTIVATED" xml:space="preserve">
+    <value>Remote disconnect success</value>
+  </data>
+  <data name="RESET_COUNTERS" xml:space="preserve">
+    <value>Reset Counters</value>
+  </data>
+  <data name="RFLAN_DWLD_ALREADY_ACTIVE" xml:space="preserve">
+    <value>Communication Module Firmware Upload Already Active</value>
+  </data>
+  <data name="RFLAN_DWLD_INITIATED" xml:space="preserve">
+    <value>Communication Module Firmware Upload Initiated</value>
+  </data>
+  <data name="RFLAN_DWLD_INITIATION_FAILED" xml:space="preserve">
+    <value>Communication Module Firmware Upload Initialization Failed</value>
+  </data>
+  <data name="RFLAN_DWLD_TERMINATED" xml:space="preserve">
+    <value>Communication Module Download Terminated</value>
+  </data>
+  <data name="RFLAN_FW_DWLD_STATUS" xml:space="preserve">
+    <value>Communication Module Firmware Upload In Progress</value>
+  </data>
+  <data name="ZIGBEE_DWLD_ALREADY_ACTIVE" xml:space="preserve">
+    <value>Zigbee Download Already Active</value>
+  </data>
+  <data name="ZIGBEE_DWLD_INITIATED" xml:space="preserve">
+    <value>HAN Module Firmware Upload Initiated</value>
+  </data>
+  <data name="ZIGBEE_DWLD_INITIATION_FAILED" xml:space="preserve">
+    <value>HAN Module Firmware Upload Initialization Failed</value>
+  </data>
+  <data name="ZIGBEE_DWLD_TERMINATED" xml:space="preserve">
+    <value>Zigbee Download Terminated</value>
+  </data>
+  <data name="ZIGBEE_FW_DWLD_STATUS" xml:space="preserve">
+    <value>HAN Module Firmware Upload In Progress</value>
+  </data>
+  <data name="SELF_READ_2" xml:space="preserve">
+    <value>(SR2)</value>
+  </data>
+  <data name="SELF_READ_3" xml:space="preserve">
+    <value>(SR3)</value>
+  </data>
+  <data name="SELF_READ_4" xml:space="preserve">
+    <value>(SR4)</value>
+  </data>
+  <data name="DEREGISTRATION_SUCCEEDED" xml:space="preserve">
+    <value>Deregistration Succeeded</value>
+  </data>
+  <data name="NUM_RFLAN_CELL_CHANGES" xml:space="preserve">
+    <value>Number of Comm Module Cell Changes</value>
+  </data>
+  <data name="RFLAN_CELL_ID" xml:space="preserve">
+    <value>Comm Module Current Cell ID</value>
+  </data>
+  <data name="GW_FORCE_DECOMMISSION" xml:space="preserve">
+    <value>Force Decommission</value>
+  </data>
+  <data name="GW_GET_CFG_BLOCK1" xml:space="preserve">
+    <value>Get Configuration Block 1</value>
+  </data>
+  <data name="GW_GET_COLLECTION_CFG" xml:space="preserve">
+    <value>Get Collection Configuration</value>
+  </data>
+  <data name="GW_GET_DATA_DELIVERY_CFG" xml:space="preserve">
+    <value>Get Data Delivery Configuration</value>
+  </data>
+  <data name="GW_GET_DATE_TIME" xml:space="preserve">
+    <value>Get Date Time</value>
+  </data>
+  <data name="GW_GET_HANDLER_CFG" xml:space="preserve">
+    <value>Get Handler Configuration</value>
+  </data>
+  <data name="GW_GET_METER_DATA_DAILY" xml:space="preserve">
+    <value>Get Daily DFT Readings</value>
+  </data>
+  <data name="GW_GET_METER_DATA_HOURLY" xml:space="preserve">
+    <value>Get Hourly Consumption Readings</value>
+  </data>
+  <data name="GW_GET_METER_DATA_LATEST" xml:space="preserve">
+    <value>Get Latest Consumption Readings</value>
+  </data>
+  <data name="GW_GET_RF_RETRY_CFG" xml:space="preserve">
+    <value>Get RF Retry Configuration</value>
+  </data>
+  <data name="GW_GET_TIMEOUT_DURATION" xml:space="preserve">
+    <value>Get Timeout Duration</value>
+  </data>
+  <data name="GW_KEEP_ALIVE" xml:space="preserve">
+    <value>Keep Alive</value>
+  </data>
+  <data name="GW_NEW_APP_KEY_ACTIVE" xml:space="preserve">
+    <value>New Application Key Activate</value>
+  </data>
+  <data name="GW_SET_CFG_BLOCK1" xml:space="preserve">
+    <value>Set Configuration Block 1</value>
+  </data>
+  <data name="GW_SET_COLLECTION_CFG" xml:space="preserve">
+    <value>Set Collection Configuration</value>
+  </data>
+  <data name="GW_SET_DATA_DELIVERY_CFG" xml:space="preserve">
+    <value>Set Data Delivery Configuration</value>
+  </data>
+  <data name="GW_SET_HANDLER_CFG" xml:space="preserve">
+    <value>Set Handler Configuration</value>
+  </data>
+  <data name="GW_SET_HIGH_APP_SECURITY_KEY" xml:space="preserve">
+    <value>Set High Application Security Key</value>
+  </data>
+  <data name="GW_SET_HIGH_NET_SECURITY_KEY" xml:space="preserve">
+    <value>Set High Network Security Key</value>
+  </data>
+  <data name="GW_SET_INITIAL_CONSUMPTION" xml:space="preserve">
+    <value>Set Initial Consumption</value>
+  </data>
+  <data name="GW_SET_LOW_APP_SECURITY_KEY" xml:space="preserve">
+    <value>Set Low Application Security Key</value>
+  </data>
+  <data name="GW_SET_LOW_NET_SECURITY_KEY" xml:space="preserve">
+    <value>Set Low Network Security Key</value>
+  </data>
+  <data name="GW_SET_REMOTE_DATE_TIME" xml:space="preserve">
+    <value>Set Remote Date Time</value>
+  </data>
+  <data name="GW_SET_RF_RETRY_CFG" xml:space="preserve">
+    <value>Set RF Retry Configuration</value>
+  </data>
+  <data name="GW_SET_TIMEOUT_DURATION" xml:space="preserve">
+    <value>Set Timeout Duration</value>
+  </data>
+  <data name="NAK" xml:space="preserve">
+    <value>NAK</value>
+  </data>
+  <data name="GW_ERR_UNKNOWN_CMD" xml:space="preserve">
+    <value>Unknown Command</value>
+  </data>
+  <data name="GW_ERR_INVALID_PACKET_VERSION" xml:space="preserve">
+    <value>Invalid Packet Version</value>
+  </data>
+  <data name="GW_ERR_INVALID_PARAM_SIZE_OR_CNT" xml:space="preserve">
+    <value>Invalid Parameter Size or Count</value>
+  </data>
+  <data name="GW_ERR_INVALID_PARAM_VAL" xml:space="preserve">
+    <value>Invalid Parameter Value</value>
+  </data>
+  <data name="GW_ERR_INVALID_PKT_VER" xml:space="preserve">
+    <value>Invalid Packet Version</value>
+  </data>
+  <data name="GW_ERR_INVALID_SECURITY_KEY_CHANGE_SEQ" xml:space="preserve">
+    <value>Invalid Security Key Change Sequence</value>
+  </data>
+  <data name="GW_ERR_INVALID_TIMESTAMP" xml:space="preserve">
+    <value>Invalid Timestamp</value>
+  </data>
+  <data name="GW_ERR_UNKNOWN_ERROR" xml:space="preserve">
+    <value>Unknown Error</value>
+  </data>
+  <data name="GW_ERROR_RESPONSE" xml:space="preserve">
+    <value>Error Response</value>
+  </data>
+  <data name="GW_CONSUMPTION_DATA_RETRIEVED" xml:space="preserve">
+    <value>Consumption data retrieved</value>
+  </data>
+  <data name="A_NEUTRAL" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="A_PHA" xml:space="preserve">
+    <value>A(a)</value>
+  </data>
+  <data name="A_PHB" xml:space="preserve">
+    <value>A(b)</value>
+  </data>
+  <data name="A_PHC" xml:space="preserve">
+    <value>A(c)</value>
+  </data>
+  <data name="AH_NEUTRAL" xml:space="preserve">
+    <value>NAh</value>
+  </data>
+  <data name="AH_PHA" xml:space="preserve">
+    <value>Ah(a)</value>
+  </data>
+  <data name="AH_PHB" xml:space="preserve">
+    <value>Ah(b)</value>
+  </data>
+  <data name="AH_PHC" xml:space="preserve">
+    <value>Ah(c)</value>
+  </data>
+  <data name="I2_AGG" xml:space="preserve">
+    <value>A^2</value>
+  </data>
+  <data name="I2H_AGG" xml:space="preserve">
+    <value>A^2h</value>
+  </data>
+  <data name="PF_INTERVAL" xml:space="preserve">
+    <value>PF</value>
+  </data>
+  <data name="Q_DEL" xml:space="preserve">
+    <value>Q d</value>
+  </data>
+  <data name="Q_REC" xml:space="preserve">
+    <value>Q r</value>
+  </data>
+  <data name="QH_DEL" xml:space="preserve">
+    <value>Qh d</value>
+  </data>
+  <data name="QH_REC" xml:space="preserve">
+    <value>Qh r</value>
+  </data>
+  <data name="V_AVG" xml:space="preserve">
+    <value>V avg</value>
+  </data>
+  <data name="V_PHA" xml:space="preserve">
+    <value>V(a)</value>
+  </data>
+  <data name="V_PHB" xml:space="preserve">
+    <value>V(b)</value>
+  </data>
+  <data name="V_PHC" xml:space="preserve">
+    <value>V(c)</value>
+  </data>
+  <data name="V2_AGG" xml:space="preserve">
+    <value>V^2</value>
+  </data>
+  <data name="V2H_AGG" xml:space="preserve">
+    <value>V^2h</value>
+  </data>
+  <data name="VAR_NET" xml:space="preserve">
+    <value>VAR net</value>
+  </data>
+  <data name="VAR_NET_DEL" xml:space="preserve">
+    <value>VAR net d</value>
+  </data>
+  <data name="VAR_NET_REC" xml:space="preserve">
+    <value>VAR net r</value>
+  </data>
+  <data name="VAR_Q1" xml:space="preserve">
+    <value>VAR Q1</value>
+  </data>
+  <data name="VAR_Q2" xml:space="preserve">
+    <value>VAR Q2</value>
+  </data>
+  <data name="VAR_Q3" xml:space="preserve">
+    <value>VAR Q3</value>
+  </data>
+  <data name="VAR_Q4" xml:space="preserve">
+    <value>VAR Q4</value>
+  </data>
+  <data name="VARH_NET" xml:space="preserve">
+    <value>VARh net</value>
+  </data>
+  <data name="VARH_NET_DEL" xml:space="preserve">
+    <value>VARh net d</value>
+  </data>
+  <data name="VARH_NET_REC" xml:space="preserve">
+    <value>VARh net r</value>
+  </data>
+  <data name="VARH_Q1" xml:space="preserve">
+    <value>VARh Q1</value>
+  </data>
+  <data name="VARH_Q2" xml:space="preserve">
+    <value>VARh Q2</value>
+  </data>
+  <data name="VARH_Q3" xml:space="preserve">
+    <value>VARh Q3</value>
+  </data>
+  <data name="VARH_Q4" xml:space="preserve">
+    <value>VARh Q4</value>
+  </data>
+  <data name="VH_AVG" xml:space="preserve">
+    <value>Vh avg</value>
+  </data>
+  <data name="VH_PHA" xml:space="preserve">
+    <value>Vh(a)</value>
+  </data>
+  <data name="VH_PHB" xml:space="preserve">
+    <value>Vh(b)</value>
+  </data>
+  <data name="VH_PHC" xml:space="preserve">
+    <value>Vh(c)</value>
+  </data>
+  <data name="FIRMWARE_DWLD_ABORTED" xml:space="preserve">
+    <value>Firmware Download Aborted</value>
+  </data>
+  <data name="PENDING_TABLE_CLEAR_FAIL" xml:space="preserve">
+    <value>Pending Table Clear Failed</value>
+  </data>
+  <data name="FIRMWARE_PENDING_TABLE_FULL" xml:space="preserve">
+    <value>Pending Table Full</value>
+  </data>
+  <data name="FIRMWARE_PENDING_TABLE_HEADER_SWAPPED" xml:space="preserve">
+    <value>Pending Table Header Changed</value>
+  </data>
+  <data name="ALT_KH" xml:space="preserve">
+    <value>Alt Mode Kh</value>
+  </data>
+  <data name="CLPU_OUTAGE_TIME" xml:space="preserve">
+    <value>CLPU Outage Time</value>
+  </data>
+  <data name="CT_RATIO" xml:space="preserve">
+    <value>CT Ratio</value>
+  </data>
+  <data name="CUST_SCHED_NAME" xml:space="preserve">
+    <value>Custom Schedule</value>
+  </data>
+  <data name="DATE_AND_TIME_OF" xml:space="preserve">
+    <value>Date and Time of</value>
+  </data>
+  <data name="DATE_OF" xml:space="preserve">
+    <value>Date of</value>
+  </data>
+  <data name="DAY_OF_WEEK" xml:space="preserve">
+    <value>Current Day of Week</value>
+  </data>
+  <data name="DAYS_SINCE_DR" xml:space="preserve">
+    <value>Days Since Demand Reset</value>
+  </data>
+  <data name="DEMAND_RESET_COUNT" xml:space="preserve">
+    <value>Demand Reset Count</value>
+  </data>
+  <data name="DISP_ON_TIME" xml:space="preserve">
+    <value>Display On Time</value>
+  </data>
+  <data name="MAX_2" xml:space="preserve">
+    <value>max 2</value>
+  </data>
+  <data name="MAX_3" xml:space="preserve">
+    <value>max 3</value>
+  </data>
+  <data name="MAX_4" xml:space="preserve">
+    <value>max 4</value>
+  </data>
+  <data name="MAX_5" xml:space="preserve">
+    <value>max 5</value>
+  </data>
+  <data name="NORM_KH" xml:space="preserve">
+    <value>Normal Mode Kh</value>
+  </data>
+  <data name="NUMBER_OF_SUBINT" xml:space="preserve">
+    <value>Number of Subintervals</value>
+  </data>
+  <data name="NUMBER_OF_TEST_SUBINT" xml:space="preserve">
+    <value>Number of Test Subintervals</value>
+  </data>
+  <data name="REG_MULT" xml:space="preserve">
+    <value>Register Multiplier</value>
+  </data>
+  <data name="SUB_INT_TIME_REMAINING" xml:space="preserve">
+    <value>Time Remaining in Demand Subinterval</value>
+  </data>
+  <data name="TEST_ALT_KH" xml:space="preserve">
+    <value>Test Alt Mode Kh</value>
+  </data>
+  <data name="TEST_KH" xml:space="preserve">
+    <value>Test Mode Kh</value>
+  </data>
+  <data name="TEST_MODE_TIME_REM" xml:space="preserve">
+    <value>Time Remaining in Test Mode</value>
+  </data>
+  <data name="TEST_SUB_INT_LEN" xml:space="preserve">
+    <value>Test Subinterval Length</value>
+  </data>
+  <data name="TIME_OF" xml:space="preserve">
+    <value>Time of</value>
+  </data>
+  <data name="VT_RATIO" xml:space="preserve">
+    <value>VT Ratio</value>
+  </data>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="ARITH" xml:space="preserve">
+    <value>Arith</value>
+  </data>
+  <data name="AT" xml:space="preserve">
+    <value>@</value>
+  </data>
+  <data name="CALIBRATION" xml:space="preserve">
+    <value>Calibration</value>
+  </data>
+  <data name="DATE" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DATE_AND_TIME" xml:space="preserve">
+    <value>Date and Time</value>
+  </data>
+  <data name="FW_VERS_REV" xml:space="preserve">
+    <value>Firmware Version</value>
+  </data>
+  <data name="HZ" xml:space="preserve">
+    <value>Hz</value>
+  </data>
+  <data name="INS" xml:space="preserve">
+    <value>ins</value>
+  </data>
+  <data name="LAST_INTERROGATE" xml:space="preserve">
+    <value>Optical Port Last Interrogate</value>
+  </data>
+  <data name="LAST_OUTAGE" xml:space="preserve">
+    <value>Last Outage</value>
+  </data>
+  <data name="LAST_PROGRAM" xml:space="preserve">
+    <value>Last Program</value>
+  </data>
+  <data name="LAST_RESET" xml:space="preserve">
+    <value>Last Reset</value>
+  </data>
+  <data name="LAST_TEST" xml:space="preserve">
+    <value>Last Test</value>
+  </data>
+  <data name="LOAD_RESEARCH_PT1" xml:space="preserve">
+    <value>Load Research ID</value>
+  </data>
+  <data name="LOAD_RESEARCH_PT2" xml:space="preserve">
+    <value>Load Research ID 2</value>
+  </data>
+  <data name="LSSR" xml:space="preserve">
+    <value>(LSSR)</value>
+  </data>
+  <data name="METER_ID_PT1" xml:space="preserve">
+    <value>Meter ID</value>
+  </data>
+  <data name="METER_ID_PT2" xml:space="preserve">
+    <value>Meter ID 2</value>
+  </data>
+  <data name="METER_MULT" xml:space="preserve">
+    <value>Meter Ratio</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="NUMBER_TIMES_PROGRAMMED" xml:space="preserve">
+    <value>Program Count</value>
+  </data>
+  <data name="PF" xml:space="preserve">
+    <value>PF</value>
+  </data>
+  <data name="PF_AVG" xml:space="preserve">
+    <value>avg PF</value>
+  </data>
+  <data name="PROGRAM_ID" xml:space="preserve">
+    <value>Program ID</value>
+  </data>
+  <data name="SNAPSHOT_2" xml:space="preserve">
+    <value>(SS2)</value>
+  </data>
+  <data name="SS_SERV_TYPE" xml:space="preserve">
+    <value>Service Type</value>
+  </data>
+  <data name="SS_SNAPSHOT_COUNT" xml:space="preserve">
+    <value>SiteScan Snapshot Count</value>
+  </data>
+  <data name="SUB_INT_LEN" xml:space="preserve">
+    <value>Subinterval Length</value>
+  </data>
+  <data name="SW_VERS_REV" xml:space="preserve">
+    <value>Software Version</value>
+  </data>
+  <data name="TIME" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TOU_EXPIRE_DATE" xml:space="preserve">
+    <value>TOU Expiration Date</value>
+  </data>
+  <data name="TRANSFORMER_MULT" xml:space="preserve">
+    <value>Transformer Ratio</value>
+  </data>
+  <data name="V" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="VA" xml:space="preserve">
+    <value>VA</value>
+  </data>
+  <data name="VAR" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="VEC" xml:space="preserve">
+    <value>Vec</value>
+  </data>
+  <data name="W" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="NUM_ENERGIES" xml:space="preserve">
+    <value>Number of Energies</value>
+  </data>
+  <data name="OPT_BOARD_FIELD_1" xml:space="preserve">
+    <value>Option Board Field 1</value>
+  </data>
+  <data name="OPT_BOARD_FIELD_2" xml:space="preserve">
+    <value>Option Board Field 2</value>
+  </data>
+  <data name="OPT_BOARD_FIELD_3" xml:space="preserve">
+    <value>Option Board Field 3</value>
+  </data>
+  <data name="SEG_TEST" xml:space="preserve">
+    <value>Segment Test</value>
+  </data>
+  <data name="SELF_READ" xml:space="preserve">
+    <value>Self Read</value>
+  </data>
+  <data name="TOT_1" xml:space="preserve">
+    <value>Totalized #1</value>
+  </data>
+  <data name="TOT_2" xml:space="preserve">
+    <value>Totalized #2</value>
+  </data>
+  <data name="TOT_3" xml:space="preserve">
+    <value>Totalized #3</value>
+  </data>
+  <data name="TOT_H_1" xml:space="preserve">
+    <value>Totalized-h #1</value>
+  </data>
+  <data name="TOT_H_2" xml:space="preserve">
+    <value>Totalized-h #2</value>
+  </data>
+  <data name="TOT_H_3" xml:space="preserve">
+    <value>Totalized-h #3</value>
+  </data>
+  <data name="VA_CALCULATION_METHOD" xml:space="preserve">
+    <value>VA Calculation Method</value>
+  </data>
+  <data name="TDD_I_A" xml:space="preserve">
+    <value>%TDD I(a)</value>
+  </data>
+  <data name="TDD_I_B" xml:space="preserve">
+    <value>%TDD I(b)</value>
+  </data>
+  <data name="TDD_I_C" xml:space="preserve">
+    <value>%TDD I(c)</value>
+  </data>
+  <data name="THD_V_A" xml:space="preserve">
+    <value>%THD V(a)</value>
+  </data>
+  <data name="THD_V_B" xml:space="preserve">
+    <value>%THD V(b)</value>
+  </data>
+  <data name="THD_V_C" xml:space="preserve">
+    <value>%THD V(c)</value>
+  </data>
+  <data name="DST_TIME_CHANGE" xml:space="preserve">
+    <value>DST Time Change</value>
+  </data>
+  <data name="EVENT_LOG_PTRS_UPDATED" xml:space="preserve">
+    <value>Event Log Pointers Updated</value>
+  </data>
+  <data name="DEMAND_THRESHOLD_EXCEEDED" xml:space="preserve">
+    <value>Demand Threshold Exceeded</value>
+  </data>
+  <data name="DEMAND_THRESHOLD_RESTORED" xml:space="preserve">
+    <value>Demand Threshold Restored</value>
+  </data>
+  <data name="INPUT_CHANNEL_HI" xml:space="preserve">
+    <value>Input Channel High</value>
+  </data>
+  <data name="INPUT_CHANNEL_LO" xml:space="preserve">
+    <value>Input Channel Low</value>
+  </data>
+  <data name="REVERSE_POWER_FLOW_RESTORE" xml:space="preserve">
+    <value>Reverse Power Flow Restore</value>
+  </data>
+  <data name="SITESCAN_ERROR_OR_CUST_SCHED_CHANGED_EVT" xml:space="preserve">
+    <value>SiteScan Error</value>
+  </data>
+  <data name="SS_DIAG1_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 1 On</value>
+  </data>
+  <data name="SS_DIAG1_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 1 Off</value>
+  </data>
+  <data name="SS_DIAG2_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 2 On</value>
+  </data>
+  <data name="SS_DIAG2_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 2 Off</value>
+  </data>
+  <data name="SS_DIAG3_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 3 On</value>
+  </data>
+  <data name="SS_DIAG3_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 3 Off</value>
+  </data>
+  <data name="SS_DIAG4_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 4 On</value>
+  </data>
+  <data name="SS_DIAG4_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 4 Off</value>
+  </data>
+  <data name="SS_DIAG5_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 5 On</value>
+  </data>
+  <data name="SS_DIAG5_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 5 Off</value>
+  </data>
+  <data name="SS_DIAG6_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 6 On</value>
+  </data>
+  <data name="SS_DIAG6_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 6 Off</value>
+  </data>
+  <data name="VQ_LOG_CLEARED" xml:space="preserve">
+    <value>Voltage Quality Log Cleared</value>
+  </data>
+  <data name="VQ_LOG_NEARLY_FULL" xml:space="preserve">
+    <value>Voltage Quality Log Nearly Full</value>
+  </data>
+  <data name="VQ_LOG_PTRS_UPDATED" xml:space="preserve">
+    <value>Voltage Quality Log Pointers Updated</value>
+  </data>
+  <data name="OPTION_BOARD_EVENT" xml:space="preserve">
+    <value>Option Board Event</value>
+  </data>
+  <data name="LOSS_OF_POTENTIAL" xml:space="preserve">
+    <value>Loss of Voltage</value>
+  </data>
+  <data name="CUST_SCHEDULE_CHANGED" xml:space="preserve">
+    <value>Custom Schedule Changed</value>
+  </data>
+  <data name="C12_22_DEREGISTERED" xml:space="preserve">
+    <value>C12.22 Deregistration Succeeded</value>
+  </data>
+  <data name="C12_22_DEREGISTRATION_ATTEMPT" xml:space="preserve">
+    <value>C12.22 Deregistration Attempt</value>
+  </data>
+  <data name="C12_22_REGISTERED" xml:space="preserve">
+    <value>C12.22 Registered</value>
+  </data>
+  <data name="C12_22_REGISTRATION_ATTEMPT" xml:space="preserve">
+    <value>C12.22 Registration Attempt</value>
+  </data>
+  <data name="C12_22_RFLAN_ID_CHANGED" xml:space="preserve">
+    <value>RFLAN Cell Change</value>
+  </data>
+  <data name="EVENT_SCHEDULING_REJECTED" xml:space="preserve">
+    <value>Event Scheduling Rejected</value>
+  </data>
+  <data name="NUMBER_RFLAN_LEVEL_CHANGES" xml:space="preserve">
+    <value>Number of Comm Module Level Changes</value>
+  </data>
+  <data name="RFLAN_CURRENT_LEVEL" xml:space="preserve">
+    <value>Comm Module Current Level</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="USER_INTERVENTION_NOT_REQUIRED" xml:space="preserve">
+    <value>Reconnect without customer intervention</value>
+  </data>
+  <data name="USER_INTERVENTION_REQUIRED" xml:space="preserve">
+    <value>Arm for customer activation</value>
+  </data>
+  <data name="BEST_FATHER_GPD" xml:space="preserve">
+    <value>(Best Father) GPD</value>
+  </data>
+  <data name="BEST_FATHER_LEVEL" xml:space="preserve">
+    <value>(Best Father) Level</value>
+  </data>
+  <data name="BEST_FATHER_LPD" xml:space="preserve">
+    <value>(Best Father) LPD</value>
+  </data>
+  <data name="BEST_FATHER_RXI" xml:space="preserve">
+    <value>(Best Father) RXI</value>
+  </data>
+  <data name="BROADCAST_RECEIVED" xml:space="preserve">
+    <value>Broadcast Received</value>
+  </data>
+  <data name="BROADCAST_STATE" xml:space="preserve">
+    <value>Broadcast State</value>
+  </data>
+  <data name="CORE_DUMP_STATE" xml:space="preserve">
+    <value>Core Dump State</value>
+  </data>
+  <data name="NETWORK_STATE" xml:space="preserve">
+    <value>Network State</value>
+  </data>
+  <data name="NO_ACTIVE_BROADCAST" xml:space="preserve">
+    <value>No Active Broadcast</value>
+  </data>
+  <data name="NOT_SYNCHRONIZED" xml:space="preserve">
+    <value>Not Synchronized</value>
+  </data>
+  <data name="OUTAGE_ID" xml:space="preserve">
+    <value>Outage ID</value>
+  </data>
+  <data name="RFLAN_BEST_FATHER_MAC_ADDRESS" xml:space="preserve">
+    <value>Comm Module Best Father MAC Address</value>
+  </data>
+  <data name="RFLAN_FATHER_COUNT" xml:space="preserve">
+    <value>Comm Module Father Count</value>
+  </data>
+  <data name="RFLAN_GPD" xml:space="preserve">
+    <value>Comm Module GPD</value>
+  </data>
+  <data name="RFLAN_MAC_MONOCAST_RX_COUNT" xml:space="preserve">
+    <value>Comm Module MAC Monocast Rx Count</value>
+  </data>
+  <data name="RFLAN_NET_DOWNLINK_PACKET_COUNT" xml:space="preserve">
+    <value>Comm Module Net Downlink Packet Count</value>
+  </data>
+  <data name="RFLAN_NET_UPLINK_PACKET_COUNT" xml:space="preserve">
+    <value>Comm Module Net Uplink Packet Count</value>
+  </data>
+  <data name="RFLAN_SYNCH_FATHER_MAC_ADDRESS" xml:space="preserve">
+    <value>Comm Module Synch Father MAC Address</value>
+  </data>
+  <data name="SYNCH_FATHER_GPD" xml:space="preserve">
+    <value>(Synch Father) GPD</value>
+  </data>
+  <data name="SYNCH_FATHER_LEVEL" xml:space="preserve">
+    <value>(Synch Father) Level</value>
+  </data>
+  <data name="SYNCH_FATHER_LPD" xml:space="preserve">
+    <value>(Synch Father) LPD</value>
+  </data>
+  <data name="SYNCH_FATHER_RXI" xml:space="preserve">
+    <value>(Synch Father) RXI</value>
+  </data>
+  <data name="SYNCH_NET" xml:space="preserve">
+    <value>Synch Net</value>
+  </data>
+  <data name="SYNCHED" xml:space="preserve">
+    <value>Synched</value>
+  </data>
+  <data name="SYNCHING" xml:space="preserve">
+    <value>Synching</value>
+  </data>
+  <data name="BEST_FATHER_RSSI" xml:space="preserve">
+    <value>(Best Father) Average RSSI</value>
+  </data>
+  <data name="SYNCH_FATHER_RSSI" xml:space="preserve">
+    <value>(Synch Father) Average RSSI</value>
+  </data>
+  <data name="BILLING_DATA_CLEARED" xml:space="preserve">
+    <value>Billing Data Cleared</value>
+  </data>
+  <data name="CONFIGURATION_ERROR" xml:space="preserve">
+    <value>Configuration Error Detected</value>
+  </data>
+  <data name="REVERSE_ROTATION_DETECTED" xml:space="preserve">
+    <value>Reverse Rotation Detected</value>
+  </data>
+  <data name="HAN_DEVICE_STATUS_CHANGE" xml:space="preserve">
+    <value>HAN Device Status Change</value>
+  </data>
+  <data name="HAN_LOAD_CONTROL_EVENT_OPT_OUT" xml:space="preserve">
+    <value>Load Control Opt Out</value>
+  </data>
+  <data name="HAN_LOAD_CONTROL_EVENT_STATUS" xml:space="preserve">
+    <value>HAN Load Control Event Status</value>
+  </data>
+  <data name="HAN_MESSAGING_EVENT" xml:space="preserve">
+    <value>HAN Message</value>
+  </data>
+  <data name="VOLT_RMS_ABOVE_THRESHOLD" xml:space="preserve">
+    <value>Volt(RMS) Above Threshold</value>
+  </data>
+  <data name="RMS_VOLTAGE_BELOW_LOW_THRESHOLD" xml:space="preserve">
+    <value>Volt(RMS) Below Threshold</value>
+  </data>
+  <data name="SERVICE_LIMITING_ACTIVE_TIER_CHANGED" xml:space="preserve">
+    <value>Service Limiting Active Threshold Switched</value>
+  </data>
+  <data name="VOLT_HOUR_ABOVE_THRESHOLD" xml:space="preserve">
+    <value>VoltHour Above Threshold</value>
+  </data>
+  <data name="VOLT_HOUR_BELOW_LOW_THRESHOLD" xml:space="preserve">
+    <value>VoltHour Below Threshold</value>
+  </data>
+  <data name="BEST_FATHER_CHANGE" xml:space="preserve">
+    <value>RFLAN Best Father Change</value>
+  </data>
+  <data name="COMM_MODULE_LINK_FAILED" xml:space="preserve">
+    <value>C12.22 Communication Module Link Failed</value>
+  </data>
+  <data name="COMM_MODULE_LINK_RESET" xml:space="preserve">
+    <value>C12.22 Communication Module Link Reset</value>
+  </data>
+  <data name="COMM_MODULE_LINK_UP" xml:space="preserve">
+    <value>C12.22 Communication Module Link Up</value>
+  </data>
+  <data name="CONFIGURED_SEND_FAILURE_LIMIT_EXCEEDED" xml:space="preserve">
+    <value>C12.22 Configured Send Failure Limit Exceeded</value>
+  </data>
+  <data name="DEREGISTERED" xml:space="preserve">
+    <value>C12.22 Deregistered</value>
+  </data>
+  <data name="DEREGISTRATION_ATTEMPT" xml:space="preserve">
+    <value>C12.22 Deregistration Attempt</value>
+  </data>
+  <data name="DEREGISTRATION_RESULT" xml:space="preserve">
+    <value>C12.22 Deregistration Result</value>
+  </data>
+  <data name="LEVEL_CHANGE" xml:space="preserve">
+    <value>RFLAN Level Change</value>
+  </data>
+  <data name="LINK_FAILURE" xml:space="preserve">
+    <value>C12.22 Link Failure</value>
+  </data>
+  <data name="LINK_METRIC" xml:space="preserve">
+    <value>C12.22 Link Metric</value>
+  </data>
+  <data name="LINK_SWITCH" xml:space="preserve">
+    <value>C12.22 Link Switch</value>
+  </data>
+  <data name="LINK_UP" xml:space="preserve">
+    <value>C12.22 Link Up</value>
+  </data>
+  <data name="PROCESS_RCVD_MSG_TIMING" xml:space="preserve">
+    <value>C12.22 Process Received Message Timing</value>
+  </data>
+  <data name="RECEIVED_INVALID_MESSAGE" xml:space="preserve">
+    <value>C12.22 Received Invalid Message</value>
+  </data>
+  <data name="RECEIVED_MESSAGE_FROM" xml:space="preserve">
+    <value>C12.22 Received Message From</value>
+  </data>
+  <data name="RECEIVED_REQUEST" xml:space="preserve">
+    <value>C12.22 Received Request</value>
+  </data>
+  <data name="REGISTERED" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="REGISTRATION_ATTEMPT" xml:space="preserve">
+    <value>C12.22 Registration Attempted</value>
+  </data>
+  <data name="REGISTRATION_RESULT" xml:space="preserve">
+    <value>C12.22 Registration Result</value>
+  </data>
+  <data name="RFLAN_CELL_CHANGE" xml:space="preserve">
+    <value>RFLAN Cell Change</value>
+  </data>
+  <data name="SEND_EXCEPTION_FAILED" xml:space="preserve">
+    <value>C12.22 Exception Send Failed</value>
+  </data>
+  <data name="SEND_EXCEPTION_SUCCESS" xml:space="preserve">
+    <value>C12.22 Exception Send Succeeded</value>
+  </data>
+  <data name="SENT_MESSAGE_FAILED" xml:space="preserve">
+    <value>C12.22 Send Message Failed</value>
+  </data>
+  <data name="SEND_MESSAGE_SUCCEEDED" xml:space="preserve">
+    <value>C12.22 Send Message Succeeded</value>
+  </data>
+  <data name="SEND_PERIODIC_READ_FAILED" xml:space="preserve">
+    <value>Interrogation Send Failed</value>
+  </data>
+  <data name="SEND_PERIODIC_READ_SUCCESS" xml:space="preserve">
+    <value>Interrogation Send Succeeded</value>
+  </data>
+  <data name="SEND_RESPONSE_FAILED" xml:space="preserve">
+    <value>C12.22 Send Response Failed</value>
+  </data>
+  <data name="SEND_RESPONSE_SUCCESS" xml:space="preserve">
+    <value>C12.22 Send Response Succeeded</value>
+  </data>
+  <data name="SENT_MESSAGE_TO" xml:space="preserve">
+    <value>C12.22 Sent Message To</value>
+  </data>
+  <data name="SENT_RESPONSE" xml:space="preserve">
+    <value>C12.22 Sent Response</value>
+  </data>
+  <data name="SYNCH_FATHER_CHANGE" xml:space="preserve">
+    <value>RFLAN Synch Father Change</value>
+  </data>
+  <data name="ZIGBEE_DRLC_MSG" xml:space="preserve">
+    <value>ZigBee DRLC Message</value>
+  </data>
+  <data name="ZIGBEE_KEY_EST_MSG" xml:space="preserve">
+    <value>ZigBee Key Established Message</value>
+  </data>
+  <data name="ZIGBEE_MESSAGING_MSG" xml:space="preserve">
+    <value>ZigBee Messaging Message</value>
+  </data>
+  <data name="ZIGBEE_MSG" xml:space="preserve">
+    <value>ZigBee Message</value>
+  </data>
+  <data name="ZIGBEE_PREPAY_MSG" xml:space="preserve">
+    <value>ZigBee Prepay Message</value>
+  </data>
+  <data name="ZIGBEE_PRICE_MSG" xml:space="preserve">
+    <value>ZigBee Pricing Message</value>
+  </data>
+  <data name="ZIGBEE_SE_TUNNELING_MSG" xml:space="preserve">
+    <value>ZigBee SE Tunneling Message</value>
+  </data>
+  <data name="ZIGBEE_SIMPLE_METERING_MSG" xml:space="preserve">
+    <value>ZigBee Simple Metering Message</value>
+  </data>
+  <data name="TABLE_WRITTEN" xml:space="preserve">
+    <value>Table Written To</value>
+  </data>
+  <data name="RLAN_NET_ROUTING_COUNT" xml:space="preserve">
+    <value>Comm Module Net Routing Count</value>
+  </data>
+  <data name="PENDING_TABLE_ERROR" xml:space="preserve">
+    <value>Pending Table Failure</value>
+  </data>
+  <data name="PRIMARY_POWER_DOWN" xml:space="preserve">
+    <value>Primary Power Down</value>
+  </data>
+  <data name="PRIMARY_POWER_UP" xml:space="preserve">
+    <value>Primary Power Up</value>
+  </data>
+  <data name="C1222_RESET" xml:space="preserve">
+    <value>C12.22 Reset</value>
+  </data>
+  <data name="PR_SEND_TABLE" xml:space="preserve">
+    <value>C12.22 Table Send Request</value>
+  </data>
+  <data name="PR_SEND_TABLE_FAILED" xml:space="preserve">
+    <value>C12.22 Table Send Request Failed</value>
+  </data>
+  <data name="SENT_SIMPLE_ERROR_RESONSE" xml:space="preserve">
+    <value>C12.22 Sent Simple Error Response</value>
+  </data>
+  <data name="TIME_ADJUSTMENT_FAILED" xml:space="preserve">
+    <value>Time Adjustment Failed</value>
+  </data>
+  <data name="EVENT_CACHE_OVERFLOW" xml:space="preserve">
+    <value>Event Cache Overflow</value>
+  </data>
+  <data name="EVENT_TAMPER_CLEARED" xml:space="preserve">
+    <value>Event Tamper Cleared</value>
+  </data>
+  <data name="LAN_HAN_LOG_RESET" xml:space="preserve">
+    <value>LAN HAN Log Reset</value>
+  </data>
+  <data name="RFLAN_COLD_START" xml:space="preserve">
+    <value>C12.22 RFLAN Cold Start</value>
+  </data>
+  <data name="AES_DECRYPTION_PROCESSING_FAIL" xml:space="preserve">
+    <value>AES Decryption Processing Fail</value>
+  </data>
+  <data name="AES_ENCRYPTION_PROCESSING_FAIL" xml:space="preserve">
+    <value>AES Encryption Processing Fail</value>
+  </data>
+  <data name="ANSIX931_PROCESSING_FAIL" xml:space="preserve">
+    <value>ANSIX931 Processing Fail</value>
+  </data>
+  <data name="BASE_MODE_ERROR" xml:space="preserve">
+    <value>BASE Mode Error</value>
+  </data>
+  <data name="ECDSA_INCORRECT_KEY" xml:space="preserve">
+    <value>ECDSA Incorrect Key Usage</value>
+  </data>
+  <data name="ECDSA_PROCESSING_FAIL" xml:space="preserve">
+    <value>ECDSA Processing Fail</value>
+  </data>
+  <data name="ECDSA_VERIFY_FAIL" xml:space="preserve">
+    <value>ECDSA Verify Fail</value>
+  </data>
+  <data name="ECIES_DECRYPTION_PROCESSING_FAIL" xml:space="preserve">
+    <value>ECIES Decryption Processing Fail</value>
+  </data>
+  <data name="HASH256_ERROR" xml:space="preserve">
+    <value>Hash256 Processing Failure</value>
+  </data>
+  <data name="HMAC_PROCESSING_FAIL" xml:space="preserve">
+    <value>HMAC Processing Fail</value>
+  </data>
+  <data name="IV_GENERATE_PROCESSING_FAIL" xml:space="preserve">
+    <value>IV Generate Processing Fail</value>
+  </data>
+  <data name="KEY_ROLLOVER_FAIL" xml:space="preserve">
+    <value>Key Rollover Fail.  Key Id = </value>
+  </data>
+  <data name="KEY_ROLLOVER_NO_KEY" xml:space="preserve">
+    <value>Key Rollover - No Key Failure</value>
+  </data>
+  <data name="KEY_ROLLOVER_PASS" xml:space="preserve">
+    <value>Key Rollover Success</value>
+  </data>
+  <data name="PENDING_RECONFIGURE" xml:space="preserve">
+    <value>Pending Reconfigure</value>
+  </data>
+  <data name="READING_KEY_FAIL" xml:space="preserve">
+    <value>Reading Key Fail</value>
+  </data>
+  <data name="REPLACE_METER_KEY_FAIL" xml:space="preserve">
+    <value>Replace Meter Key Fail.  Key Id = </value>
+  </data>
+  <data name="REPLACE_SIGN_KEY_FAIL" xml:space="preserve">
+    <value>Replace Sign Key Fail.  Key Id = </value>
+  </data>
+  <data name="REPLAY_ATTACK" xml:space="preserve">
+    <value>Replay Attack</value>
+  </data>
+  <data name="SECURITY_EVENT" xml:space="preserve">
+    <value>Replay Attack</value>
+  </data>
+  <data name="SIGN_KEY_REPLACE_PROCESSING_PASS" xml:space="preserve">
+    <value>Signing Key Update Success</value>
+  </data>
+  <data name="STORIING_KEY_FAIL" xml:space="preserve">
+    <value>Storing Key Fail</value>
+  </data>
+  <data name="SYMMETRIC_KEY_REPLACE_PROCESSING_PASS" xml:space="preserve">
+    <value>Symmetric Key Update Success</value>
+  </data>
+  <data name="UNKNOWN_ASYMMETRIC_SIGN_KEY" xml:space="preserve">
+    <value>Unknown Asymmetric Sign Key</value>
+  </data>
+  <data name="UNKNOWN_KEY" xml:space="preserve">
+    <value>Unknown Key</value>
+  </data>
+  <data name="UNKNOWN_SYMMETRIC_SIGN_KEY" xml:space="preserve">
+    <value>Unknown Symmetric Sign Key</value>
+  </data>
+  <data name="METER_DWLD_FAILED" xml:space="preserve">
+    <value>Meter Firmware Download Failed</value>
+  </data>
+  <data name="DISP_FW_DWLD_INITIATED" xml:space="preserve">
+    <value>Display Firmware Download Initiated</value>
+  </data>
+  <data name="DISP_FW_DWLD_INITIATION_FAILED" xml:space="preserve">
+    <value>Display Firmware Initiation Failed</value>
+  </data>
+  <data name="METER_FW_DWLD_SUCCEDED" xml:space="preserve">
+    <value>Meter Firmware Download Success</value>
+  </data>
+  <data name="ANSI_SECURITY_FAILED" xml:space="preserve">
+    <value>ANSI Security Failed</value>
+  </data>
+  <data name="C1222_REGISTERED" xml:space="preserve">
+    <value>C12.22 Registered</value>
+  </data>
+  <data name="TIME_CHANGED" xml:space="preserve">
+    <value>Time Changed (new time)</value>
+  </data>
+  <data name="HAN_DEVICE_FW_TABLE" xml:space="preserve">
+    <value>Gas Module Firmware Download Table</value>
+  </data>
+  <data name="HAN_FW_DL_ACTIVATING" xml:space="preserve">
+    <value>Activation scheduled</value>
+  </data>
+  <data name="HAN_FW_DL_ACTIVATION_SENT" xml:space="preserve">
+    <value>Activation command sent</value>
+  </data>
+  <data name="HAN_FW_DL_BAD_CRC" xml:space="preserve">
+    <value>File corrupted.  Bad CRC.</value>
+  </data>
+  <data name="HAN_FW_DL_BAD_FILE_SIZE" xml:space="preserve">
+    <value>Wrong size file.  Download not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_BAD_FW_TYPE" xml:space="preserve">
+    <value>Wrong firmware type.  Download not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_BAD_HW_REV" xml:space="preserve">
+    <value>Bad Hardware Revision.  Download not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_BAD_HW_VER" xml:space="preserve">
+    <value>Bad Hardware Version.  Download not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_DL_IN_PROGRESS" xml:space="preserve">
+    <value>Download in progress.</value>
+  </data>
+  <data name="HAN_FW_DL_DL_SETUP" xml:space="preserve">
+    <value>Download starting or resuming.</value>
+  </data>
+  <data name="HAN_FW_DL_FLASH_WRITE_FAIL" xml:space="preserve">
+    <value>Fatal Error!  Flash write failure.</value>
+  </data>
+  <data name="HAN_FW_DL_HEAD_END_CANCEL" xml:space="preserve">
+    <value>Firmware download cancelled by the head end.</value>
+  </data>
+  <data name="HAN_FW_DL_INITIATE_FAIL" xml:space="preserve">
+    <value>Could not initiate download in the device.</value>
+  </data>
+  <data name="HAN_FW_DL_INSUFF_BLKS" xml:space="preserve">
+    <value>Device received incomplete image.  Download failed.</value>
+  </data>
+  <data name="HAN_FW_DL_INVALID_DEV_CLASS" xml:space="preserve">
+    <value>Invalid device class.  Download of this image not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_INVALID_FW_TYPE" xml:space="preserve">
+    <value>Invalid firwmare type. Download of this image not supported.</value>
+  </data>
+  <data name="HAN_FW_DL_PAUSED" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="HAN_FW_DL_READY_FOR_ACTIVATION" xml:space="preserve">
+    <value>Ready for activation.</value>
+  </data>
+  <data name="HAN_FW_DL_RESYNC_NEEDED" xml:space="preserve">
+    <value>Resynchronization needed.</value>
+  </data>
+  <data name="HAN_FW_DL_RETRY_FAILED" xml:space="preserve">
+    <value>Download failed due to excessive image errors.</value>
+  </data>
+  <data name="HAN_FW_DL_SUCCESS_END_OF_TRANSFER" xml:space="preserve">
+    <value>Successful transfer of image.</value>
+  </data>
+  <data name="HAN_FW_DL_SYNC_PKT_SENT" xml:space="preserve">
+    <value>Sync packet was sent.</value>
+  </data>
+  <data name="HAN_FW_DL_UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="HAN_FW_DL_VER_DOWNLOADED" xml:space="preserve">
+    <value>Version downloaded. Ready for activation.</value>
+  </data>
+  <data name="HAN_FW_DL_VER_RUNNING" xml:space="preserve">
+    <value>Firmware version running.</value>
+  </data>
+  <data name="HAN_FW_DL_VOLT_OUT_OF_RANGE" xml:space="preserve">
+    <value>Fatal Error!  Voltage out of range!</value>
+  </data>
+  <data name="LOSS_OF_PHASE" xml:space="preserve">
+    <value>Loss of Phase Error</value>
+  </data>
+  <data name="SITESCAN_ERROR_CLEARED" xml:space="preserve">
+    <value>SiteScan Error Cleared</value>
+  </data>
+  <data name="CLOCK_ERROR_DETECTED" xml:space="preserve">
+    <value>Clock Error Detected</value>
+  </data>
+  <data name="DEMAND_OVERLOAD_DETECTED" xml:space="preserve">
+    <value>Demand Overload Detected</value>
+  </data>
+  <data name="DEMAND_RESET_OCCURRED" xml:space="preserve">
+    <value>Demand Reset Occurred</value>
+  </data>
+  <data name="LOW_BATTERY_DETECTED" xml:space="preserve">
+    <value>Low Battery Detected</value>
+  </data>
+  <data name="LOW_LOSS_POTENTIAL_DETECTED" xml:space="preserve">
+    <value>Low Loss Potential Detected</value>
+  </data>
+  <data name="MEASUREMENT_ERROR_DETECTED" xml:space="preserve">
+    <value>Measurement Error Detected</value>
+  </data>
+  <data name="PERIODIC_READ" xml:space="preserve">
+    <value>Periodic Read Occurred</value>
+  </data>
+  <data name="SS_ERR_CLEARED" xml:space="preserve">
+    <value>SiteScan Error Cleared</value>
+  </data>
+  <data name="NETWORK_HUSH_STARTED" xml:space="preserve">
+    <value>Network Hush Started</value>
+  </data>
+  <data name="PENDING_TABLE_ACTIVATE_FAIL" xml:space="preserve">
+    <value>Pending Table Activate Fail</value>
+  </data>
+  <data name="ACTIVATE_IN_PROGRESS" xml:space="preserve">
+    <value>Prior Activation in Progress</value>
+  </data>
+  <data name="DISABLED_CONFIG_BIT_SIGNED_AUTHORIZATION" xml:space="preserve">
+    <value>Optical Signed Authorization Disabled.</value>
+  </data>
+  <data name="END_TIME_OLDER_METER" xml:space="preserve">
+    <value>“END” Time in the Optical Signed Authorization Record is older than the Meter’s Time.</value>
+  </data>
+  <data name="FAILURE_PROCESS_TIME_SYNC" xml:space="preserve">
+    <value>Failure to Process Time-Sync Message.</value>
+  </data>
+  <data name="REPLAY_ATTACK_TIME_SYNC" xml:space="preserve">
+    <value>Replay Attack on Time-Sync Message</value>
+  </data>
+  <data name="START_TIME_AHEAD_METER" xml:space="preserve">
+    <value>“START” Time in the Optical Signed Authorization Record is ahead of the Meter’s Time.</value>
+  </data>
+  <data name="UNRECOGNIZED_PASSWORD_LEVEL" xml:space="preserve">
+    <value>Unrecognized Password Level in the Optical Signed Authorization Record</value>
+  </data>
+  <data name="UNRECOGNIZED_SERIAL_NUMBER" xml:space="preserve">
+    <value>Unrecognized Mfg Serial Number in the Optical Signed Authorization Record.</value>
+  </data>
+  <data name="UNRECOGNIZED_TABLE_ID" xml:space="preserve">
+    <value>Unrecognized Table ID in the Optical Signed Authorization Record</value>
+  </data>
+  <data name="PLAN_CELL_ID" xml:space="preserve">
+    <value>PLAN Cell ID</value>
+  </data>
+  <data name="PLAN_CREDIT_LEVEL" xml:space="preserve">
+    <value>PLAN Credit Level</value>
+  </data>
+  <data name="PLAN_ELECTRICAL_STATUS" xml:space="preserve">
+    <value>PLAN Electrical Status</value>
+  </data>
+  <data name="PLAN_IS_SYNC" xml:space="preserve">
+    <value>PLAN Sync</value>
+  </data>
+  <data name="PLAN_LOCAL_MAC" xml:space="preserve">
+    <value>PLAN Local MAC Address</value>
+  </data>
+  <data name="PLAN_LOCAL_SYS_TITLE" xml:space="preserve">
+    <value>PLAN Local System Title</value>
+  </data>
+  <data name="PLAN_MASTER_MAC" xml:space="preserve">
+    <value>PLAN Master MAC Address</value>
+  </data>
+  <data name="PLAN_MASTER_SYS_TITLE" xml:space="preserve">
+    <value>PLAN Master System Title</value>
+  </data>
+  <data name="PLAN_REPEATER_STATUS" xml:space="preserve">
+    <value>PLAN Repeater Status</value>
+  </data>
+  <data name="TABLE_CONFIGURATION" xml:space="preserve">
+    <value>Configuration Table Written To</value>
+  </data>
+  <data name="SIGNED_AUTH_ENABLED" xml:space="preserve">
+    <value>Optical Signed Authorization Enabled</value>
+  </data>
+  <data name="SIGNED_AUTH_TEMP_DISABLED" xml:space="preserve">
+    <value>Optical Signed Authorization Temporarily Disabled</value>
+  </data>
+  <data name="HAN_DEVICE_ADDED_OR_REMOVED" xml:space="preserve">
+    <value>HAN Device added or removed</value>
+  </data>
+  <data name="GW_CONFIGURATION_DOWNLOAD" xml:space="preserve">
+    <value>Gateway Configured Successfully</value>
+  </data>
+  <data name="ANSI_LOGIN" xml:space="preserve">
+    <value>ANSI Login</value>
+  </data>
+  <data name="BILLING_SCHED_CHANGE" xml:space="preserve">
+    <value>Billing Schedule Changed</value>
+  </data>
+  <data name="METER_RECONFIG" xml:space="preserve">
+    <value>Meter Reconfigure</value>
+  </data>
+  <data name="REVERSE_ROTATION_RESTORE" xml:space="preserve">
+    <value>Reverse Rotation Restored</value>
+  </data>
+  <data name="ANSI_SECURITY_SUCCESS" xml:space="preserve">
+    <value>ANSI Security Succeeded</value>
+  </data>
+  <data name="CRITICAL_PEAK_PRICING" xml:space="preserve">
+    <value>Critical Peak Pricing</value>
+  </data>
+  <data name="FATAL_5_GATEWAY" xml:space="preserve">
+    <value>Fatal Error #5 - Bad EPF Data</value>
+  </data>
+  <data name="HAN_EVENT_CACHE_OVERFLOW" xml:space="preserve">
+    <value>HAN Event Cache Overflow</value>
+  </data>
+  <data name="CPP_ACTIVE" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="CPP_DONE" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="CPP_DONE_ON_EOI" xml:space="preserve">
+    <value>Done on EOI</value>
+  </data>
+  <data name="CPP_INVALID" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="CPP_NOT_CONFIGURED" xml:space="preserve">
+    <value>Not Configured</value>
+  </data>
+  <data name="CPP_PENDING" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="CPP_UNKNOWN" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="CPP_WAITING_FOR_EOI_SYNC" xml:space="preserve">
+    <value>Waiting for EOI Sync</value>
+  </data>
+  <data name="CPP_EVENT" xml:space="preserve">
+    <value>Critical Peak Pricing</value>
+  </data>
+  <data name="RECEIVED_SEGMENT_BYTES" xml:space="preserve">
+    <value>Received Segment Bytes</value>
+  </data>
+  <data name="SENT_SEGMENT_BYTES" xml:space="preserve">
+    <value>Sent Segment Bytes</value>
+  </data>
+  <data name="HAN_DEVICE_ADDED" xml:space="preserve">
+    <value>HAN Device Added Exception</value>
+  </data>
+  <data name="HAN_LOAD_CTRL_OPT_OUT_EXCEPTION" xml:space="preserve">
+    <value>HAN Load Control Opt Out</value>
+  </data>
+  <data name="EXTENDED_OUTAGE_RECOVERY_MODE_ENTERED" xml:space="preserve">
+    <value>Extended Outage Recovery Mode</value>
+  </data>
+  <data name="AGGREGATE" xml:space="preserve">
+    <value>aggregate</value>
+  </data>
+  <data name="AVG_INS_W_D" xml:space="preserve">
+    <value>ins avg W d</value>
+  </data>
+  <data name="AVG_INS_W_R" xml:space="preserve">
+    <value>ins avg W r</value>
+  </data>
+  <data name="INS_W_D" xml:space="preserve">
+    <value>ins W d</value>
+  </data>
+  <data name="INS_W_R" xml:space="preserve">
+    <value>ins W r</value>
+  </data>
+  <data name="MAX_INS_W_D" xml:space="preserve">
+    <value>ins max W d</value>
+  </data>
+  <data name="MAX_INS_W_R" xml:space="preserve">
+    <value>ins max W r</value>
+  </data>
+  <data name="MIN_INS_W_D" xml:space="preserve">
+    <value>ins min W d</value>
+  </data>
+  <data name="MIN_INS_W_R" xml:space="preserve">
+    <value>ins min W r</value>
+  </data>
+  <data name="HAN_PRICING_TABLE" xml:space="preserve">
+    <value>HAN Pricing Table</value>
+  </data>
+  <data name="FW_DWLD_EVENT_LOG_FULL" xml:space="preserve">
+    <value>Firmware Download Event Log Full</value>
+  </data>
+  <data name="RMS_VOLTAGE_FROM_ABOVE_HIGH_THRESHOLD_TO_NORMAL" xml:space="preserve">
+    <value>Volt(RMS) Restored From Above Threshold to Normal</value>
+  </data>
+  <data name="RMS_VOLTAGE_FROM_BELOW_LOW_THRESHOLD_TO_NORMAL" xml:space="preserve">
+    <value>Volt(RMS) Restored From Below Threshold to Normal</value>
+  </data>
+  <data name="VOLT_HOUR_FROM_ABOVE_HIGH_THRESHOLD_TO_NORMAL" xml:space="preserve">
+    <value>VoltHour Restored From Above Threshold to Normal</value>
+  </data>
+  <data name="VOLT_HOUR_FROM_BELOW_LOW_THRESHOLD_TO_NORMAL" xml:space="preserve">
+    <value>VoltHour Restored From Below Threshold to Normal</value>
+  </data>
+  <data name="BUTTON_PRESSED" xml:space="preserve">
+    <value>Button Pressed</value>
+  </data>
+  <data name="INITIATED_REMOTELY" xml:space="preserve">
+    <value>Initiated Remotely</value>
+  </data>
+  <data name="SCHEDULED" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="HAN_DEVICE_JOINED_EXCEPTION" xml:space="preserve">
+    <value>HAN Device Joined</value>
+  </data>
+  <data name="INITIATED_LOCALLY" xml:space="preserve">
+    <value>Initiated Locally</value>
+  </data>
+  <data name="MAGNETIC_TAMPER_CLEARED" xml:space="preserve">
+    <value>Magnetic tamper cleared</value>
+  </data>
+  <data name="MAGNETIC_TAMPER_DETECTED" xml:space="preserve">
+    <value>Magnetic tamper detected</value>
+  </data>
+  <data name="GW_GAS_RANGE_EXTENDER_DATA" xml:space="preserve">
+    <value>Gas Range Extender status and child data</value>
+  </data>
+  <data name="EVENT_GENERIC_HISTORY_EVENT" xml:space="preserve">
+    <value>Generic Event</value>
+  </data>
+  <data name="CTE_EVENT" xml:space="preserve">
+    <value>Current Threshold Exceeded</value>
+  </data>
+  <data name="AUTO_REGISTRATION" xml:space="preserve">
+    <value>Auto Registration</value>
+  </data>
+  <data name="DELAYED_RESET_SSI_MODULE_ALARM" xml:space="preserve">
+    <value>Delayed Reset ICM Alarm</value>
+  </data>
+  <data name="EXTENSIBLE_FIRMWARE_DOWNLOAD_STATUS" xml:space="preserve">
+    <value>Extensible Firmware Download Status</value>
+  </data>
+  <data name="EXTREME_TEMPERATURE_INSERVICE" xml:space="preserve">
+    <value>Extreme Temperature In Service</value>
+  </data>
+  <data name="EXTREME_TEMPERATURE_SHUTDOWN" xml:space="preserve">
+    <value>Extreme Temperature Shutdown</value>
+  </data>
+  <data name="FAILURE_TO_SET_METER_TIME" xml:space="preserve">
+    <value>Failure to Set Meter Time</value>
+  </data>
+  <data name="FIRMWARE_IMAGE_CORRUPTED" xml:space="preserve">
+    <value>Firmware Image Corrupted</value>
+  </data>
+  <data name="IP_ADDRESS_REPORT" xml:space="preserve">
+    <value>IP Address Report</value>
+  </data>
+  <data name="METER_COMMUNICATION_FAULT" xml:space="preserve">
+    <value>Meter Communication Fault</value>
+  </data>
+  <data name="METER_COMMUNICATION_REESTABLISHED" xml:space="preserve">
+    <value>Meter Communication Reestablished</value>
+  </data>
+  <data name="METER_COMMUNICATION_STATUS_ALARM" xml:space="preserve">
+    <value>Meter Communication Status Alarm</value>
+  </data>
+  <data name="METER_ERROR_GREATER_THAN_MAXIMUM_CORRECTABLE_TIME_ERROR" xml:space="preserve">
+    <value>Meter Error Greater Than Maximum Correctable Time Error</value>
+  </data>
+  <data name="METER_PASSWORDS_OUT_OF_SYNC" xml:space="preserve">
+    <value>Meter Passwords Out of SYNC</value>
+  </data>
+  <data name="POWER_OUTAGE_DETECTED" xml:space="preserve">
+    <value>Power Outage Detected</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_1" xml:space="preserve">
+    <value>Power Quality Detection: Polarity, Cross-Phase, and Energy Flow</value>
+  </data>
+  <data name="POWER_RESTORATION_DETECTED" xml:space="preserve">
+    <value>Power Restoration Detected</value>
+  </data>
+  <data name="RCDC_FAULT_RCDC_COMM_ERROR" xml:space="preserve">
+    <value>RCDC: RCDC Comm Error</value>
+  </data>
+  <data name="SUCCESSFUL_TIME_SYNC_TIME_CHANGE_OCCURRED" xml:space="preserve">
+    <value>Successful Time Sync Time Change Occurred</value>
+  </data>
+  <data name="SYNCHRONIZATION_TIME_ERROR_IS_TOO_LARGE" xml:space="preserve">
+    <value>Synchronization Time Error is Too Large</value>
+  </data>
+  <data name="TAMPER_DETECTION_PASSWORD_RECOVERY_DETECTED" xml:space="preserve">
+    <value>Password Recovery Detected</value>
+  </data>
+  <data name="BASE_SWITCH_COMMAND" xml:space="preserve">
+    <value>Base Switch Command</value>
+  </data>
+  <data name="COMMIT_HAN_LOG" xml:space="preserve">
+    <value>Commit HAN Log</value>
+  </data>
+  <data name="COMMIT_LAN_LOG" xml:space="preserve">
+    <value>Commit LAN Log</value>
+  </data>
+  <data name="CONNECT_FORCED" xml:space="preserve">
+    <value>Connect Forced</value>
+  </data>
+  <data name="DISCONNECT_FORCED" xml:space="preserve">
+    <value>Disconnect Forced</value>
+  </data>
+  <data name="END_DEVICE_SEALED" xml:space="preserve">
+    <value>End Device Sealed</value>
+  </data>
+  <data name="END_DEVICE_UNSEALED" xml:space="preserve">
+    <value>End Device Unsealed</value>
+  </data>
+  <data name="FIRMWARE_ACTIVATE_IN_PROGRESS" xml:space="preserve">
+    <value>Firmware Activate in Progress</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_DEBUG" xml:space="preserve">
+    <value>Firmware Download Debug</value>
+  </data>
+  <data name="LAN_HAN_LOCATE_BY_EVENT" xml:space="preserve">
+    <value>LAN/HAN Locate by Event</value>
+  </data>
+  <data name="LAN_HAN_LOCATE_BY_TIME" xml:space="preserve">
+    <value>LAN/HAN Locate by Time</value>
+  </data>
+  <data name="ON_DEMAND_PERIODIC_READ" xml:space="preserve">
+    <value>On Demand Periodic Read</value>
+  </data>
+  <data name="PENDING_TABLE_FAILURE" xml:space="preserve">
+    <value>Pending Table Failure</value>
+  </data>
+  <data name="PRIOR_DEMAND_RESET" xml:space="preserve">
+    <value>Prior Demand Reset</value>
+  </data>
+  <data name="PRIOR_SELF_READ" xml:space="preserve">
+    <value>Prior Self Read</value>
+  </data>
+  <data name="SAFE_INITIALIZATION_AFTER_FATAL" xml:space="preserve">
+    <value>Safe Initialization After Fatal</value>
+  </data>
+  <data name="SERVICE_LIMITING_CONNECT_SWITCH" xml:space="preserve">
+    <value>Service Limiting Connect Switch</value>
+  </data>
+  <data name="SERVICE_LIMITING_SWITCH_PERIOD" xml:space="preserve">
+    <value>Service Limiting Switch Period</value>
+  </data>
+  <data name="THIRD_PARTY_RESERVED" xml:space="preserve">
+    <value>Third Party Reserved</value>
+  </data>
+  <data name="TOU_DAY_TYPE_1" xml:space="preserve">
+    <value>TOU Day Type 1</value>
+  </data>
+  <data name="TOU_DAY_TYPE_2" xml:space="preserve">
+    <value>TOU Day Type 2</value>
+  </data>
+  <data name="TOU_DAY_TYPE_3" xml:space="preserve">
+    <value>TOU Day Type 3</value>
+  </data>
+  <data name="TOU_DAY_TYPE_4" xml:space="preserve">
+    <value>TOU Day Type 4</value>
+  </data>
+  <data name="VOLTAGE_MONITORING_EOI" xml:space="preserve">
+    <value>Voltage Monitoring EOI</value>
+  </data>
+  <data name="ZIGBEE_DOWNLOAD_TERMINATE" xml:space="preserve">
+    <value>ZigBee Download Terminate</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_2" xml:space="preserve">
+    <value>Power Quality Detection: Voltage Imbalance</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_3" xml:space="preserve">
+    <value>Power Quality Detection: Inactive Phase Current</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_4" xml:space="preserve">
+    <value>Power Quality Detection: Current Phase Angle</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_5" xml:space="preserve">
+    <value>Power Quality Detection: High Distortion</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_6" xml:space="preserve">
+    <value>Power Quality Detection: Under Voltage Test</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_7" xml:space="preserve">
+    <value>Power Quality Detection: Over Voltage Test</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_DIAGNOSTIC_8" xml:space="preserve">
+    <value>Power Quality Detection: High Imputed Neutral Current</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_VOLTAGE_SAG" xml:space="preserve">
+    <value>Power Quality Detection: Voltage Sag</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_VOLTAGE_SWELL" xml:space="preserve">
+    <value>Power Quality Detection: Voltage Swell</value>
+  </data>
+  <data name="RCDC_FAULT_ALTERNATE_SOURCE" xml:space="preserve">
+    <value>RCDC: Alternate Source</value>
+  </data>
+  <data name="RCDC_FAULT_BYPASSED" xml:space="preserve">
+    <value>RCDC: Bypassed</value>
+  </data>
+  <data name="RCDC_FAULT_MANUAL_ARM_TIMED_OUT" xml:space="preserve">
+    <value>RCDC: Manual Arm Timed Out</value>
+  </data>
+  <data name="RCDC_FAULT_PPM_ALERT" xml:space="preserve">
+    <value>RCDC: PPM Alert</value>
+  </data>
+  <data name="RCDC_FAULT_SWITCHED_FAILED_TO_CLOSE" xml:space="preserve">
+    <value>RCDC: Switch Failed to Close</value>
+  </data>
+  <data name="RCDC_FAULT_SWITCH_CONTROLLER_ERROR" xml:space="preserve">
+    <value>RCDC: Switch Controller Error</value>
+  </data>
+  <data name="RCDC_FAULT_SWITCH_FAILED_TO_OPEN" xml:space="preserve">
+    <value>RCDC: Switch Failed to Open</value>
+  </data>
+  <data name="TAMPER_DETECTION_DEVICE_RECONFIGURED_REPROGRAMMED" xml:space="preserve">
+    <value>Device Reconfigured or Reprogrammed</value>
+  </data>
+  <data name="TAMPER_DETECTION_MODULE_INVERTED" xml:space="preserve">
+    <value>Inversion tamper</value>
+  </data>
+  <data name="TAMPER_DETECTION_OPTICAL_PORT_SESSION_IN_PROGRESS" xml:space="preserve">
+    <value>Optical Port Session in Progress</value>
+  </data>
+  <data name="TAMPER_DETECTION_PASSWORD_FAILURE" xml:space="preserve">
+    <value>Password Failure</value>
+  </data>
+  <data name="TAMPER_DETECTION_POWER_OUTAGES_DUE_TO_LOSS_OF_AC_POWER" xml:space="preserve">
+    <value>Power Outages Due to Loss of AC Power</value>
+  </data>
+  <data name="TAMPER_DETECTION_POWER_OUTAGES_RECOGNIZED_BY_SSI_MODULE" xml:space="preserve">
+    <value>Power Outages Recognized by ICM</value>
+  </data>
+  <data name="TAMPER_DETECTION_REMOTE_DISCONNECT_SWITCH_BYPASS" xml:space="preserve">
+    <value>Remote Disconnect Switch Bypass</value>
+  </data>
+  <data name="TAMPER_DETECTION_SERVICE_ERROR_DETECTED" xml:space="preserve">
+    <value>Service Error Detected</value>
+  </data>
+  <data name="TAMPER_DETECTION_TILT_SWITCH_CLEARED" xml:space="preserve">
+    <value>Tilt Switch Cleared</value>
+  </data>
+  <data name="TAMPER_DETECTION_TILT_SWITCH_SET" xml:space="preserve">
+    <value>Tilt Switch Set</value>
+  </data>
+  <data name="TAMPER_DETECTION_TOTAL_DEMAND_RESETS" xml:space="preserve">
+    <value>Total Demand Resets</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_ACTIVATING" xml:space="preserve">
+    <value>Firmware Download: Activating</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_CANCELED" xml:space="preserve">
+    <value>Firmware Download: Canceled</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_CANCELING" xml:space="preserve">
+    <value>Firmware Download: Canceling</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_COPYING_FILE" xml:space="preserve">
+    <value>Firmware Download: Copying File</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_FAILED_WILL_RETRY" xml:space="preserve">
+    <value>Firmware Download: Failed will Retry</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_FILE_EXISTS" xml:space="preserve">
+    <value>Firmware Download: File Exists</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_INCORRECT_VERSION" xml:space="preserve">
+    <value>Firmware Download: Incorrect Version</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_REMOVING_INACTIVE_FILES" xml:space="preserve">
+    <value>Firmware Download: Removing Inactive Files</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_RETRIES_EXCEEDED" xml:space="preserve">
+    <value>Firmware Download: Retries Exceeded</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_SET_ACTIVE_REBOOT" xml:space="preserve">
+    <value>Firmware Download: Set Active Reboot</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_SUCCESSFUL" xml:space="preserve">
+    <value>Firmware Download: Successful</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_TOTAL_TIME" xml:space="preserve">
+    <value>Firmware Download Total Time</value>
+  </data>
+  <data name="FIRMWARE_UPGRADE_ACTIVE_ALARM" xml:space="preserve">
+    <value>Firmware Upgrade Activate Alarm</value>
+  </data>
+  <data name="FIRMWARE_UPGRADE_DOWNLOAD_ALARM" xml:space="preserve">
+    <value>Firmware Upgrade Download Alarm</value>
+  </data>
+  <data name="SET_ACTIVE_FIRMWARE_ALARM" xml:space="preserve">
+    <value>Set Active Firmware Alarm</value>
+  </data>
+  <data name="UNKNOWN_EVENT" xml:space="preserve">
+    <value>Unknown Event</value>
+  </data>
+  <data name="C1222_ADDED_EXCEPTION_ID" xml:space="preserve">
+    <value>C12.22 Added Exception ID</value>
+  </data>
+  <data name="C1222_FAILED_ADD_EXCEPTION_DETAIL" xml:space="preserve">
+    <value>C12.22 Failed to Add Exception Detail</value>
+  </data>
+  <data name="C1222_FAILED_ADD_EXCEPTION_ID" xml:space="preserve">
+    <value>C12.22 Failed to Add Exception ID</value>
+  </data>
+  <data name="C1222_PERIODIC_READ_TIMING" xml:space="preserve">
+    <value>C12.22 Periodic Read Timing</value>
+  </data>
+  <data name="C1222_SEND_IDENT_REQUEST" xml:space="preserve">
+    <value>C12.22 Send Ident Request</value>
+  </data>
+  <data name="C1222_SEND_IDENT_REQUEST_FAILED" xml:space="preserve">
+    <value>C12.22 Send Ident Request Failed</value>
+  </data>
+  <data name="COMM_LOG_ONE_HR_MAX" xml:space="preserve">
+    <value>C12.22 Communication Log One HR Max</value>
+  </data>
+  <data name="COMM_LOG_TEST" xml:space="preserve">
+    <value>C12.22 Communication Log Test</value>
+  </data>
+  <data name="EVENT_CACHE_OVERFLOWED" xml:space="preserve">
+    <value>Event Cache Overflow</value>
+  </data>
+  <data name="INCOMING_SEGMENT_DISCARDED_IN_KEEPALIVE" xml:space="preserve">
+    <value>Incoming Segment Discarded in Keep Alive</value>
+  </data>
+  <data name="CELL_TOWER_CHANGES_EXCEED_THRESHOLD" xml:space="preserve">
+    <value>Cell Tower Changes Exceed Threshold</value>
+  </data>
+  <data name="COMM_LINK_FAILURE" xml:space="preserve">
+    <value>Comm Link Failure</value>
+  </data>
+  <data name="SECTOR_CHANGES_EXCEED_THRESHOLD" xml:space="preserve">
+    <value>Sector Changes Exceed Threshold</value>
+  </data>
+  <data name="CDMA_SUBSCRIPTION_ERROR" xml:space="preserve">
+    <value>CDMA Subscription Error</value>
+  </data>
+  <data name="ICM_CONFIGURATION_CHANGE" xml:space="preserve">
+    <value>ICM Configuration Change</value>
+  </data>
+  <data name="ICM_REBOOT_MODEM_NOT_RESPONDING" xml:space="preserve">
+    <value>ICM Reboot: Modem Not Responding</value>
+  </data>
+  <data name="INITIAL_MODEM_PROVISION" xml:space="preserve">
+    <value>Initial Modem Provision</value>
+  </data>
+  <data name="MDN_LOGIN_ERROR" xml:space="preserve">
+    <value>MDN Login Error</value>
+  </data>
+  <data name="MODEM_IDENTITY_ERROR" xml:space="preserve">
+    <value>Modem Identity Error</value>
+  </data>
+  <data name="METER_INVERSION_DETECTED_ON_STARTUP" xml:space="preserve">
+    <value>Meter Inversion Detected on Startup</value>
+  </data>
+  <data name="MODEM_PROVISION_FAILED" xml:space="preserve">
+    <value>Modem Provision Failed</value>
+  </data>
+  <data name="MODEM_PROVISION_SUCCESSFUL" xml:space="preserve">
+    <value>Modem Provision Successful</value>
+  </data>
+  <data name="RECEIVED_SMS" xml:space="preserve">
+    <value>Received SMS</value>
+  </data>
+  <data name="UNINTELLIGIBLE_MESSAGE_RECEIVED" xml:space="preserve">
+    <value>Unintelligible Message Received</value>
+  </data>
+  <data name="CELLUAR_TIMEOUT_RECEIVED" xml:space="preserve">
+    <value>Cellular Non-Comm Timeout: Received</value>
+  </data>
+  <data name="CELLUAR_TIMEOUT_SENT" xml:space="preserve">
+    <value>Cellular Non-Comm Timeout: Sent</value>
+  </data>
+  <data name="CLI_COMMAND_EXECUTED_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>CLI Command Executed via Optical Port</value>
+  </data>
+  <data name="CLI_IS_DISABLED" xml:space="preserve">
+    <value>CLI is Disabled</value>
+  </data>
+  <data name="CLI_IS_REVERT_ONLY" xml:space="preserve">
+    <value>CLI is Revert Only</value>
+  </data>
+  <data name="CLI_LOCKED_OUT_TOO_MANY_LOGIN_ATTEMPTS_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>CLI Locked Out: Too Many Login Attempts via Optical Port</value>
+  </data>
+  <data name="CLI_LOGIN_ATTEMPTED_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>CLI Login Attempted via Optical Port</value>
+  </data>
+  <data name="CLI_LOGIN_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>CLI Login via Optical Port</value>
+  </data>
+  <data name="CLI_PASSWORD_FAILED" xml:space="preserve">
+    <value>CLI Password Failed</value>
+  </data>
+  <data name="GATEWAY_CHANGED" xml:space="preserve">
+    <value>Gateway Changed</value>
+  </data>
+  <data name="ICM_ENTERING_QUIET_MODE" xml:space="preserve">
+    <value>ICM Entering Quiet Mode</value>
+  </data>
+  <data name="ICM_HEATER_DISABLED" xml:space="preserve">
+    <value>ICM Heater Disabled</value>
+  </data>
+  <data name="ICM_HEATER_ENABLED" xml:space="preserve">
+    <value>ICM Heater Enabled</value>
+  </data>
+  <data name="ICM_LEAVING_QUIET_MODE" xml:space="preserve">
+    <value>ICM Leaving Quiet Mode</value>
+  </data>
+  <data name="ICM_STATE_CHANGED" xml:space="preserve">
+    <value>ICM State Changed</value>
+  </data>
+  <data name="ICM_TIME_SET_FROM_METER" xml:space="preserve">
+    <value>ICM Time Set from Meter</value>
+  </data>
+  <data name="ICM_TIME_UPDATED_FROM_NETWORK" xml:space="preserve">
+    <value>ICM Time Updated from Network</value>
+  </data>
+  <data name="LOADSIDE_VOLTAGE_WHILE_SWITCH_OPEN" xml:space="preserve">
+    <value>Loadside Voltage While Switch Open</value>
+  </data>
+  <data name="LOADSIDE_VOLTAGE_WHILE_SWITCH_OPEN_CLEAR" xml:space="preserve">
+    <value>Loadside Voltage While Switch Open Clear</value>
+  </data>
+  <data name="MAGNETIC_SWIPE_IGNORED_CONDITION_NOT_MET" xml:space="preserve">
+    <value>Magnetic Swipe Ignored: Condition Not Met</value>
+  </data>
+  <data name="MAGNETIC_SWIPE_IGNORED_NOT_IN_NON_COMM" xml:space="preserve">
+    <value>Magnetic Swipe Ignored: Not in Non-comm</value>
+  </data>
+  <data name="MAGNETIC_SWIPE_IN_MANUFACTURING_MODE" xml:space="preserve">
+    <value>Magnetic Swipe in Manufacturing Mode</value>
+  </data>
+  <data name="MAGNETIC_SWIPE_IN_PRODUCTION_MODE" xml:space="preserve">
+    <value>Magnetic Swipe in Production Mode</value>
+  </data>
+  <data name="METER_LOGIN_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>Meter Login via Optical Port</value>
+  </data>
+  <data name="METER_LOGOFF_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>Meter Logoff via Optical Port</value>
+  </data>
+  <data name="METER_MODEL_I_210" xml:space="preserve">
+    <value>Meter Model: I-210</value>
+  </data>
+  <data name="METER_MODEL_I_210C" xml:space="preserve">
+    <value>Meter Model: I-210+c</value>
+  </data>
+  <data name="METER_MODEL_KV2C" xml:space="preserve">
+    <value>Meter Model: KV2c</value>
+  </data>
+  <data name="MODEM_OPTICAL_PASSTHROUGH_STARTED" xml:space="preserve">
+    <value>Modem Optical Passthrough Started</value>
+  </data>
+  <data name="MODULE_POWER_FAIL" xml:space="preserve">
+    <value>Module Power Fail</value>
+  </data>
+  <data name="QUALIFIED_POWER_FAIL" xml:space="preserve">
+    <value>Qualified Power Fail</value>
+  </data>
+  <data name="STARTED_C1218_SESSION_VIA_OPTICAL_PORT" xml:space="preserve">
+    <value>Started C12.18 Session via Optical Port</value>
+  </data>
+  <data name="TIMESYNCH_STATE_CHANGED" xml:space="preserve">
+    <value>TimeSynch State Changed</value>
+  </data>
+  <data name="UNKNOWN_METER_TYPE" xml:space="preserve">
+    <value>Can't Update Display: Unknown Meter Type</value>
+  </data>
+  <data name="ZIGBEE_OPTICAL_PASSTHROUGH_STARTED" xml:space="preserve">
+    <value>ZigBee Optical Passthrough Started</value>
+  </data>
+  <data name="ACCUMULATOR_READ_FAILURE" xml:space="preserve">
+    <value>Accumulator Read Failure</value>
+  </data>
+  <data name="BAD_PASSWORD" xml:space="preserve">
+    <value>Bad Password</value>
+  </data>
+  <data name="CLOCK_ERROR" xml:space="preserve">
+    <value>Clock Error</value>
+  </data>
+  <data name="DC_DETECTED" xml:space="preserve">
+    <value>DC Detected</value>
+  </data>
+  <data name="DEMAND_OVERLOAD" xml:space="preserve">
+    <value>Demand Overload</value>
+  </data>
+  <data name="FLASH_CODE_ERROR" xml:space="preserve">
+    <value>Flash Code Error</value>
+  </data>
+  <data name="FLASH_DATA_ERROR" xml:space="preserve">
+    <value>Flash Data Error</value>
+  </data>
+  <data name="HIGH_TEMP" xml:space="preserve">
+    <value>High Temperature</value>
+  </data>
+  <data name="LEADING_KVARH" xml:space="preserve">
+    <value>Leading KVARh</value>
+  </data>
+  <data name="LOSS_OF_PROGRAM" xml:space="preserve">
+    <value>Loss of Program</value>
+  </data>
+  <data name="LOW_LOSS_POTENTIAL" xml:space="preserve">
+    <value>Low Loss Potential</value>
+  </data>
+  <data name="MEASUREMENT_ERROR" xml:space="preserve">
+    <value>Measurement Error</value>
+  </data>
+  <data name="NONVOLATILE_MEMORY_FAILURE" xml:space="preserve">
+    <value>Non-volatile Memory Failure</value>
+  </data>
+  <data name="POWER_FAILURE" xml:space="preserve">
+    <value>Power Failure</value>
+  </data>
+  <data name="RAM_FAILURE" xml:space="preserve">
+    <value>RAM Failure</value>
+  </data>
+  <data name="RECEIVED_KWH" xml:space="preserve">
+    <value>Received KWh</value>
+  </data>
+  <data name="ROM_FAILURE" xml:space="preserve">
+    <value>ROM Failure</value>
+  </data>
+  <data name="SYSTEM_ERROR" xml:space="preserve">
+    <value>System Error</value>
+  </data>
+  <data name="UNPROGRAMMED" xml:space="preserve">
+    <value>Unprogrammed</value>
+  </data>
+  <data name="CELLULAR_CONNECTION_TIMEOUT_ALARM" xml:space="preserve">
+    <value>Cellular Connection Timeout Alarm</value>
+  </data>
+  <data name="ERT_ADDING_AN_ERT_METER_READING_TO_OUR_MASTER_LIST" xml:space="preserve">
+    <value>Adding an ERT meter reading to our master list</value>
+  </data>
+  <data name="ERT_CC1121_PART_NUMBER" xml:space="preserve">
+    <value>CC1121 part number</value>
+  </data>
+  <data name="ERT_CHANGING_ERT_RESTING_CHANNEL" xml:space="preserve">
+    <value>Changing ERT resting channel</value>
+  </data>
+  <data name="ERT_ERT_CC1121_MANUAL_CALIBRATION_SUCCESSFUL" xml:space="preserve">
+    <value>ERT CC1121 manual calibration successful</value>
+  </data>
+  <data name="ERT_ERT_HW_SUCCESSFULLY_INITIALIZED" xml:space="preserve">
+    <value>ERT HW successfully initialized</value>
+  </data>
+  <data name="ERT_ERT_MASTER_LIST_INITIALIZATION_CREATION_FAILED" xml:space="preserve">
+    <value>ERT Master List initialization/creation failed</value>
+  </data>
+  <data name="ERT_ERT_RADIO_OFF_FREEZE_PROC_IMC_REJECTED" xml:space="preserve">
+    <value>ERT Radio Off: Freeze proc IMC rejected</value>
+  </data>
+  <data name="ERT_ERT_RADIO_TURNED_OFF_IN_ERT_CFG_DATA_TABLE" xml:space="preserve">
+    <value>ERT Radio turned off in ERT_CFG_DATA_TABLE</value>
+  </data>
+  <data name="ERT_ICM_CAMPING_CHANNEL" xml:space="preserve">
+    <value>ERT Camping Channel</value>
+  </data>
+  <data name="ERT_INCOMING_ERT_PACKET_CRC_ERROR" xml:space="preserve">
+    <value>Incoming ERT packet CRC error</value>
+  </data>
+  <data name="ERT_NUMBER_OF_ERTS_WHOSE_RECORDS_WERE_FROZEN" xml:space="preserve">
+    <value>Number of ERTs whose records were frozen</value>
+  </data>
+  <data name="ERT_REACHED_MAX_NUMBER_OF_ERT_METERS" xml:space="preserve">
+    <value>Reached the MAX number of ERT meters</value>
+  </data>
+  <data name="ERT_RECEIVED_INVALID_TIME_FROM_NTP_TASK" xml:space="preserve">
+    <value>Received invalid time from NTP task</value>
+  </data>
+  <data name="ERT_SUCCESSFULLY_INITIALIZED_SPI_DRIVER" xml:space="preserve">
+    <value>Successfully initialized SPI Driver</value>
+  </data>
+  <data name="ERT_UNSUCCESSFUL_PDOID_READ" xml:space="preserve">
+    <value>Unsuccessful PDOID read</value>
+  </data>
+  <data name="ICM_EVENT_LOG_CLEARED" xml:space="preserve">
+    <value>ICM Event Log Cleared</value>
+  </data>
+  <data name="METER_MODEL_OW_CENTRON" xml:space="preserve">
+    <value>Meter Model: OpenWay CENTRON</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_MOMENTARY_INTERRUPTION" xml:space="preserve">
+    <value>PQ: Momentary Interuption</value>
+  </data>
+  <data name="POWER_QUALITY_DETECTION_SUSTAINED_INTERRUPTION" xml:space="preserve">
+    <value>PQ: Sustained Interruption</value>
+  </data>
+  <data name="SMS_WAKEUP_RECEIVED" xml:space="preserve">
+    <value>SMS Wakeup Received</value>
+  </data>
+  <data name="HOURS" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="MINUTES" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="DelaySeasonChangeUntilDemandReset" xml:space="preserve">
+    <value>Delay Season Change Until Demand Reset</value>
+  </data>
+  <data name="ForceDemandResetOnSeasonChange" xml:space="preserve">
+    <value>Force Demand Reset Upon Season Change</value>
+  </data>
+  <data name="SeasonChangeWithoutDemandReset" xml:space="preserve">
+    <value>Season Change Without Demand Reset</value>
+  </data>
+  <data name="EnterDST" xml:space="preserve">
+    <value>Enter DST</value>
+  </data>
+  <data name="ExitDST" xml:space="preserve">
+    <value>Exit DST</value>
+  </data>
+  <data name="Holiday" xml:space="preserve">
+    <value>Holiday</value>
+  </data>
+  <data name="Season1" xml:space="preserve">
+    <value>Season 1</value>
+  </data>
+  <data name="Season2" xml:space="preserve">
+    <value>Season 2</value>
+  </data>
+  <data name="Season3" xml:space="preserve">
+    <value>Season 3</value>
+  </data>
+  <data name="Season4" xml:space="preserve">
+    <value>Season 4</value>
+  </data>
+  <data name="Season5" xml:space="preserve">
+    <value>Season 5</value>
+  </data>
+  <data name="Season6" xml:space="preserve">
+    <value>Season 6</value>
+  </data>
+  <data name="Season7" xml:space="preserve">
+    <value>Season 7</value>
+  </data>
+  <data name="Season8" xml:space="preserve">
+    <value>Season 8</value>
+  </data>
+  <data name="Unused" xml:space="preserve">
+    <value>Unused</value>
+  </data>
+  <data name="ADDED_ERT_TO_MANAGED_LIST" xml:space="preserve">
+    <value>Added ERT to Managed List</value>
+  </data>
+  <data name="ERT_242_TX_FAILED" xml:space="preserve">
+    <value>ERT 242 Transmit Failed</value>
+  </data>
+  <data name="ERT_TIME_SET_FAILED" xml:space="preserve">
+    <value>ERT Time Set Failed</value>
+  </data>
+  <data name="CONFIGURATION_COMMIT" xml:space="preserve">
+    <value>Configuration Commit</value>
+  </data>
+  <data name="CRITICAL_PEAK_PRICING_STATUS" xml:space="preserve">
+    <value>Critical Peak Pricing Status</value>
+  </data>
+  <data name="ERT_242_COMMAND_REQUEST" xml:space="preserve">
+    <value>ERT 242 Command Request</value>
+  </data>
+  <data name="ERT_CONNECTION_DOWNTIME_TIME_EXCEEDED" xml:space="preserve">
+    <value>ERT Connection Downtime Time Exceeded</value>
+  </data>
+  <data name="ERT_METER_REMOVED" xml:space="preserve">
+    <value>ERT Meter Removed</value>
+  </data>
+  <data name="ERT_METER_STOLEN" xml:space="preserve">
+    <value>ERT Meter Stolen</value>
+  </data>
+  <data name="ERT_PREDICTOR_LIST_TIME_MODIFIED" xml:space="preserve">
+    <value>ERT Predictor List Time Modified</value>
+  </data>
+  <data name="FAILED_CE_CONFIGURATION_VERIFICATION" xml:space="preserve">
+    <value>Failed CE configuration verification</value>
+  </data>
+  <data name="FAILED_SECURITY_KEY_VERIFICATION" xml:space="preserve">
+    <value>Failed Security Key Verification</value>
+  </data>
+  <data name="FIRMWARE_DOWNLOAD_INITIALIZATION_FAILURE" xml:space="preserve">
+    <value>Firmware Download: Initialization Failure</value>
+  </data>
+  <data name="HAN_FIRMWARE_DOWNLOAD_FAILURE" xml:space="preserve">
+    <value>HAN Firmware Download Failure</value>
+  </data>
+  <data name="MIGRATION_STATE_CHANGE" xml:space="preserve">
+    <value>Migration State Change</value>
+  </data>
+  <data name="SECURITY_EVENT_ICM" xml:space="preserve">
+    <value>Security Event</value>
+  </data>
+  <data name="SMS_WAKEUP_IDENTITY_NOT_SENT_BECAUSE_NOT_REGISTERED" xml:space="preserve">
+    <value>SMS Wakeup Identity Request Not Sent Because Not Registered</value>
+  </data>
+  <data name="SMS_WAKEUP_IDENTITY_REQUEST_NOT_SENT_BECAUSE_NOT_SYNCHRONIZED" xml:space="preserve">
+    <value>SMS Wakeup Identity Request Not Sent Because Not Synchronized</value>
+  </data>
+  <data name="SMS_WAKEUP_IDENTITY_REQUEST_SENT" xml:space="preserve">
+    <value>SMS Wakeup Identity Request Sent</value>
+  </data>
+  <data name="TAMPER_TILT_SET_ON_OUTAGE" xml:space="preserve">
+    <value>Removal tamper</value>
+  </data>
+  <data name="TIME_SOURCE_UNAVAILABLE" xml:space="preserve">
+    <value>Time Source Unavailable</value>
+  </data>
+  <data name="ICS_CHECKSUM_ERRORS" xml:space="preserve">
+    <value>ICM Checksum Errors</value>
+  </data>
+  <data name="ICS_CONNECTION_STATE" xml:space="preserve">
+    <value>ICM Connection State</value>
+  </data>
+  <data name="ICS_NUMBER_OF_CELL_TOWER_CHANGES" xml:space="preserve">
+    <value>ICM Number of Cell Tower Changes</value>
+  </data>
+  <data name="ICS_OUTAGE_ID" xml:space="preserve">
+    <value>ICM Outage ID</value>
+  </data>
+  <data name="ICS_PACKETS_RECEIVED" xml:space="preserve">
+    <value>ICM Packets Received</value>
+  </data>
+  <data name="ICS_PACKETS_SENT" xml:space="preserve">
+    <value>ICM Packets Sent</value>
+  </data>
+  <data name="ICS_REGISTRATION_STATUS" xml:space="preserve">
+    <value>ICM Registration Status</value>
+  </data>
+  <data name="ICS_TAMPERS" xml:space="preserve">
+    <value>ICM Tampers</value>
+  </data>
+  <data name="ICS_TOWER_AND_SECTOR_ID" xml:space="preserve">
+    <value>ICM Tower and Sector ID</value>
+  </data>
+  <data name="IPV4_ERROR_COUNT" xml:space="preserve">
+    <value>IPv4 Error Count</value>
+  </data>
+  <data name="PPP_ERROR_COUNT" xml:space="preserve">
+    <value>PPP Error Count</value>
+  </data>
+  <data name="SECTOR_ID" xml:space="preserve">
+    <value>Sector ID</value>
+  </data>
+  <data name="TCP_ERROR_COUNT" xml:space="preserve">
+    <value>TCP Error Count</value>
+  </data>
+  <data name="TOWER_ID" xml:space="preserve">
+    <value>Tower ID</value>
+  </data>
+  <data name="ERT_CC1121_MANUAL_CALIBRATION_FAILED" xml:space="preserve">
+    <value>ERT CC1121 manual calibration failed</value>
+  </data>
+  <data name="ERT_ICM_100G_TRACKING_FAILED" xml:space="preserve">
+    <value>ERT Meter Tracking Failed</value>
+  </data>
+  <data name="ICS_ERT_EVENT" xml:space="preserve">
+    <value>ERT 242 Command Request</value>
+  </data>
+  <data name="CELL_MERIT_CALCULATION_WITH_RF_LEVEL" xml:space="preserve">
+    <value>Calculation with RF Level</value>
+  </data>
+  <data name="DEFAULT_CELL_MERIT_CALCULATION" xml:space="preserve">
+    <value>Default Calculation</value>
+  </data>
+  <data name="UNSUPPORTED_CELL_MERIT_CALCULATION" xml:space="preserve">
+    <value>Unsupported Cell Merit Calculation</value>
+  </data>
+  <data name="KEY_ROLLOVER_SUCCESS" xml:space="preserve">
+    <value>Key Rollover Success</value>
+  </data>
+  <data name="SIGNING_KEY_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Signing Key Update Success</value>
+  </data>
+  <data name="SYMMETRIC_KEY_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Symmetric Key Update Success</value>
+  </data>
+  <data name="LEVEL" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="C1222_FIRMWARE_BLOCK_CRC_ERRORS" xml:space="preserve">
+    <value>C12.22 Firmware Block CRC Errors</value>
+  </data>
+  <data name="HAN_NEXT_BLOCK_PRICE_COMMIT_TIMEOUT" xml:space="preserve">
+    <value>HAN RIB Next Block Price Commit Timeout</value>
+  </data>
+  <data name="TEMPERATURE_EXCEEDS_THRESHOLD1" xml:space="preserve">
+    <value>Temperature Above Threshold 1</value>
+  </data>
+  <data name="TEMPERATURE_EXCEEDS_THRESHOLD2" xml:space="preserve">
+    <value>Temperature Above Threshold 2</value>
+  </data>
+  <data name="TEMPERATURE_RETURNED_TO_NORMAL" xml:space="preserve">
+    <value>Temperature Returned From Above Threshold 1 to Normal</value>
+  </data>
+  <data name="CLOCK_RESET" xml:space="preserve">
+    <value>Time Changed (new time)</value>
+  </data>
+  <data name="PENDING_TBL_ACTIVATE_FAIL" xml:space="preserve">
+    <value>Pending Table Failure</value>
+  </data>
+  <data name="EVENT_HARDWARE_ERROR_DETECTION" xml:space="preserve">
+    <value>Hardware Error Detection</value>
+  </data>
+  <data name="HWERR_DISCONNECT_NO_LSV_CURRENT_FLOWING" xml:space="preserve">
+    <value>LSV failure: Disconnect Switch Failure</value>
+  </data>
+  <data name="ERT_100G_TRACKING_FAILED" xml:space="preserve">
+    <value>ERT Meter Tracking Failed</value>
+  </data>
+  <data name="ERT_MANUAL_CALIBRATION_FAILED" xml:space="preserve">
+    <value>ERT CC1121 manual calibration failed</value>
+  </data>
+  <data name="TIME_CHANGED_STATUS" xml:space="preserve">
+    <value>Time Changed Status</value>
+  </data>
+  <data name="HAN_DEVICE_STATUS_CHANGED" xml:space="preserve">
+    <value>HAN Device Status Changed</value>
+  </data>
+  <data name="SITESCAN_ERROR" xml:space="preserve">
+    <value>SiteScan Error</value>
+  </data>
+  <data name="NETWORK_TIME_UNAVAILABLE" xml:space="preserve">
+    <value>Network Time Unavailable</value>
+  </data>
+  <data name="CARBON_ON_DEMAND_PERIODIC_READ" xml:space="preserve">
+    <value>On Demand Periodic Read</value>
+  </data>
+  <data name="CHECK_CONFIG_CRC" xml:space="preserve">
+    <value>Check Configuration CRC</value>
+  </data>
+  <data name="WRONG_CONFIG_CRC" xml:space="preserve">
+    <value>Wrong Configuration CRC</value>
+  </data>
+  <data name="HAN_LOAD_CONTROL_EVENT_SENT" xml:space="preserve">
+    <value>HAN Load Control Event Sent</value>
+  </data>
+  <data name="IO_OUT_RECONFIGURE" xml:space="preserve">
+    <value>IO Out Reconfigure</value>
+  </data>
+  <data name="METERING_ERROR" xml:space="preserve">
+    <value>Metering Error (DSP Error)</value>
+  </data>
+  <data name="EVENT_LOGGING_SUSPENDED" xml:space="preserve">
+    <value>Event Logging Suspended</value>
+  </data>
+  <data name="LOGGING_RESUMED" xml:space="preserve">
+    <value>Logging Resumed</value>
+  </data>
+</root>

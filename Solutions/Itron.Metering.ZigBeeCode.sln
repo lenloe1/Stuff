@@ -1,0 +1,151 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.AMIConfiguration", "..\Shared\Itron.Metering.AMIConfiguration\Itron.Metering.AMIConfiguration.csproj", "{012CB69B-5E05-43A6-9931-76FA42642E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Communications", "..\Shared\Itron.Metering.Communications\Itron.Metering.Communications.csproj", "{A7D80805-B020-42A2-B843-28A5E72609A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Device", "..\Shared\Itron.Metering.Device\Itron.Metering.Device.csproj", "{D019F65F-9C7E-4F65-93D4-A0734D76816E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.DST", "..\Shared\Itron.Metering.DST\Itron.Metering.DST.csproj", "{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Progressable", "..\Shared\Itron.Metering.Progressable\Itron.Metering.Progressable.csproj", "{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Utilities", "..\Shared\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj", "{1C2BA173-78D6-4818-A68A-3773173F9104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.ReplicaSettings", "..\OpenWay Tools\Itron.Metering.ReplicaSettings\Itron.Metering.ReplicaSettings.csproj", "{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.SharedControls", "..\OpenWay Tools\Itron.Metering.SharedControls\Itron.Metering.SharedControls.csproj", "{A078716A-19FB-4398-B42E-3D14726BD3E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Zigbee.Radio", "..\Shared\Itron.Metering.Zigbee.Radio\Itron.Metering.Zigbee.Radio.csproj", "{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.DataCollections", "..\Shared\Itron.Metering.DataCollections\Itron.Metering.DataCollections.csproj", "{56EEF4EB-117C-40F9-A849-9BDF61A22507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Zigbee.BeltClipRadio", "..\Shared\Itron.Metering.Zigbee.BeltClipRadio\Itron.Metering.Zigbee.BeltClipRadio.csproj", "{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.Datafiles", "..\Shared\Itron.Metering.Datafiles\Itron.Metering.Datafiles.csproj", "{2FCF6554-0C01-414A-827C-7101126BA6AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.DeviceDataTypes", "..\Shared\Itron.Metering.DeviceDataTypes\Itron.Metering.DeviceDataTypes.csproj", "{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.ZigBeeRadioServerObjects", "..\OpenWay Tools\Itron.Metering.ZigBeeRadioServerObjects\Itron.Metering.ZigBeeRadioServerObjects.csproj", "{E4136E1A-01DB-40C8-99E2-C83888403DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.ZigBeeRadioManager", "..\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\Itron.Metering.ZigBeeRadioManager.csproj", "{FCCFD240-62EF-47A3-9E4E-79C8D6F14C96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.CustomerValidationTool", "..\OpenWay Tools\Itron.Metering.CustomerValidationTool\Itron.Metering.CustomerValidationTool.csproj", "{48F12465-D6C7-4F0E-AC01-6D45D790F942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.CustomerValidation", "..\OpenWay Tools\Itron.Metering.CustomerValidation\Itron.Metering.CustomerValidation.csproj", "{C9EC8200-93C2-43D5-AFD4-8F444450129C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientBaseLib", "..\OpenWay Tools\CEWebService\Libs\Base\CEWebServiceClientBaseLib.csproj", "{BC5525C1-9EA1-4075-BC39-4A42BA24414E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEWebServiceClientExternalLib", "..\OpenWay Tools\CEWebService\Libs\External\CEWebServiceClientExternalLib.csproj", "{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.TOU", "..\Shared\Itron.Metering.TOU\Itron.Metering.TOU.csproj", "{A9FD2A7A-3493-4331-8F7F-790139E1E651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Metering.ZigBee.EZSP", "..\Shared\Itron.Metering.ZigBee.EZSP\Itron.Metering.ZigBee.EZSP.csproj", "{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itron.Common", "..\OpenWay Tools\TBD\Itron.Common\Itron.Common.csproj", "{E4FAFBA1-5D5B-4870-9759-D5763E33604F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{012CB69B-5E05-43A6-9931-76FA42642E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012CB69B-5E05-43A6-9931-76FA42642E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012CB69B-5E05-43A6-9931-76FA42642E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012CB69B-5E05-43A6-9931-76FA42642E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D80805-B020-42A2-B843-28A5E72609A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D80805-B020-42A2-B843-28A5E72609A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D80805-B020-42A2-B843-28A5E72609A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D80805-B020-42A2-B843-28A5E72609A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D019F65F-9C7E-4F65-93D4-A0734D76816E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D019F65F-9C7E-4F65-93D4-A0734D76816E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D019F65F-9C7E-4F65-93D4-A0734D76816E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D019F65F-9C7E-4F65-93D4-A0734D76816E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3C3BEE-2BF7-442C-85DB-3126F704A8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EE7EB8-F5AF-41E2-A6F9-ABF7D7DBC011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2BA173-78D6-4818-A68A-3773173F9104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2BA173-78D6-4818-A68A-3773173F9104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2BA173-78D6-4818-A68A-3773173F9104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2BA173-78D6-4818-A68A-3773173F9104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A078716A-19FB-4398-B42E-3D14726BD3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A078716A-19FB-4398-B42E-3D14726BD3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A078716A-19FB-4398-B42E-3D14726BD3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A078716A-19FB-4398-B42E-3D14726BD3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BE7066-AE1D-4A1F-B896-F87F7A64EC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56EEF4EB-117C-40F9-A849-9BDF61A22507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56EEF4EB-117C-40F9-A849-9BDF61A22507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56EEF4EB-117C-40F9-A849-9BDF61A22507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56EEF4EB-117C-40F9-A849-9BDF61A22507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAEFABA-7AAB-4B64-88FB-0B2C98CBE2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCF6554-0C01-414A-827C-7101126BA6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCF6554-0C01-414A-827C-7101126BA6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCF6554-0C01-414A-827C-7101126BA6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCF6554-0C01-414A-827C-7101126BA6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1A1E9C-EC29-4EF0-8A7D-39CDDC25C90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4136E1A-01DB-40C8-99E2-C83888403DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4136E1A-01DB-40C8-99E2-C83888403DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4136E1A-01DB-40C8-99E2-C83888403DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4136E1A-01DB-40C8-99E2-C83888403DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCFD240-62EF-47A3-9E4E-79C8D6F14C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCFD240-62EF-47A3-9E4E-79C8D6F14C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCFD240-62EF-47A3-9E4E-79C8D6F14C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCFD240-62EF-47A3-9E4E-79C8D6F14C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F12465-D6C7-4F0E-AC01-6D45D790F942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F12465-D6C7-4F0E-AC01-6D45D790F942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F12465-D6C7-4F0E-AC01-6D45D790F942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F12465-D6C7-4F0E-AC01-6D45D790F942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9EC8200-93C2-43D5-AFD4-8F444450129C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EC8200-93C2-43D5-AFD4-8F444450129C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EC8200-93C2-43D5-AFD4-8F444450129C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EC8200-93C2-43D5-AFD4-8F444450129C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5525C1-9EA1-4075-BC39-4A42BA24414E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FD2A7A-3493-4331-8F7F-790139E1E651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FD2A7A-3493-4331-8F7F-790139E1E651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FD2A7A-3493-4331-8F7F-790139E1E651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FD2A7A-3493-4331-8F7F-790139E1E651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B871E8-6B14-47B3-B30F-ABADCCBC513C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4FAFBA1-5D5B-4870-9759-D5763E33604F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4FAFBA1-5D5B-4870-9759-D5763E33604F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4FAFBA1-5D5B-4870-9759-D5763E33604F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4FAFBA1-5D5B-4870-9759-D5763E33604F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3238A20F-421C-4AF6-945D-4E9B77D4E43E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB27B0DF-9A54-4CC6-AA0B-76B7A47F4140}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Ami.CEWebServiceClient.External</RootNamespace>
+    <AssemblyName>CEWebServiceClientExternal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DATA_USERNAME_CLIENT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\CEWebServiceClientExternal.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\AddHANDeviceWithInstalCode.cs" />
+    <Compile Include="Action\AddMeterDefinitions.cs" />
+    <Compile Include="Action\ChangeConfigurationGroup.cs" />
+    <Compile Include="Action\CriticalPeakPricing.cs" />
+    <Compile Include="Action\DownloadConfiguration.cs" />
+    <Compile Include="Action\FirmwareDownloadsRunningReport.cs" />
+    <Compile Include="Action\GetDownloadConfigResult.cs" />
+    <Compile Include="Action\ReconnectMeter.cs" />
+    <Compile Include="Action\DisconnectMeter.cs" />
+    <Compile Include="Action\GetInteractiveReadResult.cs" />
+    <Compile Include="Action\GetMemberESNList.cs" />
+    <Compile Include="Action\InteractiveRead.cs" />
+    <Compile Include="Action\RemoveHANDevice.cs" />
+    <Compile Include="Action\RemoveMeterDefinitions.cs" />
+    <Compile Include="Action\SignatureAuthorization.cs" />
+    <Compile Include="Action\ExternalAction.cs" />
+    <Compile Include="Action\Ping.cs" />
+    <Compile Include="Action\Interrogation.cs" />
+    <Compile Include="ExternalAPI.cs" />
+    <Compile Include="Proxy\OpticalSignedAuthorization2009ClientProxy.cs" />
+    <Compile Include="ServiceHost\DataSubscriberController.cs" />
+    <Compile Include="ServiceHost\DataSubscriberItem.cs" />
+    <Compile Include="ServiceHost\DataSubscriberService.cs" />
+    <Compile Include="ServiceHost\DataSubscriberServiceHost.cs" />
+    <Compile Include="ServiceHost\ExceptionSubscriberController.cs" />
+    <Compile Include="ServiceHost\ExceptionSubscriberItem.cs" />
+    <Compile Include="ServiceHost\ExceptionSubscriberService.cs" />
+    <Compile Include="ServiceHost\ExceptionSubscriberServiceHost.cs" />
+    <Compile Include="ServiceHost\EventSubscriberController.cs" />
+    <Compile Include="ServiceHost\EventSubscriberItem.cs" />
+    <Compile Include="ServiceHost\EventSubscriberService.cs" />
+    <Compile Include="ServiceHost\EventSubscriberServiceHost.cs" />
+    <Compile Include="ServiceHost\ExternalAPICallbackController.cs" />
+    <Compile Include="ServiceHost\RequestStatusChangedItem.cs" />
+    <Compile Include="ServiceHost\RequestStatusChangedService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Factory\ExternalClientFactory.cs" />
+    <Compile Include="Proxy\Common200810ClientProxy.cs" />
+    <Compile Include="Proxy\Control200810ClientProxy.cs" />
+    <Compile Include="Proxy\Data200810ClientProxy.cs" />
+    <Compile Include="Proxy\ExternalAPIManagerServiceClientProxy.cs" />
+    <Compile Include="Proxy\Han200810ClientProxy.cs" />
+    <Compile Include="Proxy\Membership200810ClientProxy.cs" />
+    <Compile Include="Proxy\Provisioning200810ClientProxy.cs" />
+    <Compile Include="Proxy\Provisioning200908ClientProxy.cs" />
+    <Compile Include="Proxy\Reporting200810ClientProxy.cs" />
+    <Compile Include="Proxy\Reporting200908ClientProxy.cs" />
+    <Compile Include="Proxy\Subscriptions200810ClientProxy.cs" />
+    <Compile Include="Proxy\Subscriptions200908ClientProxy.cs" />
+    <Compile Include="ServiceHost\RequestStatusChangedServiceHost.cs" />
+    <Compile Include="ServiceHost\SubscriberControllerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ItronIEMPublic.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\CEWebServiceClientBaseLib.csproj">
+      <Project>{bc5525c1-9ea1-4075-bc39-4a42ba24414e}</Project>
+      <Name>CEWebServiceClientBaseLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="UpdateAssemblyInfo" Condition="'$(BuildVersion)' != '' And Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  </Target>
+  <Target Name="UpdateAssemblyInfo">
+    <Message Text="Updating Version to $(BuildVersion)" Importance="high" />
+    <Time Format="yyyy">
+      <Output TaskParameter="FormattedTime" PropertyName="CurrentYear" />
+    </Time>
+    <Attrib Files="$(ProjectDir)Properties\AssemblyInfo.cs" ReadOnly="false" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="(AssemblyVersion|AssemblyFileVersionAttribute|AssemblyFileVersion)\(&quot;.*&quot;\)" ReplacementText="$1(&quot;$(BuildVersion)&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCompany\(&quot;.*&quot;\)" ReplacementText="AssemblyCompany(&quot;Itron, Inc&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCopyright\(&quot;.*&quot;\)" ReplacementText="AssemblyCopyright(&quot;Copyright © Itron, Inc $(CurrentYear)&quot;)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

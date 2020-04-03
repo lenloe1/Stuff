@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.OWOC.C1219Tables</id>
+		<version>0.0.223.0</version>
+		<authors>Itron, Inc.</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes/>
+		<description>OWOC C1219Tables .dlls needed for OpenWay CENTRON Configuration management.</description>
+		<copyright>Copyright ©2017 Itron, Inc</copyright>
+		<tags>configuration openway centron</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="Itron.Common.C1219Tables.Centron.dll" target="lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.Centron.dll" />
+		<file src="Itron.Common.C1219Tables.ANSIStandard.dll" target="lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.ANSIStandard.dll" />
+		<file src="Itron.Common.C1219Tables.LandisGyr.dll" target="lib\Itron.Common.C1219Tables\Itron.Common.C1219Tables.LandisGyr.dll" />
+	</files>
+</package>

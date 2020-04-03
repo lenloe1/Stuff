@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.Loadbox</id>
+		<version>1.0.0.0</version>
+		<authors>Itron, Inc.</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes/>
+		<description>Libraries used for controlling Poly and Mini Loadboxes</description>
+		<copyright>Copyright ©2017 Itron, Inc</copyright>
+		<tags>loadbox</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="AxLBox.dll" target="lib\Loadbox\AxLBox.dll" />
+		<file src="LBox_Sch.dll" target="lib\Loadbox\LBox_Sch.dll" />
+		<file src="LboxUsbLibrary.dll" target="lib\Loadbox\LboxUsbLibrary.dll" />
+	</files>
+</package>

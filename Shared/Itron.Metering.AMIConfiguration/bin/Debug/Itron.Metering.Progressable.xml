@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.Progressable</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.Progressable.IProgressable">
+            <summary>
+            Interface for a control that can display a progress bar on another form using events
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Progressable.IProgressable.ShowProgressEvent">
+            <summary>
+            Event for showing the progress bar
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Progressable.IProgressable.HideProgressEvent">
+            <summary>
+            Event for hiding the progress bar
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Progressable.IProgressable.StepProgressEvent">
+            <summary>
+            Event for causing the progress bar to perform a step
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Progressable.ShowProgressEventHandler">
+            <summary>
+            Delegate for the show progress event handler
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:Itron.Metering.Progressable.StepProgressEventHandler">
+            <summary>
+            Delegate for the hide progress event handler
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:Itron.Metering.Progressable.HideProgressEventHandler">
+            <summary>
+            Delegate for the step progress event handler
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:Itron.Metering.Progressable.ProgressEventArgs">
+            <summary>
+            Event arguments for a progress event
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Progressable.ProgressEventArgs.MIN_NUMER_OF_STEPS">
+            <summary>
+            The minimum number of steps that can be performed.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Progressable.ProgressEventArgs.m_strStatus">
+            <summary>
+            The description will be displayed on the progress bar 
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ProgressEventArgs.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ProgressEventArgs.#ctor(System.String)">
+            <summary>
+            Constructor that sets the status
+            </summary>
+            <param name="strStatus">The status text for the progress event.</param>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ProgressEventArgs.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a new Progress event argument object.
+            </summary>
+            <param name="strStatus">The status text for the progress event.</param>
+            <param name="stepsToIncrement">The number of steps to increment.</param>
+        </member>
+        <member name="P:Itron.Metering.Progressable.ProgressEventArgs.Status">
+            <summary>
+            Gets or sets the status string
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Progressable.ProgressEventArgs.StepsToIncrement">
+            <summary>
+            Gets or sets the number of steps to increment.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Progressable.ShowProgressEventArgs">
+            <summary>
+            Event arguments for the show progress event
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Progressable.ShowProgressEventArgs.m_iNumberOfSteps">
+            <summary>
+            The total number of steps in the progress bar
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Progressable.ShowProgressEventArgs.m_iStepSize">
+            <summary>
+            The number of steps to take
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Progressable.ShowProgressEventArgs.m_strTitle">
+            <summary>
+            The title for the form
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ShowProgressEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor that sets the step size and the number of steps
+            </summary>
+            <param name="iStepSize">The number of steps taken when performing a step</param>
+            <param name="iNumberofSteps">The total number of steps in the progress bar</param>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ShowProgressEventArgs.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Constructor that sets the step size, the number of steps, and the title
+            </summary>
+            <param name="iStepSize">The number of steps taken when performing a step</param>
+            <param name="iNumberofSteps">The total number of steps in the progress bar</param>
+            <param name="strTitle">The title of the progress bar form</param>
+        </member>
+        <member name="M:Itron.Metering.Progressable.ShowProgressEventArgs.#ctor(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Constructor that sets the step size, the number of steps, and the title
+            </summary>
+            <param name="iStepSize">The number of steps taken when performing a step</param>
+            <param name="iNumberofSteps">The total number of steps in the progress bar</param>
+            <param name="strTitle">The title of the progress bar form</param>
+            <param name="strStatus">The description of the current step</param>
+        </member>
+        <member name="P:Itron.Metering.Progressable.ShowProgressEventArgs.NumberOfSteps">
+            <summary>
+            Gets or sets the total number of steps
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Progressable.ShowProgressEventArgs.StepSize">
+            <summary>
+            Gets or sets the size of each step
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Progressable.ShowProgressEventArgs.Title">
+            <summary>
+            Gets or sets the string to use for the form title
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Progressable\obj\Debug\Itron.Metering.Progressable.csprojAssemblyReference.cache

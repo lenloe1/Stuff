@@ -1,0 +1,6 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\bin\Debug\CEWebServiceClientBase.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\bin\Debug\CEWebServiceClientBase.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\obj\Debug\CEWebServiceClientBaseLib.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\obj\Debug\CEWebServiceClientBaseLib.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\obj\Debug\CEWebServiceClientBase.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\CEWebService\Libs\Base\obj\Debug\CEWebServiceClientBase.pdb

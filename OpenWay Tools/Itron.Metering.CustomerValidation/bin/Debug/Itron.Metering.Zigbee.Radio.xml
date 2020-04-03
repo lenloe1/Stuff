@@ -1,0 +1,954 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.Zigbee.Radio</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.Zigbee.EndDeviceJoinedEventHandler">
+            <summary>
+            Handler delegate for the EndDeviceJoinedEvent.  Only the GasModule class
+            should be handling this event. All application events will come from the 
+            GasModule class via GasModuleEvents.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs">
+            <summary>
+            Event argument class for the end device joined event.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs.#ctor(System.UInt16,System.UInt64,System.UInt64,System.Byte)">
+            <summary>
+            Arguments for EndDeviceJoinedEvent. These arguements correspond to 
+            IA's TC_AUTHENTICATION_indication primitive. This may need to be 
+            modified once more devices are supported.
+            </summary>
+            <param name="PanID">PanID of device that joined</param>
+            <param name="EndDevMAC">IEEE address of device that joined</param>
+            <param name="ParentMAC">IEEE address of the coordinator of the 
+            network the end device joined. This should always be the dongle's
+            address.</param>
+            <param name="SecureStatus">The security status the end device 
+            joined with. 0=Secured Join, 1=Unsecured Join</param>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs.PanID">
+            <summary>PanID of device that joined</summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs.ParentMAC">
+            <summary>IEEE address of the coordinator of the/ network the end 
+            device joined. This should always be the dongle's address.</summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs.EndDeviceMAC">
+            <summary>IEEE address of device that joined</summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.EndDeviceJoinedEventArgs.SecureStatus">
+            <summary>The security status the end device joined with. 
+            0=Secured Join, 1=Unsecured Join</summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeDeviceType">
+            <summary>
+            Itron defined Zigbee node types.  This identifier is the 6th byte
+            in the IEEE address for the device.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.ELECTRIC_METER">
+            <summary>ELECTRIC_METER</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.CELL_RELAY">
+            <summary>CELL_RELEAY</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.GAS_METER">
+            <summary>GAS_METER</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.WATER_METER">
+            <summary>WATER_METER</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.HHC">
+            <summary>HHC</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeDeviceType.COMVERGE_GATEWAY">
+            <summary>COMVERGE_GATEWAY</summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeLogicalType">
+            <summary>The Zigbee node type</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeLogicalType.COORDINATOR">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeLogicalType.ROUTER">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeLogicalType.ENDDEVICE">
+            <summary></summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ItronClusters">
+            <summary>C177 profile Command Clusters</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.UNENCRYPTED_OTA">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.DECOMMISSION">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.DATA_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.DATA_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.SERIAL_SERVER_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.SERIAL_SERVER_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.LINK_STATUS_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.LINK_STATUS_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.HEARTBEAT_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.HEARTBEAT_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.ENCRYPTED_OTA">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.NETWORK_SET_CONFIG_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.NETWORK_SET_CONFIG_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.NETWORK_GET_CONFIG_REQUEST">
+            <summary></summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ItronClusters.NETWORK_GET_CONFIG_RESPONSE">
+            <summary></summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.Radio">
+            <summary>
+            Represents an abstract Zigbee Radio.  At least 2 radios will eventually
+            inherit from this class, the Integration Associates Zigbee Dongle, and
+            the FC200 Zibee Radio.
+            </summary>
+            <summary>
+            Represents an abstract Zigbee Radio.  At least 2 radios will eventually
+            inherit from this class, the Integration Associates Zigbee Dongle, and
+            the FC200 Zibee Radio.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.Radio.EndDeviceJoinedEvent">
+            <summary>Notification event for an end device joining the radio's 
+            network when the radio is configured as a Trust Center. Only the
+            GasModule class should be handling this event. All application 
+            events will come from the GasModule class via GasModuleEvents.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.NUMBER_OF_BEACONS">
+            <summary>
+            The number of beacons to send at one time during beacon burst.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.MAX_DATA_SIZE">
+            <summary>
+            Max frame size supported by Itron Zigbee radio stacks
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.COORDINATOR_SHORT_ADDRESS">
+            <summary>
+            Coordinators are node 0 within their networks
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.OUT_OF_NETWORK_PAN_ID">
+            <summary>
+            The only invalid network address. A network address of 0xFFFF
+            indicates that we are not in a network.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.C177_HANDHELD_PROGRAMMER_MAC">
+            <summary>IEEE address of the MAC layer.  This address includes the 
+            ITRON identifier and designates the radio's device type as HHC.  
+            The lower four digits are bogus and need to be revisited.</summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.OPENWAY_CHANNELS">
+            <summary>
+            Each bit represents a channel. This set represents the channels the
+            OpenWay will be using (11, 15, 20, 25)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.ALL_CHANNELS">
+            <summary>
+            Each bit represents a channel. This constant represents all of the 
+            ZigBee channels (11-26)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.CHANNEL_11">
+            <summary>
+            Each bit represents a channel. This constant represents channel 11. 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.CHANNEL_15">
+            <summary>
+            Each bit represents a channel. This constant represents channel 15. 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.CHANNEL_20">
+            <summary>
+            Each bit represents a channel. This constant represents channel 20. 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.CHANNEL_25">
+            <summary>
+            Each bit represents a channel. This constant represents channel 25. 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.GAS_MODULE_PROGRAMMING_CHANNEL">
+            <summary>
+            Each bit represents a channel. This set represents the channel 
+            reserved for programming gas modules (17)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.ITRON_DEVICE_MAC_BASE">
+            <summary>
+            The base MAC address for Itron devices.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.ITRON_DEVICE_MAC_MASK">
+            <summary>
+            The mask for the base section of the MAC address
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.ITRON_DEVICE_TYPE_MASK">
+            <summary>
+            The mask for the device type section of the MAC address
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.ITRON_DEVICE_TYPE_SHIFT">
+            <summary>
+            The number of places to shift in order to get the device type
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Connect(System.IntPtr)">
+             <summary>
+             Connects to radio hardware. This method does not start the radio.
+             This method should be used to verify the hardware exists and is
+             available for use.
+             </summary>
+             <returns>true if the hardware is available</returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             09/07/07 mcm 8.10.26 
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Connect(System.IntPtr,System.String)">
+            <summary>
+            Connects to radio hardware with the specified device address.
+            </summary>
+            <param name="hWnd">The handle to use for the connection.</param>
+            <param name="DevAddr">The address of the device to use.</param>
+            <returns>true if the connection was successful.</returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Disconnect">
+             <summary>
+             Disconnects from radio hardware. This method will stop the radio.
+             </summary>
+             <returns>true if the hardware is available</returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             09/07/07 mcm 8.10.26 
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Start(System.UInt64,System.UInt64,Itron.Metering.Zigbee.ZigbeeLogicalType,System.UInt32)">
+             <summary>Starts the Radio. Returns a ZigbeeResult indicating success.  
+             This method can be used to detect whether the radio exists.
+             </summary>
+             <param name="MAC">MAC address for the radio</param>
+             <param name="LogicalType">The type of device to configure.  When
+             joined to a cell relay, this should be a router, otherwise this
+             should be a coordinator</param>
+             <param name="ScanChannels">This now represents the logical channel
+             id.  If the channel is 0 then the dongle will try a mask of multiple
+             channels.  This is only supported in the dongle, not the belt clip
+             radio.
+             
+             Note: this is the old definintion: Packed bits representing the channels
+             to search.  Only channels 15-26 are valid, so only bits 15 (0x800)
+             through bit 26 (0x4000000).  Note that bits are 0 indexed, so 
+             bit 0 = 0x01.</param>
+             <param name="ExPanID">The 8 byte extended Pan ID you want to start 
+             with.  This value can be 0, which will cause the radio to either 
+             assign one at random or join the first suitable network it finds 
+             depending on the LogicalType.</param>
+             <returns>True if the radio exists and was successfully started</returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             11/08/06 mcm 8.10.26 
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Stop">
+            <summary>Stops the Radio. </summary>
+            <remarks>
+            Revision History	
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            05/30/07 mcm 8.10.05        Initial Release
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.FindNetworks(System.UInt32,Itron.Metering.Zigbee.ZigbeeNetwork[]@,System.Boolean)">
+            <summary>
+            Finds the networks around the dongle. Note that radios may be 
+            limited in the number of networks they keep track of, so you may
+            not get a complete list, and the list may vary.
+            </summary>
+            <param name="ScanChannels">Packed bits representing the channels
+            to search.  Only channels 15-26 are valid, so only bits 15 (0x800)
+            through bit 26 (0x4000000).  Note that bits are 0 indexed, so 
+            bit 0 = 0x01.</param>
+            <param name="Networks">Returned array of found networks</param>
+            <param name="Fast">Indicates whether or not the duration period 
+            used during scan should be set to a small number.</param>
+            <returns>ZigbeeResult indicating success of search</returns>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.SendBeaconBurst(System.UInt32)">
+            <summary>
+            Sends a series of find network commands (beacons) in quick succession.
+            This helps some devices with communication issues to become 
+            responsive.
+            </summary>
+            <param name="Channels">Packed bits representing the channels
+            to search.  Only channels 15-26 are valid, so only bits 15 (0x800)
+            through bit 26 (0x4000000).  Note that bits are 0 indexed, so 
+            bit 0 = 0x01.</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.SendUnencryptedOTA(System.UInt16,System.Byte[],System.Byte[]@)">
+            <summary>
+            Sends a data packet to the Unencrypted OTA cluster
+            </summary>
+            <param name="TargetAddress"></param>
+            <param name="Msg"></param>
+            <param name="Response"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.SendDataRequest(System.UInt16,System.Byte[])">
+            <summary>
+            Sends a data packet to the Data Request cluster
+            </summary>
+            <param name="TargetAddress"></param>
+            <param name="Msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Authenticate(System.Boolean,System.UInt64,System.UInt64,System.Byte)">
+            <summary>
+            When the radio is running as a coordinator and Trust Center for
+            Gas and Water Modules and one of those end devices joins the 
+            network, the radio class will raise a EndDeviceJoinedEvent. The
+            client application must handle that event, decide whether to allow
+            the device to join, and authenticate the device before the radio
+            times out.  Call this methods to authenticate the device.
+            </summary>
+            <param name="AllowToJoin">True to allow the end device to join the
+            network.  False to remove it from the network.</param>
+            <param name="MAC">The MAC (IEEE) address of the device to 
+            authenticate. This value is passed to the client in the 
+            EndDeviceJoinedEvent's arguement.</param>
+            <param name="ParentMAC">The MAC address of the parent the end
+            device joined. This should always be this radio's MAC.  This value
+            is passed to the client in the EndDeviceJoinedEvent's arguement.
+            </param>
+            <param name="SecureStatus">The security status the end device
+            joined with This value is passed to the client in the 
+            EndDeviceJoinedEvent's arguement.</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.TranslateChannelBits(System.UInt32)">
+             <summary>Translates the channel set to a string.  For example,
+             translating the GAS_MODULE_CHANNELS (0x007108000) would result
+             in "15, 20, 24, 25, 26"</summary>
+             <param name="Channels"></param>
+             <returns></returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             07/11/07 mcm 1.0.0   Initial Release
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.DecryptHANKey(System.String)">
+            <summary>
+            Takes an encrypted key in the form of a string as input
+            and applies the DES encryption algorithm to produce an
+            unencrypted byte array
+            </summary>
+            <param name="strEncryptedKey">Encrypted security key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.GetSecurityKey(System.Boolean,System.String)">
+            <summary>
+            Reads the encrypted key from the registry and decrypts the byte array.
+            This version of GetSecurityKey can get either of the HAN security keys.
+            </summary>
+            <param name="IncludeSeqNbr">Whether or not to include the sequence
+            number at the start of the key</param>
+            <param name="KeyName">The name of the key to fetch - either the
+            network key or the global link key
+            </param>
+            <returns>the decrypted key as a byte array</returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.GetSecurityKey(System.Boolean)">
+            <summary>
+            Reads the encrypted key from the registry and decrypts the byte array.
+            </summary>
+            <param name="IncludeSeqNbr">Whether or not to include the sequence
+            number at the start of the key</param>
+            <returns>the decrypted key as a byte array</returns>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_RadioType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_TargetShortAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_Logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.Radio.DataReceived">
+            <summary>
+            Event raised when communication port input buffer has been read. 
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.Radio.DataSent">
+            <summary>
+            Event raised when communication port output buffer has sent data.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.Radio.RxOverrun">
+            <summary>
+            Event raised when the communication port receive buffer is overrun.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.Radio.FlagCharReceived">
+            <summary>
+            Event raised when the communication port character receive flag is 
+            set.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.MAX_RX_PACKETS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.#ctor">
+             <summary>
+             
+             </summary>
+             
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             11/08/06 mcm 1.0.0   Initial Release
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.OpenPort(System.String)">
+            <summary>
+            Opens the port passed in as a parameter.
+            </summary>
+            <param name="portName">
+            The communication port to open.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.ClosePort">
+            <summary>
+            Closes the communication port. 
+            </summary>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            comm.ClosePort();
+            comm.Dispose();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Send(System.Byte[])">
+            <summary>
+            Method to send data out of the open port. 
+            </summary>
+            <param name="Data">
+            The data to send over the communication port.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            byte[] bytData = new byte[5]{0x01, 0x02, 0x03, 0x04, 0x05};
+            comm.Send(bytData);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.Read(System.UInt32,System.Int32)">
+            <summary>
+            Method to read data from the communication port into the 
+            input buffer. 
+            </summary>
+            <param name="BytesToRead">
+            Number of bytes to read. If bytesToRead equals 0, all bytes 
+            in input buffer are read.
+            </param>
+            <param name="iTimeout">
+            Unused parameter, need for desktop implementation
+            </param>
+            <returns>Returns number of bytes read from the communication
+            port and stored into the input buffer.
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.IsOpen">
+            <summary>
+            Whether or not the communication port is open.
+            </summary>
+            <returns>
+            Boolean indicating whether or not the communication port is open.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.Input">
+            <summary>
+            Property to retrieve the bytes read from the communication port 
+            input buffer.
+            </summary>
+            <returns>Returns a byte[] of the data.</returns>		
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.InputLen">
+            <summary>
+            Property that gets or sets the input buffer length.
+            </summary>
+            <returns>Returns the number of bytes in the input buffer.</returns>		
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            02/11/08 mcm 1.00.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.BaudRate">
+            <summary>
+            Property that gets or sets the baud rate.  The baud rate can only be
+            set to a port that is not opened.
+            </summary>
+            <returns>
+            The baud rate (uint).
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown if the port is already open.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.BaudRate = 9600;
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/31/06 mrj 7.30.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.OpticalProbe">
+            <summary>
+            Property that gets or sets the Optical Probe Type
+            </summary>
+            <returns>
+            The Optical Probe Type
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.PortName">
+            <summary>
+            Property that gets the current port name
+            </summary>
+            <returns>
+            The current port name
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/29/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Zigbee.Radio.MaxSupportedPacketSize">
+            <summary>
+            Gets the Max Supported Packet Size supported by the transport protocol
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.OnDataRecieved(System.Byte[])">
+            <summary>
+            Throws the Data Recieved Event
+            </summary>
+            <param name="data">The data that was received</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.OnDataSent(System.Byte[])">
+            <summary>
+            Throws the Data Sent event
+            </summary>
+            <param name="data">The data that was sent</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.OnRxOverrun">
+            <summary>
+            Throws the RX Overrun event
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.OnFlagCharRecieved">
+            <summary>
+            Throws the Flag Char Received event
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.AddToRxBuffer(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.GetInputBuffer(System.UInt32)">
+            <summary>
+            This method gets data from the input buffer.
+            </summary>
+            <param name="Count">Number of bytes to return</param>
+            <returns>The number of bytes read</returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.Radio.TotalBytesAvailable">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_RxBuffer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_InputBuffer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_BufferLockObj">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.Radio.m_ReceiveDataEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeException.#ctor">
+             <summary>
+             
+             </summary>
+            <exception></exception>
+             <example><code></code></example>
+             
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <exception></exception>
+            <example><code></code></example>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeException.#ctor(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="ErrorCode"></param>
+            <exception></exception>
+            <example><code></code></example>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+            <exception></exception>
+            <example><code></code></example>
+            
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeNetwork">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.ExPanID">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.LogicalChannel">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.StackProfile_ZigbeeVersion">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.StackProfile">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.ZigBeeVersion">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.Capabilities">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.AllowJoining">
+            <summary></summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.Router">
+            <summary>Guessing here. The specs' aren't much help</summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.EndDevice">
+            <summary>Guessing here. The specs' aren't much help</summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.BeaconSuperframeOrder">
+            <summary> </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.BeaconOrder">
+            <summary> </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.SuperframeOrder">
+            <summary> </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeNetwork.Equals(Itron.Metering.Zigbee.ZigbeeNetwork)">
+            <summary>Compares another network to this one.  Two networks are
+            equivalent if they have the same Pan ID</summary>
+            <param name="OtherNetwork">The other network we're comparing this 
+            instance to</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigbeeNetwork.CompareTo(Itron.Metering.Zigbee.ZigbeeNetwork)">
+             <summary>Compares two networks for generic list sorting.
+                Less than zero - This instance is less than the OtherNetwork.
+                          Zero - This instance is equal to OtherNetwork. 
+             Greater than zero - This instance is greater than OtherNetwork. 
+            </summary>
+             <param name="OtherNetwork">The other network we're comparing this 
+             instance to</param>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.ExpectingJoin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.LastHopLqi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.PanId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.LastHopRssi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNetwork.NetworkUpdateID">
+            <summary>
+            Gets or sets the Network Update ID
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeNode">
+            <summary>
+            Represents a Zigbee node on a network.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.IEEEAddress">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.ShortAddr">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.LogicalType">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.AlternatePan">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.FFD">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.MainSource">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.OnIdle">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.Security">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.ManufacturerCode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.ZigbeeNode.DeviceType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigbeeResult">
+            <summary>
+            General Itron Device Results
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.SUCCESS">
+            <summary>
+            SUCCESS = 0
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.ERROR">
+            <summary>
+            ERROR = 1
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.ACKNOWLEDGED_NO_DATA">
+            <summary>
+            UNSUPPORTED_OPERATION = 2
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.SECURITY_ERROR">
+            <summary>
+            SECURITY_ERROR = 3, insufficient security clearance
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.ACKNOWLEDGED_INSUFFICIENT_DATA">
+            <summary>
+            ACKNOWLEDGED_INSUFFICIENT_DATA = 4
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.ZigbeeResult.NOT_CONNECTED">
+            <summary>
+            NOT_CONNECTED = 99
+            Must connect to hardware before using it
+            </summary>
+        </member>
+    </members>
+</doc>

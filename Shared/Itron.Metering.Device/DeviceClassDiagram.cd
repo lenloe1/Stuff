@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Itron.Metering.Device.ItronDevice" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAEBgAAoAQ=</HashCode>
+      <FileName>ItronDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.CANSIDevice" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>bO7NP6v/yu7hNmx73eU2/mfLa99bvt+/5/9Pp9te+U4=</HashCode>
+      <FileName>ANSIDevice\ANSIDevice\ANSIDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.ANSIMeter">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>qN0xXO4x9Na4w/XWLSl+1O87/q2O3IGs91t/X6Te77o=</HashCode>
+      <FileName>ANSIDevice\ANSIDevice\ANSIDevice_IConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.SENTINEL" Collapsed="true">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Q4UKEQGDLq7YkGAQZCWEKAQiEgEKRADJEu9aIsVkqTI=</HashCode>
+      <FileName>ANSIDevice\ANSIDevice\ANSIDevice_ICustomSchedule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.CENTRON_AMI">
+    <Position X="3.5" Y="7.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.RegisterCalculationMethod" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.EnterExitTestModeResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.RIBUpdateMethod" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.LEDQuantityOption" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.PendingTableIds" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI_IPending.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.HAN_FW_DL_STATUS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.AMI_TOU_Events" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.FWDLEventIDType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.FatalRecoveryOption" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.SecurityKeyID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.HANEvents" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.LANEvents" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.ConfigCppResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.PeriodicReadRemovableItems" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.HANKeys" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.FWDLEventSourceType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.TaskName" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.DESKeys" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.OpticalPasswords" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.TestMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.RemoteConnectDisconnectResponseCode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.AMI_Reset_Counter_Types" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.EnhancedKeys" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.SecurityType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Itron.Metering.Device.CENTRON_AMI.HWType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI_IFirmwareDownload.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>//9/3/v7////////7////v/v//v////9//////////8=</HashCode>
+      <FileName>ANSIDevice\CENTRON_AMI\CENTRON_AMI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITR1" Collapsed="true">
+    <Position X="9.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ANSIDevice\OpenWayITR1\OpenWayITR1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITRD" Collapsed="true">
+    <Position X="12" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAIABIAAAAAAAAAAACAFAFgAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ANSIDevice\OpenWayITRD\OpenWayITRD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.ICS_Gateway" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>UEQYACgggQwAIQAAqIAAEKAYElHKEQkICgACFEpEIAY=</HashCode>
+      <FileName>ANSIDevice\OpenWayICSGateway\ICS_Gateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITRH" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ANSIDevice\OpenWayITRH\OpenWayITRH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITRJ" Collapsed="true">
+    <Position X="14.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAgAAAAAAAKAAAACAAAgAAAAAAAAAACAAAAAI=</HashCode>
+      <FileName>ANSIDevice\OpenWayITRJ\OpenWayITRJ.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITRU" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ANSIDevice\OpenWayITRU\OpenWayITRU.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayITRV" Collapsed="true">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ANSIDevice\OpenWayITRV\OpenWayITRV.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.M2_Gateway" Collapsed="true">
+    <Position X="17" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YN+5X+tx9j40rsXkKPl+1q0r73lv/LsKy2IvX0Hfpu8=</HashCode>
+      <FileName>ANSIDevice\OpenWayM2Gateway\M2_Gateway.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayBasicPoly">
+    <Position X="6.5" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAQCQAUhABAQACAAEiQAAABASRAAE1AAAcEAEAGI=</HashCode>
+      <FileName>ANSIDevice\OpenWayBasicPoly\OpenWayBasicPoly.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayAdvPoly" Collapsed="true">
+    <Position X="9.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMJAAAAAAAQQAIECAAAEAgAAAAiCAQExBJIAACAAAI=</HashCode>
+      <FileName>ANSIDevice\OpenWayAdvPoly\OpenWayAdvPoly.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Itron.Metering.Device.OpenWayAdvPolyITRF" Collapsed="true">
+    <Position X="11.75" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAMAIABIAAAAAAAAAAACAFAFgAAAAAAAAQAAAAIAAAA=</HashCode>
+      <FileName>ANSIDevice\OpenWayAdvPolyITRF\OpenWayAdvPolyITRF.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

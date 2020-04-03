@@ -1,0 +1,24 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.DST.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DST\obj\Debug\Itron.Metering.DST.pdb

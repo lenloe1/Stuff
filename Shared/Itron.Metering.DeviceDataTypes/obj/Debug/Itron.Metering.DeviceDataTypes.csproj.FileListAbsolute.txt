@@ -1,0 +1,20 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.DeviceDataTypes\obj\Debug\Itron.Metering.DeviceDataTypes.pdb

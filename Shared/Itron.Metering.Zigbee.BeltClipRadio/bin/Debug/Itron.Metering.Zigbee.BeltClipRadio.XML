@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.Zigbee.BeltClipRadio</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.Zigbee.BeltClipRadio">
+            <summary>
+            This class represents the Itron BeltClip Zigbee Radio.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Zigbee.BeltClipRadio.EndDeviceJoinedEvent">
+            <summary>Notification event for an end device joining the radio's 
+            network when the radio is configured as a Trust Center. Only the
+            GasModule class should be handling this event. All application 
+            events will come from the GasModule class via GasModuleEvents.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands">
+            <summary>
+            PSoC command ids
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands.FIRMWARE_VERSION">
+            <summary>
+            Command id for command to retrieve the firmware version of the PSoC
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands.BATTERY_VOLTAGE">
+            <summary>
+            Command id for command to get the battery voltage in millivolts
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands.BATTERY_LEVEL">
+            <summary>
+            Command id for command to get the battery level
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands.BATTERY_TEMPERATURE">
+            <summary>
+            Command id for command to get the board temperature in Celsius
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.PSoCCommands.PSOC_STATUS">
+            <summary>
+            Command id for command that will return the PSoC version and the
+            battery fuel gauge information
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.BeltClipRadio.RadioMfg">
+            <summary>
+            Radio Manufacturer
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.RadioMfg.ItronZBCR">
+            <summary>
+            Itron made Belt Clip Radio
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.RadioMfg.TelegesisDongle">
+            <summary>
+            Telegesis made dongle
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Zigbee.BeltClipRadio.JoinMethod">
+            <summary>
+            Join method (association or secure rejoin)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.JoinMethod.MAC_ASSOCIATION">
+            <summary>
+            Join by MAC association (joining must be turned on)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Zigbee.BeltClipRadio.JoinMethod.SECURE_REJOIN">
+            <summary>
+            Join by Secure Rejoin (joining can be turned off)
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.#ctor">
+            <summary>
+            Instantiates the IAZigbee and attempts to connect to the radio. The
+            connect attempt will throw a ZigbeeException if a radio is not 
+            available.  Callers of this constructor should catch this exception
+            to determine if a radio is available.  After connecting to the 
+            radio, this method resets it (necessary to get disconnect to work)
+            and disconnects, so radio is off but ready to go.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Finalize">
+            <summary>
+            Stops the radio, frees the libraries
+            </summary>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.StartLogging(System.String,Itron.Metering.Zigbee.EZSPLogLevels)">
+            <summary>
+            Starts EZSP level logging
+            </summary>
+            <param name="filePath">The path to the log file</param>
+            <param name="logLevel">The logging level</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Connect(System.IntPtr)">
+             <summary>
+             Connects to radio hardware. This method does not start the radio.
+             This method should be used to verify the hardware exists and is
+             available for use.  Does mo harm to call this method while 
+             connected to the radio.
+             </summary>
+             <returns>true if the hardware is available</returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             01/31/08 mcm 1.0.x   
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Connect(System.IntPtr,System.String)">
+            <summary>
+            Connects to radio hardware with the specified device address.
+            </summary>
+            <param name="hWnd">The handle to use for the connection.</param>
+            <param name="DevAddr">The address of the device to use.</param>
+            <returns>true if the connection was successful.</returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Disconnect">
+             <summary>
+             Disconnects from radio hardware. This method will stop the radio.
+             </summary>
+             <returns>true if the hardware is available</returns>
+             <remarks>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             01/31/08 mcm 1.0.x   
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Start(System.UInt64,System.UInt64,Itron.Metering.Zigbee.ZigbeeLogicalType,System.UInt32)">
+            <summary>Starts the Radio. Returns a bool indicating success.
+            </summary>
+            <param name="MAC">MAC address for the radio</param>
+            <param name="LogicalType">The type of device to configure.  When
+            joined to a cell relay, this should be a router, otherwise this
+            should be a coordinator</param>
+            <param name="ScanChannels">Packed bits representing the channels
+            to search.  Only channels 15-26 are valid, so only bits 15 (0x800)
+            through bit 26 (0x4000000).  Note that bits are 0 indexed, so 
+            bit 0 = 0x01.</param>
+            <param name="ExPanID">The 8 byte extended Pan ID you want to start 
+            with.  This value can be 0, which will cause the radio to either 
+            assign one at random or join the first suitable network it finds 
+            depending on the LogicalType.</param>
+            <returns>True if the radio exists and was successfully started</returns>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Stop">
+            <summary>Stops the Radio. </summary>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.FindNetworks(System.UInt32,Itron.Metering.Zigbee.ZigbeeNetwork[]@,System.Boolean)">
+            <summary>
+            Find the Networks around the radio
+            </summary>
+            <param name="ScanChannels">Packed bits representing the channels
+            to search.  Only channels 15-26 are valid, so only bits 15 (0x800)
+            through bit 26 (0x4000000).  Note that bits are 0 indexed, so 
+            channel 0 = 0x01.</param>
+            <param name="Networks">Returned array of found networks</param>
+            <param name="Fast">Indicates whether or not the duration period 
+            used during scan should be set to a small number.</param>
+            <returns>ZigbeeResult indicating success of search</returns>
+            
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.SendUnencryptedOTA(System.UInt16,System.Byte[],System.Byte[]@)">
+             <summary>Sends a Request to given cluster and returns any data that 
+             comes back. This method is usually used for a table read.</summary>
+             <param name="TargetAddress">Short address of device to send the message to</param>
+             <param name="Msg"></param>
+             <param name="Response"></param>
+             <returns></returns>
+             <remarks>
+            Revision History	
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/31/08 mcm 1.0.x   Initial Release
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.SendDataRequest(System.UInt16,System.Byte[])">
+            <summary>Sends a Request to given cluster and returns any data that 
+            comes back. This method is usually used for a table read.</summary>
+            <param name="TargetAddress">Short address of device to send the message to</param>
+            <param name="Msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.Authenticate(System.Boolean,System.UInt64,System.UInt64,System.Byte)">
+            <summary>
+            When the radio is running as a coordinator and Trust Center for
+            Gas and Water Modules and one of those end devices joins the 
+            network, the radio class will raise a EndDeviceJoinedEvent. The
+            client application must handle that event, decide whether to allow
+            the device to join, and authenticate the device before the radio
+            times out.  Call this methods to authenticate the device.
+            </summary>
+            <param name="AllowToJoin">True to allow the end device to join the
+            network.  False to remove it from the network.</param>
+            <param name="MAC">The MAC (IEEE) address of the device to 
+            authenticate. This value is passed to the client in the 
+            EndDeviceJoinedEvent's arguement.</param>
+            <param name="ParentMAC">The MAC address of the parent the end
+            device joined. This should always be this radio's MAC.  This value
+            is passed to the client in the EndDeviceJoinedEvent's arguement.
+            </param>
+            <param name="SecureStatus">The security status the end device
+            joined with This value is passed to the client in the 
+            EndDeviceJoinedEvent's arguement.</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.GetPSoCStatus(System.String@,System.Double@,System.Byte@,System.Byte@,System.Int32@)">
+            <summary>
+            Queries the Belt Clip Radio's PSoC layer for hardware specific information.
+            This method assumes that the port has been opened.
+            </summary>
+            <param name="PSoCVersion">Firmware version of the PSoC</param>
+            <param name="BatteryVoltage">Battery voltage in millivolts</param>
+            <param name="BatteryTemperature">Board temperature in degrees Celsius</param>
+            <param name="BatteryLevel">Battery level as a percent of battery capacity left</param>
+            <param name="BatteryTimeToEmpty">
+            Battery time to empty.  Note: A battery time to empty value of 0xFFFF (65535)
+            indicates that the battery is not being discharged
+            </param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.StartIntermittentBeacons">
+            <summary>
+            This method turns on the beacon timer.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.StopIntermittentBeacons">
+            <summary>
+            This method turns off the beacon timer.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.HandleBeaconing(System.Object,System.EventArgs)">
+            <summary>
+            This method is called by timer to send beacon.
+            </summary>
+            <param name="myObject"></param>
+            <param name="myEventArgs"></param>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.BeltClipRadio.RadioManufacturer">
+            <summary>
+            Gets or sets the manufacturer of the Belt Clip type radio, Itron or Telegesis
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.BeltClipRadio.C177App">
+            <summary>
+            Itron's 0xC177 Private Profile Application
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.ConvertLogicalTypeToEmberType(Itron.Metering.Zigbee.ZigbeeLogicalType)">
+            <summary>
+            Converts a ZigBee Logical Type value to an Ember Node Type value
+            </summary>
+            <param name="type">The Logical Type</param>
+            <returns>The equivalent Ember Node Type</returns>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.C177App_IPPDataResponseReceived(System.Object,Itron.Metering.Zigbee.IPPDataResponseEventArgs)">
+            <summary>
+            Handles ZigBee C177 Data Response Cluster received message events
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.OnEndDeviceJoinedEvent(Itron.Metering.Zigbee.EndDeviceJoinedEventArgs)">
+            <summary>
+            Throws the End Device Joined Event
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.PauseIntermittentBeacons">
+            <summary>
+            This method causes the beacon timer to pause its operation.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.ResumeIntermittentBeacons">
+            <summary>
+            This method causes beacon timer to resume its operation.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.DestroyBeaconTimer">
+            <summary>
+            This method disposes of the timer.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.OpenPort(System.String)">
+            <summary>
+            Opens the port passed in as a parameter.
+            </summary>
+            <param name="portName">
+            The communication port to open.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/31/08 mcm 1.0.x   N/A	Created
+            05/15/08 AF  1.50           Added call to EnableDecryptedDebugOuput
+                                        for debug tool CommOps.exe.  This does not
+                                        affect performance unless EthDebugInfo.txt
+                                        is present in the Debug folder
+            09/15/08 AF                 Replaced C177 with EZSP because the interface
+                                        names changed in the new version of the EZSP dlls.
+            04/09/09 AF  2.20.00        Added code to distinguish between an Itron ZBCR
+                                        and a Telegesis dongle 
+            01/07/11 AF  2.45.22        Added text for Telegesis dongle
+            
+            10/17/12 PGH 2.70.36        Replaced EZSP with C177App
+                                        
+        </member>
+        <member name="M:Itron.Metering.Zigbee.BeltClipRadio.ClosePort">
+            <summary>
+            Closes the communication port. 
+            </summary>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            comm.ClosePort();
+            comm.Dispose();
+            </code>
+            </example>
+        </member>
+        <member name="P:Itron.Metering.Zigbee.BeltClipRadio.IsOpen">
+            <summary>
+            Whether or not the communication port is open.
+            </summary>
+            <returns>
+            Boolean indicating whether or not the communication port is open.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/31/08 mcm 1.0.x   N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Zigbee.BeltClipRadio.BaudRate">
+            <summary>
+            NOT MEANINGFUL, at least not yet.
+            Property that gets or sets the baud rate.  The baud rate can only be
+            set to a port that is not opened.
+            </summary>
+            <returns>
+            The baud rate (uint).
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown if the port is already open.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.BaudRate = 9600;
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            01/31/08 mcm 1.0.x   N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Zigbee.BeltClipRadio.PortName">
+            <summary>
+            Property that gets the current port name
+            </summary>
+            <returns>
+            The current port name
+            </returns>        
+            Revision History
+            MM/DD/YY who Version ID Issue# Description
+            -------- --- ------- -- ------ ---------------------------------------
+            01/31/08 mcm 1.0.x      N/A    Created
+            10/15/14 AF  4.00.73 WR 230745 Removed the extra text so that this just returns the comm port name 
+            
+        </member>
+        <member name="T:Itron.Metering.Zigbee.ZigBeeC177Application">
+            <summary>
+            ZigBee C177 Application Layer
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.Connect(System.String)">
+            <summary>
+            Connects to the radio through the specified COM port
+            </summary>
+            <param name="portName">The name of the COM port the radio is on</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.Rejoin(Itron.Metering.Zigbee.EmberNodeType,System.UInt64,System.Byte,System.Byte[])">
+            <summary>
+            Rejoins the meter
+            </summary>
+            <param name="nodeType">The type of device to join as.</param>
+            <param name="extendedPanID">The extended PAN ID of the network to join</param>
+            <param name="channel">The channel that the network is on</param>
+            <param name="networkKey">The network key to use during the rejoin</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.SendDataRequest(System.Byte[])">
+            <summary>
+            Send Data Request to the meter
+            </summary>
+            <param name="Message">the message</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.SendHeartbeatRequest">
+            <summary>
+            Send Heartbeat Request to the meter
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.SetUpClusterLists">
+            <summary>
+            Sets up any clusters that the device is hosting
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.HandleZCLMessage(Itron.Metering.Zigbee.IncomingMessage)">
+            <summary>
+            Handles ZCL Received Messages
+            </summary>
+            <param name="receivedMessage">The message that was received</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.HandleSmartEnergyMessage(Itron.Metering.Zigbee.IncomingMessage)">
+            <summary>
+            Handles incoming Smart Energy Messages
+            </summary>
+            <param name="receivedMessage">The incoming message</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.SendC177DataRequest(System.UInt16,System.Byte[])">
+            <summary>
+            Sends message to ZigBee C177 Data Request Cluster
+            </summary>
+            <param name="destination">The destination node ID to request from</param>
+            <param name="serialPayload">serial payload</param>
+        </member>
+        <member name="M:Itron.Metering.Zigbee.ZigBeeC177Application.SendC177HeartbeatRequest(System.UInt16)">
+            <summary>
+            Sends message to ZigBee C177 Heartbeat Request Cluster
+            </summary>
+            <param name="destination">The destination node ID to request from</param>
+        </member>
+    </members>
+</doc>

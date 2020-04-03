@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.DataCollections</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.DataCollections.EDLFileCollection">
+            <summary>
+            Collection of EDL files that can be easily indexed like an array
+            or iterated through with a foreach loop
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.EDLFileCollection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.EDLFileCollection.#ctor(System.String)">
+            <summary>
+            Constructor that takes the directory of the EDL files
+            </summary>
+            <param name="strDataDirectory">Directory containing EDL files</param>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.EDLFileCollection.Refresh">
+            <summary>
+            Method is used to refresh the collection of EDL files
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.EDLFileCollection.Item(System.Int32)">
+            <summary>
+            Gets an index of EDLFileCollection.  Allows the user to index the 
+            collection in the same manner as an array
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.EDLFileComparer">
+            <summary>
+            This class is needed to sort the EDL files by name
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.EDLFileComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+            <summary>
+            Calls CaseInsensitiveComparer.Compare
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.FileCollection">
+            <summary>
+            Base class that represents a collection of files.  This class should
+            be extended by other classes so that it represents collections of
+            specific types of files that can be indexed into like an array or
+            iterated through by a foreach loop.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.FileCollection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.FileCollection.#ctor(System.String)">
+            <summary>
+            Constructor that takes the path to the directory containing the files
+            </summary>
+            <param name="strDirectory">Directory containing files</param>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.FileCollection.m_strDirectory">
+            <summary>
+            Path to directory containing files
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.MV90HHFFileCollection">
+            <summary>
+            Collection of MV90 HHF files that can be easily indexed like an array
+            or iterated through with a foreach loop
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.MV90HHFFileCollection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.MV90HHFFileCollection.#ctor(System.String)">
+            <summary>
+            Constructor that takes the directory of the MV90 HHF files
+            </summary>
+            <param name="strDataDirectory">Directory containing MV90 HHF files</param>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.MV90HHFFileCollection.Refresh">
+            <summary>
+            Method is used to refresh the collection of MV90 HHF's
+            </summary>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/06/07 RDB         N/A	Created		
+            07/27/07 MAH		Removed filters based on file extensions - all files will be examined
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.MV90HHFFileCollection.Item(System.Int32)">
+            <summary>
+            Gets an index of MV90HHFFileCollection.  Allows the user to index the 
+            collection in the same manner as an array
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.MV90_HHFComparer">
+            <summary>
+            This class is needed to sort the MV90 HHF's by name
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.MV90_HHFComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+            <summary>
+            Calls CaseInsensitiveComparer.Compare
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.ProtocolFile">
+            <summary>
+            Basic information about a protocol file
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.ProtocolFile.eProtocolType">
+            <summary>
+            The types for protocols
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.ProtocolFile.eProtocolType.DNP_3">
+            <summary>
+            DNP_3 protocol
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.ProtocolFile.eProtocolType.IEC_60870_5_102">
+            <summary>
+            IEC_60870_5_102 protocol
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.ProtocolFile.eProtocolType.IEC_60870_5_102_Plus">
+            <summary>
+            IEC_60870_5_102_Plus protocol
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.ProtocolFile.eProtocolType.Modbus">
+            <summary>
+            Modbus protocol
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DataCollections.ProtocolFile.eProtocolType.PDS">
+            <summary>
+            PDS protocol
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFile.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strFileName">file name of the protocol file</param>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFile.#ctor(System.String,System.DateTime,Itron.Metering.DataCollections.ProtocolFile.eProtocolType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strFileName">file name of the protocol file</param>
+            <param name="dtLastModified">time the file was last modified</param>
+            <param name="eType">protocol type</param>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFile.GetProtocolTypeString(Itron.Metering.DataCollections.ProtocolFile.eProtocolType)">
+            <summary>
+            Given a protocol type enum, this method returns a string representation
+            of that protocol type.
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.ProtocolFile.FullPath">
+            <summary>
+            gets or sets the full file path
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.ProtocolFile.LastModified">
+            <summary>
+            gets or sets the time the file was last modified
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.ProtocolFile.Name">
+            <summary>
+            gets or sets the file name
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.ProtocolFile.Type">
+            <summary>
+            gets or sets the protocol type
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.ProtocolFileCollection">
+            <summary>
+            A collection of protocol files that can be easily traversed or indexed
+            like an array.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFileCollection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFileCollection.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strPath">
+            Path of folder that contains protocol files
+            </param>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFileCollection.Refresh">
+            <summary>
+            Refreshes the contents of the protocol file collection
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.DataCollections.ProtocolFileCollection.Item(System.Int32)">
+            <summary>
+            Allows the collection to be indexed like an array
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Itron.Metering.DataCollections.ProtocolFileComparer">
+            <summary>
+            This class is needed to sort the protocol files by name
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DataCollections.ProtocolFileComparer.System#Collections#IComparer#Compare(System.Object,System.Object)">
+            <summary>
+            Calls CaseInsensitiveComparer.Compare
+            </summary>
+        </member>
+    </members>
+</doc>

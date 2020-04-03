@@ -1,0 +1,28 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Zigbee.Radio.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.Zigbee.Radio\obj\Debug\Itron.Metering.Zigbee.Radio.pdb

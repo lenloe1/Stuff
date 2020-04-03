@@ -1,0 +1,1553 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.SharedControls</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.SharedControls.ConfiguredHelp">
+            <summary>
+            Static class that can be used to show a help dialog.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ConfiguredHelp.ShowHelp(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Shows the specified help dialog.
+            </summary>
+            <param name="parent">The parent control for the help dialog.</param>
+            <param name="strHelpName">The ID of the help to display.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ConfiguredHelp.ShowHelpIndex(System.Windows.Forms.Control)">
+            <summary>
+            Shows the help index for the configured help file.
+            </summary>
+            <param name="parent">The parent control for the help dialog</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ConfiguredHelp.ShowHelpSearch(System.Windows.Forms.Control)">
+            <summary>
+            Shows the search for the configured help file
+            </summary>
+            <param name="parent">The parent control for the help dialog</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ConfiguredHelp.ShowHelpTableOfContents(System.Windows.Forms.Control)">
+            <summary>
+            Shows the table of contents for the configured help file
+            </summary>
+            <param name="parent">The parent control for the help dialog</param>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.CProgressIndicator">
+             <summary>
+             Summary description for CProgressIndicator.
+             </summary>
+            <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.m_blnCanceled">
+            <summary>
+            Contains whether or not the user canceled the operation.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.m_strTitle">
+            <summary>
+            The CProgressIndicator member variable for the title
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.m_pbrProgress">
+            <summary>
+            CProgressIndicator protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.m_butCancel">
+            <summary>
+            CProgressIndicator protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.m_lblCurrentAction">
+            <summary>
+            CProgressIndicator protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.CProgressIndicator.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.#ctor(System.Windows.Forms.Form)">
+             <summary>
+             Contructor
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.Dispose(System.Boolean)">
+             <summary>
+             Clean up any resources being used.
+             </summary>
+            <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.CProgressIndicator.Canceled">
+             <summary>
+             Whether or not the user canceled the operation.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.SetTitle(System.String)">
+             <summary>
+             Sets the text for the title of the Progress Indicator.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.SetCurrentActionText(System.String)">
+             <summary>
+             Sets the label text that appears in the middle of the Progress Indicator Form.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.ShowCancelButton(System.Boolean)">
+             <summary>
+             Shows or hides the Cancel button based upon the blnEnabledButton parameter.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.EnableCancelButton(System.Boolean)">
+             <summary>
+             Enables or disables the Cancel button based upon the blnEnableButton parameter.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.SetProgressRange(System.Int32,System.Int32)">
+             <summary>
+             Sets the min and max progress. If the min and max are set successfully then the method will return true otherwise false will be returned.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.SetProgress(System.Int32)">
+             <summary>
+             Sets the current progress of the Progress Bar. Updates the percent complete in the title.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.IncrementProgress">
+             <summary>
+             Increments the progress bar by one. Updates the percent complete in the title.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.m_butCancel_Click(System.Object,System.EventArgs)">
+             <summary>
+             Catches the click event for the Cancel button
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            08/26/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.CProgressIndicator.CProgressIndicator_Activated(System.Object,System.EventArgs)">
+             <summary>
+             Shows the owner when activated
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            09/17/04 REM 7.00.18		   Adding support for showing owner on activate
+            11/03/04 REM 7.00.27 793    A box appears in the progress indicator of System Manager
+            </pre></remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.DoubleBufferedPanel">
+            <summary>
+            This class overrides The TableLayoutPanel so that Double Bufferring can be enabled
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedPanel.#ctor">
+            <summary>
+            Default Constructor. Enables Double Buffereing
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.DoubleBufferedPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.DoubleBufferedTableLayoutPanel">
+            <summary>
+            This class overrides The TableLayoutPanel so that Double Bufferring can be enabled
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedTableLayoutPanel.#ctor">
+            <summary>
+            Default Constructor. Enables Double Buffereing
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.DoubleBufferedTableLayoutPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedTableLayoutPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.DoubleBufferedTableLayoutPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.ErrorForm">
+            <summary>
+            This Windows Form is used to display error messages and, optionally,
+            the detailed diagnostic information provided when an exception is caught
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.#ctor">
+            <summary>
+            Contructs a form to display an error message
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.DisplayError(System.String,System.Exception)">
+             <summary>
+             Use this method to display non-fatal error messages.  This method must be used 
+             to insure consistency between all data views and to provide as much visibility as 
+             possible to all error information. 
+             </summary>
+             <param name="strErrorMessage">
+             This is the primary message that will be displayed to the user</param>
+             <param name="e">
+             This is the exception object that originally caused the error.  It is important to
+             provide this information to the user when available to assist in debugging and error 
+             resolution
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              09/13/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.DisplayWarning(System.String,System.Exception)">
+            <summary>
+            Use this method to display warning messages. 
+            </summary>
+            <param name="strWarningMessage">
+            This is the primary message that will be displayed to the user</param>
+            <param name="e">
+            This is the exception object that originally caused the warning.  
+            </param>        
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ErrorForm.Message">
+            <summary>
+            This property sets the error message displayed to the user.  This
+            message should be easily understood and instructive to the user but
+            not filled with debugging details
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ErrorForm.OriginatingException">
+            <summary>
+            This property exposes the member data of the exception
+            that caused the offending error.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ErrorForm.IconSelection">
+            <summary>
+            This property sets the error image on the form.  Note that only
+            a warning icon and error icon are supported
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.AddItem(System.String,System.String)">
+            <summary>
+            Adds a new item to the flex grid
+            </summary>
+            <param name="strDetailName">The name of the item</param>
+            <param name="strValue">The item's value</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            This is the event handler for the OK button.  All that the
+            handler does is close the form
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.btnDetails_Click(System.Object,System.EventArgs)">
+             <summary>
+             The event handler for the details button expands the form
+             to show the exception details
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              09/13/07 MAH                 Created
+              11/06/07 MAH  9.00.23 Changed the list view's Visible default property to false and
+            										only make it visible if the details button is clicked - SCR #3243
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.ResizeDialog">
+            <summary>
+            Resized the dialog based on whether or not the details are displayed
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.ErrorForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ErrorForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.Types">
+            <summary>
+            Shared Controls global enumeration
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.Types.Float">
+            <summary>
+            Float = 0
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.Types.PhoneNumber">
+            <summary>
+            PhoneNumber = 1
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FilteredTextBox">
+             <summary>
+             Summary description for FilteredTextBox.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.CHARACTER_DECIMAL">
+            <summary>
+            public static string CHARACTER_DECIMAL = System.Globalization.NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.CHARACTER_NEGATIVE">
+            <summary>
+            public static string CHARACTER_NEGATIVE = System.Globalization.NumberFormatInfo.CurrentInfo.NegativeSign; 
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.WM_PASTE">
+            <summary>
+            private const int WM_PASTE = 0x0302;
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.WM_CONTEXTMENU">
+            <summary>
+            private const int WM_CONTEXTMENU = 0x7b;
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.PHONE_NUMBER_SPECIAL_CHARACTERS">
+            <summary>
+            protected const string PHONE_NUMBER_SPECIAL_CHARACTERS = "*,.# -";
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_enumType">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_uintMaximumCharacters">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_uintMaximumDecimals">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_uintMaximumLeftDecimals">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_dblMinimumValue">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_dblMaximumValue">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FilteredTextBox.m_strLastValidValue">
+            <summary>
+            FilteredTextBox protected member variable
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Handles windows messages
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.ParseDouble(System.String,System.Double@)">
+             <summary>
+             Returns a double from a string
+             </summary>
+             <param name="strValue">String to convert</param>
+             <param name="dblValue">Varible to store the double in</param>
+             <returns>Whether or not the conversion was successful</returns>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.#ctor">
+             <summary>
+             Constructor
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.OnGotFocus(System.EventArgs)">
+             <summary>
+             Stores the current text as the last valid value
+             </summary>
+             <param name="e"></param>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.HandleKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+             <summary>
+             Filters keyboard input based upon type of filteredtextbox
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.Dispose(System.Boolean)">
+             <summary> 
+             Clean up any resources being used.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FilteredTextBox.Type">
+             <summary>
+             Sets the type of Filtered Text Box. Float, Phone Number, etc.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FilteredTextBox.MinimumValue">
+             <summary>
+             Sets the Minimum Value of the textbox. Used for Float types.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FilteredTextBox.MaximumValue">
+             <summary>
+             Sets the Maximum Value of the textbox. Used for Float types.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FilteredTextBox.MaximumCharacters">
+             <summary>
+             Sets the Maximum number of actual characters. Does not include decimal place or negative symbol
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FilteredTextBox.MaximumDecimal">
+             <summary>
+             Sets the Maximum number of decimal places. This number should not exceed the maximum number of characters.
+             </summary>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FilteredTextBox.IsValidValue">
+             <summary>
+             Checks to see if the value entered is a valid value
+             </summary>
+             <returns>Whether or not the current value is valid</returns>
+             <remarks><pre>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------------
+            07/29/04 REM 7.00.15 N/A    Initial Release
+            </pre></remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridView">
+            <summary>
+            Base class for all of the views possible in data manager.  This class provides common functions
+            for all derived views such as managing screen refreshing, handling progress indicators, error handling
+            and data item selection.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.SharedControls.FlexGridView.FlexGridSelectionChangedEvent">
+             <summary>
+             This event is fired by a data view whenever the user checks or removes
+             a selection from the data view
+             </summary>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="E:Itron.Metering.SharedControls.FlexGridView.ShowProgressEvent">
+            <summary>
+            This event is fired whenever a progress bar should be displayed
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.SharedControls.FlexGridView.HideProgressEvent">
+            <summary>
+            This event is fired to indicate that the progress bar should be removed
+            and normal processing can resume
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.SharedControls.FlexGridView.StepProgressEvent">
+            <summary>
+            This event is fired to more the progress indictor a single step forward
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.#ctor">
+            <summary>
+            Default Constructor - to be used by the forms designer only
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.#ctor(System.String)">
+            <summary>
+            Primary constructor.  This constructor MUST be called by all
+            derived classes
+            </summary>
+            <param name="strTitle">The title of the view.  The title will be displayed
+            on all printed output
+            </param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.PrintPreview">
+            <summary>
+            Displays the print preview dialog
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.Print">
+            <summary>
+            Displays the print dialog
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.PageSetup">
+            <summary>
+            Displays the page setup dialog - NOTE this method is not implemented but must be included
+            to complete the IPrintable interface specification
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.ExportToXLS">
+            <summary>
+            Handles saving the view to Excel
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.DisplayHelpTopic">
+            <summary>
+            Displays the appropriate help topic
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.Title">
+            <summary>
+            Gets or sets the title of this view.  The title will be used on all printed and exported
+            versions of the view
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.HelpTopic">
+            <summary>
+            This property identifies the help topic that will be displayed when the help button on the application window 
+            is clicked.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.HelpFilePath">
+            <summary>
+            This property identifies the help file that will be used
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridView.RefreshViewDelegate">
+            <summary>
+                
+            </summary>
+            <param name="strFileName" type="string">
+                <para>
+                    
+                </para>
+            </param>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridView.DeleteViewDelegate">
+            <summary>
+                
+            </summary>
+            <param name="strFileName" type="string">
+                <para>
+                    
+                </para>
+            </param>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridView.CreateViewDelegate">
+            <summary>
+                
+            </summary>
+            <param name="strFileName" type="string">
+                <para>
+                    
+                </para>
+            </param>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridView.RenameViewDelegate">
+            <summary>
+                
+            </summary>
+            <param name="strOldFileName" type="string">
+                <para>
+                    
+                </para>
+            </param>
+            <param name="strNewFileName" type="string">
+                <para>
+                    
+                </para>
+            </param>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnFlexGridSelectionChanged(Itron.Metering.SharedControls.FlexGridSelectionChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnShowProgress(Itron.Metering.Progressable.ShowProgressEventArgs)">
+            <summary>
+            Raises the ShowProgressEvent for this sub control
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnStepProgress(Itron.Metering.Progressable.ProgressEventArgs)">
+            <summary>
+            Raises a StepProgressEvent for this sub control
+            </summary>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnHideProgress(System.EventArgs)">
+            <summary>
+            Rasies a HideProgressEvent for this sub control
+            </summary>
+            <param name="e">The event argument</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.SelectAll">
+            <summary>
+            Selects (sets the check box) all data items currently shown in the data
+            grid
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.ClearAll">
+            <summary>
+            Clears all data item selections from the data grid.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.InitializeAutoRefresh(System.String,System.String)">
+             <summary>
+             This method is by derived classes to indicate which directory or file the current
+             view is representing and to begin watching that file or directory for changes so that
+             the view can be refreshed when needed.
+             
+             Note that this method can be overrided as needed to set different filters on the file or directory
+             to be watched.  By default the watcher will only fire events when the last write time of the 
+             file or directory changes.
+             </summary>
+             <param name="strDirectoryName">
+             This is the path of the directory watch for changes</param>
+             <param name="strFileName">
+             This is the name of the specific file or file mask to watch for changes
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.ResetAutoRefresh(System.String,System.String)">
+             <summary>
+             This method is by derived classes to change which directory or file the current
+             view is watching changes so that the view can be refreshed when needed.
+             </summary>
+             <param name="strDirectoryName">
+             This is the path of the directory watch for changes</param>
+             <param name="strFileName">
+             This is the name of the specific file or file mask to watch for changes
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/26/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.EnableAutoRefresh">
+             <summary>
+             This method enables the update notifications and automatic refreshing of 
+             the data view when the root directory or file changes.   Note that this method
+             is called as a part of the InitializeAutoRefresh method so it is only needed to 
+             re-enable update notifications after they have been disabled.
+             </summary>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.DisableAutoRefresh">
+             <summary>
+             This method disables the update notifications and automatic refreshing of 
+             the data view when the root directory or file changes.
+             </summary>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnViewDataRenamed(System.Object,System.IO.RenamedEventArgs)">
+             <summary>
+             This method is called whenever a renamed event is raised.  By default, the
+             data view is refreshed but this method can be overriden to perform custom actions
+             as needed by derived classes
+             </summary>
+             <param name="source"></param>
+             <param name="e"></param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnViewDataChanged(System.Object,System.IO.FileSystemEventArgs)">
+             <summary>
+             This method is called whenever a data changed event is raised.  By default, the
+             data view is refreshed but this method can be overriden to perform custom actions
+             as needed by derived classes
+             </summary>
+             <param name="source"></param>
+             <param name="e"></param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnViewDataDeleted(System.Object,System.IO.FileSystemEventArgs)">
+             <summary>
+             This method is called whenever a data changed event is raised.  By default, the
+             data view is refreshed but this method can be overriden to perform custom actions
+             as needed by derived classes
+             </summary>
+             <param name="source"></param>
+             <param name="e"></param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.OnViewDataCreated(System.Object,System.IO.FileSystemEventArgs)">
+             <summary>
+             This method is called whenever a data changed event is raised.  By default, the
+             data view is refreshed but this method can be overriden to perform custom actions
+             as needed by derived classes
+             </summary>
+             <param name="source"></param>
+             <param name="e"></param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.RefreshDataViewItem(System.String)">
+             <summary>
+             Refreshes the current data view asynchronously.  This method can be overrided by derived
+             classes to perform custom actions on refresh operations but care must be taken to ensure 
+             thread safety since this method is typically invoked by a thread that does not own the 
+             UI controls.  Note that the default implementation completely reinitializes the data view.  Therefore
+             user selections are cleared.
+             </summary>
+             <param name="strFileName">
+             The full path name of the item that was updated.  This information is provided so that derived
+             classes can decide if the entire view must be refreshed or only a single item
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.RenameDataViewItem(System.String,System.String)">
+             <summary>
+             Refreshes the current data view asynchronously to reflect the fact that an item was renamed.  
+             This method should be overriden by derived classes to perform custom actions on refresh 
+             operations but care must be taken to ensure thread safety since this method is typically 
+             invoked by a thread that does not own the UI controls.  Note that there is no default 
+             implementation.  Therefore any view that needs to react to the renaming of a data file must 
+             implement this method
+             </summary>
+             <param name="strOldFileName">
+             The original full path name of the file that was renamed.  This information is provided so that derived
+             classes can decide if the entire view must be refreshed or only a single item
+             </param>
+             <param name="strNewFileName">
+             The new full path name of the file that was renamed.  </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              11/20/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.DeleteDataViewItem(System.String)">
+             <summary>
+             Refreshes the current data view asynchronously to reflect the fact that an item was deleted.  
+             This method should be overriden by derived classes to perform custom actions on refresh 
+             operations but care must be taken to ensure thread safety since this method is typically 
+             invoked by a thread that does not own the UI controls.  Note that there is no default 
+             implementation.  Therefore any view that needs to react to the deletion of a data file must 
+             implement this method
+             </summary>
+             <param name="strFileName">
+             The full path name of the file that was deleted.  This information is provided so that derived
+             classes can decide if the entire view must be refreshed or only a single item
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/26/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.CreateDataViewItem(System.String)">
+             <summary>
+             Refreshes the current data view asynchronously to reflect the addition of a new data item.  
+             This method can be overrided by derived classes to perform custom actions on refresh 
+             operations but care must be taken to ensure thread safety since this method is typically 
+             invoked by a thread that does not own the UI controls.  Note that there is no default 
+             implementation.
+             </summary>
+             <param name="strFileName">
+             The full path name of the item that was added.  This information is provided so that derived
+             classes can decide if the entire view must be refreshed or only a single item
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.PopulateDataView">
+             <summary>
+             This method must be overriden by derived classes to populate the data view.
+             </summary>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.DisplayError(System.String,System.Exception)">
+             <summary>
+             Use this method to display non-fatal error messages.  This method must be used 
+             to insure consistency between all data views and to provide as much visibility as 
+             possible to all error information. 
+             </summary>
+             <param name="strErrorMessage">
+             This is the primary message that will be displayed to the user</param>
+             <param name="e">
+             This is the exception object that originally caused the error.  It is important to
+             provide this information to the user when available to assist in debugging and error 
+             resolution
+             </param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              07/19/07 MAH                 Created
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.AddHeadingRow(System.String,System.Int32)">
+            <summary>
+            Adds a heading row to the flex grid.
+            </summary>
+            <param name="strTitle">The title of the heading row.</param>
+            <param name="iLevel">The level of the heading row.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.AddDataRow(System.String,System.String,System.Int32)">
+            <summary>
+            Adds a new row with the specified data to the flex grid.
+            </summary>
+            <param name="strItemName">The name of the item being added.</param>
+            <param name="strValue">The values of the item.</param>
+            <param name="iLevel">The level of the row to add.</param>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.DataGrid">
+            <summary>
+            Gets or sets the Data Grid.  This property MUST be set by all derived classes for this
+            class to operate properly
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.SelectionCount">
+            <summary>
+            Returns the number of items currently selected on the data grid.  This is 
+            a read-only property
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.ExportSheetName">
+            <summary>
+            Gets or sets the sheet name to use when exporting this view.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.PrintHeader">
+            <summary>
+            Gets or sets the header to use when printing or print previewing this view.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridView.PrintDocumentName">
+            <summary>
+            Gets or sets the document name to use when printing or print previewing this view.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.FlexGridView.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.Dispose(System.Boolean)">
+             <summary> 
+             Clean up any resources being used.
+             </summary>
+             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+              10/03/07 MAH  9.00.14               Added dispose of the directory watcher object
+            
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridSelectionChangedEventArgs">
+            <summary>
+                
+            </summary>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.FlexGridSelectionChangedEventArgs.#ctor(System.Int32)">
+            <summary>
+                
+            </summary>
+            <param name="nRow" >
+            </param>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.FlexGridSelectionChangedEventArgs.Row">
+             <summary>
+             
+             </summary>
+             <remarks>
+              Revision History	
+              MM/DD/YY Who Version Issue# Description
+              -------- --- ------- ------ -------------------------------------------
+            
+             </remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.FlexGridSelectionChangedHandler">
+            <summary>
+                
+            </summary>
+            <param name="sender" type="object">
+            </param>
+            <param name="e" type="Itron.Metering.SharedControls.ProcessStartedEventArgs">
+            </param>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.IntroSplashScreen">
+            <summary>
+                
+            </summary>
+            <remarks>
+                
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.IntroSplashScreen.#ctor">
+            <summary>
+            Constructor - retrieves and initializes the splash screen with the current
+            application version and copyright information.
+            </summary>
+            <remarks>
+             Revision History
+             MM/DD/YY Who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             03/20/09 jrf 9.60.01 125531 Modifying copyright year to extract the year the 
+                                         the app was created to so we don't have to 
+                                         keep changing this date each year.
+             
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.IntroSplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.IntroSplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.IntroSplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.LogWatcherTextBox">
+            <summary>
+            Text box that displays the end of a log file and updates automatically
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.WatchFile(System.String,System.Int32)">
+            <summary>
+            Begins watching the specified file.
+            </summary>
+            <param name="filePath">The path to the file to watch</param>
+            <param name="linesToDisplay">The number of lines to display</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.Stop">
+            <summary>
+            Stops the current file from being watched
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.m_FileWatcher_Changed(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            Handles the file watcher changed event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.UpdateFileText(System.String)">
+            <summary>
+            Updates the text box with the text from the file
+            </summary>
+            <param name="path">The path to the file to update from</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LogWatcherTextBox.LogWatcherTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Handles the Key Press event and prevents the user from typing in the text box
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.MessageForm">
+            <summary>
+            This class provides a simple, consistent mechanism for displaying a message 
+            to the user in a modal dialog box.  It is similar to the                    
+            System.Forms.MessageBox class but the form properties are more consistent 
+            with the current Itron/DataManager form styles.  The message form should 
+            only be accessed via the static ShowMessage method.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.MessageForm.#ctor">
+            <summary>
+            The default constructor for the message form.  Note that it is protected and
+            cannot be called directly from a client application.  Instead the 
+            'ShowMessage' method should be used to create and display the message form.
+            </summary>
+            <remarks>
+             Revision History	
+             MM/DD/YY Who Version Issue#        Description
+             -------- --- ------- ------------- -----------------------------------
+             08/27/08 MAH 9.50				    Created
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.MessageForm.MessageText">
+            <summary>
+            This property sets the primary text displayed on the message form    
+            </summary>
+            <remarks>
+             Revision History	
+             MM/DD/YY Who Version Issue#        Description
+             -------- --- ------- ------------- -----------------------------------
+             08/27/08 MAH 9.50				    Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.MessageForm.ShowMessage(System.String,System.String)">
+            <summary>
+            This is the primary method to be used when displaying an interactive text 
+            message to the user.  This method should be used instead of the standard 
+            System.Forms.MessageBox class in order to provide a more consistent user 
+            interface to the operator
+            </summary>
+            <param name="strTitle" type="string">
+            The text of the form's title.  Typically this is the application and/or 
+            function name
+            </param>
+            <param name="strMessage" type="string">
+            The text of the message to be displayed
+            </param>
+            <remarks>
+             Revision History	
+             MM/DD/YY Who Version Issue#        Description
+             -------- --- ------- ------------- -----------------------------------
+             08/27/08 MAH 9.50				    Created
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.MessageForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.MessageForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.MessageForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.Properties.Resources.Warning">
+            <summary>
+              Looks up a localized string similar to Warning.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.BetaForm">
+            <summary>
+            Displays a Beta Splash Screen
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.BetaForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.BetaForm.btnContinue_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Continue button click event.
+            </summary>
+            <param name="sender">The object that sent the event.</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.BetaForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.BetaForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.BetaForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.HostedControl">
+            <summary>
+            Helper class that contains a control hosted within a C1FlexGrid.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.HostedControl.#ctor(C1.Win.C1FlexGrid.C1FlexGrid,System.Windows.Forms.Control,System.Int32,System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="flex">Flexgrid that the control resides in.</param>
+            <param name="hosted">The control to be hosted in the grid</param>
+            <param name="row">The row the control resides in.</param>
+            <param name="col">The column that the control resides in.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.HostedControl.UpdatePosition">
+            <summary>
+            This method updates the position of the control in the flexgrid.  It must 
+            be called in the flexgrid's paint event handler.
+            </summary>
+            <returns>Whether or not the position was updated.</returns>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.HostedControl.RootControl">
+            <summary>
+            The control being hosted.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.HostedControl.Row">
+            <summary>
+            The row the control is in.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.HostedControl.Column">
+            <summary>
+            The row the control is in.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.LoginDialog">
+            <summary>
+            Generic log in dialog
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.LoginDialog.UserName">
+            <summary>
+            Gets the selected User Name
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.LoginDialog.Password">
+            <summary>
+            Gets the selected password
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.LoginDialog.HelpID">
+            <summary>
+            Gets or sets the Help ID
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.LoginDialog.Title">
+            <summary>
+            Gets or sets the dialog's title
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.btnOk_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the OK button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Cancel button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.btnHelp_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Help button click event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="F:Itron.Metering.SharedControls.LoginDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.LoginDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.ToolBoxChart">
+            <summary>
+            Class used for generating the chart object for the Toolbox
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.#ctor(Itron.Metering.DeviceDataTypes.Toolbox)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="toolbox">The object to use for toolbox generation.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.GenerateToolBox">
+            <summary>
+            Generates the ToolBox chart
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.GeneratePowerCircle">
+            <summary>
+            Generates the Power Circle chart
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.DetermineVAAngle">
+            <summary>
+            Determines the angle for the VA vector.
+            </summary>
+            <returns>The integer representation of the VA angle.</returns>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            05/02/07 ach 8.10    N/A    Added helper method.
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.DetermineMagnitudes(System.Single@,System.Single@,System.Single@,System.Boolean)">
+            <summary>
+            Determines the magnitudes of the vectors for the graph
+            </summary>
+            <param name="fMagnitudeA">The magnitude for the A phase vector.</param>
+            <param name="fMagnitudeB">The magnitude for the B phase vector.</param>
+            <param name="fMagnitudeC">The magnitude for the C phase vector.</param>
+            <param name="bDetermineVoltages">Boolean to indicate whether to determine
+            magnitudes for voltages or currents.</param>
+        </member>
+        <member name="M:Itron.Metering.SharedControls.ToolBoxChart.SetupRotation">
+            <summary>
+            This method sets up the meter's rotation 
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChart.ChartToolBox">
+            <summary>
+            Gets the generated ToolBox Chart object
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChart.ChartPowerCircle">
+            <summary>
+            Gets the generated Power Circle Chart object
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.SharedControls.ToolBoxChartResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChartResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChartResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChartResources.PowerCirclePropBag">
+            <summary>
+              Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;&lt;Chart2DPropBag Version=&quot;2.0.20073.17282&quot; UseAntiAliasedGraphics=&quot;True&quot; UseAntiAliasedText=&quot;True&quot;&gt;&lt;StyleCollection&gt;&lt;NamedStyle Name=&quot;Area&quot; ParentName=&quot;Area.default&quot; StyleData=&quot;BackColor2=127, 127, 127;Border=None,ControlDark,1;Opaque=False;GradientStyle=Radial;BackColor=White;Font=Microsoft Sans Serif, 9.75pt;HatchStyle=None;ForeColor=Black;Rounding=10 10 10 10;&quot; /&gt;&lt;NamedStyle Name=&quot;Style8&quot; ParentName=&quot;LabelStyleDefault&quot; StyleData=&quot;ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, sty [rest of string was truncated]&quot;;.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.SharedControls.ToolBoxChartResources.ToolBoxChartPropBag">
+            <summary>
+              Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;&lt;Chart2DPropBag Version=&quot;2.0.20073.17282&quot; UseAntiAliasedGraphics=&quot;True&quot; UseAntiAliasedText=&quot;True&quot;&gt;&lt;StyleCollection&gt;&lt;NamedStyle Name=&quot;Area&quot; ParentName=&quot;Area.default&quot; StyleData=&quot;GradientStyle=Radial;Border=None,Black,1;Font=Microsoft Sans Serif, 9.75pt;ForeColor=Black;BackColor=White;BackColor2=127, 127, 127;Opaque=False;Rounding=15 15 15 15;&quot; /&gt;&lt;NamedStyle Name=&quot;Style8&quot; ParentName=&quot;LabelStyleDefault&quot; StyleData=&quot;ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;&quot; /&gt;&lt;NamedStyl [rest of string was truncated]&quot;;.
+            </summary>
+        </member>
+    </members>
+</doc>

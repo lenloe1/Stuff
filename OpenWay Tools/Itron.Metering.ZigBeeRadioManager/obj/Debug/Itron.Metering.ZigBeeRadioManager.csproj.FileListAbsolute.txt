@@ -1,0 +1,58 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.exe.config
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.exe
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csprojResolveAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csproj.GenerateResource.Cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.exe
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.exe.config
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.exe
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioManager.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.ZigBee.EZSP.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.exe
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ZigBeeRadioManager\obj\Debug\Itron.Metering.ZigBeeRadioManager.pdb

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.BlurtSim</id>
+		<version>1.0.0.8</version>
+		<authors>Itron, Inc.</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes/>
+		<description>Blurt Simulator</description>
+		<copyright>Copyright ©2018 Itron, Inc</copyright>
+		<tags>blurt simulator blurtsim</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="Itron.Common.dll" target="lib\Itron.Metering.BlurtSim\Itron.Common.dll" />
+		<file src="Itron.Common.Devices.dll" target="lib\Itron.Metering.BlurtSim\Itron.Common.Devices.dll" />
+		<file src="Itron.Metrology.dll" target="lib\Itron.Metering.BlurtSim\Itron.Metrology.dll" />
+		<file src="Itron.Simulator.Core.dll" target="lib\Itron.Metering.BlurtSim\Itron.Simulator.Core.dll" />
+		<file src="Itron.Tbd.BuildInTypes.dll" target="lib\Itron.Metering.BlurtSim\Itron.Tbd.BuildInTypes.dll" />
+		<file src="PwrUSBDll.dll" target="content\PwrUSBDll.dll" />
+	</files>
+</package>

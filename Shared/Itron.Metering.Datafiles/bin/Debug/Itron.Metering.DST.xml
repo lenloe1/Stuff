@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.DST</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.DST.CDSTDatePair">
+            <summary>
+            Represents the To DST Date and From DST Date for a single year.    Each date is accessable
+            through public properties
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DST.CDSTDatePair.m_dtToDate">
+            <summary>
+            Represents the To Date of the object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DST.CDSTDatePair.m_dtFromDate">
+            <summary>
+            Represents the From Date of the object
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePair.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePair.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Constructor - takes the parameters and set the instance variables.  
+            </summary>
+            <param name="dtToDate">
+            The To Date of the object
+            </param>
+            <param name="dtFromDate">
+            The From Date of the object
+            </param>
+            <example>
+            <code>
+            CDSTDatePair myYear = new CDSTDatePair(new DateTime(2006,4,2), new DateTime(2006,10,29));
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTDatePair.ToDate">
+            <summary>
+            Property to get the objects To Date
+            </summary>
+            <example>
+            <code>
+            CDSTDatePair myYear = new CDSTDatePair(new DateTime(2006,4,2), new DateTime(2006,10,29));
+            DateTime dtDate = myYear.ToDate;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTDatePair.FromDate">
+            <summary>
+            Property to get the objects From Date
+            </summary>
+            <example>
+            <code>
+            CDSTDatePair myYear = new CDSTDatePair(new DateTime(2006,4,2), new DateTime(2006,10,29));
+            DateTime dtDate = myYear.FromDate;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePair.CompareTo(System.Object)">
+            <summary>
+            Method that allows to CDSTDatePair objects to be compared
+            </summary>
+            <param name="obj">
+            The object to compare the current CDSTDatePair too
+            </param>
+            <returns>
+            An int that tells if objects are equal, less than, or greater than
+            </returns>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePair.EPACompliant(Itron.Metering.DST.CDSTDatePair)">
+            <summary>
+            This method indicates whether the given dstDate pair is compliant with the Energy
+            Policy Act of 2005
+            </summary>
+            <param name="dstDates">A single pair of DST dates</param>
+            <returns>True if the both the To DST date and the From DST date comply with the
+            Energy Policy Act of 2005, False is returned if either date differs from the Act's mandate.
+            A value of True will be returned for all DST date pairs prior to 2007
+            </returns>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -------------------------------------------
+            01/15/07 MAH 8.00.00 Created
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.DST.CDSTDatePairCollection">
+            <summary>
+            Represents a list of CDSTDatePair objects
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePairCollection.#ctor">
+            <summary>
+            Creates an instance of the CDSTDatePair Collection object
+            </summary>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTDatePairCollection.Item(System.Int32)">
+            <summary>
+            Gets a CDSTDatePair at an index of the CDSTDatePairCollection.  Allows 
+            access to elements like an array
+            </summary>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            CDSTDatePair temp = coll[0];
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePairCollection.Add(Itron.Metering.DST.CDSTDatePair)">
+            <summary>
+            Adds a CDSTDatePair to the end of the CDSTDatePairCollection
+            </summary>
+            <param name="objToAdd">
+            The CDSTDatePair to be added
+            </param>
+            <returns>
+            The zero base index of the CDSTDatePair added
+            </returns>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            coll.Add(new CDSTDatePair(new DateTime(2006,4,4), new DateTime(2006,10,29)));
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class   
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePairCollection.Insert(System.Int32,Itron.Metering.DST.CDSTDatePair)">
+            <summary>
+            Adds a CDSTDatePair to the CDSTDatePairCollection at the given index
+            </summary>
+            <param name="intIndex">
+            Index to insert the CDSTDatePair into in the collection
+            </param>
+            <param name="objToAdd">
+            The CDSTDatePair to be added
+            </param>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            coll.Insert(3, new CDSTDatePair(new DateTime(2006,4,4), new DateTime(2006,10,29)));
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePairCollection.FindYear(System.Int32)">
+            <summary>
+            Searches the collection for the given CDSTDatePair and returns the index.
+            If the item is not found in the collection then an ArgumentException 
+            will be thrown
+            </summary>
+            <param name="intYear">
+            The year to search for
+            </param>
+            <returns>
+            The index of the CDSTDatePair
+            </returns>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            CDSTDatePair temp = new CDSTDatePair(new DateTime(2006,4,4), new DateTime(2006,10,29));
+            coll.Add(temp);
+            int intIndex = coll.SearchYear(temp.Year);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTDatePairCollection.Sort">
+            <summary>
+            Used to sort the CDSTDatePair collection based on the years of the 
+            CDSTDatePair objects
+            </summary>
+            <example>
+            <code>
+            CDSTDatePairCollection coll = new CDSTDatePairCollection();
+            CDSTDatePair temp = new CDSTDatePair(new DateTime(2006,4,4), new DateTime(2006,10,29));
+            CDSTDatePair temp1 = new CDSTDatePair(new DateTime(2007,4,4), new DateTime(2007,10,29));
+            coll.Add(temp);
+            coll.Add(temp1);
+            coll.Sort();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="T:Itron.Metering.DST.CDSTSchedule">
+            <summary>
+            Class represents the information contained in the DST.xml file
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DST.CDSTSchedule.m_colDSTDatePairs">
+            <summary>
+            Collection of CDSTDatePair objects
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DST.CDSTSchedule.m_strFilePath">
+            <summary>
+            Variable used to reprsent the path of the xml file
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.DST.CDSTSchedule.m_xmldomDST">
+            <summary>
+            Variable used to represent xml file
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTSchedule.#ctor">
+            <summary>
+            Constructor - Load the DST xml file in the XmlDocument, and begin to
+            build the collection of DSTDatePair objects.  Will use the Registry Access
+            Namespace's CRegistryHelper class and the GetFilePath method to obtain
+            FilePath for the DST xml file.
+            If there is an error with the XmlDocument then an XmlException will be
+             thrown.  
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTSchedule.#ctor(System.String)">
+            <summary>
+            Constructor - Load the DST xml file in the XmlDocument, and begin to
+            build the collection of DSTDatePair objects. If there is an error 
+            with the XmlDocument then an XmlException will be thrown.  
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTSchedule.FindDSTIndex(System.Int32,System.Byte@)">
+            <summary>
+            Builds the CDSTDatePairCollection
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/13/06 mcm 7.30.?? N/A	Creation 
+        </member>
+        <member name="M:Itron.Metering.DST.CDSTSchedule.BuildDSTDatePairs">
+             <summary>
+             Builds the CDSTDatePairCollection
+             </summary>
+             <remarks>
+             Revision History
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             03/03/06 rrr N/A	 N/A	Creation of class
+             02/28/08 AF  1.01.07        Fixed code analysis warning on int.Parse
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.FilePath">
+            <summary>
+            Property to return the FilePath of the xml file
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.DSTDatePairs">
+            <summary>
+            Property to get the CDSTDatePairCollection
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            CDSTDatePairCollection col = objDST.DSTDatePairs;
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class  
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.JumpLength">
+            <summary>
+            Property to get the Jump Length
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            int intJump = objDST.JumpLength;
+            </code>
+            </example>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class 
+            02/28/08 AF  1.01.07        Fixed code analysis warning on int.Parse
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.FromTime">
+            <summary>
+            Property to get the From Time
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            int intFrom = objDST.FromTime;
+            </code>
+            </example>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class
+            02/28/08 AF  1.01.07        Fixed code analysis warning on int.Parse
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.ToTime">
+            <summary>
+            Property to get the To Time
+            </summary>
+            <example>
+            <code>
+            CDSTSchedule objDST = new CDSTSchedule();
+            int intTo = objDST.ToTime;
+            </code>
+            </example>
+            <remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/03/06 rrr N/A	 N/A	Creation of class
+            02/28/08 AF  1.01.07        Fixed code analysis warning on int.Parse
+            </remarks>
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.NextDSTFromDate">
+            <summary>
+            Property to get the next DST from date that will occur.
+            </summary>
+            <remarks>If date is not found in the schedule then a default date 
+            of 1/1/2000 12:00:00AM will be returned.</remarks>
+        </member>
+        <member name="P:Itron.Metering.DST.CDSTSchedule.NextDSTToDate">
+            <summary>
+            Property to get the next DST to date that will occur.
+            </summary>
+            <remarks>If date is not found in the schedule then a default date 
+            of 1/1/2000 12:00:00AM will be returned.</remarks>
+        </member>
+    </members>
+</doc>

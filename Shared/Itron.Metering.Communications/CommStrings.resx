@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string"/>
+							<xsd:attribute name="type" type="xsd:string"/>
+							<xsd:attribute name="mimetype" type="xsd:string"/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<data name="OPEN_PORT_FAILED">
+		<value>Open port failed: {0}</value>
+	</data>
+	<data name="CLOSE_PORT_FAILED">
+		<value>Close port failed: {0}</value>
+	</data>
+	<data name="PORT_NOT_OPEN">
+		<value>Port not open.</value>
+	</data>
+	<data name="WRITE_FILE_FAILED">
+		<value>Write file failed: {0}</value>
+	</data>
+	<data name="OUTPUT_FAILED">
+		<value>Output failed: {0}</value>
+	</data>
+	<data name="SEND_FAILED">
+		<value>Send failed: {0}</value>
+	</data>
+	<data name="READ_FILE_FAILED">
+		<value>Read file failed: {0}</value>
+	</data>
+	<data name="READ_FAILED">
+		<value>Read failed: {0}</value>
+	</data>
+	<data name="INPUT_FAILED">
+		<value>Input failed: {0}</value>
+	</data>
+	<data name="PORT_NOT_AVAILABLE">
+		<value>Port not available: {0}</value>
+	</data>
+	<data name="CREATE_FILE_FAILED">
+		<value>Create file failed: {0}</value>
+	</data>
+	<data name="SET_COMM_FAILED">
+		<value>Set comm failed: {0}</value>
+	</data>
+	<data name="SET_COMM_TIMOUTS">
+		<value>Set comm timeouts failed: {0}</value>
+	</data>
+	<data name="CLOSE_FAILED">
+		<value>Close failed: {0}</value>
+	</data>
+	<data name="SET_DTR_STATE_FAILED">
+		<value>Set DTR state failed.</value>
+	</data>
+	<data name="WAIT_COMM_EVENT_FAILED">
+		<value>Wait comm event failed: {0}</value>
+	</data>
+	<data name="CLEAR_COMM_ERROR_FAILED">
+		<value>Clear comm error failed: {0}</value>
+	</data>
+	<data name="PORT_ALREADY_OPEN">
+		<value>A port is already open.</value>
+	</data>
+	<data name="BAUD_RATE_CHANGE_FAILED">
+		<value>Failed to change baud rate.</value>
+	</data>
+	<data name="PARITY_CHANGE_FAILED">
+		<value>Failed to change parity.</value>
+	</data>
+	<data name="STOP_BITS_CHANGE_FAILED">
+		<value>Failed to change stop bits.</value>
+	</data>
+	<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader></root>

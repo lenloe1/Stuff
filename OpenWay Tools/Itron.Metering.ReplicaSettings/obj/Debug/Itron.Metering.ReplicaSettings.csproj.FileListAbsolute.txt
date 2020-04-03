@@ -1,0 +1,31 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.XMLShared.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.ctrlFieldProDynamicOptions.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.frmFieldProAddMenu.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.XMLShared.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll.CodeAnalysisLog.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.ReplicaSettings.dll.lastcodeanalysissucceeded
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.ctrlFieldProDynamicOptions.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.frmFieldProAddMenu.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.ReplicaSettings\obj\Debug\Itron.Metering.ReplicaSettings.csprojAssemblyReference.cache

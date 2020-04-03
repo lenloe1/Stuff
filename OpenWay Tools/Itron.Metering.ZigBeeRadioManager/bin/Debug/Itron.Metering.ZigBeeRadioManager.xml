@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.ZigBeeRadioManager</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService">
+            <summary>
+            Windows Service class that hosts a WCF service that will manage ZigBee radios for all
+            other applications.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.OnStart(System.String[])">
+            <summary>
+            Performs any operations needed to start the Windows Service.
+            </summary>
+            <param name="args">The arguments for starting the Windows Service</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.OnStop">
+            <summary>
+            Performs any operations needed to stop the Windows Service.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.ZigBeeRadioMangerService.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.ZigBeeRadioManager.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

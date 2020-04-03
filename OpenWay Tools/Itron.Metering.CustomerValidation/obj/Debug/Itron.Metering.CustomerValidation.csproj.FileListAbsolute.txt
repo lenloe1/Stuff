@@ -1,0 +1,124 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Ribbon.4.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Ami.Common.Security.X509XmlSigning.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.Centron.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.LandisGyr.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.ANSIStandard.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1FlexGrid.4.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Chart.4.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Ribbon.4.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1FlexGrid.4.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Chart.4.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csprojResolveAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.TestResources.resources
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csproj.GenerateResource.Cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.Properties.Resources.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.TestResources.resources
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csproj.GenerateResource.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.CustomerValidation.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Ribbon.4.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ReplicaSettings.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Ami.Common.Security.X509XmlSigning.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.Centron.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.LandisGyr.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Common.C1219Tables.ANSIStandard.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1FlexGrid.4.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Chart.4.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Datafiles.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Device.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.DST.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Progressable.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ReplicaSettings.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.SharedControls.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.BeltClipRadio.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBeeRadioServerObjects.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Ribbon.4.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.TOU.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.AMIConfiguration.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1FlexGrid.4.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\C1.Win.C1Chart.4.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\bin\Debug\Itron.Metering.ZigBee.EZSP.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\Itron.Metering.CustomerValidation\obj\Debug\Itron.Metering.CustomerValidation.pdb

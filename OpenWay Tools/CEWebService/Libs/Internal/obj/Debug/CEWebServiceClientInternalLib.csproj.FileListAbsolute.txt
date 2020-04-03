@@ -1,0 +1,9 @@
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\bin\Debug\CEWebServiceClientInternal.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\bin\Debug\CEWebServiceClientInternal.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\bin\Debug\CEWebServiceClientBase.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\bin\Debug\CEWebServiceClientBase.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\obj\Debug\CEWebServiceClientInternalLib.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\obj\Debug\CEWebServiceClientInternalLib.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\obj\Debug\CEWebServiceClientInternalLib.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\obj\Debug\CEWebServiceClientInternal.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\OpenWay Tools\CEWebService\Libs\Internal\obj\Debug\CEWebServiceClientInternal.pdb

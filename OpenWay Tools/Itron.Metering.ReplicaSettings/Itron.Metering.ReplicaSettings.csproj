@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41F124A1-D1FE-4D8A-947D-7E3CDDB8696B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itron.Metering.ReplicaSettings</RootNamespace>
+    <AssemblyName>Itron.Metering.ReplicaSettings</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ItronIEMPublic.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Itron.Metering.XMLShared.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.ReplicaSettings.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Itron.Metering.XMLShared.XML</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.ReplicaSettings (2).ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ATIRelease|AnyCPU'">
+    <OutputPath>bin\ATIRelease\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <DocumentationFile>bin\Release\Itron.Metering.XMLShared.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\Itron.Metering.ReplicaSettings.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for Itron.Metering.ReplicaSettings (2).ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ctrlFieldProDynamicOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlFieldProDynamicOptions.Designer.cs">
+      <DependentUpon>ctrlFieldProDynamicOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmFieldProAddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmFieldProAddMenu.Designer.cs">
+      <DependentUpon>frmFieldProAddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CXMLCanadian.cs" />
+    <Compile Include="CShared.cs" />
+    <Compile Include="CXMLColorSelections.cs" />
+    <Compile Include="CXMLCustSchedProgSettings.cs" />
+    <Compile Include="CXMLDefaultValues.cs" />
+    <Compile Include="CXMLDeviceOptions.cs" />
+    <Compile Include="CXMLDeviceSecurityCodes.cs" />
+    <Compile Include="CXMLDisplayData.cs" />
+    <Compile Include="CXMLEncryptedSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CXMLEncryptedSettingsAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CXMLFieldProSettings.cs" />
+    <Compile Include="CXMLFieldProSettingsAllDevices.cs" />
+    <Compile Include="CXMLFieldProSettingsLogonOptions.cs" />
+    <Compile Include="CXMLMeterChangeOutSettings.cs" />
+    <Compile Include="CXMLOpenWayActiveFiles.cs" />
+    <Compile Include="CXMLOpenWaySystemSettings.cs" />
+    <Compile Include="CXMLOpenWayReplicaFileSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CXMLOpenWayUserAccessPolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CXMLProgrammingOptions.cs" />
+    <Compile Include="CXMLQ1000SecurityCodes.cs" />
+    <Compile Include="CXMLReplicaFileSettings.cs" />
+    <Compile Include="CXMLSecurityCodes.cs" />
+    <Compile Include="CXMLSENTINELSecurityCodes.cs" />
+    <Compile Include="CXMLSettings.cs" />
+    <Compile Include="CXMLSettingsAccess.cs" />
+    <Compile Include="CXMLSettingsFieldPro.cs" />
+    <Compile Include="CXMLStandardKhValues.cs" />
+    <Compile Include="UtilityIdentificationSettingsGroupCollection.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLCENTRONProgrammingOptions.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsCENTRONMono.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsCENTRONPoly.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsDATASTAR.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsDMTMTR200.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsFULCRUM.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLProgrammingOptionsQUANTUM.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLQ1000ProgrammingOptions.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLSENTINELProgrammingOptions.cs" />
+    <Compile Include="PROGRAMMING OPTIONS\CXMLVECTRONProgrammingOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="REPLICATION\CXMLInfo.cs" />
+    <Compile Include="REPLICATION\CXMLInfoProductInfo.cs" />
+    <Compile Include="SECURITY CODES\CXMLSecurityCodesLimited.cs" />
+    <Compile Include="SECURITY CODES\CXMLSecurityCodesTertiary.cs" />
+    <Compile Include="UIDefinitionFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Itron.Metering.Utilities\Itron.Metering.Utilities.csproj">
+      <Project>{1C2BA173-78D6-4818-A68A-3773173F9104}</Project>
+      <Name>Itron.Metering.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ctrlFieldProDynamicOptions.resx">
+      <DependentUpon>ctrlFieldProDynamicOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmFieldProAddMenu.resx">
+      <DependentUpon>frmFieldProAddMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ItronIEMPublic.snk" />
+    <None Include="Migrated rules for Itron.Metering.ReplicaSettings %282%29.ruleset" />
+    <None Include="Migrated rules for Itron.Metering.ReplicaSettings.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="UpdateAssemblyInfo" Condition="'$(BuildVersion)' != '' And Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" />
+  </Target>
+  <Target Name="UpdateAssemblyInfo">
+    <Message Text="Updating Version to $(BuildVersion)" Importance="high" />
+    <Time Format="yyyy">
+      <Output TaskParameter="FormattedTime" PropertyName="CurrentYear" />
+    </Time>
+    <Attrib Files="$(ProjectDir)Properties\AssemblyInfo.cs" ReadOnly="false" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="(AssemblyVersion|AssemblyFileVersionAttribute|AssemblyFileVersion)\(&quot;.*&quot;\)" ReplacementText="$1(&quot;$(BuildVersion)&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCompany\(&quot;.*&quot;\)" ReplacementText="AssemblyCompany(&quot;Itron, Inc&quot;)" />
+    <FileUpdate Files="$(ProjectDir)Properties\AssemblyInfo.cs" Multiline="true" Singleline="false" Regex="AssemblyCopyright\(&quot;.*&quot;\)" ReplacementText="AssemblyCopyright(&quot;Copyright © Itron, Inc $(CurrentYear)&quot;)" />
+  </Target>
+  <!--<Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

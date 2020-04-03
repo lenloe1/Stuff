@@ -1,0 +1,3750 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Itron.Metering.Communications</name>
+    </assembly>
+    <members>
+        <member name="T:Itron.Metering.Communications.CommPortException">
+            <summary>
+            Exception encapsulating all non-recoverable communication port
+            failures during the open, read, write and close methods. 
+            </summary>
+            <example>
+            <code>
+            try{...}
+            catch(CommPortException e){...}
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.CommPortException.#ctor">
+            <summary>
+            Constructor to create a CommPortException.
+            </summary>
+            <example>
+            <code>
+            CommPortException CPE = new CommPortException();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.CommPortException.#ctor(System.String)">
+            <summary>
+            Constructor to create a CommPortException.
+            </summary>
+            <param name="description">
+            Description of the CommPortException.
+            </param>/>
+            <example>
+            <code>
+            CommPortException CPE = new CommPortException("Port error.");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.CommPortException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor to create a CommPortException.
+            </summary>
+            <param name="description">
+            Description of the CommPortException.
+            </param>/>
+            <param name="systemException">
+            The System.Exception caught to be nested into
+            the CommPortException exception.
+            </param>/>		
+            <example>
+            <code>
+            try{...}
+            catch(Exception e)
+            {
+            	throw(new CommPortException("Port error.", e));
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.TimeOutException">
+            <summary>
+            Exception occurs when a communication timeout occurs with a device.
+            </summary>
+            <example>
+            <code>
+            try{...}
+            catch(TimeOutException e){...}
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.TimeOutException.#ctor">
+            <summary>
+            Constructor to create a TimeOutException.
+            </summary>
+            <example>
+            <code>
+            TimeOutException TOE = new TimeOutException();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.TimeOutException.#ctor(System.String)">
+            <summary>
+            Constructor to create a TimeOutException.
+            </summary>
+            <param name="description">
+            Description of the TimeOutException.
+            </param>
+            <example>
+            <code>
+            TimeOutException TOE = new TimeOutException("Data response timeout.");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.TimeOutException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor to create a TimeOutException.
+            </summary>
+            <param name="description">
+            Description of the TimeOutException.
+            </param>/>
+            <param name="systemException">
+            The System.Exception caught to be nested into
+            the TimeOutException exception.
+            </param>/>		
+            <example>
+            <code>
+            try{...}
+            catch(Exception e)
+            {
+            	throw(new TimeOutException("Data response timeout", e));
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.CommLineDroppedException">
+            <summary>
+            Exception created to handle a case when the communication line is dropped and
+            a timeout exception isn't the best way to handle it
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.CommLineDroppedException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.CommLineDroppedException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="description">The description of the exception</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.CommLineDroppedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="description">The description of the exception</param>
+            <param name="systemException">The System.Exception caught to be nested into
+            the CommLineDroppedException exception.</param>
+        </member>
+        <member name="T:Itron.Metering.Communications.CommEvent">
+            <summary>
+            Delegate to support raising a communication event.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.CommEventData">
+            <summary>
+            Delegate to support raising a communication event with data.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.CommChangeEvent">
+            <summary>
+            Delegate to support raising a communication change event 
+            with state. 
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.CommErrorEvent">
+            <summary>
+            Delegate to support raising a communication error event 
+            with description.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.ICommunications">
+            <summary>
+            Communication class - This is the base class of all communication objects.
+            </summary>    
+        </member>
+        <member name="E:Itron.Metering.Communications.ICommunications.DataReceived">
+            <summary>
+            Event raised when communication port input buffer has been read. 
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.ICommunications.DataSent">
+            <summary>
+            Event raised when communication port output buffer has sent data.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.ICommunications.RxOverrun">
+            <summary>
+            Event raised when the communication port receive buffer is overrun.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.ICommunications.FlagCharReceived">
+            <summary>
+            Event raised when the communication port character receive flag is 
+            set.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.ICommunications.OpenPort(System.String)">
+            <summary>
+            Opens the port passed in as a parameter.
+            </summary>
+            <param name="portName">
+            The communication port to open.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.ICommunications.ClosePort">
+            <summary>
+            Closes the communication port. 
+            </summary>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            comm.ClosePort();
+            comm.Dispose();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.ICommunications.Send(System.Byte[])">
+            <summary>
+            Method to send data out of the open port. 
+            </summary>
+            <param name="data">
+            The data to send over the communication port.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            byte[] bytData = new byte[5]{0x01, 0x02, 0x03, 0x04, 0x05};
+            comm.Send(bytData);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.ICommunications.Read(System.UInt32,System.Int32)">
+            <summary>
+            Method to read data from the communication port into the 
+            input buffer. 
+            </summary>
+            <param name="bytesToRead">
+            Number of bytes to read. If bytesToRead equals 0, all bytes 
+            in input buffer are read.
+            </param>
+            <param name="iTimeout">
+            Unused parameter, need for desktop implementation
+            </param>
+            <returns>Returns number of bytes read from the communication
+            port and stored into the input buffer.
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.IsOpen">
+            <summary>
+            Whether or not the communication port is open.
+            </summary>
+            <returns>
+            Boolean indicating whether or not the communication port is open.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.Input">
+            <summary>
+            Property to retrieve the bytes read from the communication port 
+            input buffer.
+            </summary>
+            <returns>Returns a byte[] of the data.</returns>		
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.InputLen">
+            <summary>
+            Property that gets or sets the input buffer length.
+            </summary>
+            <returns>Returns the number of bytes in the input buffer.</returns>		
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.BaudRate">
+            <summary>
+            Property that gets or sets the baud rate.  The baud rate can only be
+            set to a port that is not opened.
+            </summary>
+            <returns>
+            The baud rate (uint).
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown if the port is already open.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.BaudRate = 9600;
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/31/06 mrj 7.30.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.OpticalProbe">
+            <summary>
+            Property that gets or sets the Optical Probe Type
+            </summary>
+            <returns>
+            The Optical Probe Type
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.PortName">
+            <summary>
+            Property that gets the current port name
+            </summary>
+            <returns>
+            The current port name
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/29/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.ICommunications.MaxSupportedPacketSize">
+            <summary>
+            Gets the Max Supported Packet Size supported by the transport protocol
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.NAKException">
+            <summary>
+            Exception occurs when a the maximum number of naks has been
+            received from the device.
+            </summary>
+            <example>
+            <code>
+            try{...}
+            catch(NAKException e){...}
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.NAKException.#ctor">
+            <summary>
+            Constructor to create a NAKException.
+            </summary>
+            <example>
+            <code>
+            NAKException NE = new NAKException();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            /// 08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.NAKException.#ctor(System.String)">
+            <summary>
+            Constructor to create a NAKException.
+            </summary>
+            <param name="description">
+            Description of the NAKException.
+            </param>/>
+            <example>
+            <code>
+            NAKException NE = new NAKException("Maximum naks received.");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.NAKException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor to create a NAKException.
+            </summary>
+            <param name="description">
+            Description of the NAKException.
+            </param>/>
+            <param name="systemException">
+            The System.Exception caught to be nested into
+            the NAKException exception.
+            </param>/>		
+            <example>
+            <code>
+            try{...}
+            catch(Exception e)
+            {
+            	throw(new NAKException("Maximum naks received.", e));
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CANSIL2">
+            <summary>
+            CANSIL2 supports the ANSI datalink layer 2 communication with
+            a device. 
+            </summary>
+            <remarks>
+            CANSIL2 is internal abstract which implies it is not visible 
+            outside the assembly and must be inherited.
+             </remarks>
+            <example>
+            <code>
+            internal class C1218L2 : CANSIL2
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CANSIL2.PSEMInfo">
+            <summary>
+            PSEMInfo eunumeration supports PSEM specific constants.
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_uintITO">
+            <summary>
+            Inter-character timeout.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_uintRTO">
+            <summary>
+            Reasponse timeout.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_uintCTO">
+            <summary>
+            Channel Traffic timeout.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_usMaxPktSize">
+            <summary>
+            Maximum packet size allowed. Typically a result of a layer 7 negotiate.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_uintBaudRate">
+            <summary>
+            Baud Rate to use
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_usNumRetries">
+            <summary>
+            Number of transmit (send) retries to attempt.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_usPktOverhead">
+            <summary>
+            Number of datalink (ANSI layer 2) bytes of overhead.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_bytReserved">
+            <summary>
+            Datalink (ANSI L2) reserved byte.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_Logger">
+            <summary>
+            Comm Logger
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_bytTxToggle">
+            <summary>
+            State of toggle for the next tx packet.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_bytRxToggle">
+            <summary>
+            State of toggle for the previously rx packet used for testing
+            duplicate packets.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_usCRC">
+            <summary>
+            CRC value of the previously rx packet used for testing
+            duplicate packets.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_abytTxPkt">
+            <summary>
+            The complete datalink (ANSI layer 2) tx packet.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_abytTxL2Data">
+            <summary>
+            The datalink (ANSI layer 2) tx packet data portion.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL2.m_abytRxL2Data">
+            <summary>
+            The datalink (ANSI layer 2) rx packet data portion.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor.  
+            </summary>
+            <param name="comm">
+            The communication object supporting communication over the 
+            physical layer. 
+            </param>
+            <exception cref="T:System.Exception">
+            Thrown when the CANSIL2 fails to instantiate correctly.
+            </exception>
+            <example>
+            <code>
+            public C1218L2(Communication comm):base(comm){}
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.Finalize">
+            <summary>
+            Destructor to release all resources.  
+            </summary>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.Send(System.Byte[])">
+            <summary>
+            Manages sending the ansiL7Pkt parameter according to the 
+            ANSI layer 2 protocol.
+            </summary>
+            <param name="ansiL7Pkt">
+            The complete ANSI layer 7 packet to send.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.TimeOutException">
+            Thrown when a communication timeout occurs with a device.
+            </exception>
+            <exception cref="T:Itron.Metering.Communications.PSEM.NAKException">
+            Thrown when the maximum number of naks have been received.
+            </exception>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            byte[] txPacket = new byte[3]{0x30, 0x00, 0x05};
+            byte[] rxPacket = null;
+            m_ANSIL2.Send(txPacket);
+            m_ANSIL2.Receive(out rxPacket);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.Receive(System.Byte[]@)">
+            <summary>
+            Manages receiving the ansiL2Pkt packet, parsing according to the 
+            ANSI layer 2 protocol and returning the ANSI layer 7 packet.
+            </summary>
+            <param name="ansiL7Pkt">
+            The complete ANSI layer 7 packet received from the device.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.TimeOutException">
+            Thrown when a communication timeout occurs with a device.
+            </exception>
+            <exception cref="T:Itron.Metering.Communications.PSEM.NAKException">
+            Thrown when the maximum number of naks have been received.
+            </exception>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            byte[] txPacket = new byte[3]{0x30, 0x00, 0x05};
+            byte[] rxPacket = null;
+            m_ANSIL2.Send(txPacket);
+            m_ANSIL2.Receive(out rxPacket);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            07/06/06 mrj 7.30.00        Fixed timing issues
+            08/03/06 rcg 7.35.00        Fixed several issues related to using .NET
+                                        2.0 SerialPort object
+            09/26/14 AF  4.00.62 523633 Fixed a corner case where the timer expired but 
+                                        we received the whole packet. In that case we can
+                                        ignore the timeout
+             08/30/16 jrf 4.70.15 No WR Quieting compiler warning and disposing of tmrRxDataRcvd in a finally block.
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL2.MaxPacketSize">
+            <summary>
+            Maximum packet size that the datalink (layer 2) can
+            support.  Typically determined by using layer 7
+            negotiate service.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            Thrown when the maximum packet size being assigned
+            is not supported.
+            </exception>
+            <example>
+            <code>
+            m_ANSIL2.MaxPacketSize = 128;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL2.BaudRate">
+            <summary>
+            Maximum packet size that the datalink (layer 2) can
+            support.  Typically determined by using layer 7
+            negotiate service.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            Thrown when the maximum packet size being assigned
+            is not supported.
+            </exception>
+            <example>
+            <code>
+            m_ANSIL2.MaxPacketSize = 128;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A	Adding real negotiate support
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL2.NextPacketToggleSet">
+            <summary>
+            Returns whether or not the next PSEM packet has the toggle bit set.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.BuildPacket(System.Byte,System.Boolean,System.Boolean)">
+            <summary>
+            Builds the complete datalink (ANSI layer 2) packet.
+            </summary>
+            <param name="sequenceNumber">
+            Number that is decremented by one for each new packet sent. 
+            The first packet in a multiple packet transmission shall have
+            a sequence number equal to the total number of packets minus one.
+            A value of zero in this field indicates that this packet is 
+            the last packet of a multiple packet transmission.  
+            If only one packet in a transmission, this field shall be set 
+            to zero.
+            </param>
+            <param name="firstPacket">
+            True if this packet is the first packet of a multiple packet
+            transmission.
+            </param>
+            <param name="multiPacket">
+            True if this packet is part of a multiple packet transmission.
+            </param>
+            <exception cref="T:System.Exception">
+            Thrown when a system exception occurs.
+            </exception>
+            <example>
+            <code>
+            byte[] abytL7Pkt = new byte[3]{0x30, 0x00, 0x05};
+            byte   bytSeqNum = 0x00;
+            m_abytTxL2Data = new byte[abytL7.Length];
+            bool blnFirstPacket = false;
+            bool blnMultiPacket = false;
+            Array.Copy(abytL7Pkt, 0, m_abytTxL2Data, 0, m_abytTxL2Data.Length);
+            BuildPacket(bytSeqNum, blnFirstPacket, blnMultiPacket);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.CalcCRC(System.Byte[],System.UInt16,System.UInt16)">
+            <summary>
+            Calculates the receive buffer CRC.	
+            </summary>
+            <param name="buffer">Array of bytes from which the
+            CRC will be calculated.</param>
+            <param name="index">Index into the array from which
+            the CRC calculation will start. </param>
+            <param name="count">The number of bytes to be included
+            in the CRC calculation.</param>
+            <returns>
+            An unsigned short containing the value of the CRC.
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.CalcCRC16(System.Byte,System.UInt16)">
+            <summary>
+            Assists calculating the CRC.
+            </summary>
+            <param name="octet"></param>
+            <param name="crc"></param>
+            <returns>
+            An unsigned short containing the
+            calcualted crc 16.
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.Write16Bits(System.Byte[]@,System.Int32,System.UInt16)">
+            <summary>
+            Writes an unsigned short value into a buffer as two separate bytes.
+            </summary>
+            <param name="buffer">Reference to a byte array.</param>
+            <param name="index">Index into the buffer where the 
+            two bytes of data should be stored.</param>
+            <param name="value">The unsigned short representing the value
+            to be written into the buffer.</param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.SendPacket">
+            <summary>
+            Manages (re)sending a packet and the expected response according
+            to the datalink layer 2 defined by the ANSI specifications.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.SendAck">
+            <summary>
+            Sends an ack over the communication port.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.SendNak">
+            <summary>
+            Sends a nak over the communication port.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.ParseRxBuffer(System.Byte[])">
+            <summary>
+            Parses the ANSI layer 2 packet received and
+            stores the data (layer 7 packet) in m_abytRxL2Data.
+            </summary>
+            <remarks>
+            Sentinel firmware version 2.067 issue: After sending a multiple
+            packet write request, the response has the multi-packet control
+            bit set.  
+            </remarks>
+            <param name="buffer">The array of bytes containing
+            one or more datalink (ANSI layer 2) packets.
+            </param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.AckNakRcvdTmout(System.Object)">
+            <summary>
+            Method called when a datalink (ANSI layer 2) acknowlegement
+            timeout occurs.
+            </summary>
+            <param name="stateInfo">
+            The state information object associated
+            with the timer that was triggered.
+            </param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.RxDataTimout_Tick(System.Object)">
+            <summary>
+            Method called when a datalink (ANSI layer 2) receive data 
+            timeout occurs.
+            </summary>
+            <param name="stateInfo">
+            The state information object associated
+            with the timer that was triggered.
+            </param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL2.ResizeBuffers">
+            <summary>
+            Resizes the member buffers according to the maximum
+            packet size member.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CANSIL7">
+            <summary>
+            CANSIL7 supports the ANSI application layer 7 communication with
+            a device. 
+            </summary>
+            <remarks>
+            CANSIL7 is internal abstract which implies it is not visible 
+            outside the assembly and must be inherited.
+            </remarks>
+            <example>
+            <code>
+            internal class C1218L7 : CANSIL7
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.#ctor(Itron.Metering.Communications.PSEM.CANSIL2)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="ansiL2">A CANSIL2 object for which CANSIL7
+            can use to send and receive packets.
+            </param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Identify">
+            <summary>
+            Performs the identification service.
+            </summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Negotiate(System.UInt16,System.Byte,System.UInt32)">
+            <summary>
+            Performs the negotiate service.
+            </summary>
+            <param name="usPacketSize">Maximum packet size supported, in bytes. 
+            This value shall not be greater than 8192 bytes.</param>
+            <param name="byNbrPackets">Maximum number of packets this layer is 
+            able to reassemble into an upper layer data structure at one 
+            time.</param>
+            <param name="uiBaudRate">The baud rate to negotiate to.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            08/17/06 KRC 7.35.00 N/A    Adding real negotiate support
+            06/17/10 AF  2.41.11        Added baud rate 38400 (used only by the M2 Gateway)
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Logoff">
+            <summary>
+            Performs the logoff service.
+            </summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Security("userpassword");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logoff();
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Logon(System.String,System.Int64)">
+            <summary>
+            Performs the logon service.
+            </summary>
+            <param name="strUser">
+            The logon user name.
+            </param>
+            <param name="lngUserID">
+            The user ID
+            </param>
+            <remarks>
+            This routine does not currently support a Canadian logon
+            due to the implementation of the user id.
+            </remarks>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the user length exceeds the acceptable length.
+            </exception>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            08/17/06 KRC 7.35.00 N/A    Adding real logon support
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Security(System.String)">
+            <summary>
+            Performs the security service.
+            </summary>
+            <param name="userPassword">
+            The user password to use when performing the security
+            service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Security("userpassword");
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Security(System.Byte[])">
+            <summary>
+            Performs the security service.
+            </summary>
+            <param name="byUserPassword">
+            The user password to use when performing the security
+            service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Security("userpassword");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Wait(System.Byte)">
+            <summary>
+            Performs the wait service.
+            </summary>
+            <param name="seconds">
+            Number of seconds to send when performing the wait service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Security("userpassword");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Wait(0xFF);
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.Terminate">
+            <summary>
+            Performs the terminate service.
+            </summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            		/// <example>
+            <code>
+            PSEMResponse Result = m_ANSIL7.Identify();
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Negotiate();
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Logon("username");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Security("userpassword");
+            }
+            if (PSEMResponse.OK == Result)
+            {
+            	Result = m_ANSIL7.Terminate();
+            }
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.FullRead(System.UInt16,System.Byte[]@)">
+            <summary>
+            Performs the full read service.
+            </summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">
+            The table's data.
+            </param>
+            <param name="table">
+            The table for which to perform a full read.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = null;
+            PSEMResponse Result = m_ANSIL7.FullRead(5, out abytData); 
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.OffsetRead(System.UInt16,System.Int32,System.UInt16,System.Byte[]@)">
+            <summary>Performs the offset read service.</summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">The table's data.</param>
+            <param name="table">
+            The table for which to perform a full read.
+            </param>
+            <param name="count">Number of bytes to read.</param>
+            <param name="offset">Offset into the table from where the
+            read should begin.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = null;
+            PSEMResponse Result = m_ANSIL7.OffsetRead(2049, 4261, 54, out abytData); 
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.IndexRead(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Performs the index read service.</summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">The table's data.</param>
+            <param name="table">
+            The table for which to perform a full read.
+            </param>
+            <param name="count">Number of bytes to read.</param>
+            <param name="index">Index into the table from where the
+            read should begin.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = null;
+            PSEMResponse Result = m_ANSIL7.IndexRead(2049, 2, 54, out abytData); 
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexRead not yet implemented.
+            </exception>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.FullWrite(System.UInt16,System.Byte[])">
+            <summary>Performs the full write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to perform a full write.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEMResponse Result = m_ANSIL7.FullWrite(2049, abytData); 
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.IndexWrite(System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Performs the index write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to perform a index write.
+            </param>
+            <param name="index">Index into the table.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEMResponse Result = m_ANSIL7.IndexWrite(2049, 2, abytData); 
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexWrite not yet implemented.
+            </exception>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.OffsetWrite(System.UInt16,System.Int32,System.Byte[])">
+            <summary>Performs the offset write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to perform a offset write.
+            </param>
+            <param name="offset">Offset into the table.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEMResponse Result = m_ANSIL7.OffsetWrite(2049, 400, abytData); 
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.TimingSetup(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>Changes the timing parameters.  Calling this service will
+            cause our C12.18 meters to switch to C12.21.</summary>
+            <remarks>
+            </remarks>
+            <param name="byCTO">Channel Traffic Timeout in seconds</param>
+            <param name="byITO">Inter-character Timeout in seconds</param>
+            <param name="byRTO">Response Timeout in seconds</param>
+            <param name="byRetries">Number of retries. If the default of 3 doesn't
+            work, 45 probably won't work either.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexRead not yet implemented.
+            </exception>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.Standard">
+            <summary>
+            Supports retrieving the identification service reference standard.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.MaxPacketSize">
+            <summary>
+            Gets the maximum size of a packet.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.BaudRate">
+            <summary>
+            Gets the current baud rate
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.Revision">
+            <summary>
+            Supports retrieving the identification service revision.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.Version">
+            <summary>
+            Supports retrieving the identifcation service version.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.NextPacketToggleSet">
+            <summary>
+            Returns whether or not the next PSEM packet has the toggle bit set.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.IdentityByte">
+            <summary>
+            Supports retrieving and setting the identity byte (reserved byte
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CANSIL7.CTO">
+            <summary>
+            Supports retrieving and setting the CTO (Channel Traffic Timeout).
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.StringToByteArray(System.String)">
+            <summary>
+            Converts a string to an ASCII encoded byte array. 
+            </summary>
+            <param name="stringToConvert">
+            The string to convert.
+            </param>
+            <remarks>
+            An empty or null string returns a null array.
+            </remarks>
+            <returns>
+            A byte array containing each character's
+            ASCII encoded value.
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.GetChecksum(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Calculates the checksum of an array of bytes.
+            </summary>
+            <param name="buffer">
+            The array of bytes that contains the bytes from which
+            the checksum is to be calculated.
+            </param>
+            <param name="start">
+            Index into the array of bytes from which
+            the checksum is to start.
+            </param>
+            <param name="count">
+            Number of bytes to include in the checksum.
+            </param>
+            <returns>
+            A byte containing the checksum
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.SetBaudRate(Itron.Metering.Communications.PSEM.CANSIL7.BaudRates)">
+            <summary>
+            Sets the baud rate of the SerialPort
+            </summary>
+            <param name="Rate">Baud rate code indicating the speed to set</param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A	Supporting real negotiate
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CANSIL7.TranslateToBaudRates(System.UInt32)">
+            <summary>
+            Translates the Baud rate specified as an integer into the byte
+            format required by the ANSI C12.19 standard
+            </summary>
+            <param name="uintRate">
+            The baud rate as an unsigned integer.
+            </param>
+            <returns>
+            BaudRates
+            </returns>
+            <example>
+            <code>
+            BaudRates NewBaudRate = TranslateToBaudRates(9600);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A	Support real negotiate
+            06/17/10 AF  2.41.10        Added 38400 baud
+            
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_ANSIL2">
+            <summary>
+            ANSI layer 2 support.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_abytTxPkt">
+            <summary>
+            Byte array of the transmit packet.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_abytRxPkt">
+            <summary>
+            Byte array of the packet received.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_bytRefStd">
+            <summary>
+            The identification service reference standard.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_bytVer">
+            <summary>
+            The identification service version.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CANSIL7.m_bytRev">
+            <summary>
+            The identification service revision.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CC1218L2">
+            <summary>
+            C1218L2 inherits from CANSIL2 and supports the ANSI datalink 
+            layer 2 for C12.18 communication with a device. 
+            </summary>
+            <remarks>
+            CANSIL2 is internal which implies it is not visible 
+            outside the assembly.
+             </remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CC1218L2.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comm">
+            Communication object that supports communication over the 
+            physical layer
+            </param>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            C1218L2 c1218l2 = new C1218L2(comm)
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CC1218L2.BuildPacket(System.Byte,System.Boolean,System.Boolean)">
+            <summary>
+            Builds the complete datalink (ANSI layer 2) packet for C12.18.
+            Overrides the base class abstract.
+            </summary>
+            <param name="sequenceNumber">
+            Number that is decremented by one for each new packet sent. 
+            The first packet in a multiple packet transmission shall have
+            a sequence number equal to the total number of packets minus one.
+            A value of zero in this field indicates that this packet is 
+            the last packet of a multiple packet transmission.  
+            If only one packet in a transmission, this field shall be set 
+            to zero.
+            </param>
+            <param name="firstPacket">
+            True if this packet is the first packet of a multiple packet
+            transmission.
+            </param>
+            <param name="multiPacket">
+            True if this packet is part of a multiple packet transmission.
+            </param>
+            <exception cref="T:System.Exception">
+            Thrown when a system exception occurs.
+            </exception>
+            <example>
+            <code>
+            byte[] abytL7Pkt = new byte[3]{0x30, 0x00, 0x05};
+            byte   bytSeqNum = 0x00;
+            m_abytTxL2Data = new byte[abytL7.Length];
+            bool blnFirstPacket = false;
+            bool blnMultiPacket = false;
+            Array.Copy(abytL7Pkt, 0, m_abytTxL2Data, 0, m_abytTxL2Data.Length);
+            BuildPacket(bytSeqNum, blnFirstPacket, blnMultiPacket);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CC1218L7">
+            <summary>
+            C1218L7 supports the ANSI C12.18 application layer 7 communication 
+            with a device. 
+            </summary>
+            <remarks>
+            C1218L7 internal which implies it is not visible 
+            outside the assembly.
+            </remarks>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CC1218L7.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="comm">
+            The communication object that supports 
+            communication over the physical layer.
+            </param>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            C1218L7 c1218l7 = new C1218L7(comm);
+            </code>
+            </example>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.CPSEM">
+            <summary>
+            CPSEM supports the PSEM services for ANSI devices.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.MAX_WAIT_TIME">
+            <summary>
+            The max time the protocol allows between packets, 255 seconds.
+            Use this constant with the Wait() request to keep the device from
+            timing out.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.m_CommPort">
+            <summary>
+            Communication object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.DEFAULT_MAX_PACKET_LEGNTH">
+            <summary>
+            Default max packet size for Itron meters (128)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.DEFAULT_MAX_NUMBER_OF_PACKETS">
+            <summary>
+            Default max number packets for Itron meters (254)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.DEFAULT_MAX_NUMBER_OF_PACKETS_LG">
+            <summary>
+            Default max number of packets for Landis+Gyr M2 Gateway meter (1)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.DEFAULT_BAUD_RATE">
+            <summary>
+            Default baud rate
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.CPSEM.DEFAULT_HH_PRO_USER_ID">
+            <summary>
+            Default Canadian user ID for HH-Pro
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="comm">
+            The communication object that supports
+            communication over the physical layer.
+            </param>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            06/14/06 mrj 7.30.00        Added ability to ignore wait commands
+            08/29/06 mrj 7.35.00        Store off the comm port to expose to
+                                        the ANSI device, and the packet info.
+            04/16/10 AF  2.40.38        Added a max wait variable for M2 Gateway
+            04/26/10 AF  2.40.43        Replaced hard coded wait time with constant
+            
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Security(System.String)">
+            <summary>
+            Performs the security service.
+            </summary>
+            <param name="userPassword">
+            The user password to use when performing the security
+            service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            03/14/07 mrj 8.00.18		Added wait if security failed.
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Security(System.Byte[])">
+            <summary>
+            Performs the security service.
+            </summary>
+            <param name="byUserPassword">
+            The user password to use when performing the security
+            service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Logon(System.String,System.Int64)">
+            <summary>
+            Performs a logon to the device.  It sends Identify, negotiate, and
+            then logon.
+            </summary>
+            <param name="strUser">
+            The logon user name.
+            </param>
+            <param name="lngUserID">
+            The logon user ID.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the user length exceeds the acceptable length.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            08/16/06 KRC 7.35.00 N/A    Need real Logon support
+            08/31/06 mrj 7.35.00        Save off the user id
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Identify">
+            <summary>Performs the Identify service.</summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Identify();		
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00    N/A Created
+            08/16/06 KRC 7.35.00    N/A Adding Desktop support
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Negotiate(System.UInt16,System.Byte,System.UInt32)">
+            <summary>Performs the Negotiate service.</summary>
+            <param name="usPacketSize">Maximum packet size supported, in bytes. 
+            This alue shall not be greater than 8192 bytes.</param>
+            <param name="byNbrPackets">Maximum number of packets this layer is 
+            able to reassemble into an upper layer data structure at one 
+            time.</param>
+            <param name="uiBaudRate">The baud rate to negotiate to.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Identify();
+            PSEM.Negotiate(128, 254, 9600 );		
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00    N/A Created
+            08/31/06 mrj 7.35.00        Save off negotiated packet info
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Terminate">
+            <summary>Performs the Terminate service.</summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Identify();
+            PSEM.Negotiate(128, 254, 9600 );
+            PSEM.Logon("user");
+            PSEM.Security("");
+            PSEM.Terminate();		
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00    N/A Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Logoff">
+            <summary>
+            Performs a logoff from the device. 
+            </summary>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.Logoff();
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.Wait(System.Byte)">
+            <summary>
+            Performs the wait service.
+            </summary>
+            <param name="seconds">
+            Number of seconds to send when performing the wait service.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.Wait(0xFF);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+            06/14/06 mrj 7.30.00        Added ability to ignore wait commands
+            03/14/07 mrj 8.00.18		Removed ignore waits
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.FullWrite(System.UInt16,System.Byte[])">
+            <summary>Performs the full write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to peform a full write.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.FullWrite(5, abytData);
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.OffsetWrite(System.UInt16,System.Int32,System.Byte[])">
+            <summary>Performs the offset write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to peform an offset write.
+            </param>
+            <param name="offset">Offset into the table.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.FullWrite(2048, 400, abytData);
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.IndexWrite(System.UInt16,System.UInt16,System.Byte[])">
+            <summary>Performs the index write service.</summary>
+            <param name="data">The data to write to the table.</param>
+            <param name="table">
+            The table for which to peform an index write.
+            </param>
+            <param name="index">Index into the table.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = new byte[3]{0x01, 0x02, 0x03};
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.IndexWrite(2049, 2, abytData); 
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexWrite not yet implemented.
+            </exception>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.FullRead(System.UInt16,System.Byte[]@)">
+            <summary>
+            Performs the full read service.
+            </summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">
+            The table's data.
+            </param>
+            <param name="table">
+            The table for which to peform a full read.
+            </param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = null;
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.FullRead(5, out abytData);
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.OffsetRead(System.UInt16,System.Int32,System.UInt16,System.Byte[]@)">
+            <summary>Performs the offset read service.</summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">The table's data.</param>
+            <param name="table">
+            The table for which to peform a full read.
+            </param>
+            <param name="count">Number of bytes to read.</param>
+            <param name="offset">Offset into the table from where the
+            read should begin.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = null;
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.OffsetRead.OffsetRead(2049, 4261, 54, out abytData); 
+            </code>
+            </example>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.IndexRead(System.UInt16,System.UInt16,System.UInt16,System.Byte[]@)">
+            <summary>Performs the index read service.</summary>
+            <remarks>
+            When an error occurs, the byte array of data will be null.
+            </remarks>
+            <param name="data">The table's data.</param>
+            <param name="table">
+            The table for which to peform a full read.
+            </param>
+            <param name="count">Number of bytes to read.</param>
+            <param name="index">Index into the table from where the
+            read should begin.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            CPSEM PSEM = new CPSEM(comm);
+            byte[] abytData = null;
+            PSEM.Logon("username");
+            PSEM.Security("userpassword");
+            PSEM.IndexRead(2049, 2, 54, out abytData); 
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexRead not yet implemented.
+            </exception>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.TimingSetup(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>Changes the timing parameters.  Calling this service will
+            cause our C12.18 meters to switch to C12.21.</summary>
+            <remarks>
+            </remarks>
+            <param name="byCTO">Channel Traffic Timeout in seconds</param>
+            <param name="byITO">Inter-character Timeout in seconds</param>
+            <param name="byRTO">Response Timeout in seconds</param>
+            <param name="byRetries">Number of retries. If the default of 3 doesn't
+            work, 45 probably won't work either.</param>
+            <returns>
+            A PSEMResponse encapsulating the layer 7 response
+            to the layer 7 request.
+            </returns>
+            <example>
+            <code>
+            </code>
+            </example>
+            <exception cref="T:System.NotImplementedException">
+            IndexRead not yet implemented.
+            </exception>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.PacketSize">
+             <summary>
+             Returns the negotiated packet size
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             08/31/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.NumberPackets">
+             <summary>
+             Returns the negotiated number of packets
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             08/31/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.BaudRate">
+             <summary>
+             Returns the negotiated baud rate.
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             02/07/14 jrf 3.50.32 419257 Created
+             05/16/16 AF  4.50.268 622562  Added the ability to set the baud rate for times
+                                           that the meter has timed out and we want to return to
+                                           base state for a retry.
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.UserID">
+             <summary>
+             Returns the current user id for this session
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             08/31/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.TimeFormat">
+             <summary>
+             Access to the ANSI Time Format. The time format comes from standard
+             table 00.  Be sure it has been read before accessing this property.
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             09/19/06 KRC 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.ReferenceTime">
+             <summary>
+             Access to the ANSI Reference Time - Value differs depending on which ANSI meter you
+             //  are talking to.
+             </summary>
+             Revision History	
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------------
+             03/16/07 KRC 8.00.19 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.MaxWaitTime">
+            <summary>
+            The max time the protocol allows between packets is 255 seconds.
+            Use this constant with the Wait() request to keep the device from
+            timing out.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.IdentityByte">
+            <summary>
+            Supports retrieving and setting the identity byte (reserved byte).
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.NextPacketToggleSet">
+            <summary>
+            Returns whether or not the next PSEM packet has the toggle bit set.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.CPSEM.CTO">
+            <summary>
+            Supports retrieving and setting the CTO (Channel Traffic Timeout).
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.MaintainCommunicationsSession">
+             <summary>
+              This method is used to maintain continuous communications with a metering device by
+              periodically issuing wait commands.  The time between wait commands is determined
+              by the protocol's default timeout values and will be reset each commands are issued
+              to the meter.
+             
+              Note that this method is a private method and all exception handling is the responsibility
+              of the calling routine
+             </summary>
+             <remarks>
+              Note that Windows.Forms Timers are used instead of system timers.  Windows.Form timers
+              are intended for single threaded, UI oriented applications while system timers are intended for 
+              thread safe applications.  Since serial communications is inherently single threaded and this protocol
+              class is not intended for concurrent use, Windows.Forms.Timers are the better choice
+            
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             11/20/06 mah 8.00.00 N/A	Created
+             03/23/07 mrj 8.00.21		Do not allow multiple session timers
+            								to get created.
+             </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.DisableSessionMaintenance">
+            <summary>
+            This method is to be called when logging off a meter.  It disables
+            periodic calls to the meter and releases the timer coordinating the calls
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.KeepSessionAliveHandler(System.Object,System.EventArgs)">
+            <summary>
+            This method is called when the maintenance timer is fired.  It is responsible
+            
+            for issueing a command to the meter to keep it alive and/or cleaning up if 
+            we are no longer on line with the meter
+            </summary>
+            <param name="myObject"></param>
+            <param name="myEventArgs"></param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.ResetSessionTimer">
+            <summary>
+            This method should be called after each successful communication with the meter.
+            It resets the maintenance timer for the communication session and prevents 
+            unnecessary wakeup commands from being issued and slowing the 
+            application down unnecessarily
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.ResetSessionTimerToMax">
+            <summary>
+            This method is called after a wait is successfully sent to the meter.  It resets
+            the maintenance timer for the communication session to 245 seconds.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.CPSEM.PauseSessionTimer">
+            <summary>
+            This method should be called immediately before communicating with the meter.
+            It stops the maintenance timer from firing and prevents the application from
+            queuing up a wait command during the execution of another meter 
+            operation
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.PSEMBinaryReader">
+            <summary>
+            Binary Reader that will implement some special PSEM reads
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.LTIMEReferenceDate">
+            <summary>
+            Reference date for TM_FORMAT=3 is 1/1/1970 Local.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.STIMEReferenceDate">
+            <summary>
+            Reference date for TM_FORMAT=3 is 1/1/1970 GMT.  
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT">
+            <summary>
+            Time Format Enumeration that matches that in table 0.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT.NO_CLOCK">
+            <summary>
+            No Clock type
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT.BCD_TIME">
+            <summary>
+            BCD: year, month, day, hour, minute, second
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT.UINT8_TIME">
+            <summary>
+            uint8: year, month, day, hour, minute, second
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT.UINT32_TIME">
+            <summary>
+            UTIME: uint32 (minutes since 01/01/1970), seconds
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.#ctor(System.IO.Stream)">
+            <summary>
+            PSEMBinary Reading constructor
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadChars(System.Int32)">
+            <summary>
+            ReadChars - Handles the ReadChars Behavior, but using Byte
+            </summary>
+            <param name="iLength">Number of characters to read</param>
+            <returns>array of characters read from bineary stream</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadString(System.Int32)">
+            <summary>
+            Reads a String of a given length out of the Binary Reader
+            </summary>
+            <param name="iLength">The number of bytes to read from the stream.</param>
+            <returns>string - "" if there were no valid bytes returned.</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadLTIME(Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT)">
+            <summary>
+            Reads the LTIME out of the stream.  Time Format must be set
+            to correct value for this to work correctly.
+            </summary>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadSTIME(Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT)">
+            <summary>
+            Reads the STIME out of the stream.  Time Format must be set
+            to correct value for this to work correctly.
+            </summary>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadTIME(Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT)">
+            <summary>
+            Reads the TIME out of the stream. Time Format must be set to
+            a correct value for this to work correctly.
+            </summary>
+            <returns>DateTime representing the time of day</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadInt48">
+            <summary>
+            Reads a 48-bit integer out of the stream
+            </summary>
+            <returns>long</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadUInt48">
+            <summary>
+            Reads a 48-bit unsigned integer out of the stream
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadUInt24">
+            <summary>
+            Read a 24-bit Unsigned Integer out of the stream
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryReader.ReadInt24">
+            <summary>
+            Reads a 24-bit signed integer
+            </summary>
+            <returns>The 24-bit signed integer</returns>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.PSEMBinaryWriter">
+            <summary>
+            This class adds functionality on top of the BinaryWriter class for
+            writing items to PSEM devices.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.STIMEReferenceDate">
+            <summary>
+            Reference date for TM_FORMAT=3 is 1/1/1970 GMT.  
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.#ctor(System.IO.Stream)">
+            <summary>
+            Constructor. Always uses UTF-8 encoding for writing
+            to PSEM devices.
+            </summary>
+            <param name="output">The stream to write the data to.</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.Write(System.String,System.Int32)">
+            <summary>
+            Writes the specified string to the stream and makes sure that the
+            string written takes up the specified number of bytes.
+            </summary>
+            <param name="value">The string to write to the meter.</param>
+            <param name="iLength">The length, in bytes, of the data to write.</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.WriteTIME(System.TimeSpan,Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT)">
+            <summary>
+            Writes a TIME value to the stream.
+            </summary>
+            <param name="time">The time value to write.</param>
+            <param name="timeFormat">The time format of the meter.</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.WriteSTIME(System.DateTime,Itron.Metering.Communications.PSEM.PSEMBinaryReader.TM_FORMAT)">
+            <summary>
+            Writes the STIME value to the stream
+            </summary>
+            <param name="date">The date to write</param>
+            <param name="timeFormat">The time format to use</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.WriteUInt24(System.UInt32)">
+            <summary>
+            Writes a UINT 24 value to the stream
+            </summary>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMBinaryWriter.WriteUInt48(System.UInt64)">
+            <summary>
+            Writes a UINT 48 value to the stream
+            </summary>
+            <param name="value">The value to write.</param>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.PSEMResponse">
+            <summary>
+            ResultCodes enumeration encapsulates all possible results or errors
+            that could be returned from the PSEM application layer. However, the
+            possible errors returned are not necessarily restricted to  
+            the result codes defined within the ANSI application layer 7.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Ok">
+            <summary>
+            Acknowledge—No problems, request accepted.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Err">
+            <summary>
+            Rejection of the received service request.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Sns">
+            <summary>
+            Service not supported.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Isc">
+            <summary>
+            Insufficient security clearance.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Onp">
+            <summary>
+            Operation not possible.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Iar">
+            <summary>
+            Inappropriate action requested.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Bsy">
+            <summary>
+            Device busy.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Dnr">
+            <summary>
+            Data not ready.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Dlk">
+            <summary>
+            Data locked.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Rno">
+            <summary>
+            Renegotiate request.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.PSEM.PSEMResponse.Isss">
+            <summary>
+            Invalid service sequence state.
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics">
+            <summary>
+            Singleton class used to keep communication statistics
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/24/08 rdb            	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Clear">
+            <summary>
+            Clear the counters
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Increment(System.Int32)">
+            <summary>
+            Increment the counter that matches the code
+            </summary>
+            <param name="iCode"></param>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.CommStats">
+            <summary>
+            Returns the instance of the singleton
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Ok">
+            <summary>
+            Gets or sets number of Ok's
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Err">
+            <summary>
+            Gets or sets number of Errors
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Sns">
+            <summary>
+            Gets or sets number of Service Not Supporteds
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Isc">
+            <summary>
+            Gets or sets number of Insufficient Security Clearances
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Onp">
+            <summary>
+            Gets or sets the number of Operation Not Possibles
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Iar">
+            <summary>
+            Gets or sets the number of Inappropriate Action Requesteds
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Bsy">
+            <summary>
+            Gets or sets the number of Device Busies
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Dnr">
+            <summary>
+            Gets or sets the number of Data Not Readies
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Dlk">
+            <summary>
+            Gets or sets the number of Data Lockeds
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Rno">
+            <summary>
+            Gets or sets the number of Renegotiate Requests
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Isss">
+            <summary>
+            Gets or sets the number of Invalid Service Sequence States
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.To">
+            <summary>
+            Gets or sets the number of Timeouts
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.AckSent">
+            <summary>
+            Gets or sets number of Acks
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.NakSent">
+            <summary>
+            Gets or sets number of Nacks
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Ack">
+            <summary>
+            Gets or sets number of acks received
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.Nak">
+            <summary>
+            Gets or sets the number of naks received
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.PSEM.PSEMCommunicationsStatistics.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications">
+            <summary>
+            Communication object for the RAVEn ZigBee Module
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.DataReceived">
+            <summary>
+            Event raised when data has been received
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.Finalize">
+            <summary>
+            Deconstructor
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.Dispose">
+            <summary>
+            Disposes the object
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.OpenPort(System.String)">
+            <summary>
+            Opens the specified port
+            </summary>
+            <param name="portName">The name of the port to open</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.ClosePort">
+            <summary>
+            Closes the port.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.Initialize">
+            <summary>
+            Initializes the session by clearing out any prior unfinished commands
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.SendFragment(System.Xml.Linq.XElement)">
+            <summary>
+            Sends the XML fragment to the meter.
+            </summary>
+            <param name="xmlElement">The XML fragment to send</param>
+        </member>
+        <member name="P:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.IsOpen">
+            <summary>
+            Gets whether or not the Port is currently open.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.ReceivedElements">
+            <summary>
+            Gets the current list of received elements
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.OnDataReceived">
+            <summary>
+            Raises the Data Received event
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.SetupSerialPort">
+            <summary>
+            Sets up the parameters for the Serial Port
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.DataReceivedEventHandler(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Handles the Data Received Event
+            </summary>
+            <param name="sender">The object that sent the event</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.ReadCurrentData">
+            <summary>
+            Reads whatever is in the buffer and adds any valid elements to the received list.
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.RAVEn.RAVEnSerialCommunications.ParseNewElements">
+            <summary>
+            Parses any new elements from the data stream
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.SCS.SCSProtocolResponse">
+            <summary>
+            SCSProtocolResponse enumeration encapsulates the SCS Protocol responses.
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ -------------------------------------------
+            04/03/06 mrj 7.30.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocolResponse.NoResponse">
+            <summary>
+            NoResponse = 0,
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocolResponse.SCS_ACK">
+            <summary>
+            SCS_ACK = 0x06,  (acknowledge)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocolResponse.SCS_NAK">
+            <summary>
+            SCS_NAK = 0x15,  (negative acknowledge)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocolResponse.SCS_CAN">
+            <summary>
+            SCS_CAN = 0x18,  (Cancel, security error)
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.SCS.SCSCommands">
+            <summary>
+            SCSCommands enumeration encapsulates the SCS Protocol commands.
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/03/06 mrj 7.30.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSCommands.SCS_I">
+            <summary>
+            SCS_I = 0x49, (Identify)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSCommands.SCS_S">
+            <summary>
+            SCS_S = 0x53, (Security)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSCommands.SCS_U">
+            <summary>
+            SCS_U = 0x55, (Upload)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSCommands.SCS_D">
+            <summary>
+            SCS_D = 0x44, (Download)
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSCommands.SCS_ENQ">
+            <summary>
+            SCS_ENQ = 0x05, (Enquire)
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.SCS.SCSProtocol">
+            <summary>
+            Class which handles all SCS Protocol communications.
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/03/06 mrj 7.30.00  N/A	Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            06/06/06 jrf 7.30.00  N/A   Add in Logger Code
+            </remarks>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocol.m_CommPort">
+            <summary>
+            Communication object
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SCS.SCSProtocol.m_rmStrings">
+            <summary>
+            Resourse Manager object that supports extracting strings from the 
+            resourse file.
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MinReceiveTimeout">
+            <summary>This property gets or sets the amount of time to wait 
+            for a response after sending an SCS command.</summary>
+            <returns>
+            An uint representing the timeout in milliseconds.
+            </returns>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            scsProtocol.MinReceiveTimeout = 2000;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MaxRetries">
+            <summary>This property gets or sets the maximum retries for sending
+            any SCS command.</summary>
+            <returns>
+            An uint representing the retries.
+            </returns>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            scsProtocol.MaxRetries = 3;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MaxUploadSize">
+            <summary>This property gets or sets the maximum packet size.
+            </summary>
+            <returns>
+            An int representing the maximum packet size.
+            </returns>
+            <remarks>This value can not be set lower than the minimum packet 
+            size.</remarks>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            scsProtocol.MaxPacketSize = 64;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            06/16/06 jrf 7.30.00  N/A	Removed tertiary operator
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MaxDownloadSize">
+            <summary>This property gets or sets the maximum download packet size.
+            </summary>
+            <returns>
+            An int representing the maximum packet size.
+            </returns>
+            <remarks>This value can not be set lower than the minimum packet 
+            size.</remarks>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            scsProtocol.MaxPacketSize = 64;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            06/16/06 jrf 7.30.00  N/A	Removed tertiary operator
+            02/07/07 mrj 8.00.11		Changed to allow any packet size to be
+            							set.
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.Identified">
+            <summary>
+            Has this device been identified?  If so, you can use the protocol's
+            saved device identity values to avoid reissuing Wakeup and Identify
+            requests. Note that if you switch devices (daisy chaining, etc.), 
+            you still need to re-identify the new device.
+            </summary>
+            
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            09/08/06 mcm 7.35.00  N/A   Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.DeviceID">
+            <summary>
+            Returns the device ID retreived during the last Identify request.
+            If Identify has not been called, you shouldn't be asking, but I'll
+            return an empty string.
+            </summary>
+            
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            09/08/06 mcm 7.35.00  N/A   Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.DeviceType">
+            <summary>
+            Returns the device Type retreived during the last Identify request.
+            If Identify has not been called, you shouldn't be asking, but I'll
+            return an empty string.
+            </summary>
+            
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            09/08/06 mcm 7.35.00  N/A   Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MeterStartAddress">
+            <summary>
+            Returns the Meter Start Address retreived during the last Identify
+            request. If Identify has not been called, you shouldn't be asking,
+            but I'll return an empty string.
+            </summary>
+            
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            09/08/06 mcm 7.35.00  N/A   Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSProtocol.MeterStopAddress">
+            <summary>
+            Returns the Meter Stop Address retreived during the last Identify
+            request. If Identify has not been called, you shouldn't be asking,
+            but I'll return an empty string.
+            </summary>
+            
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            09/08/06 mcm 7.35.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="Comm">The communication object that supports
+            communication over the physical port.</param>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A	Modified
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/19/06 jrf 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.WakeUpDevice">
+             <summary>
+             This method performs actions to get the attention of a
+             SCS device. In the SCS protocol this is performed
+             by sending multiple ENQs to the device until the device 
+             acknowledges it with an ACK message.
+            <remarks>When an ACK message is received we must pause for 1 second
+             before returning processing to the calling routine.</remarks>
+             </summary>
+             <returns>A SCSProtocolResponse representing the protocol response.
+             </returns>
+             <example>
+             <code>
+             Communication Comm = new Communication();
+             Comm.OpenPort("COM4:");
+             SCSProtocol scsProtocol = new SCSProtocol(Comm);
+             scsProtocol.WakeUpDevice(25);		
+             </code>
+             </example>
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             04/12/06 mrj 7.30.00  N/A    Created
+             05/04/06 jrf 7.30.00  N/A	 Rewrote
+             06/16/06 jrf 7.30.00  N/A	 Changed to Send Enquires one after
+            								 another with no pause
+             09/28/06 mrj 7.35.00         Adjusted for better performance on 
+                                          handheld.
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.Identify(System.String@,System.String@,System.Int32@,System.Int32@)">
+             <summary>
+             Format the SCS I Command and send it to the device.  This method
+             returns the device type, device ID as well as the memory start and
+             stop addresses.  It assumes that the device has been woken up prior
+             to being called.  
+             </summary>
+             <param name="strDeviceID">The device ID of the connected meter
+             </param>
+             <param name="strDeviceType">The device type of the connected meter
+             </param>
+             <param name="iMeterStartAddress">The start address for the base page
+             of the connected meter.</param>
+             <param name="iMeterStopAddress">The stop address for the base page of
+             the connected meter.</param>
+             <devdoc>Saves the device identity info and marks the device this 
+             protocol is connected to as identified. SCSDevice.Logon uses this 
+             info to avoid reissuing unnecessary WakeUp and Indentify requests.
+             </devdoc>
+             <returns>A SCSProtocolResponse representing the protocol response.
+             </returns>
+             <example>
+             <code>
+             Communication Comm = new Communication();
+             Comm.OpenPort("COM4:");
+             SCSProtocol scsProtocol = new SCSProtocol(Comm);
+             
+             string strID;
+             string strType;
+             int iMemStart;
+             int iMemEnd;
+             
+             scsProtocol.WakeUpDevice(25);
+             scsProtocol.Identify(out strID, out strType, out iMemStart, out iMemEnd);		
+             </code>
+             </example>
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             04/12/06 mrj 7.30.00  N/A   Created
+             05/10/06 jrf 7.30.00  N/A	Revised
+             09/09/06 mcm 7.35.00  N/A   Save device identity info for future use
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.Security(System.String)">
+             <summary>
+             This method sends the SCS security command to the device.  Note that 
+             no information is returned from the device other than an 
+             acknowledgement or rejection of the security code
+             </summary>
+             <param name="strSecurityCode">The security code for the device.
+             </param>
+             <returns>A SCSProtocolResponse representing the protocol response.
+             </returns>
+             <example>
+             <code>
+             Communication Comm = new Communication();
+             Comm.OpenPort("COM4:");
+             SCSProtocol scsProtocol = new SCSProtocol(Comm);
+             
+             string strID;
+             string strType;
+             int iMemStart;
+             int iMemEnd;
+             
+             scsProtocol.WakeUpDevice(25);
+             scsProtocol.Identify(out strID, out strType, out iMemStart, out iMemEnd);		
+             scsProtocol.Security("");
+             </code>
+             </example>
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             04/12/06 mrj 7.30.00  N/A   Created
+             05/10/06 jrf 7.30.00  N/A   Revised
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.Upload(System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            Oversees the uploading process, breaking request up into smaller
+            chunks if neccessary and calling UploadData on each.
+            </summary>
+            <param name="iUploadAddress">The base page address to start the
+            upload</param>
+            <param name="iDataLength">The data length of the upload</param>
+            <param name="byData">The data buffer to read the bytes into</param>
+            <returns>A SCSProtocolResponse representing the protocol response.
+            </returns>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            
+            string strID;
+            string strType;
+            int iMemStart;
+            int iMemEnd;
+            
+            scsProtocol.WakeUpDevice(25);
+            scsProtocol.Identify(out strID, out strType, out iMemStart, out iMemEnd);		
+            scsProtocol.Security("");
+            
+            byte[] abytOperatingSetup;
+            scsProtocol.Upload(0x2196, 1, out abytOperatingSetup);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A   Rewrote
+            06/19/06 jrf 7.30.00  N/A	Broke into two methods to avoid recursion
+                   
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.UploadData(System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            Uploads data from the device starting at a given address.
+            </summary>
+            <param name="iUploadAddress">The base page address to start the
+            upload</param>
+            <param name="iDataLength">The data length of the upload</param>
+            <param name="byData">The data buffer to read the bytes into</param>
+            <returns>A SCSProtocolResponse representing the protocol response.
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/19/06 jrf 7.30.00  N/A   Created
+                   
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.Download(System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            Oversees the downloading process, breaking download up into smaller
+            chunks if neccessary and calling DownloadData on each.
+            </summary>
+            <param name="iDownloadAddress">The base page address to start the 
+            download</param>
+            <param name="iDownloadLength">The length of bytes to download</param>
+            <param name="byData">The buffer of data to download</param>
+            <returns>A SCSProtocolResponse representing the protocol response.
+            </returns>
+            <example>
+            <code>
+            Communication Comm = new Communication();
+            Comm.OpenPort("COM4:");
+            SCSProtocol scsProtocol = new SCSProtocol(Comm);
+            
+            string strID;
+            string strType;
+            int iMemStart;
+            int iMemEnd;
+            
+            scsProtocol.WakeUpDevice(25);
+            scsProtocol.Identify(out strID, out strType, out iMemStart, out iMemEnd);		
+            scsProtocol.Security("");
+            
+            byte[] byHangUpFlag = new byte[1];
+            byHangUpFlag[0] = 0xFF;
+            SCSProtocolResponse ProtoResponse = 
+            	scsProtocol.Download(0x1B03, 1, ref byHangUpFlag);
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            05/10/06 jrf 7.30.00  N/A   Rewrote
+            06/19/06 jrf 7.30.00  N/A	Broke into two methods to avoid recursion
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.DownloadData(System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            Downloads data to the device starting at a given address.
+            </summary>
+            <param name="iDownloadAddress">The base page address to start the 
+            download</param>
+            <param name="iDownloadLength">The length of bytes to download</param>
+            <param name="byData">The buffer of data to download</param>
+            <returns>A SCSProtocolResponse representing the protocol response.
+            </returns>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/19/06 jrf 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.SendAndReceive(System.Byte[]@,System.Int32,System.Byte[]@,System.Int32)">
+            <summary>
+            Sends a command and gets a response from a connected device
+            </summary>
+            <param name="byCmdBuffer">The command to send to the device</param>
+            <param name="iCmdLength">The length of the command to send</param>
+            <param name="byResponseBuffer">The buffer to hold the response from 
+            the device</param>
+            <param name="iResponseLength">The length of the response</param>
+            <returns>A SCSProtocolResponse representing the protocol response.
+            </returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.RcvdData">
+            <summary>
+            Method called when the communications port character received flag
+            is set.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/20/06 jrf 7.30.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.SetTimeout(System.Object)">
+            <summary>
+            Method called when SendAndReceive's timeout timer fires.
+            </summary>
+            <param name="stateInfo">Used solely to match TimerCallback's 
+            signature</param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            06/20/06 jrf 7.30.00 N/A	Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.SCSCalculateCRC(System.Byte[]@,System.Int32,System.Byte[]@)">
+            <summary>
+            This routine calculates the 16 bit CRC used with the SCS protocol
+            </summary>
+            <param name="abytBuffer">Buffer containing the data to calculate CRC
+            </param>
+            <param name="iDataLength">The length of the data in the buffer that 
+            needs the CRC</param>
+            <param name="byCRC">Buffer to return the CRC</param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.MaintainCommunicationsSession">
+            <summary>
+             This method is used to maintain continuous communications with a metering device by
+             periodically issuing wake up commands.  The time between wait commands is determined
+             by the protocol's default timeout values and will be reset whenever commands are issued
+             to the meter.
+            
+             Note that this method is a private method and all exception handling is the responsibility
+             of the calling routine
+            </summary>
+            <remarks>
+             Note that Windows.Forms Timers are used instead of system timers.  Windows.Form timers
+             are intended for single threaded, UI oriented applications while system timers are intended for 
+             thread safe applications.  Since serial communications is inherently single threaded and this protocol
+             class is not intended for concurrent use, Windows.Forms.Timers are the better choice
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.DisableSessionMaintenance">
+            <summary>
+            This method is to be called when logging off a meter.  It disables
+            periodic calls to the meter and releases the timer coordinating the calls
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.KeepSessionAliveHandler(System.Object,System.EventArgs)">
+            <summary>
+            This method is called when the maintenance timer is fired.  It is responsible
+            for issueing a command to the meter to keep it alive and/or cleaning up if 
+            we are no longer on line with the meter
+            </summary>
+            <param name="myObject"></param>
+            <param name="myEventArgs"></param>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.ResetSessionTimer">
+            <summary>
+            This method should be called after each successful communication with the meter.
+            It resets the maintenance timer for the communication session and prevents 
+            unnecessary wakeup commands from being issued and slowing the 
+            application down unnecessarily
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.PauseSessionTimer">
+            <summary>
+            This method should be called immediately before communicating with the meter.
+            It stops the maintenance timer from firing and prevents the application from
+            queuing up a wakeup command during the execution of another meter 
+            operation
+            </summary>
+            <remarks>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            11/20/06 mah 8.00.00 N/A	Created
+            </remarks>
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSProtocol.KeepAlive">
+            <summary>
+            Sends ENQ's to keep the meter's session alive (up to 3 ENQ's looking for
+            and ACK).
+            </summary>		
+            <exception cref="T:Itron.Metering.Communications.TimeOutException">
+            Timeout thrown if ACK is not received from ENQ.
+            </exception>
+        </member>
+        <member name="T:Itron.Metering.Communications.SCS.SCSAddress">
+             <summary>
+             This internal class represents an SCS address
+             </summary>
+             Revision History
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ -------------------------------------------
+             04/13/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSAddress.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSAddress.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="iAddress">The SCS address</param>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SCS.SCSAddress.Address">
+            <summary>This property gets or sets the SCS address.</summary>
+            <returns>
+            An int representing the SCS address
+            </returns>
+            <example>
+            <code>
+            SCSAddress Address = new SCSAddress();
+            Address.Address = 0x1234;
+            </code>
+            </example>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSAddress.Insert(System.Byte[]@,System.Int32)">
+             <summary>
+            	Inserts the address into an array at a specified offset.
+             </summary>
+             <param name="byArray">The buffer to insert the address</param>
+             <param name="iOffset">The location in the buffer to start the 
+             insertion</param>
+             <example>
+             <code>
+             SCSAddress Address = new SCSAddress(1234);
+             byte[] byAddress = new byte[3];
+             
+             Address.Insert(byAddress, 0);
+             </code>
+             </example>
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SCS.SCSAddress.Extract(System.Byte[]@,System.Int32)">
+             <summary>
+            	Extracts the address from an array at a specified offset.
+             </summary>
+             <param name="byArray">The buffer to extract the address from</param>
+             <param name="iOffset">The location in the buffer to start the 
+             extraction</param>
+             <example>
+             <code>
+             SCSAddress Address = new SCSAddress(1234);
+             byte[] byAddress = new byte[3];
+             
+             byAddress[0] = 3;
+             byAddress[1] = 4;
+             byAddress[2] = 5;
+             
+             Address.Extract(byAddress, 0);
+             </code>
+             </example>
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             04/12/06 mrj 7.30.00  N/A   Created
+            
+        </member>
+        <member name="T:Itron.Metering.Communications.SerialCommDesktop">
+            <summary>
+            Class supporting all communication types such as a comm port.  
+            </summary>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="E:Itron.Metering.Communications.SerialCommDesktop.DataReceived">
+            <summary>
+            Event raised when communication port input buffer has been read. 
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.SerialCommDesktop.DataSent">
+            <summary>
+            Event raised when communication port output buffer has sent data.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.SerialCommDesktop.RxOverrun">
+            <summary>
+            Event raised when the communication port receive buffer is overrun.
+            </summary>
+        </member>
+        <member name="E:Itron.Metering.Communications.SerialCommDesktop.FlagCharReceived">
+            <summary>
+            Event raised when the communication port character receive flag is 
+            set.
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.SerialCommDesktop.m_SerialPort">
+            Serial port communications object
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.#ctor">
+            <summary>
+            Constructor.  
+            </summary>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.Finalize">
+             <summary>
+             Destructor.  
+             </summary>
+             <remarks>
+             The communication class event thread blocks until the port handle 
+             is closed. A destructor is implemented to make sure 
+             that clean up is performed as soon as possible.
+            </remarks>
+             Revision History
+             MM/DD/YY who Version Issue# Description
+             -------- --- ------- ------ ---------------------------------------
+             08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.OpenPort(System.String)">
+            <summary>
+            Opens the port passed in as a parameter.
+            </summary>
+            <param name="portName">
+            The communication port to open.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.ReOpenPort(System.String,System.Int32)">
+            <summary>
+            ReOpenPort - Used in Factory code, we can can turn control of the port over to the factory.
+            </summary>
+            <param name="portName"></param>
+            <param name="BaudRate"></param>
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.IsOpen">
+            <summary>
+            Whether or not the communication port is open.
+            </summary>
+            <returns>
+            Boolean indicating whether or not the communication port is open.
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.ClosePort">
+            <summary>
+            Closes the communication port. 
+            </summary>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            comm.ClosePort();
+            comm.Dispose();
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.Send(System.Byte[])">
+            <summary>
+            Method to send data out of the open port. 
+            </summary>
+            <param name="data">
+            The data to send over the communication port.
+            </param>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            byte[] bytData = new byte[5]{0x01, 0x02, 0x03, 0x04, 0x05};
+            comm.Send(bytData);
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.Read(System.UInt32,System.Int32)">
+            <summary>
+            Method to read data from the communication port into the 
+            input buffer. 
+            </summary>
+            <param name="bytesToRead">
+            Number of bytes to read. If bytesToRead equals 0, all bytes 
+            in input buffer are read.
+            </param>
+            <param name="iTimeout"></param>
+            <returns>Returns number of bytes read from the communication
+            port and stored into the input buffer.
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.Input">
+            <summary>
+            Property to retrieve the bytes read from the communication port 
+            input buffer.
+            </summary>
+            <returns>Returns a byte[] of the data.</returns>		
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.InputLen">
+            <summary>
+            Property that gets or sets the input buffer length.
+            </summary>
+            <returns>Returns the number of bytes in the input buffer.</returns>		
+            <example>
+            <code>
+            Communication comm = new Communication();
+            comm.OpenPort("COM4:");
+            if ( 0 != comm.Read(0) )
+            {
+            	byte[] inputBuffer = new byte[comm.InputLen];
+            	Array.Copy(comm.Input, 0, inputBuffer, 0, inputBuffer.Length);
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.BaudRate">
+            <summary>
+            Property that gets or sets the baud rate.  The baud rate can only be
+            set to a port that is not opened.
+            </summary>
+            <returns>
+            The baud rate (uint).
+            </returns>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown if the port is already open.
+            </exception>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+            	comm.BaudRate = 9600;
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            03/31/06 mrj 7.30.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.OpticalProbe">
+            <summary>
+            Property that gets or sets the Optical Probe Type
+            </summary>
+            <returns>
+            The Optical Probe Type
+            </returns>
+            <example>
+            <code>
+            Communication comm = new Communication();
+            if ( false == comm.IsOpen() )
+            {
+                comm.OpticalProbe = OpticalProbeTypes.SCHLUMBERGER
+            	comm.BaudRate = 9600;
+            	comm.OpenPort("COM4:");
+            }
+            </code>
+            </example>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/17/06 KRC 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.PortName">
+            <summary>
+            Property that gets the current port name
+            </summary>
+            <returns>
+            The current port name
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/29/06 mrj 7.35.00 N/A    Created
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.RtsEnable">
+            <summary>
+            Property that accesses the serial port's RtsEnable line. NOTE that
+            the class will set the this line low when opening the port. If you 
+            want it high, call this after opening the port.
+            </summary>
+            <returns>
+            The serial port's RtsEnable state
+            </returns>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            12/10/07 mcm 10.0.1  N/A    Support for belt clip radios
+            
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.MaxSupportedPacketSize">
+            <summary>
+            Gets the Max Supported Packet Size supported by the transport protocol
+            </summary>
+        </member>
+        <member name="P:Itron.Metering.Communications.SerialCommDesktop.Output">
+            <summary>
+            Property that takes its assigned value and sends its contents to 
+            the communication port.
+            </summary>
+            <exception cref="T:Itron.Metering.Communications.CommPortException">
+            Thrown when a port failure occurs.
+            </exception>
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/01/05 bdm 7.13.00 N/A	Created
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.SetupSerialPort">
+            <summary>
+            Sets up the default settings for the SerialPort object
+            </summary>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/11/06 KRC 7.35.00        Created for new SerialPort
+            
+        </member>
+        <member name="M:Itron.Metering.Communications.SerialCommDesktop.serialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Handler for the DataReceived event
+            </summary>        
+            Revision History
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            08/11/06 mrj 7.35.00        Created for new SerialPort
+            
+        </member>
+        <member name="T:Itron.Metering.Communications.LGPassThrough">
+            <summary>
+            This class carries out the Landis+Gyr Pass Through command for the M2 Gateway
+            </summary>
+        </member>
+        <member name="T:Itron.Metering.Communications.LGPassThrough.LGPassThruResponse">
+            <summary>
+            Enumeration that encapsulates the L+G responses to the Pass through mode command
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.LGPassThrough.LGPassThruResponse.LG_ACK">
+            <summary>
+            Acknowledged - Pass Thru mode enabled
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.LGPassThrough.LGPassThruResponse.LG_ERROR">
+            <summary>
+            Error - request rejected for unknown reason
+            </summary>
+        </member>
+        <member name="F:Itron.Metering.Communications.LGPassThrough.LGPassThruResponse.LG_TIMER_TIMED_OUT">
+            <summary>
+            Timer timed out - Pass thru mode terminated
+            </summary>
+        </member>
+        <member name="M:Itron.Metering.Communications.LGPassThrough.#ctor(Itron.Metering.Communications.ICommunications)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="Comm">The communication object that supports
+            communication over the physical port.</param>
+        </member>
+        <member name="M:Itron.Metering.Communications.LGPassThrough.SendPassThroughCmd">
+            <summary>
+            Constructs and sends out the pass through mode command and interprets 
+            the response from the meter
+            </summary>
+            <returns>Response code enum</returns>
+        </member>
+        <member name="M:Itron.Metering.Communications.LGPassThrough.RcvdData">
+            <summary>
+            Method called when the communications port character received flag
+            is set.
+            </summary>
+            MM/DD/YY who Version Issue# Description
+            -------- --- ------- ------ ---------------------------------------
+            04/06/10 AF  2.40.32        Created/cloned from SCS Protocol code 
+        </member>
+        <member name="F:Itron.Metering.Communications.LGPassThrough.m_CommPort">
+            <summary>
+            Communication object
+            </summary>
+        </member>
+    </members>
+</doc>

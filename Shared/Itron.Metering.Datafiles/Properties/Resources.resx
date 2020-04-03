@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ALARM_ACTIVATED" xml:space="preserve">
+    <value>Alarm Activated</value>
+  </data>
+  <data name="AUTO_TIMESET" xml:space="preserve">
+    <value>Auto Timeset Performed</value>
+  </data>
+  <data name="BATT_FAIL" xml:space="preserve">
+    <value>Battery Failure</value>
+  </data>
+  <data name="BILLING_RESET" xml:space="preserve">
+    <value>Billing Reset</value>
+  </data>
+  <data name="CAPABILITIES_DATA" xml:space="preserve">
+    <value>Capabilities Data</value>
+  </data>
+  <data name="CLIENT_METER" xml:space="preserve">
+    <value>Client Meter</value>
+  </data>
+  <data name="CLOCK_ENABLED" xml:space="preserve">
+    <value>Clock Enabled</value>
+  </data>
+  <data name="CLOCK_RELATED_DATA" xml:space="preserve">
+    <value>Clock Related Data</value>
+  </data>
+  <data name="CMD" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="CMD_RESPONSE" xml:space="preserve">
+    <value>Command Response</value>
+  </data>
+  <data name="CONFIG_CHANGED" xml:space="preserve">
+    <value>Configuration Changed</value>
+  </data>
+  <data name="CONFIG_ERROR" xml:space="preserve">
+    <value>Configuration Error</value>
+  </data>
+  <data name="CONSTANTS_DATA" xml:space="preserve">
+    <value>Constants Data</value>
+  </data>
+  <data name="CT_MULT" xml:space="preserve">
+    <value>CT Multiplier</value>
+  </data>
+  <data name="CURRENT_BATT_READ" xml:space="preserve">
+    <value>Current Battery Reading</value>
+  </data>
+  <data name="CURRENT_CUM_DEM_DATA" xml:space="preserve">
+    <value>Current Cumulative Demand Data</value>
+  </data>
+  <data name="CURRENT_DEM_DATA" xml:space="preserve">
+    <value>Current Demand Data</value>
+  </data>
+  <data name="CURRENT_DEM_TOO_DATA" xml:space="preserve">
+    <value>Current Demand Time of Occurrence Data</value>
+  </data>
+  <data name="CURRENT_ENERGY_DATA" xml:space="preserve">
+    <value>Current Energy Data</value>
+  </data>
+  <data name="CURRENT_SEASON_TOTAL" xml:space="preserve">
+    <value>Current Season Total</value>
+  </data>
+  <data name="CURRENT_STATE_DATA" xml:space="preserve">
+    <value>Current State Data</value>
+  </data>
+  <data name="CURRENT_TIME" xml:space="preserve">
+    <value>Current Time</value>
+  </data>
+  <data name="CUSTOMER_ID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="CUST_1_ALARM" xml:space="preserve">
+    <value>Customer 1 Alarm</value>
+  </data>
+  <data name="CUST_1_ALARM_OFF" xml:space="preserve">
+    <value>Customer 1 Alarm Off</value>
+  </data>
+  <data name="CUST_2_ALARM" xml:space="preserve">
+    <value>Customer 2 Alarm</value>
+  </data>
+  <data name="DAILY_FREEZE_READING" xml:space="preserve">
+    <value>Daily Freeze Reading</value>
+  </data>
+  <data name="DATA_FLASH" xml:space="preserve">
+    <value>Data Flash</value>
+  </data>
+  <data name="DATA_RAM_ERR" xml:space="preserve">
+    <value>Data RAM Error Detected</value>
+  </data>
+  <data name="DAYS_ON_BATT" xml:space="preserve">
+    <value>Days on Battery</value>
+  </data>
+  <data name="DAYS_SINCE_LAST_DR" xml:space="preserve">
+    <value>Days Since Last Demand Reset</value>
+  </data>
+  <data name="DAYS_SINCE_LAST_TEST" xml:space="preserve">
+    <value>Days Since Last Test</value>
+  </data>
+  <data name="DEM_INT_LEN" xml:space="preserve">
+    <value>Demand Interval Length</value>
+  </data>
+  <data name="DEM_RESET" xml:space="preserve">
+    <value>Demand Reset</value>
+  </data>
+  <data name="DEM_RESET_COUNT" xml:space="preserve">
+    <value>Demand Reset Count</value>
+  </data>
+  <data name="DEM_THRESHOLD_EXCEEDED" xml:space="preserve">
+    <value>Demand Threshold Exceeded</value>
+  </data>
+  <data name="DEM_THRESH_CAUTION" xml:space="preserve">
+    <value>Demand Threshold Caution</value>
+  </data>
+  <data name="DEM_THRESH_COND_CLEARED" xml:space="preserve">
+    <value>Demand Threshold Condition Cleared</value>
+  </data>
+  <data name="DIAG_1_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 1 Active</value>
+  </data>
+  <data name="DIAG_1_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 1 Inactive</value>
+  </data>
+  <data name="DIAG_2_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 2 Active</value>
+  </data>
+  <data name="DIAG_2_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 2 Inactive</value>
+  </data>
+  <data name="DIAG_3_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 3 Active</value>
+  </data>
+  <data name="DIAG_3_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 3 Inactive</value>
+  </data>
+  <data name="DIAG_4_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 4 Active</value>
+  </data>
+  <data name="DIAG_4_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 4 Inactive</value>
+  </data>
+  <data name="DIAG_5_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 5 Active</value>
+  </data>
+  <data name="DIAG_5_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 5 Inactive</value>
+  </data>
+  <data name="DIAG_6_ACTIVE" xml:space="preserve">
+    <value>Diagnostic 6 Active</value>
+  </data>
+  <data name="DIAG_6_INACTIVE" xml:space="preserve">
+    <value>Diagnostic 6 Inactive</value>
+  </data>
+  <data name="DIAG_FAIL" xml:space="preserve">
+    <value>Diagnostic Failure</value>
+  </data>
+  <data name="DST_CHANGE_NEW" xml:space="preserve">
+    <value>DST Change – New Time</value>
+  </data>
+  <data name="DST_ENABLED" xml:space="preserve">
+    <value>DST Enabled</value>
+  </data>
+  <data name="EEPROM_FAIL" xml:space="preserve">
+    <value>EEPROM Failure</value>
+  </data>
+  <data name="END_OF_CAL_WARN" xml:space="preserve">
+    <value>End Of Calendar Warning</value>
+  </data>
+  <data name="END_TEST_MODE" xml:space="preserve">
+    <value>End of Test Mode</value>
+  </data>
+  <data name="EPF_COUNT" xml:space="preserve">
+    <value>Early Power Fail Count</value>
+  </data>
+  <data name="EPF_DATA" xml:space="preserve">
+    <value>Early Power Fail Data</value>
+  </data>
+  <data name="EVENT_LOG_RESET" xml:space="preserve">
+    <value>Event Log Reset</value>
+  </data>
+  <data name="FALL_DST_CHANGE" xml:space="preserve">
+    <value>Fall DST Change</value>
+  </data>
+  <data name="FATAL_1" xml:space="preserve">
+    <value>Fatal Error #1 - Processor Flash Error</value>
+  </data>
+  <data name="FATAL_2" xml:space="preserve">
+    <value>Fatal Error #2 - Processor RAM Error</value>
+  </data>
+  <data name="FATAL_3" xml:space="preserve">
+    <value>Fatal Error #3 - Data Flash Error</value>
+  </data>
+  <data name="FATAL_4" xml:space="preserve">
+    <value>Fatal Error #4 - Metrology Communications Error</value>
+  </data>
+  <data name="FATAL_5" xml:space="preserve">
+    <value>Fatal Error #5 - Power Down Error</value>
+  </data>
+  <data name="FATAL_6" xml:space="preserve">
+    <value>Fatal Error #6 - File System Error</value>
+  </data>
+  <data name="FATAL_7" xml:space="preserve">
+    <value>Fatal Error #7 - Operating System Error</value>
+  </data>
+  <data name="FATAL_ERR" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="FATAL_ERRS" xml:space="preserve">
+    <value>Fatal Errors</value>
+  </data>
+  <data name="FILE_SYS" xml:space="preserve">
+    <value>File System</value>
+  </data>
+  <data name="FREEZE_METER_READINGS" xml:space="preserve">
+    <value>Freeze Meter Readings</value>
+  </data>
+  <data name="FW_VERSION" xml:space="preserve">
+    <value>Firmware Version</value>
+  </data>
+  <data name="GOOD_BATT_READ" xml:space="preserve">
+    <value>Good Battery Reading</value>
+  </data>
+  <data name="HAN_CLIENT_DATA" xml:space="preserve">
+    <value>HAN Client Data</value>
+  </data>
+  <data name="INPUT_HIGH" xml:space="preserve">
+    <value>Input High</value>
+  </data>
+  <data name="INPUT_LOW" xml:space="preserve">
+    <value>Input Low</value>
+  </data>
+  <data name="INTELLIGENT_REG_COMM_FAIL" xml:space="preserve">
+    <value>Intelligent Register Communications Failure</value>
+  </data>
+  <data name="INTELLIGENT_REG_COMM_RESTORED" xml:space="preserve">
+    <value>Intelligent Register Communications Restored</value>
+  </data>
+  <data name="INTERNAL_OP_BOARD_EVENT" xml:space="preserve">
+    <value>Internal Option Board Event</value>
+  </data>
+  <data name="LAST_BP_CUM_DEM_DATA" xml:space="preserve">
+    <value>Last Billing Period Cumulative Demand Data</value>
+  </data>
+  <data name="LAST_BP_DEM_DATA" xml:space="preserve">
+    <value>Last Billing Period Demand Data</value>
+  </data>
+  <data name="LAST_BP_DEM_TOO_DATA" xml:space="preserve">
+    <value>Last Billing Period Demand Time of Occurrence Data</value>
+  </data>
+  <data name="LAST_BP_ENERGY_DATA" xml:space="preserve">
+    <value>Last Billing Period Energy Data</value>
+  </data>
+  <data name="LAST_BP_STATE_DATA" xml:space="preserve">
+    <value>Last Billing Period State Data</value>
+  </data>
+  <data name="LAST_BP_TIME" xml:space="preserve">
+    <value>Last Billing Period Time</value>
+  </data>
+  <data name="LAST_SR_CUM_DEM_DATA" xml:space="preserve">
+    <value>Last Self Read Cumulative Demand Data</value>
+  </data>
+  <data name="LAST_SR_DEM_DATA" xml:space="preserve">
+    <value>Last Self Read Demand Data</value>
+  </data>
+  <data name="LAST_SR_DEM_TOO_DATA" xml:space="preserve">
+    <value>Last Self Read Demand Time of Occurrence Data</value>
+  </data>
+  <data name="LAST_SR_ENERGY_DATA" xml:space="preserve">
+    <value>Last Self Read Energy Data</value>
+  </data>
+  <data name="LAST_SR_STATE_DATA" xml:space="preserve">
+    <value>Last Self Read State Data</value>
+  </data>
+  <data name="LAST_SR_TIME" xml:space="preserve">
+    <value>Last Self Read Time</value>
+  </data>
+  <data name="LATEST_READING" xml:space="preserve">
+    <value>Latest Reading</value>
+  </data>
+  <data name="LOW_BATT" xml:space="preserve">
+    <value>Low Battery</value>
+  </data>
+  <data name="LP_DATA_CORRUPT" xml:space="preserve">
+    <value>Load Profile Data Corrupted</value>
+  </data>
+  <data name="MASS_MEMORY" xml:space="preserve">
+    <value>Mass Memory</value>
+  </data>
+  <data name="MCU_FLASH" xml:space="preserve">
+    <value>MCU Flash</value>
+  </data>
+  <data name="METER_ADDRESS" xml:space="preserve">
+    <value>Meter Address</value>
+  </data>
+  <data name="METER_OVER_THRESH" xml:space="preserve">
+    <value>Meter Over Threshold</value>
+  </data>
+  <data name="METER_TYPE" xml:space="preserve">
+    <value>Meter Type</value>
+  </data>
+  <data name="METROLOGY_COMMS" xml:space="preserve">
+    <value>Metrology Communications</value>
+  </data>
+  <data name="MINUTES" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NON_FATAL_ERR" xml:space="preserve">
+    <value>Non-Fatal Error</value>
+  </data>
+  <data name="NON_FATAL_ERRS" xml:space="preserve">
+    <value>Non-Fatal Errors</value>
+  </data>
+  <data name="NUM_OF_CUM_DEMANDS" xml:space="preserve">
+    <value>Number of Cumulative Demands</value>
+  </data>
+  <data name="NUM_OF_DEMANDS" xml:space="preserve">
+    <value>Number of Demands</value>
+  </data>
+  <data name="NUM_OF_ENERGIES" xml:space="preserve">
+    <value>Number of Energies</value>
+  </data>
+  <data name="NUM_OF_LP_CHANNELS" xml:space="preserve">
+    <value>Number of Load Profile Channels</value>
+  </data>
+  <data name="OP_PARAM_CHANGED" xml:space="preserve">
+    <value>Operating Parameter changed</value>
+  </data>
+  <data name="OP_SYS" xml:space="preserve">
+    <value>Operating System</value>
+  </data>
+  <data name="OUTAGE_COUNT" xml:space="preserve">
+    <value>Power Outage Count</value>
+  </data>
+  <data name="PF_AVG_BILL_PERIOD_AVAILABLE" xml:space="preserve">
+    <value>PF Average Billing Period Available</value>
+  </data>
+  <data name="PHASE_DROPOUT" xml:space="preserve">
+    <value>Phase Drop-out (Phase, short/long)</value>
+  </data>
+  <data name="PHASE_FAIL" xml:space="preserve">
+    <value>Phase Failure</value>
+  </data>
+  <data name="PHASE_LOSS" xml:space="preserve">
+    <value>Phase Loss</value>
+  </data>
+  <data name="PHASE_RESTORATION" xml:space="preserve">
+    <value>Phase Restoration</value>
+  </data>
+  <data name="PHASE_VOLT_LESS_80" xml:space="preserve">
+    <value>Phase Voltages &lt; 80% of Voltage Class</value>
+  </data>
+  <data name="POWER_DOWN" xml:space="preserve">
+    <value>AC Power Down</value>
+  </data>
+  <data name="POWER_UP" xml:space="preserve">
+    <value>AC Power Up</value>
+  </data>
+  <data name="PROGRAM_COUNT" xml:space="preserve">
+    <value>Times Programmed Count</value>
+  </data>
+  <data name="PROG_ID" xml:space="preserve">
+    <value>Program ID</value>
+  </data>
+  <data name="PULSE_OVERFLOW" xml:space="preserve">
+    <value>Pulse Overflow</value>
+  </data>
+  <data name="QUANT_IDENTIFICATION" xml:space="preserve">
+    <value>Quantity Identification</value>
+  </data>
+  <data name="RAM" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="RAM_ERR" xml:space="preserve">
+    <value>RAM Error Detected</value>
+  </data>
+  <data name="RATEA" xml:space="preserve">
+    <value>Rate A</value>
+  </data>
+  <data name="RATEB" xml:space="preserve">
+    <value>Rate B</value>
+  </data>
+  <data name="RATEC" xml:space="preserve">
+    <value>Rate C</value>
+  </data>
+  <data name="RATED" xml:space="preserve">
+    <value>Rate D</value>
+  </data>
+  <data name="RATE_CHANGE" xml:space="preserve">
+    <value>Rate Change</value>
+  </data>
+  <data name="RATE_ID" xml:space="preserve">
+    <value>Rate ID</value>
+  </data>
+  <data name="READING_TIME" xml:space="preserve">
+    <value>Reading Time</value>
+  </data>
+  <data name="RECORDER_CLOCK_MALFUNCTION" xml:space="preserve">
+    <value>Recorder Clock Malfunction Detected</value>
+  </data>
+  <data name="RECORDER_CLOCK_SET_NEW" xml:space="preserve">
+    <value>Recorder Clock Set – New Time</value>
+  </data>
+  <data name="REG_FULLSCALE_EXCEEDED_EVENT" xml:space="preserve">
+    <value>Previous kW &gt; Register Full-Scale Value</value>
+  </data>
+  <data name="REG_FULL_SCALE_EXCEEDED" xml:space="preserve">
+    <value>Register Full-scale Exceeded</value>
+  </data>
+  <data name="REG_MULT" xml:space="preserve">
+    <value>Register Multiplier</value>
+  </data>
+  <data name="RESPONSE" xml:space="preserve">
+    <value>Response</value>
+  </data>
+  <data name="REVERSE_ENGINEERED_FROM" xml:space="preserve">
+    <value>Reverse engineered from </value>
+  </data>
+  <data name="REV_POWER_FLOW" xml:space="preserve">
+    <value>Reverse Power Flow</value>
+  </data>
+  <data name="REV_RUNNING_CEASED" xml:space="preserve">
+    <value>Reverse Running Ceased</value>
+  </data>
+  <data name="REV_RUNNING_DETECTED" xml:space="preserve">
+    <value>Reverse Running Detected</value>
+  </data>
+  <data name="SCHED_CALLIN" xml:space="preserve">
+    <value>Scheduled Call-in</value>
+  </data>
+  <data name="SEASON_CHANGE" xml:space="preserve">
+    <value>Season Change</value>
+  </data>
+  <data name="SELF_READ" xml:space="preserve">
+    <value>Self Read</value>
+  </data>
+  <data name="SELF_READ_AVAILABLE" xml:space="preserve">
+    <value>Self Read Data Available</value>
+  </data>
+  <data name="SPRING_DST_CHANGE" xml:space="preserve">
+    <value>Spring DST Change</value>
+  </data>
+  <data name="START_TEST_MODE" xml:space="preserve">
+    <value>Start of Test Mode</value>
+  </data>
+  <data name="STATUS_INPUT_CLOSING" xml:space="preserve">
+    <value>Status Input Closing</value>
+  </data>
+  <data name="STATUS_INPUT_OPENING" xml:space="preserve">
+    <value>Status Input Opening</value>
+  </data>
+  <data name="SUCCESS" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="SUPPORTED_CLIENT_DATA_SIZE" xml:space="preserve">
+    <value>Supported Client Data Size</value>
+  </data>
+  <data name="SUPPORTED_NUM_CLIENTS" xml:space="preserve">
+    <value>Supported Number of Clients</value>
+  </data>
+  <data name="TAMPER_INDICATION" xml:space="preserve">
+    <value>Tamper Indication</value>
+  </data>
+  <data name="TEST_MODE_DATA" xml:space="preserve">
+    <value>Test Mode Data</value>
+  </data>
+  <data name="TIME_DATE_CHANGED" xml:space="preserve">
+    <value>Time or Date Changed</value>
+  </data>
+  <data name="TIME_LAST_INTERROGATION" xml:space="preserve">
+    <value>Time of Last Interrogation</value>
+  </data>
+  <data name="TIME_LAST_OUTAGE" xml:space="preserve">
+    <value>Time of Last Outage</value>
+  </data>
+  <data name="TOU_RATES" xml:space="preserve">
+    <value>TOU Rates</value>
+  </data>
+  <data name="TOU_SCHED" xml:space="preserve">
+    <value>TOU Schedule</value>
+  </data>
+  <data name="TOU_SCHED_ERR" xml:space="preserve">
+    <value>TOU Schedule Error</value>
+  </data>
+  <data name="UNIT_ACCESSED" xml:space="preserve">
+    <value>Unit Accessed</value>
+  </data>
+  <data name="UNIT_ACCESSED_INVALID_PW" xml:space="preserve">
+    <value>Unit Accessed with Invalid Password</value>
+  </data>
+  <data name="UNIT_ACCESSED_READER" xml:space="preserve">
+    <value>Unit Accessed by Reader</value>
+  </data>
+  <data name="UNIT_ACCESSED_REMOTE" xml:space="preserve">
+    <value>Unit Accessed Remotely</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UNRECOGNIZED_RECORDER_EVENT" xml:space="preserve">
+    <value>Unrecognized Recorder Event</value>
+  </data>
+  <data name="VOLT_CUT" xml:space="preserve">
+    <value>Voltage Cut</value>
+  </data>
+  <data name="VOLT_IMBALANCE" xml:space="preserve">
+    <value>Voltage Imbalance</value>
+  </data>
+  <data name="VOLT_SAG" xml:space="preserve">
+    <value>Voltage Sag</value>
+  </data>
+  <data name="VOLT_SWELL" xml:space="preserve">
+    <value>Voltage Swell</value>
+  </data>
+  <data name="VQ_LOG_NEAR_FULL" xml:space="preserve">
+    <value>VQ Log Near Full</value>
+  </data>
+  <data name="VT_MULT" xml:space="preserve">
+    <value>VT Multiplier</value>
+  </data>
+  <data name="WATCHDOG_TIMEOUT" xml:space="preserve">
+    <value>Watchdog Timeout</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ZERO_INT_VAL" xml:space="preserve">
+    <value>Zero Interval Value</value>
+  </data>
+  <data name="FILE_DOES_NOT_EXIST" xml:space="preserve">
+    <value>File Does Not Exist</value>
+  </data>
+  <data name="DATE" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="EVENT" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="EVENT_DATA" xml:space="preserve">
+    <value>Event Data</value>
+  </data>
+  <data name="HISTORICAL" xml:space="preserve">
+    <value>Historical</value>
+  </data>
+  <data name="INTERVAL_DATA" xml:space="preserve">
+    <value>Interval Data</value>
+  </data>
+  <data name="ITEM" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="REGISTER_DATA" xml:space="preserve">
+    <value>Register Data</value>
+  </data>
+  <data name="SOURCE_VALIDATION" xml:space="preserve">
+    <value>Source Validation</value>
+  </data>
+  <data name="STATUS_CODES" xml:space="preserve">
+    <value>Status Codes</value>
+  </data>
+  <data name="TABLE_OF_CONTENTS" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="TOP_OF_PAGE" xml:space="preserve">
+    <value>Top of page</value>
+  </data>
+  <data name="VALUE" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ANCILLARY_DATA" xml:space="preserve">
+    <value>Ancillary Data</value>
+  </data>
+  <data name="Arithmetic" xml:space="preserve">
+    <value>Arithmetic</value>
+  </data>
+  <data name="BlockDemandCalculation" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="EnhancedItronSecurity" xml:space="preserve">
+    <value>Enhanced Itron Security</value>
+  </data>
+  <data name="Lag" xml:space="preserve">
+    <value>Lag</value>
+  </data>
+  <data name="SlidingDemandCalculation" xml:space="preserve">
+    <value>Sliding</value>
+  </data>
+  <data name="StandardC1222Security" xml:space="preserve">
+    <value>Standard C12.22 Security</value>
+  </data>
+  <data name="Vectorial" xml:space="preserve">
+    <value>Vectorial</value>
+  </data>
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Itron.Metering.OWOC.X509XmlSigning</id>
+		<version>0.0.249.0</version>
+		<authors>Itron, Inc.</authors>
+		<owners>Ryan Garlington</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes/>
+		<description>OWOC X509XmlSigning .dlls needed for handling configuration signatures.</description>
+		<copyright>Copyright ©2017 Itron, Inc</copyright>
+		<tags>configuration openway centron</tags>
+		<dependencies/>
+	</metadata>
+	<files>
+		<file src="Itron.Ami.Common.Security.X509XmlSigning.dll" target="lib\Itron.Ami.Common.Security\Itron.Ami.Common.Security.X509XmlSigning.dll" />
+	</files>
+</package>

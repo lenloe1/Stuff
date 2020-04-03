@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PowerCirclePropBag" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;&lt;Chart2DPropBag Version="2.0.20073.17282" UseAntiAliasedGraphics="True" UseAntiAliasedText="True"&gt;&lt;StyleCollection&gt;&lt;NamedStyle Name="Area" ParentName="Area.default" StyleData="BackColor2=127, 127, 127;Border=None,ControlDark,1;Opaque=False;GradientStyle=Radial;BackColor=White;Font=Microsoft Sans Serif, 9.75pt;HatchStyle=None;ForeColor=Black;Rounding=10 10 10 10;" /&gt;&lt;NamedStyle Name="Style8" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Style5" ParentName="LabelStyleDefault" StyleData="Rotation=Rotate90;Font=Microsoft Sans Serif, 11.25pt, style=Bold;ForeColor=Transparent;" /&gt;&lt;NamedStyle Name="LabelStyleDefault.default" ParentName="Control" StyleData="Border=None,Transparent,1;BackColor=Transparent;" /&gt;&lt;NamedStyle Name="Control" ParentName="Control.default" StyleData="GradientStyle=None;Border=None,ControlText,1;ForeColor=Black;BackColor=White;BackColor2=Black;Opaque=False;" /&gt;&lt;NamedStyle Name="AxisY2" ParentName="Area" StyleData="Rotation=Rotate90;AlignVert=Bottom;AlignHorz=Far;" /&gt;&lt;NamedStyle Name="Style6" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;BackColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Header" ParentName="Control" StyleData="Border=None,Transparent,1;ForeColor=Black;BackColor=Transparent;Font=Microsoft Sans Serif, 9pt, style=Bold;Opaque=False;" /&gt;&lt;NamedStyle Name="Footer" ParentName="Control" StyleData="Border=None,Transparent,1;ForeColor=Black;BackColor=Transparent;Font=Microsoft Sans Serif, 8.25pt, style=Bold;Opaque=False;" /&gt;&lt;NamedStyle Name="Style4" ParentName="LabelStyleDefault" StyleData="ForeColor=Transparent;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Area.default" ParentName="Control" StyleData="Border=None,Transparent,1;AlignVert=Top;" /&gt;&lt;NamedStyle Name="AxisY" ParentName="Area" StyleData="Font=Microsoft Sans Serif, 8.25pt;Rotation=Rotate270;ForeColor=Black;AlignHorz=Near;AlignVert=Center;" /&gt;&lt;NamedStyle Name="AxisX" ParentName="Area" StyleData="Font=Microsoft Sans Serif, 8.25pt;Rotation=Rotate0;ForeColor=Black;AlignHorz=Center;AlignVert=Bottom;" /&gt;&lt;NamedStyle Name="Control.default" ParentName="" StyleData="Border=None,Transparent,1;ForeColor=ControlText;BackColor=Control;" /&gt;&lt;NamedStyle Name="Legend" ParentName="Legend.default" StyleData="ForeColor=Black;BackColor=Transparent;Opaque=False;" /&gt;&lt;NamedStyle Name="Style9" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="LabelStyleDefault" ParentName="LabelStyleDefault.default" /&gt;&lt;NamedStyle Name="PlotArea" ParentName="Area" StyleData="GradientStyle=None;Border=None,Black,1;HatchStyle=None;BackColor=MintCream;BackColor2=Black;Opaque=True;" /&gt;&lt;NamedStyle Name="Legend.default" ParentName="Control" StyleData="Wrap=False;Border=None,Transparent,1;AlignVert=Top;" /&gt;&lt;NamedStyle Name="Style7" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;BackColor=Transparent;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Style10" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;/StyleCollection&gt;&lt;ChartGroupsCollection&gt;&lt;ChartGroup Name="Group1" ChartType="Polar" Use3D="False"&gt;&lt;DataSerializer DefaultSet="True"&gt;&lt;DataSeriesCollection&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;W&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style4&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;DLConnected&gt;True&lt;/DLConnected&gt;&lt;LineStyle Color="Red" /&gt;&lt;SymbolStyle Color="LightPink" OutlineColor="DeepPink" Shape="None" /&gt;&lt;SeriesLabel&gt;W&lt;/SeriesLabel&gt;&lt;X&gt;0&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;VAR&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style5&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;DLConnected&gt;True&lt;/DLConnected&gt;&lt;LineStyle Color="Red" /&gt;&lt;SymbolStyle Color="LightBlue" OutlineColor="DarkBlue" Shape="None" /&gt;&lt;SeriesLabel&gt;VAR&lt;/SeriesLabel&gt;&lt;X&gt;0&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;VA&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style6&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;DLConnected&gt;True&lt;/DLConnected&gt;&lt;LineStyle Color="Blue" /&gt;&lt;SymbolStyle Color="LightGreen" OutlineColor="DarkGreen" Shape="None" /&gt;&lt;SeriesLabel&gt;VA&lt;/SeriesLabel&gt;&lt;X&gt;0&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;W Del&lt;/DLText&gt;&lt;DLOffset&gt;120&lt;/DLOffset&gt;&lt;DLStyle&gt;Style7&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Transparent" Pattern="None" /&gt;&lt;SymbolStyle Color="Crimson" Shape="None" /&gt;&lt;SeriesLabel&gt;W Del&lt;/SeriesLabel&gt;&lt;X&gt;0&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;W Rec&lt;/DLText&gt;&lt;DLOffset&gt;120&lt;/DLOffset&gt;&lt;DLCompass&gt;West&lt;/DLCompass&gt;&lt;DLStyle&gt;Style8&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Black" Pattern="None" /&gt;&lt;SymbolStyle Color="Cyan" Shape="None" /&gt;&lt;SeriesLabel&gt;W Rec&lt;/SeriesLabel&gt;&lt;X&gt;180&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;var Rec&lt;/DLText&gt;&lt;DLOffset&gt;120&lt;/DLOffset&gt;&lt;DLCompass&gt;South&lt;/DLCompass&gt;&lt;DLStyle&gt;Style9&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Black" Pattern="None" /&gt;&lt;SymbolStyle Color="DarkBlue" Shape="None" /&gt;&lt;SeriesLabel&gt;var Rec&lt;/SeriesLabel&gt;&lt;X&gt;270&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;var Del&lt;/DLText&gt;&lt;DLOffset&gt;120&lt;/DLOffset&gt;&lt;DLCompass&gt;North&lt;/DLCompass&gt;&lt;DLStyle&gt;Style10&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Black" Pattern="None" /&gt;&lt;SymbolStyle Color="DarkCyan" Shape="None" /&gt;&lt;SeriesLabel&gt;var Del&lt;/SeriesLabel&gt;&lt;X&gt;90&lt;/X&gt;&lt;Y&gt;1&lt;/Y&gt;&lt;DataTypes&gt;Single;Single;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;/DataSeriesCollection&gt;&lt;Highlight /&gt;&lt;/DataSerializer&gt;&lt;/ChartGroup&gt;&lt;ChartGroup Name="Group2"&gt;&lt;DataSerializer&gt;&lt;Highlight /&gt;&lt;/DataSerializer&gt;&lt;/ChartGroup&gt;&lt;/ChartGroupsCollection&gt;&lt;Header Compass="North"&gt;&lt;Text&gt;Unit ID:
+Meter Time: &lt;/Text&gt;&lt;/Header&gt;&lt;Footer Compass="South" Visible="False"&gt;&lt;Text&gt;Site Name:
+HardWare Options:&lt;/Text&gt;&lt;/Footer&gt;&lt;Legend Compass="East" Visible="False" /&gt;&lt;ChartArea LocationDefault="-1, -1" SizeDefault="-1, -1" PlotAntiAlias="True"&gt;&lt;Margin /&gt;&lt;/ChartArea&gt;&lt;Axes&gt;&lt;Axis Max="360" Min="0" UnitMajor="30" UnitMinor="15" AutoMajor="True" AutoMinor="True" AutoMax="True" AutoMin="True" TickMinor="None" TickLabels="None" _onTop="-1" Compass="South" _Origin="0" _AutoOrigin="False"&gt;&lt;GridMajor Visible="True" Spacing="30" /&gt;&lt;GridMinor Visible="True" Spacing="15" /&gt;&lt;ValueLabels&gt;&lt;ValueLabel Color="Black" Text="W Del" /&gt;&lt;ValueLabel Color="Black" Text="W Rec" Value="1" /&gt;&lt;/ValueLabels&gt;&lt;/Axis&gt;&lt;Axis Max="1" Min="1" UnitMajor="0" UnitMinor="0" AutoMajor="True" AutoMinor="True" AutoMax="True" AutoMin="True" TickLabels="None" _onTop="-1" Compass="West" _Origin="360" _AutoOrigin="False"&gt;&lt;GridMajor Visible="True" /&gt;&lt;GridMinor Visible="True" /&gt;&lt;ValueLabels&gt;&lt;ValueLabel BackColor="Transparent" Color="64, 64, 64" Text="W Del" /&gt;&lt;ValueLabel BackColor="Transparent" Color="64, 64, 64" Text="W Rec" /&gt;&lt;/ValueLabels&gt;&lt;/Axis&gt;&lt;Axis Max="0" Min="0" UnitMajor="0" UnitMinor="0" AutoMajor="True" AutoMinor="True" AutoMax="True" AutoMin="True" Compass="East"&gt;&lt;ValueLabels&gt;&lt;ValueLabel Color="Black" Text="W Del" /&gt;&lt;ValueLabel Color="Black" Text="W Rec" /&gt;&lt;/ValueLabels&gt;&lt;/Axis&gt;&lt;/Axes&gt;&lt;AutoLabelArrangement /&gt;&lt;VisualEffectsData&gt;45,1,0,0.9,0.05,0.9,1,0,0.15,1,0,1,0.5,-25,0,0,0,1,64,1&lt;/VisualEffectsData&gt;&lt;/Chart2DPropBag&gt;</value>
+  </data>
+  <data name="ToolBoxChartPropBag" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;&lt;Chart2DPropBag Version="2.0.20073.17282" UseAntiAliasedGraphics="True" UseAntiAliasedText="True"&gt;&lt;StyleCollection&gt;&lt;NamedStyle Name="Area" ParentName="Area.default" StyleData="GradientStyle=Radial;Border=None,Black,1;Font=Microsoft Sans Serif, 9.75pt;ForeColor=Black;BackColor=White;BackColor2=127, 127, 127;Opaque=False;Rounding=15 15 15 15;" /&gt;&lt;NamedStyle Name="Style8" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Style5" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="LabelStyleDefault.default" ParentName="Control" StyleData="Border=None,Transparent,1;BackColor=Transparent;" /&gt;&lt;NamedStyle Name="Control" ParentName="Control.default" StyleData="Border=None,ControlText,1;Rotation=Rotate0;BackColor=White;ForeColor=White;Opaque=False;" /&gt;&lt;NamedStyle Name="AxisY2" ParentName="Area" StyleData="Rotation=Rotate90;AlignVert=Bottom;AlignHorz=Far;" /&gt;&lt;NamedStyle Name="Style6" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Header" ParentName="Control" StyleData="Border=None,Black,1;ForeColor=Black;Font=Microsoft Sans Serif, 9.75pt;" /&gt;&lt;NamedStyle Name="Style7" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Footer" ParentName="Control" StyleData="Border=None,Transparent,1;ForeColor=Black;" /&gt;&lt;NamedStyle Name="Area.default" ParentName="Control" StyleData="Border=None,Transparent,1;AlignVert=Top;" /&gt;&lt;NamedStyle Name="Style11" ParentName="LabelStyleDefault" StyleData="ForeColor=Black;BackColor=Transparent;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="AxisY" ParentName="Area" StyleData="Font=Microsoft Sans Serif, 8.25pt;Rotation=Rotate270;ForeColor=Black;AlignHorz=Far;AlignVert=Center;" /&gt;&lt;NamedStyle Name="AxisX" ParentName="Area" StyleData="Font=Microsoft Sans Serif, 9.75pt;Rotation=Rotate0;ForeColor=Black;AlignHorz=Center;AlignVert=Bottom;" /&gt;&lt;NamedStyle Name="Style1" ParentName="LabelStyleDefault" StyleData="Border=None,Transparent,1;ForeColor=Black;BackColor=Transparent;Font=Microsoft Sans Serif, 11.25pt, style=Bold;" /&gt;&lt;NamedStyle Name="Legend" ParentName="Legend.default" /&gt;&lt;NamedStyle Name="LabelStyleDefault" ParentName="LabelStyleDefault.default" /&gt;&lt;NamedStyle Name="PlotArea" ParentName="Area" StyleData="GradientStyle=None;Border=None,Transparent,1;BackColor=MintCream;HatchStyle=None;BackColor2=Black;Opaque=True;" /&gt;&lt;NamedStyle Name="Legend.default" ParentName="Control" StyleData="Wrap=False;Border=None,Transparent,1;AlignVert=Top;" /&gt;&lt;NamedStyle Name="Control.default" ParentName="" StyleData="Border=None,Transparent,1;ForeColor=ControlText;BackColor=Control;" /&gt;&lt;/StyleCollection&gt;&lt;ChartGroupsCollection&gt;&lt;ChartGroup Name="Group1" ChartType="Polar" Use3D="False"&gt;&lt;DataSerializer DefaultSet="True"&gt;&lt;DataSeriesCollection&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Va&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style1&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Red" /&gt;&lt;SymbolStyle Color="Red" Shape="None" /&gt;&lt;SeriesLabel&gt;Va&lt;/SeriesLabel&gt;&lt;X&gt;270;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Vb&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style5&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Red" /&gt;&lt;SymbolStyle Color="Red" Shape="None" /&gt;&lt;SeriesLabel&gt;Vb&lt;/SeriesLabel&gt;&lt;X&gt;160;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Vc&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style6&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Red" /&gt;&lt;SymbolStyle Color="Red" Shape="None" /&gt;&lt;SeriesLabel&gt;Vc&lt;/SeriesLabel&gt;&lt;X&gt;40;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Ia&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style7&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Blue" /&gt;&lt;SymbolStyle Color="Blue" Shape="None" /&gt;&lt;SeriesLabel&gt;Ia&lt;/SeriesLabel&gt;&lt;X&gt;270;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Ib&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style8&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Blue" /&gt;&lt;SymbolStyle Color="Blue" Shape="None" /&gt;&lt;SeriesLabel&gt;Ib&lt;/SeriesLabel&gt;&lt;X&gt;135;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;DataSeriesSerializer&gt;&lt;DLVisible&gt;True&lt;/DLVisible&gt;&lt;DLText&gt;Ic&lt;/DLText&gt;&lt;DLCompass&gt;Auto&lt;/DLCompass&gt;&lt;DLStyle&gt;Style11&lt;/DLStyle&gt;&lt;DLFilter&gt;2&lt;/DLFilter&gt;&lt;LineStyle Color="Blue" /&gt;&lt;SymbolStyle Color="Blue" Shape="None" /&gt;&lt;SeriesLabel&gt;Ic&lt;/SeriesLabel&gt;&lt;X&gt;35;0&lt;/X&gt;&lt;Y&gt;0;0&lt;/Y&gt;&lt;DataTypes&gt;Double;Double;Double;Double;Double&lt;/DataTypes&gt;&lt;FillStyle /&gt;&lt;Histogram /&gt;&lt;/DataSeriesSerializer&gt;&lt;/DataSeriesCollection&gt;&lt;Highlight /&gt;&lt;/DataSerializer&gt;&lt;/ChartGroup&gt;&lt;ChartGroup Name="Group2" Use3D="False"&gt;&lt;DataSerializer&gt;&lt;Highlight /&gt;&lt;/DataSerializer&gt;&lt;/ChartGroup&gt;&lt;/ChartGroupsCollection&gt;&lt;Header Compass="North"&gt;&lt;Text&gt;Meter Time: &lt;/Text&gt;&lt;/Header&gt;&lt;Footer Compass="South" /&gt;&lt;Legend Compass="East" Visible="False" /&gt;&lt;ChartArea LocationDefault="-1, -1" SizeDefault="-1, -1" PlotAntiAlias="True"&gt;&lt;Margin /&gt;&lt;/ChartArea&gt;&lt;Axes&gt;&lt;Axis Max="360" Min="0" Reversed="True" UnitMajor="90" UnitMinor="45" AutoMajor="True" AutoMinor="True" AutoMax="True" AutoMin="True" _onTop="-1" Compass="South" _Origin="0" _AutoOrigin="False"&gt;&lt;Text&gt;Rotation: Unknown&lt;/Text&gt;&lt;GridMajor Visible="True" Spacing="90" /&gt;&lt;GridMinor Visible="True" Spacing="45" /&gt;&lt;/Axis&gt;&lt;Axis Max="20" Min="0" UnitMajor="10" UnitMinor="5" AutoMajor="False" AutoMinor="False" AutoMax="False" AutoMin="False" AnnoMethod="ValueLabels" _onTop="-1" Compass="East" _Origin="360" _AutoOrigin="False"&gt;&lt;Text&gt;Axis Y&lt;/Text&gt;&lt;GridMajor Visible="True" Spacing="5" AutoSpace="False" /&gt;&lt;GridMinor Visible="True" Spacing="1" AutoSpace="False" /&gt;&lt;/Axis&gt;&lt;Axis Max="1.7976931348623157E+308" Min="1.7976931348623157E+308" UnitMajor="0" UnitMinor="0" AutoMajor="True" AutoMinor="True" AutoMax="True" AutoMin="True" Compass="East" /&gt;&lt;/Axes&gt;&lt;AutoLabelArrangement /&gt;&lt;VisualEffectsData&gt;45,1,0,0.9,0.05,0.9,1,0,0.15,1,1,1,0.5,-25,0,0,0,1,64,1&lt;/VisualEffectsData&gt;&lt;/Chart2DPropBag&gt;</value>
+  </data>
+</root>

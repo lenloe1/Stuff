@@ -1,0 +1,54 @@
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.XML
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\OpenWayToolsAndTest-Main5\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.XML
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csprojAssemblyReference.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CoreCompileInputs.cache
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CopyComplete
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\jefreema\Source\Repos\ZigBee Code\Shared\Itron.Metering.ZigBee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.XML
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.ZigBee.EZSP.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Communications.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Utilities.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Communications.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.DeviceDataTypes.xml
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Utilities.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.pdb
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\bin\Debug\Itron.Metering.Zigbee.Radio.xml
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csprojAssemblyReference.cache
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CoreCompileInputs.cache
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.csproj.CopyComplete
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.dll
+C:\Users\lenloe.ITRON\Desktop\ZigBeeCode\Shared\Itron.Metering.Zigbee.EZSP\obj\Debug\Itron.Metering.ZigBee.EZSP.pdb

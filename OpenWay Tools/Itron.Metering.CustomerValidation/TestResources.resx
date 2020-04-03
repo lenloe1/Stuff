@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReasonActivityStatusPermissions" xml:space="preserve">
+    <value>User is not allowed to reset Activity Status</value>
+  </data>
+  <data name="DemandResetCount" xml:space="preserve">
+    <value>Demand Reset Count</value>
+  </data>
+  <data name="PowerOutageCount" xml:space="preserve">
+    <value>Power Outage Count</value>
+  </data>
+  <data name="ProgrammedCount" xml:space="preserve">
+    <value>Programmed Count</value>
+  </data>
+  <data name="InversionTamperCount" xml:space="preserve">
+    <value>Inversion Tamper Count</value>
+  </data>
+  <data name="RemovalTamperCount" xml:space="preserve">
+    <value>Removal Tamper Count</value>
+  </data>
+  <data name="EventLogCount" xml:space="preserve">
+    <value>Event Log Count</value>
+  </data>
+  <data name="ClearEventLogs" xml:space="preserve">
+    <value>Clear Event Logs</value>
+  </data>
+  <data name="ReasonSiteScanNotSupported" xml:space="preserve">
+    <value>SiteScan is not supported by this device</value>
+  </data>
+  <data name="ClearSiteScanDiagnosticCounts" xml:space="preserve">
+    <value>Clear SiteScan Diagnostic Counts</value>
+  </data>
+  <data name="ClearRemovalTampers" xml:space="preserve">
+    <value>Clear Removal Tampers</value>
+  </data>
+  <data name="ClearInversionTampers" xml:space="preserve">
+    <value>Clear Inversion Tampers</value>
+  </data>
+  <data name="ClearProgrammedCount" xml:space="preserve">
+    <value>Clear Programmed Count</value>
+  </data>
+  <data name="ClearPowerOutageCount" xml:space="preserve">
+    <value>Clear Power Outage Count</value>
+  </data>
+  <data name="ClearDemandResetCount" xml:space="preserve">
+    <value>Clear Demand Reset Count</value>
+  </data>
+  <data name="PrefixInitial" xml:space="preserve">
+    <value>Initial </value>
+  </data>
+  <data name="PrefixFinal" xml:space="preserve">
+    <value>Final </value>
+  </data>
+  <data name="ReasonBillingResetPermissions" xml:space="preserve">
+    <value>User is not allowed to perform a Billing Register reset</value>
+  </data>
+  <data name="ClearBillingData" xml:space="preserve">
+    <value>Clear Billing Data</value>
+  </data>
+  <data name="ReasonDisconnectNotSupported" xml:space="preserve">
+    <value>This meter does not support remote disconnect.</value>
+  </data>
+  <data name="RemoteConnect" xml:space="preserve">
+    <value>Remote Connect</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="LoadVoltagePresent" xml:space="preserve">
+    <value>Load Voltage Present</value>
+  </data>
+  <data name="RemoteDisconnect" xml:space="preserve">
+    <value>Remote Disconnect</value>
+  </data>
+  <data name="ReasonLoadVoltageNotDetected" xml:space="preserve">
+    <value>Load Voltage not detected</value>
+  </data>
+  <data name="ReasonLoadVoltagePresent" xml:space="preserve">
+    <value>Load Voltage present</value>
+  </data>
+  <data name="ReasonRemoteConnectFailed" xml:space="preserve">
+    <value>Remote connect failed</value>
+  </data>
+  <data name="ReasonSecurityError" xml:space="preserve">
+    <value>Security error</value>
+  </data>
+  <data name="ReasonUnrecognizedProcedure" xml:space="preserve">
+    <value>Unrecognized procedure</value>
+  </data>
+  <data name="Skipped" xml:space="preserve">
+    <value>Skipped</value>
+  </data>
+  <data name="Passed" xml:space="preserve">
+    <value>Passed</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="MeterTypeNotSupported" xml:space="preserve">
+    <value>This meter type is not supported</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ReasonProtocolError" xml:space="preserve">
+    <value>Protocol error</value>
+  </data>
+  <data name="ReasonOperationNotSupported" xml:space="preserve">
+    <value>Operation not supported</value>
+  </data>
+  <data name="MeterID" xml:space="preserve">
+    <value>Meter ID</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="MFGSerialNumber" xml:space="preserve">
+    <value>MFG Serial Number</value>
+  </data>
+  <data name="ElectronicSerialNumber" xml:space="preserve">
+    <value>Electronic Serial Number</value>
+  </data>
+  <data name="HardwareVersion" xml:space="preserve">
+    <value>Hardware Version</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Time Zone</value>
+  </data>
+  <data name="GMT" xml:space="preserve">
+    <value>GMT </value>
+  </data>
+  <data name="DeviceTime" xml:space="preserve">
+    <value>Device Time</value>
+  </data>
+  <data name="TOUEnabled" xml:space="preserve">
+    <value>TOU Enabled</value>
+  </data>
+  <data name="DSTEnabled" xml:space="preserve">
+    <value>DST Enabled</value>
+  </data>
+  <data name="DSTFromDate" xml:space="preserve">
+    <value>DST From Date </value>
+  </data>
+  <data name="DSTToDate" xml:space="preserve">
+    <value>DST To Date </value>
+  </data>
+  <data name="MinutesOnBattery" xml:space="preserve">
+    <value>Minutes on Battery</value>
+  </data>
+  <data name="DateLastProgrammed" xml:space="preserve">
+    <value>Date Last Programmed</value>
+  </data>
+  <data name="DateOfLastDemandReset" xml:space="preserve">
+    <value>Date of Last Demand Reset</value>
+  </data>
+  <data name="DateOfLastOutage" xml:space="preserve">
+    <value>Date of Last Outage</value>
+  </data>
+  <data name="DateOfLastTest" xml:space="preserve">
+    <value>Date of Last Test</value>
+  </data>
+  <data name="NormalKh" xml:space="preserve">
+    <value>Normal Kh</value>
+  </data>
+  <data name="RFLANSynchLevel" xml:space="preserve">
+    <value>Comm Module synch level</value>
+  </data>
+  <data name="HANMACAddress" xml:space="preserve">
+    <value>HAN MAC Address</value>
+  </data>
+  <data name="EnhancedBlurtsEnabled" xml:space="preserve">
+    <value>Enhanced Blurts Enabled</value>
+  </data>
+  <data name="AdvancedPolyMeter" xml:space="preserve">
+    <value>Advanced Poly Meter</value>
+  </data>
+  <data name="ReasonNoProgramFile" xml:space="preserve">
+    <value>A program file was not selected.</value>
+  </data>
+  <data name="LoadProfileRunning" xml:space="preserve">
+    <value>Load Profile Running</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="RFLANMACAddress" xml:space="preserve">
+    <value>Comm Module MAC Address</value>
+  </data>
+  <data name="ReasonNoFirmwareFile" xml:space="preserve">
+    <value>No active firmware file.</value>
+  </data>
+  <data name="RegisterFirmwareVersion" xml:space="preserve">
+    <value>Register Firmware Version</value>
+  </data>
+  <data name="RFLANFirmwareVersion" xml:space="preserve">
+    <value>Comm Module Firmware Version</value>
+  </data>
+  <data name="ZigBeeFirmwareVersion" xml:space="preserve">
+    <value>ZigBee Firmware Version</value>
+  </data>
+  <data name="DisplayFirmwareVersion" xml:space="preserve">
+    <value>Display Firmware Version</value>
+  </data>
+  <data name="DeviceErrors" xml:space="preserve">
+    <value>Device Errors</value>
+  </data>
+  <data name="DeviceError" xml:space="preserve">
+    <value>Device Error </value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Found" xml:space="preserve">
+    <value> found</value>
+  </data>
+  <data name="HANChannel" xml:space="preserve">
+    <value>HAN Channel</value>
+  </data>
+  <data name="HANJoiningEnabled" xml:space="preserve">
+    <value>HAN Joining Enabled</value>
+  </data>
+  <data name="SupportsANSIC1218OverZigBee" xml:space="preserve">
+    <value>Supports ANSI C12.18 over ZigBee</value>
+  </data>
+  <data name="ReasonFailedToGetHANInfo" xml:space="preserve">
+    <value>Unable to retrieve device's HAN information</value>
+  </data>
+  <data name="AllowedANSIC1218Connection" xml:space="preserve">
+    <value>Allowed ANSI C12.18 connection</value>
+  </data>
+  <data name="NoRadiosAvailable" xml:space="preserve">
+    <value>No radios available.</value>
+  </data>
+  <data name="AllAvailableRadiosInUse" xml:space="preserve">
+    <value>All available radios in use.</value>
+  </data>
+  <data name="ReasonOneInvalidItemFound" xml:space="preserve">
+    <value>1 invalid item found.</value>
+  </data>
+  <data name="ReasonInvalidItemsFound" xml:space="preserve">
+    <value> invalid items found.</value>
+  </data>
+  <data name="ReasonSP5OrLaterRequired" xml:space="preserve">
+    <value>This test requires Register Firmware 2.005 or later</value>
+  </data>
+  <data name="ReasonProgramFileNeededToValidate" xml:space="preserve">
+    <value>A program file must be specified to validate this password.</value>
+  </data>
+  <data name="PrimaryOpticalPassword" xml:space="preserve">
+    <value>Primary Optical Password</value>
+  </data>
+  <data name="SecondaryOpticalPassword" xml:space="preserve">
+    <value>Secondary Optical Password</value>
+  </data>
+  <data name="TertiaryOpticalPassword" xml:space="preserve">
+    <value>Tertiary Optical Password</value>
+  </data>
+  <data name="QuaternaryOpticalPassword" xml:space="preserve">
+    <value>Quaternary Optical Password</value>
+  </data>
+  <data name="ReasonProgramFileNeededToValidateKey" xml:space="preserve">
+    <value>A program file must be specified to validate this key.</value>
+  </data>
+  <data name="DESKey1" xml:space="preserve">
+    <value>DES Key 1</value>
+  </data>
+  <data name="DESKey2" xml:space="preserve">
+    <value>DES Key 2</value>
+  </data>
+  <data name="DESKey3" xml:space="preserve">
+    <value>DES Key 3</value>
+  </data>
+  <data name="DESKey4" xml:space="preserve">
+    <value>DES Key 4</value>
+  </data>
+  <data name="ReasonEnhSecurtyFileRequired" xml:space="preserve">
+    <value>An Enhanced Security file must be specified to validate this key.</value>
+  </data>
+  <data name="EnhancedSecurityCommandKey1" xml:space="preserve">
+    <value>Enhanced Security Command Key 1</value>
+  </data>
+  <data name="EnhancedSecurityCommandKey2" xml:space="preserve">
+    <value>Enhanced Security Command Key 2</value>
+  </data>
+  <data name="EnhancedSecurityCommandKey3" xml:space="preserve">
+    <value>Enhanced Security Command Key 3</value>
+  </data>
+  <data name="EnhancedSecurityCommandKey4" xml:space="preserve">
+    <value>Enhanced Security Command Key 4</value>
+  </data>
+  <data name="EnhancedSecurityRevocationKey1" xml:space="preserve">
+    <value>Enhanced Security Revocation Key 1</value>
+  </data>
+  <data name="EnhancedSecurityRevocationKey2" xml:space="preserve">
+    <value>Enhanced Security Revocation Key 2</value>
+  </data>
+  <data name="HANNetworkKey" xml:space="preserve">
+    <value>HAN Network Key</value>
+  </data>
+  <data name="HANLinkKey" xml:space="preserve">
+    <value>HAN Link Key</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valid</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="ZigBeeEnabled" xml:space="preserve">
+    <value>ZigBee Enabled</value>
+  </data>
+  <data name="ZigBeePrivateProfileEnabled" xml:space="preserve">
+    <value>ZigBee Private Profile Enabled</value>
+  </data>
+  <data name="HANSecurityProfile" xml:space="preserve">
+    <value>HAN Security Profile</value>
+  </data>
+  <data name="InterPANMode" xml:space="preserve">
+    <value>InterPAN Mode</value>
+  </data>
+  <data name="ANSIC1218OverZigBeeEnabled" xml:space="preserve">
+    <value>ANSI C12.18 Over ZigBee Enabled</value>
+  </data>
+  <data name="ClearFailure" xml:space="preserve">
+    <value>Clear failed</value>
+  </data>
+  <data name="ClearSuccess" xml:space="preserve">
+    <value>Clear succeeded</value>
+  </data>
+  <data name="CountCleared" xml:space="preserve">
+    <value>Count cleared</value>
+  </data>
+  <data name="CountNotCleared" xml:space="preserve">
+    <value>Count not cleared</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorsFound" xml:space="preserve">
+    <value>Errors Found</value>
+  </data>
+  <data name="EventsCleared" xml:space="preserve">
+    <value>Events cleared</value>
+  </data>
+  <data name="EventsFoundInDisabledLog" xml:space="preserve">
+    <value>Event(s) found in disabled log</value>
+  </data>
+  <data name="EventsNotCleared" xml:space="preserve">
+    <value>Events not cleared</value>
+  </data>
+  <data name="LogDisabled" xml:space="preserve">
+    <value>Log disabled</value>
+  </data>
+  <data name="MeterValueEquals" xml:space="preserve">
+    <value>Meter Value = </value>
+  </data>
+  <data name="NoErrorsFound" xml:space="preserve">
+    <value>No Errors Found</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>✓</value>
+  </data>
+  <data name="OperationFailure" xml:space="preserve">
+    <value>Operation failed</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>Operation succeeded</value>
+  </data>
+  <data name="ReasonLogonFailed" xml:space="preserve">
+    <value>Unable to Logon to device</value>
+  </data>
+  <data name="ReasonSwitchOperationPermissions" xml:space="preserve">
+    <value>User is not allowed to perform switch operations</value>
+  </data>
+  <data name="InvalidProgram" xml:space="preserve">
+    <value>Invalid program file for verification</value>
+  </data>
+  <data name="MeterShouldBeConnected" xml:space="preserve">
+    <value>Meter should be connected</value>
+  </data>
+  <data name="MeterShouldBeDisconnected" xml:space="preserve">
+    <value>Meter should be disconnected</value>
+  </data>
+  <data name="MeterShouldHaveLoadVoltage" xml:space="preserve">
+    <value>Meter should have load voltage</value>
+  </data>
+  <data name="MeterShouldNotHaveLoadVoltage" xml:space="preserve">
+    <value>Meter should not have load voltage</value>
+  </data>
+  <data name="NoProgram" xml:space="preserve">
+    <value>No program file for verification</value>
+  </data>
+  <data name="ReasonInvalidProgramFile" xml:space="preserve">
+    <value>An invalid program file was selected.</value>
+  </data>
+  <data name="CannotReadValue" xml:space="preserve">
+    <value>Unable to read value</value>
+  </data>
+  <data name="ErrorPresent" xml:space="preserve">
+    <value>Error present</value>
+  </data>
+  <data name="InconsistentWithHANSetup" xml:space="preserve">
+    <value>Inconsistent with HAN setup</value>
+  </data>
+  <data name="Meter" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="MismatchWithActiveVersion" xml:space="preserve">
+    <value>Mismatch with active version</value>
+  </data>
+  <data name="NoActiveFile" xml:space="preserve">
+    <value>No file set as active for comparison</value>
+  </data>
+  <data name="NonePresent" xml:space="preserve">
+    <value>None present</value>
+  </data>
+  <data name="NormalDisplayItems" xml:space="preserve">
+    <value>Normal Display Items</value>
+  </data>
+  <data name="Program" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="ProgramMismatch" xml:space="preserve">
+    <value>Mismatch with selected program file</value>
+  </data>
+  <data name="ProgramValidationErrors" xml:space="preserve">
+    <value>Program Validation Errors</value>
+  </data>
+  <data name="ValidationFailed" xml:space="preserve">
+    <value>Validation failed</value>
+  </data>
+  <data name="EventNotFoundInEnabledLog" xml:space="preserve">
+    <value>Cleared event(s) not in enabled log</value>
+  </data>
+  <data name="ExceptionOccurred" xml:space="preserve">
+    <value>Exception Occurred</value>
+  </data>
+  <data name="KeyNotConsistentWithProgram" xml:space="preserve">
+    <value>Key is not consistent with program file</value>
+  </data>
+  <data name="KeyNotConsistentWithRegistry" xml:space="preserve">
+    <value>Key is not consistent with registry</value>
+  </data>
+  <data name="KeyNotConsistentWithSecurityFile" xml:space="preserve">
+    <value>Key is not consistent with enhanced security key file</value>
+  </data>
+  <data name="MatchesActiveVersion" xml:space="preserve">
+    <value>Matches active version</value>
+  </data>
+  <data name="PasswordNotConsistentWithProgram" xml:space="preserve">
+    <value>Password is not consistent with program file</value>
+  </data>
+  <data name="ProgramMatch" xml:space="preserve">
+    <value>Consistent with selected program file</value>
+  </data>
+  <data name="ReasonActivityStatusSealedCanadian" xml:space="preserve">
+    <value>Activity status cannot be cleared on a sealed Canadian meter.</value>
+  </data>
+  <data name="ReasonBillingResetSealedCanadian" xml:space="preserve">
+    <value>Billing cannot be cleared on a sealed Canadian meter.</value>
+  </data>
+</root>
